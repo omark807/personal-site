@@ -1,4 +1,4 @@
-import { Container, Heading, Link,  ListItem, Text,  UnorderedList} from '@chakra-ui/react'
+import { Container, Heading, Link,  ListItem, UnorderedList} from '@chakra-ui/react'
 import Layout from '../components/layouts/article'
 import Paragraph from '../components/paragraph'
 import Section from '../components/section'
@@ -7,7 +7,7 @@ import Section from '../components/section'
 
 //ToDo: Finish editing these into displaying top projects. Possible custom API to pull info
 const AboutMe = () => (
-    <Layout title="More about me!">
+    <Layout title="More about me! ">
         <Container>
             <Heading as="h3" fontsize={20} mb={4}>
                 About Me
@@ -20,14 +20,14 @@ const AboutMe = () => (
                     <Paragraph>I am one of the first graduates from the University of Illinois at Urbana-Champaign (UIUC) with a Bachelor of Science in <Link href='https://cs.illinois.edu/academics/undergraduate/degree-program-options/cs-x-degree-programs/computer-science-crop-sciences' target='_blank'> Computer Science 
                         + Crop Sciences</Link>, an interdisciplinary program that brings the strengths of the <Link href='https://cs.illinois.edu/' target='_blank'> Department of Computer Science </Link> and the
                         <Link href='https://cropsciences.illinois.edu/' target='_blank'> Department of Crop Sciences</Link> at UIUC. My drive to pursue this intersection began with my interests in computing and 
-                        sustainability, wanting to create technological solutions to the world's most prominent issues that are cognizant of the environment. 
+                        sustainability, wanting to create technological solutions to the world&apos;s most prominent issues that are cognizant of the environment. 
                     </Paragraph>
 
                     <Paragraph> While these interests definitely remain intact, through research experiences in each of my departments, my interests have shifted towards about human-computer interaction at large. Specifically, I care a lot 
                         about making technology (and in particular user interfaces) accessible to all, especially those with disabilities (e.g., visual impairments), as well as identifying the underlying emotions associated with poor interface design through
                         identifying what elements of current interface design and the design procfess in general neglect the needs of this population, as well as other historically underrepresented communities.
                         It is far too often the case that digital experiences cannot be enjoyed by everyone, and my goals as a researcher is to challenge the way we think about interface design in any software we create, understanding that the best designs 
-                        are those that are inclusive and adaptive to a user's needs. This was also motivat4ed by my own lived experiences with assistive technologies as someone with 
+                        are those that are inclusive and adaptive to a user&apos;s needs. This was also motivat4ed by my own lived experiences with assistive technologies as someone with 
                         low vision, experiencing firsthand the indequacies with current accessibility technologies. 
                         <Paragraph>
                         </Paragraph>

@@ -21,7 +21,7 @@ const AboutMe = () => (
                         + Crop Sciences, an interdisciplinary program that brings the strengths of the Department of Computer Science and the
                         Department of Crop Sciences at UIUC. I am currently applying to Ph.D. programs in Computer Science, hoping to focus on user inteface design
                         that addresses accessibility, particularly for those with disabilities (especially visual impairments), as well as affective 
-                        computing, wanting to understand the emotions that are generated as a result of inadequate interface design. 
+                        computing, wanting to understand the emotions that are generated as a result of inadequate user interface design. 
                     </Paragraph>
 
                     <Paragraph>

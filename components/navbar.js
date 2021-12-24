@@ -89,7 +89,7 @@ const Navbar = props => {
                     </LinkItem>
 
                     <LinkItem 
-                        _target="_blank"
+                        target="_blank"
                         href="https://github.com/omark807" 
                         path={path}
                         display="inline-flex"
@@ -102,7 +102,7 @@ const Navbar = props => {
                     </LinkItem>
                   
                     <LinkItem 
-                        _target="_blank"
+                        target="_blank"
                         href="https://www.linkedin.com/in/omark807/" 
                         path={path}
                         display="inline-flex"
@@ -133,9 +133,16 @@ const Navbar = props => {
                 <NextLink href="/research" passHref>
                   <MenuItem as={Link}>Research</MenuItem>
                 </NextLink>
-                <MenuItem as={Link} href="https://github.com/omark807">
+                <NextLink href="https://drive.google.com/file/d/1o24Amh19a67cx94vPurjTYD9QS1aCz8H/view?usp=sharing" target="_blank" passHref>
+                  <MenuItem as={Link}>CV</MenuItem>
+                </NextLink>
+                <MenuItem as={Link} href="https://github.com/omark807" target="_blank">
                   Github
                 </MenuItem>
+                <MenuItem as={Link} href="https://www.linkedin.com/in/omark807" target="_blank">
+                  LinkedIn
+                </MenuItem>
+
               </MenuList>
             </Menu>
           </Box>

@@ -12,7 +12,7 @@ const Main = ({ children, router }) => {
                 <meta name="author" content="Omar" />
                 <meta property="og:site_name" content="Omar's homepage" />
                 <meta property="og:type" content="website" />
-                <title>Hi, I'm Omar!</title>
+                <title>Hi, I&apos;m Omar!</title>
             </Head>
 
             <Navbar path={router.asPath}/>

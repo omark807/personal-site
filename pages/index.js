@@ -3,8 +3,7 @@ import {
     Container,
     Heading,
     Box,
-    Button,
-    useColorModeValue
+    Button
 } from '@chakra-ui/react'
 import Section from '../components/section'
 import Paragraph from '../components/paragraph'

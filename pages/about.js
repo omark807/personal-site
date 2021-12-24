@@ -1,8 +1,7 @@
-import { Container, Heading, List, ListItem, OrderedList, SimpleGrid, UnorderedList, Divider} from '@chakra-ui/react'
+import { Container, Heading,  ListItem,  UnorderedList} from '@chakra-ui/react'
 import Layout from '../components/layouts/article'
 import Paragraph from '../components/paragraph'
 import Section from '../components/section'
-import { WorkGridItem } from '../components/grid-item'
 
 
 

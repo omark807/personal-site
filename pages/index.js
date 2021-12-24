@@ -16,37 +16,37 @@ const Page = () => {
     return(
         <Layout>
             <Container>
-                <Box borderRadius="lg" 
+                {/* <Box borderRadius="lg" 
                 bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')} 
                 p={3} 
                 mb={6} 
                 align="center">
                     To view the project file for this, check out the Github button, 
                     otherwise find my favourite projects in &quot;Works&quot;!
-                </Box>
+                </Box> */}
                 
                 <Box display={{md:'flex'}}>
                     <Box flexGrow={1}>
                         <Heading as="h2" variant="page-title">
-                            Dylan Hudson
+                            Omar Khan
                         </Heading>
-                        <p>Junior Software Developer ( Java  |  C#  |  JavaScript )</p>
+                        <p>aspiring researcher, computer scientist</p>
                     </Box>
                 </Box>
                 <br/>
                 <Section delay={0.1}>
                     <Heading as="h3" variant="section-title">
-                        About Me:
+                        hello!
                     </Heading>
-                    <Paragraph>Dylan is a junior full-stack developer in Yorkshire. He has a Batchelors degree in 
-                        Computing and has worked on a number of different platforms with a variety of technologies. 
-                        He is experiencedwith the full software development lifecycle and in managing his own projects, 
-                        and producing them from artefact to long-term support.
+                    <Paragraph>I am a recent graduate from  the University of Illinois at Urbana-Champaign with a B.S in Computer Science 
+                        + Crop Sciences. I am currently applying to Ph.D. programs in Computer Science, hoping to focus on user inteface design
+                        that addresses accessibility, particularly for those with disabilities (especially visual impairments), as well as affective 
+                        computing, wanting to understand the emotions that are generated as a result of inadequate interface design. 
                     </Paragraph>
                     <Box align="center" my={4}>
-                        <NextLink href="/works">
+                        <NextLink href="/research">
                             <Button righticon={<ChevronRightIcon/>} color="purple">
-                                Portfolio
+                                Research
                             </Button>
                         </NextLink>
                     </Box>
@@ -54,53 +54,35 @@ const Page = () => {
 
                 <Section delay={0.2}>
                     <Heading as="h3" variant="section-title">
-                        Biography:
+                        current research interests
                     </Heading>
                     <BioSection>
-                        <BioYear>2016</BioYear>
+                        <BioYear>Accessibility</BioYear>
                         Began Studies at The University of Huddersfield in Computing.
                         Focus on programming modules and the theory.
                     </BioSection>
-                    <br/>
                     <BioSection>
-                        <BioYear>2018</BioYear>
-                        Began placement year at Fusion IT as a Junior Full-Stack 
-                        Software Developer on a one-year contract (2018-2019) before 
-                        returning to studies utilising C# and SQL primarially.
+                        <BioYear>Affective computing</BioYear>
+                        Understanding the underlying emotions that those with disabilities and other historically 
+                        underrepresented groups face in user interface accessibility, and how the integration of technologies 
+                        such as virtual agents can aid in making these experiences more comfortable
                     </BioSection>
-                    <br/>
-                    <BioSection>
-                        <BioYear>2020</BioYear>
-                        Completed Studies at The University of Huddersfield, Graduating
-                        with a First-Class Honours degree (1:1).
-                    </BioSection>
-                    <br/>
-                    <BioSection>
-                        <BioYear>2021</BioYear>
-                        Seeking full-time employment. Self-study for Javascript while
-                        seeking employment oppurtunities and work. Learning JavaScript 
-                        and Flutter primarially.
-                    </BioSection>
-                </Section>
-                <br/>
+
+                </Section>  
                 <Section delay={0.2}>
                     <Heading as="h3" variant="section-title">
-                        My Achievements:
+                        other interests
                     </Heading>
-                    <Paragraph>
-                        I&apos;d say in University my Final Year Project (FYP) was my biggest
-                        as I researched AI vision technology and wrote an algorithm for 
-                        a self driving car to detect obstacles and prompt a reaction.
-                    </Paragraph>
-                    <br/>
-                    <Paragraph>
-                        In the workplace, it&apos;s a mix between my work for Globab Advocacy
-                        in Dubai, in which I worked across their entire conveyancing system
-                        and helped train a new hire throughout after working at Fusion for
-                        10 months or perhaps my work for Fusion themselves for the internal
-                        systems and software packages to be sold to their Clientelle. 
-                    </Paragraph>
-                </Section>
+                    
+                    <BioSection>
+                        <BioYear>Tech law and policy</BioYear>
+                        Examining past, present, and future tech/Internet laws and policies across the world and 
+                        identifying how/why they are shaped the way they are
+
+                    </BioSection>
+
+                </Section>                
+               
             </Container>
         </Layout>
     )

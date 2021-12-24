@@ -15,7 +15,7 @@ import {
     useColorModeValue
 } from '@chakra-ui/react'
 import { HamburgerIcon } from '@chakra-ui/icons'
-import { IoLogoGithub, IoLogoLinkedin } from "react-icons/io5";
+import { IoLogoGithub, IoLogoLinkedin, IoPersonCircleOutline, IoPersonRemove, IoPersonRemoveOutline, IoBookOutline, IoBook } from "react-icons/io5";
 import ThemeToggleButton from './theme-toggle-button';
 
 const LinkItem = ({ href, path, _target, children, ...props }) => {
@@ -63,6 +63,7 @@ const Navbar = props => {
                     </Heading>
                 </Flex>
                 <Stack
+                
                     direction={{base: 'column', md: 'row'}}
                     display={{base: 'none', md: 'flex'}}
                     width={{base: 'full', md: 'auto'}}
@@ -70,13 +71,26 @@ const Navbar = props => {
                     flexGrow={1}
                     mt={{base: 4, md: 0}}
                 >
-                    <LinkItem href="/works" path={path}>
-                        Works
+
+                    <LinkItem 
+                        href="/about"  
+                        path={path}>
+                        {/* <IoPersonRemoveOutline/> */}
+                        About Me
+                    </LinkItem>
+
+                    <LinkItem href="/research" path={path}>
+                        {/* </IoBookOutline> */}
+                        Research
+                    </LinkItem>
+                    <LinkItem href='https://drive.google.com/file/d/1o24Amh19a67cx94vPurjTYD9QS1aCz8H/view?usp=sharing' _target='_blank' path={path}>
+                        {/* <IoBookOutline/> */}
+                        CV
                     </LinkItem>
 
                     <LinkItem 
                         _target="_blank"
-                        href="https://github.com/Aimireal/Portfolio-Showcase" 
+                        href="https://github.com/omark807" 
                         path={path}
                         display="inline-flex"
                         alignItems="center"
@@ -86,10 +100,10 @@ const Navbar = props => {
                         <IoLogoGithub/>
                         Github
                     </LinkItem>
-
+                  
                     <LinkItem 
                         _target="_blank"
-                        href="https://www.linkedin.com/in/dylan-hudson-dev/" 
+                        href="https://www.linkedin.com/in/omark807/" 
                         path={path}
                         display="inline-flex"
                         alignItems="center"
@@ -113,13 +127,13 @@ const Navbar = props => {
                 aria-label="Options"
               />
               <MenuList>
-                <NextLink href="/" passHref>
-                  <MenuItem as={Link}>About</MenuItem>
+                <NextLink href="/about" passHref>
+                  <MenuItem as={Link}>About Me</MenuItem>
                 </NextLink>
-                <NextLink href="/works" passHref>
-                  <MenuItem as={Link}>Works</MenuItem>
+                <NextLink href="/research" passHref>
+                  <MenuItem as={Link}>Research</MenuItem>
                 </NextLink>
-                <MenuItem as={Link} href="https://github.com/Aimireal">
+                <MenuItem as={Link} href="https://github.com/omark807">
                   Github
                 </MenuItem>
               </MenuList>

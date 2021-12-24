@@ -1,9 +1,12 @@
 {
+  "homepage": "http://omark807.github.io/my-app",
   "name": "portfolio",
   "version": "1.0.0",
-  "description": "Portfolio website for Dylan",
+  "description": "Omar Khan Personal Site",
   "scripts": {
     "dev": "next dev -H 0.0.0.0",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build": "next build",
     "start": "next start",
     "prettier": "prettier -write .",
@@ -29,6 +32,7 @@
   "devDependencies": {
     "eslint": "<8.0.0",
     "eslint-config-next": "^11.1.2",
+    "gh-pages": "^3.2.3",
     "prettier": "^2.4.1"
   }
 }

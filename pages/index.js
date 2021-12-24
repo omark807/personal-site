@@ -40,7 +40,12 @@ const Page = () => {
                     <Paragraph>I am a recent graduate from  the University of Illinois at Urbana-Champaign with a B.S in Computer Science 
                         + Crop Sciences. I am currently applying to Ph.D. programs in Computer Science, hoping to focus on user inteface design
                         that addresses accessibility, particularly for those with disabilities (especially visual impairments), as well as affective 
-                        computing, wanting to understand the emotions that are generated as a result of inadequate interface design. 
+                        computing, wanting to understand the emotions that are generated as a result of inadequate interface design through technologies 
+                        such as virtual agents. 
+                    </Paragraph>
+
+                    <Paragraph> I am also interested in any front-end development opportunities to continue furthering my knowledge in such technologies 
+                        (especially React, React Native, Typescript, Javascript, Next.js, etc.).
                     </Paragraph>
                     <Box align="center" my={4}>
                         <NextLink href="/research">
@@ -57,8 +62,8 @@ const Page = () => {
                     </Heading>
                     <BioSection>
                         <BioYear>Accessibility</BioYear>
-                        Began Studies at The University of Huddersfield in Computing.
-                        Focus on programming modules and the theory.
+                        Developing greater intution on what makes technology, and user interfaces in particular, so inaccessible 
+                        to underrepresented populations, and how we can refine the design process to become more inclusive of these groups
                     </BioSection>
                     <BioSection>
                         <BioYear>Affective computing</BioYear>
@@ -70,7 +75,7 @@ const Page = () => {
                 </Section>  
                 <Section delay={0.2}>
                     <Heading as="h3" variant="section-title">
-                        other interests
+                        other academic interests
                     </Heading>
                     
                     <BioSection>

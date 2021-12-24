@@ -8,9 +8,9 @@ const Main = ({ children, router }) => {
         <Box as="main" pb={8}>
             <Head>
                 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-                <meta name="description" content="Dylan's homepage" />
-                <meta name="author" content="Dylan" />
-                <meta property="og:site_name" content="Dylan's homepage" />
+                <meta name="description" content="Omar's homepage" />
+                <meta name="author" content="Omar" />
+                <meta property="og:site_name" content="Omar's homepage" />
                 <meta property="og:type" content="website" />
                 <title>Hi, I'm Omar!</title>
             </Head>

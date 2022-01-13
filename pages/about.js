@@ -26,8 +26,8 @@ const AboutMe = () => (
                     <Paragraph> While these interests definitely remain intact, through research experiences in each of my departments, my interests have shifted towards about human-computer interaction at large. Specifically, I care a lot 
                         about making technology (and in particular user interfaces) accessible to all, especially those with disabilities (e.g., visual impairments), as well as identifying the underlying emotions associated with poor interface design through
                         identifying what elements of current interface design and the design procfess in general neglect the needs of this population, as well as other historically underrepresented communities.
-                        It is far too often the case that digital experiences cannot be enjoyed by everyone, and my goals as a researcher is to challenge the way we think about interface design in any software we create, understanding that the best designs 
-                        are those that are inclusive and adaptive to a user&apos;s needs. This was also motivat4ed by my own lived experiences with assistive technologies as someone with 
+                        It is far too often the case that digital experiences cannot be enjoyed by everyone, and my goals as a researcher include challenging the way we think about interface design in any software we create, understanding that the best designs 
+                        are those that are inclusive and adaptive to a user&apos;s needs. This was also motivated by my own lived experiences with assistive technologies as someone with 
                         low vision, experiencing firsthand the indequacies with current accessibility technologies. 
                         <Paragraph>
                         </Paragraph>

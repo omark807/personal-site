@@ -2,6 +2,7 @@ import NextLink from 'next/link'
 import {
     Container,
     Heading,
+    Img,
     Box,
     Button
 } from '@chakra-ui/react'
@@ -30,8 +31,12 @@ const Page = () => {
                             Omar Khan
                         </Heading>
                         <p>aspiring researcher, computer scientist</p>
+                        
                     </Box>
                 </Box>
+                {/* <Box boxSize='sm'>
+                    <Img src='pages/bunny.jpeg' alt='Omar Khan' />
+                </Box> */}
                 <br/>
                 <Section delay={0.1}>
                     <Heading as="h3" variant="section-title">
@@ -45,7 +50,8 @@ const Page = () => {
                     </Paragraph>
 
                     <Paragraph> I am also interested in any front-end development opportunities to continue furthering my knowledge in such technologies 
-                        (especially React, React Native, Typescript, Javascript, Next.js, etc.).
+                        (especially React, React Native, Typescript, Javascript, Next.js, etc.), as well as research engineering and assistant positions where I can hone my 
+                        skills as a researcher. 
                     </Paragraph>
                     <Box align="center" my={4}>
                         <NextLink href="/research">

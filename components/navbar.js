@@ -83,9 +83,14 @@ const Navbar = props => {
                         {/* </IoBookOutline> */}
                         Research
                     </LinkItem>
-                    <LinkItem href='https://drive.google.com/file/d/1o24Amh19a67cx94vPurjTYD9QS1aCz8H/view?usp=sharing' target='_blank' path={path}>
+                    <LinkItem href='https://drive.google.com/file/d/1LFh5u-epH4JwxffZR6FgDmSoIdx49mhK/view?usp=sharing' target='_blank' path={path}>
                         {/* <IoBookOutline/> */}
                         CV
+                    </LinkItem>
+                    <LinkItem href='https://drive.google.com/file/d/1PkSuWIFDf5hCtkQRfIZ-D1eiNBDPXQ7r/view?usp=sharing' target='_blank' path={path}>
+                        {/* <IoBookOutline/> */}
+                        Resumé
+                        
                     </LinkItem>
 
                     <LinkItem 
@@ -135,6 +140,9 @@ const Navbar = props => {
                 </NextLink>
                 <NextLink href="https://drive.google.com/file/d/1o24Amh19a67cx94vPurjTYD9QS1aCz8H/view?usp=sharing" target="_blank" passHref>
                   <MenuItem as={Link}>CV</MenuItem>
+                </NextLink>
+                <NextLink href="https://drive.google.com/file/d/1PkSuWIFDf5hCtkQRfIZ-D1eiNBDPXQ7r/view?usp=sharing" target="_blank" passHref>
+                  <MenuItem as={Link}>Resumé</MenuItem>
                 </NextLink>
                 <MenuItem as={Link} href="https://github.com/omark807" target="_blank">
                   Github

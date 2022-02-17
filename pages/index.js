@@ -29,7 +29,7 @@ const Page = () => {
                         <Heading as="h2" variant="page-title">
                             Omar Khan
                         </Heading>
-                        <p>aspiring researcher, computer scientist</p>
+                        <p>aspiring computer scientist</p>
                         
                     </Box>
                 </Box>

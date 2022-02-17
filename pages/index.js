@@ -2,7 +2,6 @@ import NextLink from 'next/link'
 import {
     Container,
     Heading,
-    Img,
     Box,
     Button
 } from '@chakra-ui/react'
@@ -43,16 +42,16 @@ const Page = () => {
                         hello!
                     </Heading>
                     <Paragraph>I am a recent graduate from  the University of Illinois at Urbana-Champaign with a B.S in Computer Science 
-                        + Crop Sciences. I am currently applying to Ph.D. programs in Computer Science, hoping to focus on user inteface design
+                        + Crop Sciences. 
+                    </Paragraph>
+                    {/* I am currently applying to Ph.D. programs in Computer Science, hoping to focus on user inteface design
                         that addresses accessibility, particularly for those with disabilities (especially visual impairments), as well as affective 
                         computing, wanting to understand the emotions that are generated as a result of inadequate interface design through technologies 
-                        such as virtual agents. 
-                    </Paragraph>
-
-                    <Paragraph> I am also interested in any front-end development opportunities to continue furthering my knowledge in such technologies 
+                        such as virtual agents.  */}
+                    {/* <Paragraph> I am also interested in any front-end development opportunities to continue furthering my knowledge in such technologies 
                         (especially React, React Native, Typescript, Javascript, Next.js, etc.), as well as research engineering and assistant positions where I can hone my 
                         skills as a researcher. 
-                    </Paragraph>
+                    </Paragraph> */}
                     <Box align="center" my={4}>
                         <NextLink href="/research">
                             <Button righticon={<ChevronRightIcon/>} color="purple">

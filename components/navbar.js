@@ -83,7 +83,7 @@ const Navbar = props => {
                         {/* </IoBookOutline> */}
                         Research
                     </LinkItem>
-                    <LinkItem href='https://drive.google.com/file/d/1LFh5u-epH4JwxffZR6FgDmSoIdx49mhK/view?usp=sharing' target='_blank' path={path}>
+                    <LinkItem href='https://drive.google.com/file/d/1o24Amh19a67cx94vPurjTYD9QS1aCz8H/view?usp=sharing' target='_blank' path={path}>
                         {/* <IoBookOutline/> */}
                         CV
                     </LinkItem>

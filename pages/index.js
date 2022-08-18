@@ -29,7 +29,7 @@ const Page = () => {
                         <Heading as="h2" variant="page-title">
                             Omar Khan
                         </Heading>
-                        <p>aspiring computer scientist</p>
+                        <p>aspiring technologist</p>
                         
                     </Box>
                 </Box>
@@ -41,8 +41,9 @@ const Page = () => {
                     <Heading as="h3" variant="section-title">
                         hello!
                     </Heading>
-                    <Paragraph>I am a recent graduate from  the University of Illinois at Urbana-Champaign with a B.S in Computer Science 
-                        + Crop Sciences. 
+                    <Paragraph>I am a graduate student studying Computer Science at the University of Illinois
+                        at Urbana-Champaign (UIUC). <b>I am actively seeking UX research and product and/or program manager 
+                        internships for summer 2023. I am also open to software engineering internships! </b> 
                     </Paragraph>
                     {/* I am currently applying to Ph.D. programs in Computer Science, hoping to focus on user inteface design
                         that addresses accessibility, particularly for those with disabilities (especially visual impairments), as well as affective 
@@ -67,8 +68,13 @@ const Page = () => {
                     </Heading>
                     <BioSection>
                         <BioYear>Accessibility</BioYear>
-                        Developing greater intution on what makes technology, and user interfaces in particular, so inaccessible 
-                        to underrepresented populations, and how we can refine the design process to become more inclusive of these groups
+                        Discovering ways to improve the design process so that thinking about accessibility 
+                        is less of an afterthought and/or cognitive load -- I am particularly interested in exploring visual 
+                        impairments
+                    </BioSection>
+                    <BioSection>
+                        <BioYear>Usable security and privacy</BioYear>
+                        Examining ways that security/privacy considerations may not fully protect those with visual impairments (and other disabilities)
                     </BioSection>
                     <BioSection>
                         <BioYear>Affective computing</BioYear>

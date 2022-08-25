@@ -23,17 +23,20 @@ const AboutMe = () => (
                         sustainability, wanting to create technological solutions to the world&apos;s most prominent issues that are cognizant of the environment. 
                     </Paragraph>
 
+                    <br></br>
+
                     <Paragraph> 
                         <Paragraph>While these interests definitely remain intact, through research experiences in each of my departments, my interests have shifted towards about human-computer interaction at large. Specifically, I care a lot 
                         about discovering what elements of the design process can be tweaked to make considering accessibility less of an afterthought, as well as how we can improve systems to be more mindful for security/privacy concerns for those that are disabled. 
                         The latter is a newer interest of mine that I am beginning to explore through my graduate studies. 
-                        </Paragraph>
+                    </Paragraph>
 
-                        <Paragraph>
+                    <br></br>
+
+                    <Paragraph>
                         Upon completing my education, I hope to go into industry as either a UX researcher, uncovering the many ways in which humans interact with systems through qualitiative and/or mixed-methods research, or a product manager where I would have the opportunity 
                         to directly influence product strategy in hopes of creating products that are mindful of the differences each of us have. 
-                    
-                        </Paragraph>
+                    </Paragraph>
 
                       
                     </Paragraph>
@@ -51,8 +54,9 @@ const AboutMe = () => (
                         <ListItem>Reading (current read is <Link href='https://www.goodreads.com/en/book/show/56238004-the-good-lie' target='_blank'> 
                         <i>The Good Lie </i></Link> by A.R. Torre; recently read <Link href='https://www.goodreads.com/en/book/show/52149789-the-best-of-friends' target='_blank'> 
                         <i>The Best of Friends </i></Link> by Lucinda Berry)</ListItem>
-                        <ListItem>Cooking (esepcially breakfast foods!)</ListItem>
-                        <ListItem>Sweaters</ListItem>
+                        <ListItem>Cooking (esepcially breakfast foods -- check back for pictures soon!)</ListItem>
+                        <ListItem>Writing</ListItem>
+                        <ListItem>Anything outdoorsy!</ListItem>
                     </UnorderedList>
               
                 </Paragraph>

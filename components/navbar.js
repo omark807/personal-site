@@ -83,6 +83,12 @@ const Navbar = props => {
                         {/* </IoBookOutline> */}
                         Research
                     </LinkItem>
+
+                    <LinkItem href="/projects" path={path}>
+                        {/* </IoBookOutline> */}
+                        Projects
+                    </LinkItem>
+
                     <LinkItem href='https://drive.google.com/file/d/1o24Amh19a67cx94vPurjTYD9QS1aCz8H/view?usp=sharing' target='_blank' path={path}>
                         {/* <IoBookOutline/> */}
                         CV
@@ -137,6 +143,9 @@ const Navbar = props => {
                 </NextLink>
                 <NextLink href="/research" passHref>
                   <MenuItem as={Link}>Research</MenuItem>
+                </NextLink>
+                <NextLink href="/projects" passHref>
+                  <MenuItem as={Link}>Projects</MenuItem>
                 </NextLink>
                 <NextLink href="https://drive.google.com/file/d/1o24Amh19a67cx94vPurjTYD9QS1aCz8H/view?usp=sharing" target="_blank" passHref>
                   <MenuItem as={Link}>CV</MenuItem>

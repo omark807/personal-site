@@ -31,7 +31,7 @@ const Works = () => (
                 </Section>
                 <Section delay={0.3}>
                     <WorkGridItem id="coursera" title="Coursera" thumbnail={courseraImg}>
-                        An analysis of the level adherence to usability principles of the Coursera Discussion Forum using heuristic evaluation. 
+                        An analysis of the level of adherence to usability principles of the Coursera Discussion Forum using heuristic evaluation. 
                     </WorkGridItem>
                 </Section>
                

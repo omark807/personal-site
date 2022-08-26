@@ -22,7 +22,7 @@ const Works = () => (
                     Mahmood, S., Zhao, M., Khan, O., Herman, G.L. (2020). <Text fontWeight='bold'>Caches as an Example of 
                     Machine-gradable Exam Questions for Complex Engineering Systems. </Text> In Proceedings 
                     of the 49th ASEE/IEEE Frontiers in Education Conference, Uppsala, Sweden, Oct. 21-24.
-                    <Link href='https://doi.org/10.1109/FIE44824.2020.9273822'> https://doi.org/10.1109/FIE44824.2020.9273822</Link> 
+                    <Link target="_blank" href='https://doi.org/10.1109/FIE44824.2020.9273822'> https://doi.org/10.1109/FIE44824.2020.9273822</Link> 
                 </Paragraph>    
 
             </Section>

@@ -27,7 +27,7 @@ const Project = () => (
             <List>
                 <ListItem>
                     <Meta>Link</Meta>
-                    <Link href="https://docs.google.com/document/d/1IkyyjPdFBilIQL4dvq7tIBhv6H22HnstM8nFNfcc-pA/edit?usp=sharing">
+                    <Link target="_blank" href="https://docs.google.com/document/d/1IkyyjPdFBilIQL4dvq7tIBhv6H22HnstM8nFNfcc-pA/edit?usp=sharing">
                         Document
                     </Link> <ExternalLinkIcon></ExternalLinkIcon>
                 </ListItem>

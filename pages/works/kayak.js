@@ -87,7 +87,7 @@ const Project = () => (
             </P>
 
             <Heading size="sm">Severity: 3</Heading>
-            <Link href="https://drive.google.com/file/d/1cMy4ZEcHS5dXNxAqZQWuZ5f3ZNW56n4F/view?usp=sharing">
+            <Link target="_blank" href="https://drive.google.com/file/d/1cMy4ZEcHS5dXNxAqZQWuZ5f3ZNW56n4F/view?usp=sharing">
                         Interface Component in Question
             </Link> <ExternalLinkIcon></ExternalLinkIcon>
             <Heading size="sm">Recommendation: </Heading>
@@ -102,7 +102,7 @@ const Project = () => (
             </P>
 
             <Heading size="sm">Severity: 3</Heading>
-            <Link href="https://drive.google.com/file/d/1VAej-T83fwJdhVO9K_t9waV9OV6yzwql/view?usp=sharing">
+            <Link target="_blank" href="https://drive.google.com/file/d/1VAej-T83fwJdhVO9K_t9waV9OV6yzwql/view?usp=sharing">
                         Interface Component in Question
             </Link> <ExternalLinkIcon></ExternalLinkIcon>           
             <Heading size="sm">Recommendation: </Heading>
@@ -117,7 +117,7 @@ const Project = () => (
             </P>
 
             <Heading size="sm">Severity: 2</Heading>
-            <Link href="https://drive.google.com/file/d/1JkV1e5lZlH_ObvTgE_dEJD8oMcPQI11U/view?usp=sharing">
+            <Link target="_blank" href="https://drive.google.com/file/d/1JkV1e5lZlH_ObvTgE_dEJD8oMcPQI11U/view?usp=sharing">
                         Interface Component in Question
             </Link> <ExternalLinkIcon></ExternalLinkIcon>           
             <Heading size="sm">Recommendation: </Heading>
@@ -157,7 +157,7 @@ const Project = () => (
             <List>
                 <ListItem>
                     <Meta>Link</Meta>
-                    <Link href="https://docs.google.com/document/d/1ZwPsz2A0BAL0JUKBZRmvMIeZHLXvyGlYWwNeeh17I0o/edit?usp=sharing">
+                    <Link target="_blank" href="https://docs.google.com/document/d/1ZwPsz2A0BAL0JUKBZRmvMIeZHLXvyGlYWwNeeh17I0o/edit?usp=sharing">
                         Document
                     </Link> <ExternalLinkIcon></ExternalLinkIcon>
                 </ListItem>

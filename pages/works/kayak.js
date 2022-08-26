@@ -167,7 +167,7 @@ const Project = () => (
                 </ListItem> */}
                 <ListItem>
                     <Meta>Methods</Meta>
-                    <Link>Interview Design, Usability Testing</Link>
+                    Interview Protocol Design, Usability Testing
                 </ListItem>
             </List>
             <br/>

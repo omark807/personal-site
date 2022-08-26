@@ -5,6 +5,7 @@ import { WorkGridItem } from '../components/grid-item'
 
 //import placeholderImg from '../public/images/works/placeholder.png'
 import kayakImg from '../public/images/works/kayak.png'
+import courseraImg from '../public/images/works/coursera.png'
 
 
 //ToDo: Finish editing these into displaying top projects. Possible custom API to pull info
@@ -26,6 +27,11 @@ const Works = () => (
                 <Section delay={0.3}>
                     <WorkGridItem id="kayak" title="Kayak" thumbnail={kayakImg}>
                         This project involved examining the usability of Kayak, a travel booking platform. Travelers of varying expeirence levels were interviewed. 
+                    </WorkGridItem>
+                </Section>
+                <Section delay={0.3}>
+                    <WorkGridItem id="coursera" title="Coursera" thumbnail={courseraImg}>
+                        An analysis of the level adherence to usability principles of the Coursera Discussion Forum using heuristic evaluation. 
                     </WorkGridItem>
                 </Section>
                

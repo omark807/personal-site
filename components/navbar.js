@@ -84,7 +84,6 @@ const Navbar = props => {
                     </LinkItem>
 
                     <LinkItem href="/research" path={path}>
-                        {/* </IoBookOutline> */}
                         Research
                     </LinkItem>
 

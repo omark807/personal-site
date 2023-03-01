@@ -50,19 +50,19 @@ const Page = () => {
                         current research interests
                     </Heading>
                     <BioSection>
-                        <BioYear>Accessibility</BioYear>
-                        Discovering ways to improve the design process so that thinking about accessibility 
-                        is less of an afterthought and/or cognitive load -- I am particularly interested in exploring visual 
-                        impairments
+                        <BioYear>Human-centered AI (especially for accessibilit)y</BioYear>
+                        Designing machine learning (ML) powered user experiences that are accessible and evaluating those that are not; understanding how users feel 
+                        about artificial intelligence (AI) and designing systems that interact more naturally with users
                     </BioSection>
                     <BioSection>
                         <BioYear>Usable security and privacy</BioYear>
-                        Examining ways that security/privacy considerations may not fully protect those with visual impairments (and other disabilities)
+                        Examining human factors in security/privacy and including those from historically underrepresented populations in 
+                        conversations regarding security/privacy design
                     </BioSection>
                     <BioSection>
                         <BioYear>Affective computing</BioYear>
                         Understanding the underlying emotions that those with disabilities and other historically 
-                        underrepresented groups face in user interface accessibility, and how the integration of technologies 
+                        underrepresented groups face in interface accessibility, and how the integration of technologies 
                         such as virtual agents can aid in making these experiences more comfortable
                     </BioSection>
                 </Section>  

@@ -6,6 +6,7 @@ import Section from '../components/section'
 
 
 //ToDo: Finish editing these into displaying top projects. Possible custom API to pull info
+
 const AboutMe = () => (
     <Layout title="More about me! ">
         <Container>

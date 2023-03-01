@@ -147,10 +147,10 @@ const Navbar = props => {
                 <NextLink href="/projects" passHref>
                   <MenuItem as={Link}>Projects</MenuItem>
                 </NextLink>
-                <NextLink href="https://drive.google.com/file/d/1RuaDwBOhpBM4vJ3yjKWRj8G2G6hSIfce/view?usp=share_link" target="_blank">
+                <NextLink href="https://drive.google.com/file/d/1RuaDwBOhpBM4vJ3yjKWRj8G2G6hSIfce/view?usp=share_link" target="_blank" path={path}>
                   <MenuItem as={Link}>CV</MenuItem>
                 </NextLink>
-                <NextLink href="https://drive.google.com/file/d/1f9CiVmxOIZTIIHkAsn3Br6y8xtyMupy3/view?usp=share_link" target="_blank">
+                <NextLink href="https://drive.google.com/file/d/1f9CiVmxOIZTIIHkAsn3Br6y8xtyMupy3/view?usp=share_link" target="_blank" path={path}>
                   <MenuItem as={Link}>Resumé</MenuItem>
                 </NextLink>
                 <MenuItem as={Link} href="https://github.com/omark807" target="_blank">

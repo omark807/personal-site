@@ -15,21 +15,14 @@ const Page = () => {
     return(
         <Layout>
             <Container>
-                {/* <Box borderRadius="lg" 
-                bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')} 
-                p={3} 
-                mb={6} 
-                align="center">
-                    To view the project file for this, check out the Github button, 
-                    otherwise find my favourite projects in &quot;Works&quot;!
-                </Box> */}
+        
                 
                 <Box display={{md:'flex'}}>
                     <Box flexGrow={1}>
                         <Heading as="h2" variant="page-title">
                             Omar Khan
                         </Heading>
-                        <p>aspiring technologist</p>
+                        <p>aspiring researcher</p>
                         
                     </Box>
                 </Box>
@@ -42,8 +35,8 @@ const Page = () => {
                         hello!
                     </Heading>
                     <Paragraph>I am a graduate student studying Computer Science at the University of Illinois
-                        at Urbana-Champaign (UIUC). <b>I am actively seeking UX research and product and/or program manager 
-                        internships for summer 2023. I am also open to software engineering internships! </b> 
+                        Urbana-Champaign (UIUC). <b>I am actively seeking research, product and/or program manager, and 
+                        software engineering internships for summer 2023! </b> 
                     </Paragraph>
                     {/* I am currently applying to Ph.D. programs in Computer Science, hoping to focus on user inteface design
                         that addresses accessibility, particularly for those with disabilities (especially visual impairments), as well as affective 

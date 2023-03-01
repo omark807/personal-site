@@ -4,9 +4,6 @@ import Paragraph from '../components/paragraph'
 import Section from '../components/section'
 
 
-
-//ToDo: Finish editing these into displaying top projects. Possible custom API to pull info
-
 const AboutMe = () => (
     <Layout title="More about me! ">
         <Container>
@@ -18,7 +15,7 @@ const AboutMe = () => (
                     <Heading as="h3" variant="section-title">
                         who am i?
                     </Heading>
-                    <Paragraph>I am one of the first graduates from the University of Illinois at Urbana-Champaign (UIUC) with a Bachelor of Science in <Link href='https://cs.illinois.edu/academics/undergraduate/degree-program-options/cs-x-degree-programs/computer-science-crop-sciences' target='_blank'> Computer Science 
+                    <Paragraph>I graduated from the University of Illinois Urbana-Champaign (UIUC) with a Bachelor of Science in <Link href='https://cs.illinois.edu/academics/undergraduate/degree-program-options/cs-x-degree-programs/computer-science-crop-sciences' target='_blank'> Computer Science 
                         + Crop Sciences</Link>, an interdisciplinary program that brings the strengths of the <Link href='https://cs.illinois.edu/' target='_blank'> Department of Computer Science </Link> and the
                         <Link href='https://cropsciences.illinois.edu/' target='_blank'> Department of Crop Sciences</Link> at UIUC. My drive to pursue this intersection began with my interests in computing and 
                         sustainability, wanting to create technological solutions to the world&apos;s most prominent issues that are cognizant of the environment. 

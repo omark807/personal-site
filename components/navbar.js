@@ -89,11 +89,11 @@ const Navbar = props => {
                         Projects
                     </LinkItem>
 
-                    <LinkItem href='' target='_blank' path={path}>
+                    <LinkItem href='https://drive.google.com/file/d/1RuaDwBOhpBM4vJ3yjKWRj8G2G6hSIfce/view?usp=share_link' target='_blank' path={path}>
                         {/* <IoBookOutline/> */}
                         CV
                     </LinkItem>
-                    <LinkItem href='' target='_blank' path={path}>
+                    <LinkItem href='https://drive.google.com/file/d/1f9CiVmxOIZTIIHkAsn3Br6y8xtyMupy3/view?usp=share_link' target='_blank' path={path}>
                         {/* <IoBookOutline/> */}
                         Resumé
                         

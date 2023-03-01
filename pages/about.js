@@ -3,14 +3,15 @@ import Layout from '../components/layouts/article'
 import Paragraph from '../components/paragraph'
 import Section from '../components/section'
 
-
+/**
+ * Contains information about my background and some personal interests. 
+ */
 const AboutMe = () => (
     <Layout title="More about me! ">
         <Container>
             <Heading as="h3" fontsize={20} mb={4}>
                 About Me
             </Heading>
-
             <Section delay={0.1}>
                     <Heading as="h3" variant="section-title">
                         who am i?
@@ -36,11 +37,10 @@ const AboutMe = () => (
                         to directly influence product strategy in hopes of creating products that are mindful of the differences each of us have. 
                     </Paragraph>
 
-                      
                     </Paragraph>
              
             </Section>
-
+            
             <Section>
                     <Heading as="h3" variant="section-title">
                         non-academic interests
@@ -56,12 +56,11 @@ const AboutMe = () => (
                         <ListItem>Writing</ListItem>
                         <ListItem>Anything outdoorsy!</ListItem>
                     </UnorderedList>
-              
                 </Paragraph>
             </Section>
-
         </Container>
     </Layout>
-)
+
+) 
 
 export default AboutMe

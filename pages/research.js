@@ -4,7 +4,10 @@ import Section from '../components/section'
 
 import Paragraph from '../components/paragraph'
 
-//ToDo: Finish editing these into displaying top projects. Possible custom API to pull info
+/**
+ * Main page where a user cna find information about research I have done. 
+ * @returns a page displaying ifnormation about works (mainly research)
+ */
 const Works = () => (
     <Layout title="Works">
         <Container>

@@ -3,12 +3,13 @@ import Layout from '../components/layouts/article'
 import Section from '../components/section'
 import { WorkGridItem } from '../components/grid-item'
 
-//import placeholderImg from '../public/images/works/placeholder.png'
 import kayakImg from '../public/images/works/kayak.png'
 import courseraImg from '../public/images/works/coursera.png'
 
-
-//ToDo: Finish editing these into displaying top projects. Possible custom API to pull info
+/**
+ * Page where users can find information about personal projects I have done. 
+ * @returns a page showing links to personal projects I have done
+ */
 const Works = () => (
     <Layout title="Projects">
         <Container>
@@ -34,10 +35,7 @@ const Works = () => (
                         An analysis of the level of adherence to usability principles of the Coursera Discussion Forum using heuristic evaluation. 
                     </WorkGridItem>
                 </Section>
-               
             </SimpleGrid>
-
-           
         </Container>
     </Layout>
 )

@@ -18,6 +18,10 @@ import { HamburgerIcon } from '@chakra-ui/icons'
 import { IoLogoGithub, IoLogoLinkedin} from "react-icons/io5";
 import ThemeToggleButton from './theme-toggle-button';
 
+/**
+ * Static navigation bar at the top of the website that lets the user navigate to a variety of bits of information about me
+ * @returns the navigation bar to be displayed at the top of the page 
+ */
 const LinkItem = ({ href, path, _target, children, ...props }) => {
     const active = path === href
     const inactiveColour = useColorModeValue('gray200', 'whiteAlpha.900')
@@ -159,7 +163,6 @@ const Navbar = props => {
                 <MenuItem as={Link} href="https://www.linkedin.com/in/omark807" target="_blank">
                   LinkedIn
                 </MenuItem>
-
               </MenuList>
             </Menu>
           </Box>

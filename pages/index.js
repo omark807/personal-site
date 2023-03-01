@@ -11,12 +11,14 @@ import Layout from '../components/layouts/article'
 import { BioSection, BioYear } from '../components/bio'
 import { ChevronRightIcon } from '@chakra-ui/icons'
 
+/**
+ * The main landing page for the website, containing a short intro and some quick bits about my interests. 
+ * @returns the home page for the website
+ */
 const Page = () => {
     return(
         <Layout>
             <Container>
-        
-                
                 <Box display={{md:'flex'}}>
                     <Box flexGrow={1}>
                         <Heading as="h2" variant="page-title">
@@ -26,9 +28,6 @@ const Page = () => {
                         
                     </Box>
                 </Box>
-                {/* <Box boxSize='sm'>
-                    <Img src='pages/bunny.jpeg' alt='Omar Khan' />
-                </Box> */}
                 <br/>
                 <Section delay={0.1}>
                     <Heading as="h3" variant="section-title">
@@ -38,14 +37,6 @@ const Page = () => {
                         Urbana-Champaign (UIUC). <b>I am actively seeking research, product and/or program manager, and 
                         software engineering internships for summer 2023! </b> 
                     </Paragraph>
-                    {/* I am currently applying to Ph.D. programs in Computer Science, hoping to focus on user inteface design
-                        that addresses accessibility, particularly for those with disabilities (especially visual impairments), as well as affective 
-                        computing, wanting to understand the emotions that are generated as a result of inadequate interface design through technologies 
-                        such as virtual agents.  */}
-                    {/* <Paragraph> I am also interested in any front-end development opportunities to continue furthering my knowledge in such technologies 
-                        (especially React, React Native, Typescript, Javascript, Next.js, etc.), as well as research engineering and assistant positions where I can hone my 
-                        skills as a researcher. 
-                    </Paragraph> */}
                     <Box align="center" my={4}>
                         <NextLink href="/research">
                             <Button righticon={<ChevronRightIcon/>} color="purple">
@@ -54,7 +45,6 @@ const Page = () => {
                         </NextLink>
                     </Box>
                 </Section>
-
                 <Section delay={0.2}>
                     <Heading as="h3" variant="section-title">
                         current research interests
@@ -75,25 +65,19 @@ const Page = () => {
                         underrepresented groups face in user interface accessibility, and how the integration of technologies 
                         such as virtual agents can aid in making these experiences more comfortable
                     </BioSection>
-
                 </Section>  
                 <Section delay={0.2}>
                     <Heading as="h3" variant="section-title">
                         other academic interests
                     </Heading>
-                    
                     <BioSection>
                         <BioYear>Tech law and policy</BioYear>
                         Examining past, present, and future tech/Internet laws and policies across the world and 
                         identifying how/why they are shaped the way they are
-
                     </BioSection>
-
                 </Section>                
-               
             </Container>
         </Layout>
     )
 }
-
 export default Page

@@ -50,7 +50,7 @@ const Page = () => {
                         current research interests
                     </Heading>
                     <BioSection>
-                        <BioYear>Human-centered AI (especially for accessibilit)y</BioYear>
+                        <BioYear>Human-centered AI (especially for accessibility)</BioYear>
                         Designing machine learning (ML) powered user experiences that are accessible and evaluating those that are not; understanding how users feel 
                         about artificial intelligence (AI) and designing systems that interact more naturally with users
                     </BioSection>

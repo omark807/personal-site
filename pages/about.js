@@ -26,15 +26,14 @@ const AboutMe = () => (
 
                     <Paragraph> 
                         <Paragraph>While these interests definitely remain intact, through research experiences in each of my departments, my interests have shifted towards about human-computer interaction at large. Specifically, I care a lot 
-                        about discovering what elements of the design process can be tweaked to make considering accessibility less of an afterthought, as well as how we can improve systems to be more mindful for security/privacy concerns for those that are disabled. 
+                        about how we can create human-centered AI experiences that promote accessibility, how users feel about these experiences, and how we can improve systems to be more mindful for security/privacy concerns for those from historically underrepresented populations. 
                         The latter is a newer interest of mine that I am beginning to explore through my graduate studies. 
                     </Paragraph>
 
                     <br></br>
 
                     <Paragraph>
-                        Upon completing my education, I hope to go into industry as either a UX researcher, uncovering the many ways in which humans interact with systems through qualitiative and/or mixed-methods research, or a product manager where I would have the opportunity 
-                        to directly influence product strategy in hopes of creating products that are mindful of the differences each of us have. 
+                        Upon completing my education, I hope to go into industry as a researcher, investgating the many ways in which humans interact with systems through mixed-methods research. 
                     </Paragraph>
 
                     </Paragraph>

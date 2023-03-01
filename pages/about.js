@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import { Container, Heading, Link,  ListItem, UnorderedList} from '@chakra-ui/react'
+=======
+import { Container, Heading,  ListItem,  UnorderedList} from '@chakra-ui/react'
+>>>>>>> 37ac337 (More clean up, mainly older code blocks)
 import Layout from '../components/layouts/article'
 import Paragraph from '../components/paragraph'
 import Section from '../components/section'

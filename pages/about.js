@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 import { Container, Heading, Link,  ListItem, UnorderedList} from '@chakra-ui/react'
-=======
-import { Container, Heading,  ListItem,  UnorderedList} from '@chakra-ui/react'
->>>>>>> 37ac337 (More clean up, mainly older code blocks)
 import Layout from '../components/layouts/article'
 import Paragraph from '../components/paragraph'
 import Section from '../components/section'
@@ -23,21 +19,15 @@ const AboutMe = () => (
                     <Paragraph>I graduated from the University of Illinois Urbana-Champaign (UIUC) with a Bachelor of Science in <Link href='https://cs.illinois.edu/academics/undergraduate/degree-program-options/cs-x-degree-programs/computer-science-crop-sciences' target='_blank'> Computer Science 
                         + Crop Sciences</Link>, an interdisciplinary program that brings the strengths of the <Link href='https://cs.illinois.edu/' target='_blank'> Department of Computer Science </Link> and the
                         <Link href='https://cropsciences.illinois.edu/' target='_blank'> Department of Crop Sciences</Link> at UIUC. My drive to pursue this intersection began with my interests in computing and 
-                        sustainability, wanting to create technological solutions to the world&apos;s most prominent issues that are cognizant of the environment. 
+                        sustainability, wanting to create more environmentally conscious technological solutions to the world&apos;s most complex issues. 
                     </Paragraph>
 
                     <br></br>
 
                     <Paragraph> 
-                        <Paragraph>While these interests definitely remain intact, through research experiences in each of my departments, my interests have shifted towards about human-computer interaction at large. Specifically, I care a lot 
-                        about how we can create human-centered AI experiences that promote accessibility, how users feel about these experiences, and how we can improve systems to be more mindful for security/privacy concerns for those from historically underrepresented populations. 
-                        The latter is a newer interest of mine that I am beginning to explore through my graduate studies. 
-                    </Paragraph>
-
-                    <br></br>
-
-                    <Paragraph>
-                        Upon completing my education, I hope to go into industry as a researcher, investgating the many ways in which humans interact with systems through mixed-methods research. 
+                        <Paragraph>While these interests definitely remain intact, through research experiences in each of my departments, my interests have shifted broadly towards human-computer interaction (HCI). Specifically, I frequently question 
+                        the extent to which current technological paradigms promote accessibility, whether these experiences <i>also</i> consider security/privacy, and how users feel about these experiences. I am also interested in ways that security and privacy 
+                        topics are portrayed in popular media and the impact these depictions on yougner audiences (kids and teens).
                     </Paragraph>
 
                     </Paragraph>
@@ -52,10 +42,11 @@ const AboutMe = () => (
                     Some other things I enjoy...
                     <UnorderedList>
                         <ListItem>Fitness</ListItem>
+                        <ListItem>Coffee</ListItem>
                         <ListItem>Reading (current read is <Link href='https://www.goodreads.com/en/book/show/56238004-the-good-lie' target='_blank'> 
                         <i>The Good Lie </i></Link> by A.R. Torre; recently read <Link href='https://www.goodreads.com/en/book/show/52149789-the-best-of-friends' target='_blank'> 
                         <i>The Best of Friends </i></Link> by Lucinda Berry)</ListItem>
-                        <ListItem>Cooking (esepcially breakfast foods -- check back for pictures soon!)</ListItem>
+                        <ListItem>Cooking</ListItem>
                         <ListItem>Writing</ListItem>
                         <ListItem>Anything outdoorsy!</ListItem>
                     </UnorderedList>

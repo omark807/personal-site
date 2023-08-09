@@ -92,11 +92,11 @@ const Navbar = props => {
                         Projects
                     </LinkItem>
 
-                    <LinkItem href='https://drive.google.com/file/d/1RuaDwBOhpBM4vJ3yjKWRj8G2G6hSIfce/view?usp=share_link' target='_blank' path={path}>
+                    <LinkItem href='https://drive.google.com/file/d/1cAUcYLSET9oTVi57cWeootpquQ7zJqYj/view?usp=sharing' target='_blank' path={path}>
                         {/* <IoBookOutline/> */}
                         CV
                     </LinkItem>
-                    <LinkItem href='https://drive.google.com/file/d/1f9CiVmxOIZTIIHkAsn3Br6y8xtyMupy3/view?usp=share_link' target='_blank' path={path}>
+                    <LinkItem href='https://drive.google.com/file/d/1SLNPY8m6YRH22bDSagzfqtUcuEt29Mim/view?usp=sharing' target='_blank' path={path}>
                         {/* <IoBookOutline/> */}
                         Resumé
                         
@@ -150,10 +150,10 @@ const Navbar = props => {
                 <NextLink href="/projects" passHref>
                   <MenuItem as={Link}>Projects</MenuItem>
                 </NextLink>
-                <NextLink href="https://drive.google.com/file/d/1RuaDwBOhpBM4vJ3yjKWRj8G2G6hSIfce/view?usp=share_link" target="_blank" path={path} passHref>
+                <NextLink href="https://drive.google.com/file/d/1cAUcYLSET9oTVi57cWeootpquQ7zJqYj/view?usp=sharing" target="_blank" path={path} passHref>
                   <MenuItem as={Link}>CV</MenuItem>
                 </NextLink>
-                <NextLink href="https://drive.google.com/file/d/1f9CiVmxOIZTIIHkAsn3Br6y8xtyMupy3/view?usp=share_link" target="_blank" path={path} passHref>
+                <NextLink href="https://drive.google.com/file/d/1SLNPY8m6YRH22bDSagzfqtUcuEt29Mim/view?usp=sharing" target="_blank" path={path} passHref>
                   <MenuItem as={Link}>Resumé</MenuItem>
                 </NextLink>
                 <MenuItem as={Link} href="https://github.com/omark807" target="_blank">

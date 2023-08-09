@@ -33,9 +33,12 @@ const Page = () => {
                     <Heading as="h3" variant="section-title">
                         hello!
                     </Heading>
-                    <Paragraph>I am a graduate student studying Computer Science at the University of Illinois
-                        Urbana-Champaign (UIUC). <b>I am actively seeking research, product and/or program manager, and 
-                        software engineering internships for summer 2023! </b> 
+                    <Paragraph>I am a second-year PhD student studying Computer Science at the University of Illinois
+                        Urbana-Champaign (UIUC) advised by <Link href='https://camillec.com/' target='_blank'>Dr. Camille Cobb</Link>. My interests lie broadly in human-computer interaction (HCI), 
+                        and I am especially interested in accessibility and usable seucirty and privacy. <b>I am actively seeking internships for summer 2024!</b>
+                        
+                        {/* <b>I am actively seeking research scientist, UX research and 
+                        data scientist intern opportunities for summer 2024! I am also open to software engineering internships! </b>  */}
                     </Paragraph>
                     <Box align="center" my={4}>
                         <NextLink href="/research">
@@ -50,30 +53,35 @@ const Page = () => {
                         current research interests
                     </Heading>
                     <BioSection>
-                        <BioYear>Human-centered AI (especially for accessibility)</BioYear>
-                        Designing machine learning (ML) powered user experiences that are accessible and evaluating those that are not; understanding how users feel 
-                        about artificial intelligence (AI) and designing systems that interact more naturally with users
+                        <BioYear>accessibility/assistive technologies</BioYear>
+                        Investigating the ease of use of existing digital platforms for those with disabilities
                     </BioSection>
                     <BioSection>
-                        <BioYear>Usable security and privacy</BioYear>
+                        <BioYear>usable security and privacy</BioYear>
                         Examining human factors in security/privacy and including those from historically underrepresented populations in 
-                        conversations regarding security/privacy design
+                        conversations regarding security/privacy design; considering how security and privacy-related topics are conveyed to 
+                        these groups 
                     </BioSection>
-                    <BioSection>
-                        <BioYear>Affective computing</BioYear>
-                        Understanding the underlying emotions that those with disabilities and other historically 
-                        underrepresented groups face in interface accessibility, and how the integration of technologies 
-                        such as virtual agents can aid in making these experiences more comfortable
-                    </BioSection>
+                  
                 </Section>  
                 <Section delay={0.2}>
                     <Heading as="h3" variant="section-title">
                         other academic interests
                     </Heading>
                     <BioSection>
-                        <BioYear>Tech law and policy</BioYear>
+                        <BioYear>tech law and policy</BioYear>
                         Examining past, present, and future tech/Internet laws and policies across the world and 
                         identifying how/why they are shaped the way they are
+                    </BioSection>
+                    <BioSection>
+                        <BioYear>affective computing</BioYear>
+                        Understanding the underlying emotions that those with disabilities and other historically 
+                        underrepresented groups face in navigating the digital world
+                    </BioSection>
+                    <BioSection>
+                        <BioYear>human-centered AI</BioYear>
+                        Designing machine learning (ML) powered user experiences that are accessible and evaluating those that are not; understanding how users feel 
+                        about artificial intelligence (AI) and designing systems that interact more naturally with users
                     </BioSection>
                 </Section>                
             </Container>

@@ -33,7 +33,7 @@ const Page = () => {
                     </Heading>
                     <Paragraph>I am a second-year PhD student studying Computer Science at the University of Illinois
                         Urbana-Champaign (UIUC) advised by <Link href='https://camillec.com/' target='_blank'>Dr. Camille Cobb</Link>. My interests lie broadly in human-computer interaction (HCI), 
-                        and I am especially interested in accessibility and usable seucirty and privacy. <b>I am actively seeking internships for summer 2024!</b>
+                        and I am especially interested in accessibility and usable security and privacy. <b>I am actively seeking internships for summer 2024!</b>
                         
                         {/* <b>I am actively seeking research scientist, UX research and 
                         data scientist intern opportunities for summer 2024! I am also open to software engineering internships! </b>  */}

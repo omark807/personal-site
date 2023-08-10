@@ -9,9 +9,9 @@ import Section from '../components/section'
 const AboutMe = () => (
     <Layout title="More about me! ">
         <Container>
-            <Heading as="h3" fontsize={20} mb={4}>
+            {/* <Heading as="h3" fontsize={20} mb={4}>
                 About Me
-            </Heading>
+            </Heading> */}
             <Section delay={0.1}>
                     <Heading as="h3" variant="section-title">
                         who am i?

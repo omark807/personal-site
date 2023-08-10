@@ -1,16 +1,13 @@
-import NextLink from 'next/link'
 import {
     Container,
     Heading,
     Link,
-    Box,
-    Button
+    Box
 } from '@chakra-ui/react'
 import Section from '../components/section'
 import Paragraph from '../components/paragraph'
 import Layout from '../components/layouts/article'
 import { BioSection, BioYear } from '../components/bio'
-import { ChevronRightIcon } from '@chakra-ui/icons'
 
 /**
  * The main landing page for the website, containing a short intro and some quick bits about my interests. 

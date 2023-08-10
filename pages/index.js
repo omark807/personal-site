@@ -41,13 +41,13 @@ const Page = () => {
                         {/* <b>I am actively seeking research scientist, UX research and 
                         data scientist intern opportunities for summer 2024! I am also open to software engineering internships! </b>  */}
                     </Paragraph>
-                    <Box align="center" my={4}>
+                    {/* <Box align="center" my={4}>
                         <NextLink href="/research">
                             <Button righticon={<ChevronRightIcon/>} color="purple">
                                 Research
                             </Button>
                         </NextLink>
-                    </Box>
+                    </Box> */}
                 </Section>
                 <Section delay={0.2}>
                     <Heading as="h3" variant="section-title">

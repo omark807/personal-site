@@ -80,25 +80,25 @@ const Navbar = props => {
                         href="/about"  
                         path={path}>
                         {/* <IoPersonRemoveOutline/> */}
-                        About Me
+                        about me
                     </LinkItem>
 
                     <LinkItem href="/research" path={path}>
-                        Research
+                        research
                     </LinkItem>
 
                     <LinkItem href="/projects" path={path}>
                         {/* </IoBookOutline> */}
-                        Projects
+                        projects
                     </LinkItem>
 
                     <LinkItem href='https://drive.google.com/file/d/1cAUcYLSET9oTVi57cWeootpquQ7zJqYj/view?usp=sharing' target='_blank' path={path}>
                         {/* <IoBookOutline/> */}
-                        CV
+                        cv
                     </LinkItem>
                     <LinkItem href='https://drive.google.com/file/d/1SLNPY8m6YRH22bDSagzfqtUcuEt29Mim/view?usp=sharing' target='_blank' path={path}>
                         {/* <IoBookOutline/> */}
-                        Resumé
+                        resumé
                         
                     </LinkItem>
 
@@ -112,7 +112,7 @@ const Navbar = props => {
                         pl={2}
                     >
                         <IoLogoGithub/>
-                        GitHub
+                        github
                     </LinkItem>
                   
                     <LinkItem 
@@ -125,7 +125,7 @@ const Navbar = props => {
                         pl={2}
                     >
                         <IoLogoLinkedin/>
-                        LinkedIn
+                        linkedIn
                     </LinkItem>
                 </Stack>
 
@@ -142,25 +142,25 @@ const Navbar = props => {
               />
               <MenuList>
                 <NextLink href="/about" passHref>
-                  <MenuItem as={Link}>About Me</MenuItem>
+                  <MenuItem as={Link}>about me</MenuItem>
                 </NextLink>
                 <NextLink href="/research" passHref>
-                  <MenuItem as={Link}>Research</MenuItem>
+                  <MenuItem as={Link}>research</MenuItem>
                 </NextLink>
                 <NextLink href="/projects" passHref>
-                  <MenuItem as={Link}>Projects</MenuItem>
+                  <MenuItem as={Link}>projects</MenuItem>
                 </NextLink>
                 <NextLink href="https://drive.google.com/file/d/1cAUcYLSET9oTVi57cWeootpquQ7zJqYj/view?usp=sharing" target="_blank" path={path} passHref>
-                  <MenuItem as={Link}>CV</MenuItem>
+                  <MenuItem as={Link}>cv</MenuItem>
                 </NextLink>
                 <NextLink href="https://drive.google.com/file/d/1SLNPY8m6YRH22bDSagzfqtUcuEt29Mim/view?usp=sharing" target="_blank" path={path} passHref>
-                  <MenuItem as={Link}>Resumé</MenuItem>
+                  <MenuItem as={Link}>resumé</MenuItem>
                 </NextLink>
                 <MenuItem as={Link} href="https://github.com/omark807" target="_blank">
-                  GitHub
+                  github
                 </MenuItem>
                 <MenuItem as={Link} href="https://www.linkedin.com/in/omark807" target="_blank">
-                  LinkedIn
+                  linkedIn
                 </MenuItem>
               </MenuList>
             </Menu>

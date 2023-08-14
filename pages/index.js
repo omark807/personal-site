@@ -1,7 +1,7 @@
 import {
     Container,
     Heading,
-    Image,
+    //Image,
     Link,
     Box
 } from '@chakra-ui/react'

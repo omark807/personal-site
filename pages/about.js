@@ -25,8 +25,8 @@ const AboutMe = () => (
                     <br></br>
 
                     <Paragraph> 
-                        <Paragraph>While these interests definitely remain intact, through research experiences in each of my departments, my interests have shifted broadly towards human-computer interaction (HCI). Specifically, I frequently question 
-                        the extent to which current technological paradigms promote accessibility, whether these experiences <i>also</i> consider security/privacy, and how users feel about these experiences. I am also interested in ways that security and privacy 
+                        <Paragraph>While these interests definitely remain intact, through research experiences in each of my departments, as well as my lived experiences as an individual with a visual impairment, my interests have shifted broadly towards human-computer interaction (HCI).
+                        Specifically, I frequently question the extent to which current technological paradigms promote accessibility, whether these experiences <i>also</i> consider security/privacy, and how users feel about these experiences. I am also interested in ways that security and privacy 
                         topics are portrayed in popular media and the impact these depictions on yougner audiences (kids and teens).
                     </Paragraph>
 

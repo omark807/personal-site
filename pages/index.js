@@ -1,6 +1,7 @@
 import {
     Container,
     Heading,
+    Image,
     Link,
     Box
 } from '@chakra-ui/react'
@@ -38,6 +39,14 @@ const Page = () => {
                         {/* <b>I am actively seeking research scientist, UX research and 
                         data scientist intern opportunities for summer 2024! I am also open to software engineering internships! </b>  */}
                     </Paragraph>
+                    {/* <Box>
+                    <Image
+                        // borderRadius='full'
+                        boxSize='150px'
+                        src='/Users/mkhan259/Documents/personal-site/pages/profpic.JPG'
+                        alt='Omar Khan'
+                    />
+                    </Box> */}
                     {/* <Box align="center" my={4}>
                         <NextLink href="/research">
                             <Button righticon={<ChevronRightIcon/>} color="purple">

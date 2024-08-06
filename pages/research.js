@@ -22,14 +22,14 @@ const Works = () => (
                     Conference and Journal Publications
                 </Heading> 
                 <Paragraph>
-                    <b>[C1]</b> Chiang, Y.S, <Text fontWeight='bold'>Khan, O.</Text>, Bates, A., and Cobb, C. (2024). <Text fontWeight='italic'>More than just informed: The importance of consent facets in smart homes.</Text> In
+                    <b>[C1]</b> Chiang, Y.S, <Text fontWeight='underline'>Khan, O.</Text>, Bates, A., and Cobb, C. (2024). <Text fontWeight='italic'>More than just informed: The importance of consent facets in smart homes.</Text> In
                     Proceedings of the CHI Conference on Human Factors in Computing Systems (CHI ’24), May 11–16, 2024, Honolulu, HI, USA. ACM, New
                     York, NY, USA, 21 pages
                     <Link target="_blank" href='https://dl.acm.org/doi/10.1145/3613904.3642288'> [Link]</Link> 
                 </Paragraph>
                 <Divider my={3} />
                 <Paragraph>
-                    <b>[C2]</b> Mahmood, S., Zhao, M., <Text fontWeight='bold'>Khan, O.</Text>, Herman, G.L. (2020). <Text fontWeight='italic'>Caches as an Example of 
+                    <b>[C2]</b> Mahmood, S., Zhao, M., <Text fontWeight='underline'>Khan, O.</Text>, Herman, G.L. (2020). <Text fontWeight='italic'>Caches as an Example of 
                     Machine-gradable Exam Questions for Complex Engineering Systems. </Text> In Proceedings 
                     of the 49th ASEE/IEEE Frontiers in Education Conference, Uppsala, Sweden, Oct. 21-24.
                     <Link target="_blank" href='https://doi.org/10.1109/FIE44824.2020.9273822'> [Link]</Link> 
@@ -44,7 +44,7 @@ const Works = () => (
                     Posters and Presentations
                 </Heading>
                 <Paragraph>
-                    <b>[P1]</b> Deep, H., Huang, J., Dembi, R., <Text fontWeight='bold'>Khan, O.</Text>., Angrave, L.. <Text fontWeight='italic'>Webcam Eye-Tracking Based Accessibility for ClassTranscribe. </Text>
+                    <b>[P1]</b> Deep, H., Huang, J., Dembi, R., <Text fontWeight='underline'>Khan, O.</Text>., Angrave, L.. <Text fontWeight='italic'>Webcam Eye-Tracking Based Accessibility for ClassTranscribe. </Text>
                     Virtual poster presentation: Illinois Undergraduate Research Symposium 2021
                 </Paragraph> 
             </Section>

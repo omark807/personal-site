@@ -19,7 +19,7 @@ const Works = () => (
             <Section delay={0.2}>
                 <Divider my={6} />
                 <Heading as="h3" fontSize={20} mb={4}>
-                    Publications
+                    Conference and Journal Publications
                 </Heading> 
                 <Paragraph>
                     <b>[C1]</b> Chiang, Y.S, Khan, O., Bates, A., and Cobb, C. (2024). More than just informed: The importance of consent facets in smart homes. In
@@ -41,7 +41,7 @@ const Works = () => (
             <Section delay={0.2}>
                 <Divider my={6} />
                 <Heading as="h3" fontSize={20} mb={4}>
-                    Presentations
+                    Posters and Presentations
                 </Heading>
                 <Paragraph>
                     <b>[P1]</b> Deep, H., Huang, J., Dembi, R., Khan, O., Angrave, L.. <Text fontWeight='bold'>Webcam Eye-Tracking Based Accessibility for ClassTranscribe. </Text>

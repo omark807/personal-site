@@ -61,11 +61,12 @@ const Page = () => {
                     </Heading>
                     <BioSection>
                         <BioYear>accessibility/assistive technologies</BioYear>
-                        Investigating the ease of use of existing digital platforms for those with disabilities
+                        Investigating the ease of use of existing digital platforms for those with disabilities, 
+                        particularly the blind and low-vision (BLV) community 
                     </BioSection>
                     <BioSection>
                         <BioYear>mental health and well-being technologies</BioYear>
-                        Exploring the rapid popularity of digital mental health (DMH) tracking services and their lack of 
+                        Exploring the rapid growth and development of digital mental health (DMH) tracking services and their lack of 
                         consideration for the broader disability community 
                     </BioSection>
 

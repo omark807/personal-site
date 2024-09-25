@@ -1,5 +1,4 @@
 import { Box, LinkBox, LinkOverlay, Image, Text } from '@chakra-ui/react';
-import NextLink from 'next/link';
 
 export const WorkGridItem = ({ children, id, title, thumbnail }) => (
   <Box w="100%" textAlign="center">

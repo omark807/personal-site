@@ -1,25 +1,21 @@
 import Head from 'next/head'
-import Navbar from '../navbar'
+import Navbar from '../navbar.js'
 import { Box, Container } from '@chakra-ui/react'
-// import Footer from '../footer'
+import Snowfall from '../snowfall.js'  // Changed 'Snowfall.js' to 'snowfall.js'
 
 const Main = ({ children, router }) => {
     return (
         <Box as="main" pb={8}>
             <Head>
-                <meta name="viewport" content="width=device-width, initial-scale=1"/>
-                <meta name="description" content="Omar's homepage" />
-                <meta name="author" content="Omar" />
-                <meta property="og:site_name" content="Omar's homepage" />
-                <meta property="og:type" content="website" />
-                <title>Hi, I&apos;m Omar!</title>
+                <meta name="viewport" content="width=device-width, initial-scale=1" />
+                <title>Omar Khan - Homepage</title>
             </Head>
 
-            <Navbar path={router.asPath}/>
+            <Navbar path={router.asPath} />
 
             <Container maxW="container.md" pt={14}>
-                { children }
-            {/* <Footer/> */}
+                <Snowfall />  {/* Add this line */}
+                {children}
             </Container>
         </Box>
     )

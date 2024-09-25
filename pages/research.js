@@ -14,7 +14,7 @@ const Works = () => (
             <Heading as="h3" fontsize={20} mb={4}>
                 Research
             </Heading>
-            Here, you can find more information on any publications and presentations I&apos;ve participatrd in. 
+            Research is nothing if not for your collaborators, and I have had the tremendous opportunity to work with many amazing ones throughout my life. Here, you can find more information on publications and presentations I&apos;ve worked on with these folks. 
 
             <Section delay={0.2}>
                 <Divider my={6} />

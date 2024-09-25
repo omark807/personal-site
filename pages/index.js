@@ -32,8 +32,8 @@ const Page = () => {
                     <Heading as="h3" variant="section-title">
                         hello!
                     </Heading>
-                    <Paragraph>I am a third-year PhD student studying Computer Science at the University of Illinois
-                        Urbana-Champaign (UIUC) advised by <Link href='https://jooyoungseo.github.io/' target='_blank'>Dr. JooYoung Seo</Link> in the <Link href='https://xabilitylab.ischool.illinois.edu/' target='_blank'>(x)Ability Design Lab</Link>. My interests lie broadly in human-computer interaction (HCI), 
+                    <Paragraph>I am a third-year PhD student studying Computer Science at the <Link href='https://illinois.edu/' target='_blank'>University of Illinois
+                        Urbana-Champaign (UIUC)</Link> advised by <Link href='https://jooyoungseo.github.io/' target='_blank'>Dr. JooYoung Seo</Link> in the <Link href='https://xabilitylab.ischool.illinois.edu/' target='_blank'>(x)Ability Design Lab</Link>. My interests lie broadly in human-computer interaction (HCI), 
                         and I am especially interested in the intersection of accessibility and mental health, and how we can create inclusive digital mental health services that responsibly make use of emerging technologies. <b>I am actively seeking internships for summer 2025!</b>
                     </Paragraph>
                     

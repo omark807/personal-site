@@ -1,4 +1,3 @@
-import { AnimatePresence, motion } from "framer-motion";
 import {
   IconButton,
   useColorMode,
@@ -11,11 +10,12 @@ import {
   HStack,
   Text,
   Button,
+  Switch,
 } from '@chakra-ui/react'
 import { SunIcon, MoonIcon, SettingsIcon } from "@chakra-ui/icons"
 import { useState } from 'react'
 
-const ThemeToggleButton = () => {
+const ThemeToggleButton = ({ toggleSnow, isSnowEnabled }) => {
     const { colorMode, toggleColorMode } = useColorMode()
     const [fontSize, setFontSize] = useState('md')
 
@@ -62,6 +62,10 @@ const ThemeToggleButton = () => {
                                     </Button>
                                 ))}
                             </HStack>
+                        </HStack>
+                        <HStack justify="space-between">
+                            <Text>Snow:</Text>
+                            <Switch isChecked={isSnowEnabled} onChange={toggleSnow} />
                         </HStack>
                     </VStack>
                 </PopoverBody>

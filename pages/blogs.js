@@ -1,40 +1,34 @@
 import React from 'react';
 import Head from 'next/head';
-import Link from 'next/link';
+import { Box, Container, Heading, Text, VStack, SimpleGrid, Badge } from '@chakra-ui/react';
 
 const BlogsPage = () => {
-  // This would typically come from an API or database
-  const upcomingBlogs = [
-    { id: 1, title: "The Future of AI", date: "2023-06-01" },
-    { id: 2, title: "Web Development Trends in 2023", date: "2023-06-15" },
-    { id: 3, title: "Introduction to Next.js", date: "2023-07-01" },
-    { id: 4, title: "Mastering React Hooks", date: "2023-07-15" },
-  ];
-
   return (
-    <div className="container mx-auto px-4">
+    <Container maxW="container.xl">
       <Head>
-        <title>Our Blog</title>
-        <meta name="description" content="Check out our upcoming blog posts" />
+        <title>my blogs</title>
+        <meta name="description" content="some thoughts I have about things" />
       </Head>
 
-      <main className="py-8">
-        <h1 className="text-3xl font-bold mb-6">Our Blog</h1>
-        <p className="mb-6">Welcome to our blog! Here are some upcoming posts:</p>
+      <Box as="main" py={8}>
+        <Heading as="h1" size="2xl" mb={6}>my blog</Heading>
+        <Text fontSize="lg" mb={6}>I think sometimes -- read those thoughts below.</Text>
 
-        <ul className="space-y-4">
-          {upcomingBlogs.map((blog) => (
-            <li key={blog.id} className="border p-4 rounded-lg">
-              <h2 className="text-xl font-semibold">{blog.title}</h2>
-              <p className="text-gray-600">Coming on: {blog.date}</p>
-              <Link href={`/blog/${blog.id}`} className="text-blue-500 hover:underline">
-                Read more (coming soon)
-              </Link>
-            </li>
+        <SimpleGrid columns={{ base: 1, md: 2 }} spacing={6}>
+          {[1, 2].map((index) => (
+            <Box key={index} borderWidth={1} borderRadius="lg" p={6} bg="gray.50">
+              <VStack align="start" spacing={3}>
+                <Heading as="h2" size="lg">Coming Soon</Heading>
+                <Badge colorScheme="blue">TBD</Badge>
+                <Text color="gray.500" fontStyle="italic">
+                  Stay tuned!
+                </Text>
+              </VStack>
+            </Box>
           ))}
-        </ul>
-      </main>
-    </div>
+        </SimpleGrid>
+      </Box>
+    </Container>
   );
 };
 

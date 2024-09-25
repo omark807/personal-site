@@ -14,7 +14,7 @@ const AboutMe = () => (
             </Heading> */}
             <Section delay={0.1}>
                     <Heading as="h3" variant="section-title">
-                        who am i?
+                        hi there!
                     </Heading>
                     <Paragraph>I graduated from the University of Illinois Urbana-Champaign (UIUC) with a Bachelor of Science in <Link href='https://cs.illinois.edu/academics/undergraduate/degree-program-options/cs-x-degree-programs/computer-science-crop-sciences' target='_blank'> Computer Science 
                         + Crop Sciences</Link>, an interdisciplinary program that brings the strengths of the <Link href='https://cs.illinois.edu/' target='_blank'> Department of Computer Science </Link> and the
@@ -25,11 +25,27 @@ const AboutMe = () => (
                     <br></br>
 
                     <Paragraph> 
-                        <Paragraph>While these interests definitely remain intact, through research experiences in each of my departments, as well as my lived experiences as an individual with a visual impairment, my interests have shifted broadly towards human-computer interaction (HCI).
-                        Specifically, I frequently question the extent to which current technological paradigms promote accessibility, whether these experiences <i>also</i> consider security/privacy, and how users feel about these experiences. I am also interested in ways that security and privacy 
-                        topics are portrayed in popular media and the impact these depictions on yougner audiences (kids and teens).
+                            While these interests still exist, research experiences throughout my undergraduate studies accompanied with my positionality gradually shifted my interests towards human-computer interaction (HCI).
+                            I became increasingly excited in the ways in which humans and technology co-exist and interact with each other, and fast-forward to today, I find myself often lost in thought about humanity's boundless potential
+                            to craft positively impactful digital experiences.  
                     </Paragraph>
 
+                    <br></br>
+
+                    <Paragraph>And there's so many ways this has akready been done, and continues to be done as you read this/as we speak/as we exist! 
+                            As for what I find especially interesting, I find myself thinking a <i>lot</i> about gaps in mental health access and support throughout the world, 
+                            specifically for underrepresented communities. While technology rapidly evovles to offer new strategies to manage our health's multi-faceted nature, 
+                            recurring setbacks remain in <b>accessibility</b> and <b>inclusivity</b>. My research investigates and aims to address these gaps by: 
+                    </Paragraph>
+
+                    <br></br>
+
+                    <Paragraph>
+                        <UnorderedList>
+                                <ListItem><b>Collaborating</b> with community stakeholders to gather firsthand, lived experiences</ListItem>
+                                <ListItem><b>Co-designing</b> novel interaction possibilities</ListItem>
+                                <ListItem><b>Crafting</b> systems that positively enhance their users' lives, iteratively making adjustments and improvements</ListItem>
+                        </UnorderedList>
                     </Paragraph>
              
             </Section>
@@ -42,13 +58,14 @@ const AboutMe = () => (
                     Some other things I enjoy...
                     <UnorderedList>
                         <ListItem>Fitness</ListItem>
+                        <ListItem>Cat parenting</ListItem>
                         <ListItem>Coffee</ListItem>
-                        <ListItem>Reading (current read is <Link href='https://www.goodreads.com/en/book/show/56238004-the-good-lie' target='_blank'> 
-                        <i>The Good Lie </i></Link> by A.R. Torre; recently read <Link href='https://www.goodreads.com/en/book/show/52149789-the-best-of-friends' target='_blank'> 
-                        <i>The Best of Friends </i></Link> by Lucinda Berry)</ListItem>
+                        <ListItem>Reading (my <Link href='https://www.goodreads.com/user/show/143290931-omar-khan' target='_blank'> 
+                            GoodReads profile</Link> for past and current reads)</ListItem>
                         <ListItem>Cooking</ListItem>
-                        <ListItem>Writing</ListItem>
-                        <ListItem>Anything outdoorsy!</ListItem>
+                        <ListItem>Writing (conveying my love of parenthical afterthoughts)</ListItem>
+                        <ListItem>Gaming (especially Nintendo games)</ListItem>
+                        <ListItem>Anything outdoors!</ListItem>
                     </UnorderedList>
                 </Paragraph>
             </Section>

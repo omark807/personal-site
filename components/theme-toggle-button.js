@@ -1,30 +1,72 @@
 import { AnimatePresence, motion } from "framer-motion";
-import { IconButton, useColorMode, useColorModeValue } from '@chakra-ui/react'
-import { SunIcon, MoonIcon } from "@chakra-ui/icons"
+import {
+  IconButton,
+  useColorMode,
+  useColorModeValue,
+  Popover,
+  PopoverTrigger,
+  PopoverContent,
+  PopoverBody,
+  VStack,
+  HStack,
+  Text,
+  Button,
+} from '@chakra-ui/react'
+import { SunIcon, MoonIcon, SettingsIcon } from "@chakra-ui/icons"
+import { useState } from 'react'
 
 const ThemeToggleButton = () => {
-    const { toggleColorMode } = useColorMode()
+    const { colorMode, toggleColorMode } = useColorMode()
+    const [fontSize, setFontSize] = useState('md')
 
-    return(
-        <AnimatePresence exitBeforeEnter initial={false}>
-            <motion.div
-                style={{ display: 'inline-block' }}
-                key={ useColorModeValue('light', 'dark') }
-                initial={{ y: -20, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                exit={{ y: 20, opacity: 0 }}
-                transition={{ duration: 0.05 }}
-            >
+    const changeFontSize = (size) => {
+        setFontSize(size)
+        // You would need to implement a way to apply this font size globally
+        // This could be done through a context or by updating a global CSS variable
+    }
+
+    return (
+        <Popover placement="bottom-end">
+            <PopoverTrigger>
                 <IconButton
-                    aria-label="Toggle Light/Dark Theme"
+                    aria-label="Customize Theme"
                     isRound="true"
                     colorScheme={useColorModeValue('blackAlpha', 'orange')}
-                    icon={useColorModeValue(<MoonIcon/>, <SunIcon/>)}
-                    onClick={toggleColorMode}
+                    icon={<SettingsIcon />}
                 >
                 </IconButton>
-            </motion.div>
-        </AnimatePresence>
+            </PopoverTrigger>
+            <PopoverContent>
+                <PopoverBody>
+                    <VStack align="stretch" spacing={4}>
+                        <HStack justify="space-between">
+                            <Text>Theme:</Text>
+                            <IconButton
+                                aria-label="Toggle Light/Dark Theme"
+                                icon={colorMode === 'light' ? <MoonIcon/> : <SunIcon/>}
+                                onClick={toggleColorMode}
+                                size="sm"
+                            />
+                        </HStack>
+                        <HStack justify="space-between">
+                            <Text>Text Size:</Text>
+                            <HStack>
+                                {['sm', 'md', 'lg'].map((size) => (
+                                    <Button
+                                        key={size}
+                                        size="sm"
+                                        onClick={() => changeFontSize(size)}
+                                        variant={fontSize === size ? 'solid' : 'outline'}
+                                    >
+                                        {size.toUpperCase()}
+                                    </Button>
+                                ))}
+                            </HStack>
+                        </HStack>
+                    </VStack>
+                </PopoverBody>
+            </PopoverContent>
+        </Popover>
     )
 }
 

@@ -23,7 +23,7 @@ const Page = () => {
                         <Heading as="h2" variant="page-title">
                             Omar Khan
                         </Heading>
-                        <p>aspiring researcher</p>
+                        <p>researcher in training, human in the making</p>
                         
                     </Box>
                 </Box>
@@ -33,27 +33,11 @@ const Page = () => {
                         hello!
                     </Heading>
                     <Paragraph>I am a third-year PhD student studying Computer Science at the University of Illinois
-                        Urbana-Champaign (UIUC) working with <Link href='https://jooyoungseo.github.io/' target='_blank'>Dr. JooYoung Seo</Link> in the <Link href='https://xabilitylab.ischool.illinois.edu/' target='_blank'>(x)Ability Design Lab</Link>. My interests lie broadly in human-computer interaction (HCI), 
-                        and I am especially interested in accessibility and mental health. <b>I am actively seeking internships for summer 2025!</b>
-                        
-                        {/* <b>I am actively seeking research scientist, UX research and 
-                        data scientist intern opportunities for summer 2024! I am also open to software engineering internships! </b>  */}
+                        Urbana-Champaign (UIUC) advised by <Link href='https://jooyoungseo.github.io/' target='_blank'>Dr. JooYoung Seo</Link> in the <Link href='https://xabilitylab.ischool.illinois.edu/' target='_blank'>(x)Ability Design Lab</Link>. My interests lie broadly in human-computer interaction (HCI), 
+                        and I am especially interested in the intersection of accessibility and mental health, and how we can create inclusive digital mental health services that responsibly make use of emerging technologies. <b>I am actively seeking internships for summer 2025!</b>
                     </Paragraph>
-                    {/* <Box>
-                    <Image
-                        // borderRadius='full'
-                        boxSize='150px'
-                        src='/Users/mkhan259/Documents/personal-site/pages/profpic.JPG'
-                        alt='Omar Khan'
-                    />
-                    </Box> */}
-                    {/* <Box align="center" my={4}>
-                        <NextLink href="/research">
-                            <Button righticon={<ChevronRightIcon/>} color="purple">
-                                Research
-                            </Button>
-                        </NextLink>
-                    </Box> */}
+                    
+                
                 </Section>
                 <Section delay={0.2}>
                     <Heading as="h3" variant="section-title">
@@ -69,8 +53,17 @@ const Page = () => {
                         Exploring the rapid growth and development of digital mental health (DMH) tracking services and their lack of 
                         consideration for the broader disability community 
                     </BioSection>
+                    <BioSection>
+                        <BioYear>affective computing</BioYear>
+                        Understanding the underlying emotions that those with disabilities and other historically 
+                        underrepresented groups face in navigating the digital world
+                    </BioSection>
+                    <BioSection>
+                        <BioYear>human-centered AI</BioYear>
+                        Designing intelligent and accessible user experiences that leverage emerging technologies such as large language models (LLMs), and understanding user sentiment 
+                        about personalized systems 
+                    </BioSection>
 
-                  
                 </Section>  
                 <Section delay={0.2}>
                     <Heading as="h3" variant="section-title">
@@ -81,16 +74,7 @@ const Page = () => {
                         Examining past, present, and future tech/Internet laws and policies across the world and 
                         identifying how/why they are shaped the way they are
                     </BioSection>
-                    <BioSection>
-                        <BioYear>affective computing</BioYear>
-                        Understanding the underlying emotions that those with disabilities and other historically 
-                        underrepresented groups face in navigating the digital world
-                    </BioSection>
-                    <BioSection>
-                        <BioYear>human-centered AI</BioYear>
-                        Designing machine learning (ML) powered user experiences that are accessible and evaluating those that are not; understanding how users feel 
-                        about artificial intelligence (AI) and designing systems that interact more naturally with users
-                    </BioSection>
+                   
                     <BioSection>
                         <BioYear>usable security and privacy</BioYear>
                         Examining human factors in security/privacy and including those from historically underrepresented populations in 

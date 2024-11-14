@@ -34,7 +34,7 @@ const AboutMe = () => (
 
                     <Paragraph>And there&apos;s so many ways this has already been done, and continues to be done as you read this/as we speak/as we exist! 
                             As for what I find especially interesting, I find myself thinking a <i>lot</i> about gaps in mental health access and support throughout the world, 
-                            specifically for underrepresented communities. While technology rapidly evovles to offer new strategies to manage our health&apos;s multi-faceted nature, 
+                            specifically for underrepresented communities. While technology rapidly evolves to offer new strategies to manage our health&apos;s multi-faceted nature, 
                             recurring setbacks remain in <b>accessibility</b> and <b>inclusivity</b>. My research investigates and aims to address these gaps by: 
                     </Paragraph>
 

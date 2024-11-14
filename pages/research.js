@@ -45,7 +45,7 @@ const Works = () => (
                     Posters and Presentations
                 </Heading>
                 <Paragraph>
-                    <b>[P1]</b>Sanchita S. Kamath, Aziz Zeidieh, <b>Omar Khan</b>, Dhruv Sethi, and JooYoung Seo. 2024. <i>Playing Without Barriers: Crafting Playful and Accessible VR Table-Tennis with and for Blind and Low-Vision Individuals.</i> In Proceedings of the 26th International ACM SIGACCESS Conference
+                    <b>[P1]</b> Sanchita S. Kamath, Aziz Zeidieh, <b>Omar Khan</b>, Dhruv Sethi, and JooYoung Seo. 2024. <i>Playing Without Barriers: Crafting Playful and Accessible VR Table-Tennis with and for Blind and Low-Vision Individuals.</i> In Proceedings of the 26th International ACM SIGACCESS Conference
                     on Computers and Accessibility (ASSETS ’24). Association for Computing Machinery, New York, NY, USA, Article 88, 1–5.
                      <Link target="_blank" href='https://dl.acm.org/doi/10.1145/3663548.3688526'> [Link]</Link> 
                 </Paragraph>

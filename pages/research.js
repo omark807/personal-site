@@ -22,7 +22,7 @@ const Works = () => (
                     Conference and Journal Publications
                 </Heading> 
                 <Paragraph>
-                    <b>[C1]</b> Chiang, Y.S, Khan, O., Bates, A., and Cobb, C. (2024). 
+                    <b>[C1]</b> Chiang, Y.S, <b>Khan, O.</b>, Bates, A., and Cobb, C. (2024). 
                     <i>More than just informed: The importance of consent facets in smart homes.</i> 
                     In Proceedings of the CHI Conference on Human Factors in Computing Systems (CHI ’24), May 11–16, 2024, Honolulu, HI, USA. ACM, New
                     York, NY, USA, 21 pages
@@ -30,7 +30,7 @@ const Works = () => (
                 </Paragraph>
                 <Divider my={3} />
                 <Paragraph>
-                    <b>[C2]</b> Mahmood, S., Zhao, M., Khan, O., Herman, G.L. (2020). 
+                    <b>[C2]</b> Mahmood, S., Zhao, M., <b>Khan, O.</b>, Herman, G.L. (2020). 
                     <i>Caches as an Example of Machine-gradable Exam Questions for Complex Engineering Systems.</i> 
                     In Proceedings of the 49th ASEE/IEEE Frontiers in Education Conference, Uppsala, Sweden, Oct. 21-24.
                     <Link target="_blank" href='https://doi.org/10.1109/FIE44824.2020.9273822'> [Link]</Link> 
@@ -45,7 +45,13 @@ const Works = () => (
                     Posters and Presentations
                 </Heading>
                 <Paragraph>
-                    <b>[P1]</b> Deep, H., Huang, J., Dembi, R., Khan, O., Angrave, L.. 
+                    <b>[P1]</b>Sanchita S. Kamath, Aziz Zeidieh, <b>Omar Khan</b>, Dhruv Sethi, and JooYoung Seo. 2024. <i>Playing Without Barriers: Crafting Playful and Accessible VR Table-Tennis with and for Blind and Low-Vision Individuals.</i> In Proceedings of the 26th International ACM SIGACCESS Conference
+                    on Computers and Accessibility (ASSETS ’24). Association for Computing Machinery, New York, NY, USA, Article 88, 1–5.
+                     <Link target="_blank" href='https://dl.acm.org/doi/10.1145/3663548.3688526'> [Link]</Link> 
+                </Paragraph>
+                <Divider my={3} />
+                <Paragraph>
+                    <b>[P2]</b> Deep, H., Huang, J., Dembi, R., <b>Khan, O.</b>, Angrave, L.. 
                     <i>Webcam Eye-Tracking Based Accessibility for ClassTranscribe.</i>
                     Virtual poster presentation: Illinois Undergraduate Research Symposium 2021
                 </Paragraph> 

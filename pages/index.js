@@ -9,7 +9,7 @@ import {
     Icon,
     Flex
 } from '@chakra-ui/react'
-import { FaAccessibleIcon, FaBrain, FaRobot, FaHeartbeat } from 'react-icons/fa'
+import { FaAccessibleIcon, FaBrain, FaRobot, FaScroll } from 'react-icons/fa'
 import Section from '../components/section'
 import Paragraph from '../components/paragraph'
 import Layout from '../components/layouts/article'
@@ -67,9 +67,9 @@ const Page = () => {
                                 description="Investigating the ease of use of existing digital platforms for those with disabilities, particularly the blind and low-vision (BLV) community"
                             />
                             <InterestCard 
-                                icon={FaHeartbeat}
-                                title="Mental Health and Well-being Technologies"
-                                description="Exploring the rapid growth and development of digital mental health (DMH) tracking services and their lack of consideration for the broader disability community"
+                                icon={FaScroll}
+                                title="Computing Education"
+                                description="Exploring how we can make computing education more accessible and inclusive for those with disabilities, particularly the blind and low-vision (BLV) community"
                             />
                             <InterestCard 
                                 icon={FaBrain}
@@ -78,7 +78,7 @@ const Page = () => {
                             />
                             <InterestCard 
                                 icon={FaRobot}
-                                title="Human-centered AI"
+                                title="Human-Centered AI"
                                 description="Designing intelligent and accessible user experiences that leverage emerging technologies such as large language models (LLMs), and understanding user sentiment about personalized systems"
                             />
                         </SimpleGrid>

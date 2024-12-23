@@ -9,7 +9,7 @@ import {
     Icon,
     Flex
 } from '@chakra-ui/react'
-import { FaAccessibleIcon, FaBrain, FaRobot, FaScroll } from 'react-icons/fa'
+import { FaAccessibleIcon, FaBrain, FaRobot, FaScroll, FaGavel, FaHeartbeat } from 'react-icons/fa'
 import Section from '../components/section'
 import Paragraph from '../components/paragraph'
 import Layout from '../components/layouts/article'
@@ -47,9 +47,9 @@ const Page = () => {
                             hello!
                         </Heading>
                         <Paragraph>
-                            I am a third-year PhD student studying Computer Science at the <Link href='https://illinois.edu/' target='_blank'>University of Illinois
+                            I am a third-year Ph.D. student studying Computer Science at the <Link href='https://illinois.edu/' target='_blank'>University of Illinois
                             Urbana-Champaign (UIUC)</Link> advised by <Link href='https://jooyoungseo.github.io/' target='_blank'>Dr. JooYoung Seo</Link> in the <Link href='https://xabilitylab.ischool.illinois.edu/' target='_blank'>(x)Ability Design Lab</Link>. My interests lie broadly in human-computer interaction (HCI), 
-                            and I am especially interested in the intersection of accessibility and mental health, and how we can create inclusive digital mental health services that responsibly make use of emerging technologies.
+                            and I am especially interested in the intersection of accessibility and computing education, and how we can create inclusive educational experiences that responsibly make use of emerging technologies.
                         </Paragraph>
                         <Text fontWeight="bold" mt={4} color="blue.500">
                             I am actively seeking internships for summer 2025!
@@ -89,14 +89,16 @@ const Page = () => {
                             Other Academic Interests
                         </Heading>
                         <SimpleGrid columns={{ base: 1, md: 2 }} spacing={6}>
-                            <Box p={5} shadow="md" borderWidth="1px" borderRadius="lg">
-                                <Heading as="h3" size="md" mb={2}>Tech Law and Policy</Heading>
-                                <Text fontSize="sm">Examining past, present, and future tech/Internet laws and policies across the world and identifying how/why they are shaped the way they are</Text>
-                            </Box>
-                            <Box p={5} shadow="md" borderWidth="1px" borderRadius="lg">
-                                <Heading as="h3" size="md" mb={2}>Usable Security and Privacy</Heading>
-                                <Text fontSize="sm">Examining human factors in security/privacy and including those from historically underrepresented populations in conversations regarding security/privacy design; considering how security and privacy-related topics are conveyed to these groups</Text>
-                            </Box>
+                            <InterestCard
+                                icon={FaGavel}
+                                title="Tech Law and Policy"
+                                description="Examining past, present, and future tech/Internet laws and policies across the world and identifying how/why they are shaped the way they are"
+                            />
+                            <InterestCard
+                                icon={FaHeartbeat}
+                                title="Mental Health and Well-Being Technologies" 
+                                description="Exploring the rapid growth and development of digital mental health (DMH) tracking services and their lack of consideration for the broader disability community"
+                            />
                         </SimpleGrid>
                     </Section>
                 </VStack>

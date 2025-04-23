@@ -55,7 +55,7 @@ const Works = () => (
                 <Paragraph>
                     <b>[P1]</b> <b>Omar Khan</b> and JooYoung Seo. 2025. Playing Without Barriers: Crafting Playful and Accessible VR Table-Tennis with and for Blind and Low-Vision Individuals. <i>To appear. In Extended
                     Abstracts of the CHI Conference on Human Factors in Computing Systems (CHI EA ’25), April 26‐May 1, 2025, Yokohama, Japan.</i> ACM, New York, NY, USA, 13 pages.
-                     <Link target="_blank" href='https://dl.acm.org/doi/10.1145/3706599.3719817'> [Preprint Link]</Link> 
+                     <Link target="_blank" href='https://dl.acm.org/doi/10.1145/3706599.3719817'> [Link]</Link> 
                 </Paragraph>
                 <Divider my={3} />
 

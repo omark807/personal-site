@@ -75,12 +75,15 @@ const Navbar = (props) => {
           <LinkItem href="/about" path={path}>
             about
           </LinkItem>
+          <LinkItem href="/news" path={path}>
+            news
+          </LinkItem>
           <LinkItem href="/research" path={path}>
             research
           </LinkItem>
-          <LinkItem href="/projects" path={path}>
+          {/* <LinkItem href="/projects" path={path}>
             projects
-          </LinkItem>
+          </LinkItem> */}
           <Menu>
             <MenuButton
               p={2}
@@ -139,12 +142,15 @@ const Navbar = (props) => {
                 <NextLink href="/about" passHref>
                   <MenuItem as={Link}>about</MenuItem>
                 </NextLink>
+                <NextLink href="/news" passHref>
+                  <MenuItem as={Link}>news</MenuItem>
+                </NextLink>
                 <NextLink href="/research" passHref>
                   <MenuItem as={Link}>research</MenuItem>
                 </NextLink>
-                <NextLink href="/projects" passHref>
+                {/* <NextLink href="/projects" passHref>
                   <MenuItem as={Link}>projects</MenuItem>
-                </NextLink>
+                </NextLink> */}
                 <Menu placement="right-start">
                   <MenuItem as={MenuButton} rightIcon={<ChevronDownIcon />}>
                     resumé(s)

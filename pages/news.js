@@ -1,4 +1,4 @@
-import { Container, Heading, Text, Box, Tag, TagLabel, TagCloseButton, Input, InputGroup, InputLeftElement } from '@chakra-ui/react';
+import { Container, Heading, Text, Box, Tag, TagLabel, TagCloseButton, Input, InputGroup, InputLeftElement, Divider } from '@chakra-ui/react';
 import { SearchIcon } from '@chakra-ui/icons';
 import { useState } from 'react';
 import { motion } from 'framer-motion';
@@ -10,12 +10,14 @@ const NewsPage = () => {
         {
             title: 'CHI 2025 In-Person Presentation',
             date: '03-31-2025',
+            month: 'March 2025',
             content: 'I will be presenting our Late-Breaking Work at CHI 2025 in Yokohama, Japan! I am excited to share our findings and engage with the broader CHI community.',
             tags: ['conference', 'presentation'],
         },
         {
             title: 'Late-Breaking Work Accepted to CHI 2025!',
             date: '02-22-2025',
+            month: 'February 2025',
             content:
                 <>Our late-breaking work has been accepted to CHI 2025! You can find the preprint at
                 <a href="https://arxiv.org/abs/2503.07415" target='__blank'> <u>this link</u></a>.
@@ -46,6 +48,15 @@ const NewsPage = () => {
     });
 
     const allTags = [...new Set(newsItems.map(item => item.tags).flat())];
+
+    // Group news items by month
+    const groupedNewsItems = filteredNewsItems.reduce((acc, item) => {
+        if (!acc[item.month]) {
+            acc[item.month] = [];
+        }
+        acc[item.month].push(item);
+        return acc;
+    }, {});
 
     return (
         <Container>
@@ -101,43 +112,29 @@ const NewsPage = () => {
                 </Box>
             )}
 
-            <Box position="relative" pl={4} ml={2} _before={{
-                content: '""',
-                position: 'absolute',
-                top: 0,
-                left: 0,
-                height: '100%',
-                borderLeft: '2px solid',
-                borderColor: 'gray.300',
-            }}>
-                {filteredNewsItems.map((item, index) => (
-                    <Section key={item.title} delay={0.1 * (index + 1)}>
-                        <Box position="relative" mb={4} _before={{
-                            content: '""',
-                            position: 'absolute',
-                            top: '0.5em',
-                            left: '-1.1em',
-                            width: '0.8em',
-                            height: '0.8em',
-                            borderRadius: '50%',
-                            bg: 'teal.500',
-                            border: '2px solid white',
-                        }}>
-                            <Heading as="h4" variant="section-title">
-                                {item.date}: {item.title}
-                            </Heading>
-                            <Text>{item.content}</Text>
-                            <Box mt={2}>
-                                {item.tags.map((tag) => (
-                                    <Tag size="sm" key={tag} borderRadius="full" variant="subtle" colorScheme="gray" mr={2}>
-                                        <TagLabel>{tag}</TagLabel>
-                                    </Tag>
-                                ))}
+            {Object.entries(groupedNewsItems).map(([month, items]) => (
+                <Box key={month} mb={6} position="relative">
+                    <Heading as="h4" fontSize="lg" fontWeight="bold" mb={2}>{month}</Heading>
+                    <Divider mb={4} />
+                    {items.map((item, index) => (
+                        <Section key={item.title} delay={0.1 * (index + 1)}>
+                            <Box position="relative" mb={4}>
+                                <Heading as="h5" variant="section-title">
+                                    {item.title}
+                                </Heading>
+                                <Text>{item.content}</Text>
+                                <Box mt={2}>
+                                    {item.tags.map((tag) => (
+                                        <Tag size="sm" key={tag} borderRadius="full" variant="subtle" colorScheme="gray" mr={2}>
+                                            <TagLabel>{tag}</TagLabel>
+                                        </Tag>
+                                    ))}
+                                </Box>
                             </Box>
-                        </Box>
-                    </Section>
-                ))}
-            </Box>
+                        </Section>
+                    ))}
+                </Box>
+            ))}
         </Container>
     );
 };

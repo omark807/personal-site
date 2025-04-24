@@ -50,7 +50,7 @@ const Works = () => (
             <Section delay={0.2}>
                 <Divider my={6} />
                 <Heading as="h3" fontSize={20} mb={4}>
-                    Posters and Presentations
+                    Works in Progress, Posters, and Presentations
                 </Heading>
                 <Paragraph>
                     <b>[P1]</b> <b>Omar Khan</b> and JooYoung Seo. 2025. &quot;Sighted People Have Their Pick Of The Litter&quot;: Unpacking The Need For Digital Mental Health (DMH) Tracking Services With And For The Blind Community. <i>To appear. In Extended

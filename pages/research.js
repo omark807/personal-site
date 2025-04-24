@@ -24,8 +24,8 @@ const Works = () => (
                 <Paragraph>
                     <b>[C1]</b> Alex Atcheson, <b>Omar Khan</b>, Brian Siemann, Anika Jain, and Karrie Karahalios. 2025. 
                     ”I’d Never Actually Realized How Big An Impact It Had Until Now”: Perspectives of University Students with Disabilities on Generative Artificial Intelligence.
-                    <i> In Proceedings of the 2025 CHI Conference on Human Factors in Computing Systems (CHI &apos;25).</i> Association for Computing Machinery, New York, NY, USA, Article 42, 1–22..
-                    <Link target="_blank" href='https://doi.org/10.1145/3706598.3714121'> [Link]</Link> 
+                    <i> In Proceedings of the 2025 CHI Conference on Human Factors in Computing Systems (CHI &apos;25).</i> Association for Computing Machinery, New York, NY, USA, Article 42, 1–22.
+                    <Link target="_blank" href='https://doi.org/10.1145/3706598.3714121'> [DOI]</Link> 
                 </Paragraph>
                 <Divider my={3} />
                 <Paragraph>
@@ -33,14 +33,14 @@ const Works = () => (
                     More than just informed: The importance of consent facets in smart homes.
                     <i>In Proceedings of the CHI Conference on Human Factors in Computing Systems (CHI ’24), May 11–16, 2024, Honolulu, HI, USA.</i> ACM, New
                     York, NY, USA, 21 pages.
-                    <Link target="_blank" href='https://dl.acm.org/doi/10.1145/3613904.3642288'> [Link]</Link> 
+                    <Link target="_blank" href='https://dl.acm.org/doi/10.1145/3613904.3642288'> [DOI]</Link> 
                 </Paragraph>
                 <Divider my={3} />
                 <Paragraph>
                     <b>[C3]</b> Mahmood, S., Zhao, M., <b>Khan, O.</b>, Herman, G.L. (2020). 
                     Caches as an Example of Machine-gradable Exam Questions for Complex Engineering Systems. 
                     <i>In Proceedings of the 49th ASEE/IEEE Frontiers in Education Conference, Uppsala, Sweden, Oct. 21-24.</i>
-                    <Link target="_blank" href='https://doi.org/10.1109/FIE44824.2020.9273822'> [Link]</Link> 
+                    <Link target="_blank" href='https://doi.org/10.1109/FIE44824.2020.9273822'> [DOI]</Link> 
                 </Paragraph>    
 
             </Section>
@@ -61,7 +61,7 @@ const Works = () => (
                 <Paragraph>
                     <b>[P2]</b> Sanchita S. Kamath, Aziz Zeidieh, <b>Omar Khan</b>, Dhruv Sethi, and JooYoung Seo. 2024. Playing Without Barriers: Crafting Playful and Accessible VR Table-Tennis with and for Blind and Low-Vision Individuals. <i>In Proceedings of the 26th International ACM SIGACCESS Conference
                     on Computers and Accessibility (ASSETS ’24). Association for Computing Machinery, New York, NY, USA, Article 88, 1–5.</i>
-                     <Link target="_blank" href='https://dl.acm.org/doi/10.1145/3663548.3688526'> [Link]</Link> 
+                     <Link target="_blank" href='https://dl.acm.org/doi/10.1145/3663548.3688526'> [DOI]</Link> 
                 </Paragraph>
                 <Divider my={3} />
                 <Paragraph>

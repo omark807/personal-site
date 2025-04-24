@@ -24,8 +24,7 @@ const Works = () => (
                 <Paragraph>
                     <b>[C1]</b> Alex Atcheson, <b>Omar Khan</b>, Brian Siemann, Anika Jain, and Karrie Karahalios. 2025. 
                     ”I’d Never Actually Realized How Big An Impact It Had Until Now”: Perspectives of University Students with Disabilities on Generative Artificial Intelligence.
-                    <i> To appear. In CHI Conference on Human Factors in Computing Systems (CHI ’25), April 26–
-                    May 01, 2025, Yokohama, Japan.</i> ACM, New York, NY, USA, 21 pages.
+                    <i> In Proceedings of the 2025 CHI Conference on Human Factors in Computing Systems (CHI &apos;25).</i> Association for Computing Machinery, New York, NY, USA, Article 42, 1–22..
                     <Link target="_blank" href='https://doi.org/10.1145/3706598.3714121'> [Link]</Link> 
                 </Paragraph>
                 <Divider my={3} />
@@ -53,8 +52,8 @@ const Works = () => (
                     Works in Progress, Posters, and Presentations
                 </Heading>
                 <Paragraph>
-                    <b>[P1]</b> <b>Omar Khan</b> and JooYoung Seo. 2025. &quot;Sighted People Have Their Pick Of The Litter&quot;: Unpacking The Need For Digital Mental Health (DMH) Tracking Services With And For The Blind Community. <i>To appear. In Extended
-                    Abstracts of the CHI Conference on Human Factors in Computing Systems (CHI EA ’25), April 26‐May 1, 2025, Yokohama, Japan.</i> ACM, New York, NY, USA, 13 pages.
+                    <b>[P1]</b> <b>Omar Khan</b> and JooYoung Seo. 2025. &quot;Sighted People Have Their Pick Of The Litter&quot;: Unpacking The Need For Digital Mental Health (DMH) Tracking Services With And For The Blind Community. <i>In Proceedings of the Extended Abstracts of the CHI Conference on Human Factors in Computing Systems (CHI EA &apos;25).</i> Association for Computing Machinery, New York, NY, USA,
+                    Article 27, 1–13.
                      <Link target="_blank" href='https://dl.acm.org/doi/10.1145/3706599.3719817'> [DOI]</Link>  | <Link target="_blank" href='https://arxiv.org/abs/2503.07415'> [arxiv]</Link> 
                 </Paragraph>
                 <Divider my={3} />

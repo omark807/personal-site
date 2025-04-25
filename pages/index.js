@@ -37,8 +37,8 @@ const Page = () => {
                         <Heading as="h1" size="2xl" mb={2}>
                             Omar Khan
                         </Heading>
-                        <Text fontSize="xl" fontWeight="medium" color="gray.600">
-                            researcher, thinker, and cat parent
+                        <Text fontSize="xl" fontWeight="medium" color="cyan.200">
+                            researcher, (over)thinker, and cat parent
                         </Text>
                     </Box>
 

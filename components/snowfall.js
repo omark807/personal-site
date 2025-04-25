@@ -57,7 +57,9 @@ const Snowfall = ({ isVisible }) => {
       animationFrameId = requestAnimationFrame(animate);
     };
 
-    animate();
+    if (isVisible) {
+      animate();
+    }
 
     return () => {
       window.removeEventListener('resize', resizeCanvas);

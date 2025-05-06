@@ -15,7 +15,7 @@ import {
   useColorModeValue
 } from '@chakra-ui/react';
 import { HamburgerIcon } from '@chakra-ui/icons';
-import { IoLogoGithub, IoLogoLinkedin } from "react-icons/io5";
+import { IoLogoGithub, IoLogoLinkedin, IoSchoolSharp } from "react-icons/io5";
 import ThemeToggleButton from './theme-toggle-button';
 import { ChevronDownIcon } from '@chakra-ui/icons';
 
@@ -126,6 +126,18 @@ const Navbar = (props) => {
           >
             <IoLogoLinkedin />
           </LinkItem>
+          
+          <LinkItem
+            target="_blank"
+            href="https://scholar.google.com/citations?user=T6f-cucAAAAJ&hl=en"
+            path={path}
+            display="inline-flex"
+            alignItems="center"
+            style={{ gap: 4 }}
+            pl={2}
+          >
+            <IoSchoolSharp />
+          </LinkItem>
         </Stack>
 
         <Box flex={1} align="right">
@@ -169,6 +181,9 @@ const Navbar = (props) => {
                 </MenuItem>
                 <MenuItem as={Link} href="https://www.linkedin.com/in/omark807" target="_blank">
                   linkedIn
+                </MenuItem>
+                <MenuItem as={Link} href="https://scholar.google.com/citations?user=T6f-cucAAAAJ&hl=en" target="_blank">
+                  google scholar
                 </MenuItem>
                 <NextLink href="/life" passHref>
                   <MenuItem as={Link}>life</MenuItem>

@@ -2,7 +2,7 @@ import { Container, Heading, Link, ListItem, Grid, GridItem, List, ListIcon } fr
 import Layout from '../components/layouts/article'
 import Paragraph from '../components/paragraph'
 import Section from '../components/section'
-import { CheckCircleIcon, StarIcon, EditIcon, RepeatClockIcon, CoffeeIcon, DownloadIcon, SunIcon, ChevronUpIcon } from '@chakra-ui/icons'
+import { CheckCircleIcon, StarIcon, EditIcon, RepeatClockIcon, CoffeeIcon, DownloadIcon, SunIcon, ChevronUpIcon, ChevronRightIcon } from '@chakra-ui/icons'
 
 const AboutMe = () => (
     <Layout title="More about me! ">
@@ -75,7 +75,7 @@ const AboutMe = () => (
                                 Coffee
                             </ListItem>
                             <ListItem>
-                                <ListIcon as={EditIcon} color="blue.500" />
+                                <ListIcon as={ChevronRightIcon} color="blue.500" />
                                 Reading (<Link href='https://www.goodreads.com/user/show/143290931-omar-khan' target='_blank'>
                                     GoodReads profile</Link> for past and current reads)
                             </ListItem>

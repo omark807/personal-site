@@ -52,7 +52,7 @@ const Page = () => {
                             and I am especially interested in the intersection of accessibility, human-AI interaction, and education, particularly how we can craft digital experiences that responsibly make use of emerging technologies, particularly with and for the blind and low-vision (BLV) community.
                         </Paragraph>
                         <Text fontWeight="bold" mt={4} color="blue.500">
-                            I am actively seeking internships for summer 2025!
+                            I am actively seeking internships for summer 2026!
                         </Text>
                     </Section>
 

@@ -47,12 +47,12 @@ const Page = () => {
                             hello!
                         </Heading>
                         <Paragraph>
-                            I am a third-year Ph.D. candidate studying Computer Science at the <Link href='https://illinois.edu/' target='_blank'>University of Illinois
+                            I am a fourth-year Ph.D. candidate studying Computer Science at the <Link href='https://illinois.edu/' target='_blank'>University of Illinois
                             Urbana-Champaign (UIUC)</Link> advised by <Link href='https://jooyoungseo.github.io/' target='_blank'>Dr. JooYoung Seo</Link> in the <Link href='https://xabilitylab.ischool.illinois.edu/' target='_blank'>(x)Ability Design Lab</Link>. My interests lie broadly in human-computer interaction (HCI), 
                             and I am especially interested in the intersection of accessibility, human-AI interaction, and education, particularly how we can craft digital experiences that responsibly make use of emerging technologies, particularly with and for the blind and low-vision (BLV) community.
                         </Paragraph>
                         <Text fontWeight="bold" mt={4} color="blue.500">
-                            I am actively seeking internships for summer 2026!
+                            I am actively seeking research-oriented and engineering-oriented internships for summer 2026!
                         </Text>
                     </Section>
 

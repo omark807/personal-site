@@ -1,0 +1,16 @@
+{
+    "name": "Omar Khan - Personal Website",
+    "short_name": "Omar Khan",
+    "description": "PhD Candidate in Computer Science at UIUC, HCI Researcher focused on accessibility and human-AI interaction",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#FFFAF0",
+    "theme_color": "#D84315",
+    "icons": [
+        {
+            "src": "/ok_logo_transparent.png",
+            "sizes": "any",
+            "type": "image/png"
+        }
+    ]
+}

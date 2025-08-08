@@ -1,6 +1,5 @@
 import Link from 'next/link'
-// import Image from 'next/image'
-import { Text, useColorModeValue } from '@chakra-ui/react'
+import Image from 'next/image'
 import styled from '@emotion/styled'
 
 const LogoBox = styled.span`
@@ -8,30 +7,27 @@ const LogoBox = styled.span`
     font-size: 18px;
     display: inline-flex;
     align-items: center;
-    height: 30px;
+    height: 40px;
     line-height: 20px;
     padding: 10px;
 
     &:hover img{
-        transform: rotate(20deg);
+        transform: scale(1.1);
     }
 `
 
 const Logo = () => {
-    // const logoImg = `/images/logo${useColorModeValue('', '-dark')}.png`
     return(
         <Link href="/">
             <a>
                 <LogoBox>
-                    {/* <Image src={logoImg} width={20} height={20} alt="logo"/> */}
-                    <Text
-                        color={useColorModeValue('gray.800', 'whiteAlpha.900')}
-                        fontFamily='M PLUS Rounded 1c", sans-serif'
-                        fontWeight="bold"
-                        ml={3}
-                    >
-                        Omar Khan
-                    </Text>
+                    <Image 
+                        src="/ok_logo_transparent.png" 
+                        width={35} 
+                        height={35} 
+                        alt="Omar Khan personal logo"
+                        priority
+                    />
                 </LogoBox>
             </a>
         </Link>

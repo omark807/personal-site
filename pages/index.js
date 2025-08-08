@@ -25,18 +25,23 @@ import Layout from '../components/layouts/article'
 const InterestCard = ({ icon, title, description }) => {
     const cardBg = useColorModeValue('white', 'gray.800')
     const shadowColor = useColorModeValue('lg', 'dark-lg')
+    const titleColor = useColorModeValue('gray.700', 'white')
+    const descriptionColor = useColorModeValue('gray.600', 'gray.300')
+    const iconBg = useColorModeValue('blue.50', 'blue.900')
+    const borderColor = useColorModeValue('gray.200', 'gray.600')
     
     return (
         <Box 
             p={6} 
             shadow={shadowColor}
             borderWidth="1px" 
+            borderColor={borderColor}
             borderRadius="xl"
             bg={cardBg}
             _hover={{ 
                 transform: 'translateY(-4px)', 
                 shadow: 'xl',
-                borderColor: 'blue.300'
+                borderColor: useColorModeValue('blue.300', 'blue.400')
             }}
             transition="all 0.3s ease"
             cursor="pointer"
@@ -45,14 +50,14 @@ const InterestCard = ({ icon, title, description }) => {
                 <Box
                     p={2}
                     borderRadius="lg"
-                    bg="blue.50"
+                    bg={iconBg}
                     mr={3}
                 >
                     <Icon as={icon} boxSize={6} color="blue.500" />
                 </Box>
-                <Heading as="h3" size="md" color="gray.700">{title}</Heading>
+                <Heading as="h3" size="md" color={titleColor}>{title}</Heading>
             </Flex>
-            <Text fontSize="sm" color="gray.600" lineHeight="tall">{description}</Text>
+            <Text fontSize="sm" color={descriptionColor} lineHeight="tall">{description}</Text>
         </Box>
     )
 }
@@ -64,11 +69,15 @@ const InterestCard = ({ icon, title, description }) => {
 const Page = () => {
     const bgGradient = useColorModeValue(
         'linear(to-r, blue.50, purple.50, pink.50)',
-        'linear(to-r, blue.900, purple.900, pink.900)'
+        'linear(to-r, gray.800, gray.700, gray.800)'
     )
     
     const cardBg = useColorModeValue('white', 'gray.800')
     const shadowColor = useColorModeValue('lg', 'dark-lg')
+    const heroTextColor = useColorModeValue('gray.600', 'gray.300')
+    const aboutBg = useColorModeValue('blue.50', 'blue.900')
+    const aboutTextColor = useColorModeValue('blue.700', 'blue.200')
+    const aboutBorderColor = useColorModeValue('blue.500', 'blue.300')
 
     return(
         <Layout>
@@ -114,10 +123,10 @@ const Page = () => {
                                 <Heading as="h1" size="3xl" fontWeight="bold">
                                     Omar Khan
                                 </Heading>
-                                <Text fontSize="xl" fontWeight="medium" color="gray.600">
+                                <Text fontSize="xl" fontWeight="medium" color={heroTextColor}>
                                     PhD Candidate in Computer Science at UIUC
                                 </Text>
-                                <Text fontSize="lg" maxW="600px" lineHeight="tall">
+                                <Text fontSize="lg" maxW="600px" lineHeight="tall" color={heroTextColor}>
                                     researcher, (over)thinker, and cat parent passionate about making technology 
                                     accessible and inclusive for everyone
                                 </Text>
@@ -163,16 +172,16 @@ const Page = () => {
 
                             <HStack spacing={6} pt={2}>
                                 <Link href="mailto:okhan5@illinois.edu" isExternal>
-                                    <Icon as={FaEnvelope} boxSize={6} color="gray.600" _hover={{ color: 'blue.500' }} />
+                                    <Icon as={FaEnvelope} boxSize={6} color={useColorModeValue('gray.600', 'gray.400')} _hover={{ color: useColorModeValue('blue.500', 'blue.300') }} />
                                 </Link>
                                 <Link href="https://linkedin.com/in/omar-khan-profile" isExternal>
-                                    <Icon as={FaLinkedin} boxSize={6} color="gray.600" _hover={{ color: 'blue.500' }} />
+                                    <Icon as={FaLinkedin} boxSize={6} color={useColorModeValue('gray.600', 'gray.400')} _hover={{ color: useColorModeValue('blue.500', 'blue.300') }} />
                                 </Link>
                                 <Link href="https://github.com/omark807" isExternal>
-                                    <Icon as={FaGithub} boxSize={6} color="gray.600" _hover={{ color: 'blue.500' }} />
+                                    <Icon as={FaGithub} boxSize={6} color={useColorModeValue('gray.600', 'gray.400')} _hover={{ color: useColorModeValue('blue.500', 'blue.300') }} />
                                 </Link>
                                 <Link href="https://twitter.com/your_handle" isExternal>
-                                    <Icon as={FaTwitter} boxSize={6} color="gray.600" _hover={{ color: 'blue.500' }} />
+                                    <Icon as={FaTwitter} boxSize={6} color={useColorModeValue('gray.600', 'gray.400')} _hover={{ color: useColorModeValue('blue.500', 'blue.300') }} />
                                 </Link>
                             </HStack>
                         </VStack>
@@ -180,26 +189,26 @@ const Page = () => {
 
                     {/* Current Status Section */}
                     <Section>
-                        <Box bg={cardBg} p={6} borderRadius="xl" shadow={shadowColor}>
-                            <Heading as="h2" size="lg" mb={4} color="blue.500">
+                        <Box bg={cardBg} p={6} borderRadius="xl" shadow={shadowColor} borderWidth="1px" borderColor={useColorModeValue('gray.200', 'gray.600')}>
+                            <Heading as="h2" size="lg" mb={4} color={useColorModeValue('blue.500', 'blue.300')}>
                                 Currently Working On
                             </Heading>
                             <Stack direction={{ base: 'column', md: 'row' }} spacing={6}>
                                 <Box flex={1}>
-                                    <Text fontWeight="semibold" mb={2}>🔬 PhD Research</Text>
-                                    <Text fontSize="sm" color="gray.600">
+                                    <Text fontWeight="semibold" mb={2} color={useColorModeValue('gray.700', 'white')}>🔬 PhD Research</Text>
+                                    <Text fontSize="sm" color={useColorModeValue('gray.600', 'gray.300')}>
                                         Investigating accessibility in AI-powered educational tools for the blind and low-vision community
                                     </Text>
                                 </Box>
                                 <Box flex={1}>
-                                    <Text fontWeight="semibold" mb={2}>💼 Seeking Opportunities</Text>
-                                    <Text fontSize="sm" color="gray.600">
+                                    <Text fontWeight="semibold" mb={2} color={useColorModeValue('gray.700', 'white')}>💼 Seeking Opportunities</Text>
+                                    <Text fontSize="sm" color={useColorModeValue('gray.600', 'gray.300')}>
                                         Looking for research and engineering internships for Summer 2026
                                     </Text>
                                 </Box>
                                 <Box flex={1}>
-                                    <Text fontWeight="semibold" mb={2}>📚 Learning</Text>
-                                    <Text fontSize="sm" color="gray.600">
+                                    <Text fontWeight="semibold" mb={2} color={useColorModeValue('gray.700', 'white')}>📚 Learning</Text>
+                                    <Text fontSize="sm" color={useColorModeValue('gray.600', 'gray.300')}>
                                         Exploring the latest developments in human-AI interaction and assistive technologies
                                     </Text>
                                 </Box>
@@ -209,7 +218,7 @@ const Page = () => {
 
                     {/* About Section */}
                     <Section>
-                        <Heading as="h2" size="xl" mb={4}>
+                        <Heading as="h2" size="xl" mb={4} color={useColorModeValue('gray.700', 'white')}>
                             hello!
                         </Heading>
                         <Paragraph>
@@ -220,19 +229,20 @@ const Page = () => {
                         <Box 
                             mt={6} 
                             p={4} 
-                            bg="blue.50" 
+                            bg={aboutBg}
                             borderLeft="4px solid" 
-                            borderColor="blue.500" 
+                            borderColor={aboutBorderColor}
                             borderRadius="md"
                         >
-                            <Text fontWeight="bold" color="blue.700">
+                            <Text fontWeight="bold" color={aboutTextColor}>
                                 🚀 I am actively seeking research-oriented and engineering-oriented internships for summer 2026!
                             </Text>
                         </Box>
                     </Section>
 
+                    {/* Research Interests Section */}
                     <Section>
-                        <Heading as="h2" size="xl" mb={6} textAlign="center">
+                        <Heading as="h2" size="xl" mb={6} textAlign="center" color={useColorModeValue('gray.700', 'white')}>
                             Current Research Interests
                         </Heading>
                         <SimpleGrid columns={{ base: 1, md: 2 }} spacing={6}>
@@ -259,8 +269,9 @@ const Page = () => {
                         </SimpleGrid>
                     </Section>
 
+                    {/* Other Academic Interests Section */}
                     <Section>
-                        <Heading as="h2" size="xl" mb={6} textAlign="center">
+                        <Heading as="h2" size="xl" mb={6} textAlign="center" color={useColorModeValue('gray.700', 'white')}>
                             Other Academic Interests
                         </Heading>
                         <SimpleGrid columns={{ base: 1, md: 2 }} spacing={6}>

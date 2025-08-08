@@ -15,7 +15,8 @@ import {
     useColorModeValue,
     Stack
 } from '@chakra-ui/react'
-import { FaAccessibleIcon, FaBrain, FaRobot, FaScroll, FaGavel, FaHeartbeat, FaEnvelope, FaLinkedin, FaGithub, FaTwitter } from 'react-icons/fa'
+import { FaAccessibleIcon, FaBrain, FaRobot, FaScroll, FaGavel, FaHeartbeat, FaEnvelope, FaLinkedin, FaGithub } from 'react-icons/fa'
+import { IoSchoolSharp } from 'react-icons/io5'
 import { ChevronRightIcon } from '@chakra-ui/icons'
 import NextLink from 'next/link'
 import Section from '../components/section'
@@ -127,8 +128,8 @@ const Page = () => {
                                     PhD Candidate in Computer Science at UIUC
                                 </Text>
                                 <Text fontSize="lg" maxW="600px" lineHeight="tall" color={heroTextColor}>
-                                    researcher, (over)thinker, and cat parent passionate about making technology 
-                                    accessible and inclusive for everyone
+                                    researcher, (over)thinker, and cat parent passionate about human-centered technology 
+                                    design
                                 </Text>
                                 
                                 <HStack spacing={4} pt={4}>
@@ -171,17 +172,17 @@ const Page = () => {
                             </HStack>
 
                             <HStack spacing={6} pt={2}>
-                                <Link href="mailto:okhan5@illinois.edu" isExternal>
+                                <Link href="mailto:omark807@gmail.com" isExternal>
                                     <Icon as={FaEnvelope} boxSize={6} color={useColorModeValue('gray.600', 'gray.400')} _hover={{ color: useColorModeValue('blue.500', 'blue.300') }} />
                                 </Link>
-                                <Link href="https://linkedin.com/in/omar-khan-profile" isExternal>
+                                <Link href="https://linkedin.com/in/omark807" isExternal>
                                     <Icon as={FaLinkedin} boxSize={6} color={useColorModeValue('gray.600', 'gray.400')} _hover={{ color: useColorModeValue('blue.500', 'blue.300') }} />
                                 </Link>
                                 <Link href="https://github.com/omark807" isExternal>
                                     <Icon as={FaGithub} boxSize={6} color={useColorModeValue('gray.600', 'gray.400')} _hover={{ color: useColorModeValue('blue.500', 'blue.300') }} />
                                 </Link>
-                                <Link href="https://twitter.com/your_handle" isExternal>
-                                    <Icon as={FaTwitter} boxSize={6} color={useColorModeValue('gray.600', 'gray.400')} _hover={{ color: useColorModeValue('blue.500', 'blue.300') }} />
+                                <Link href="https://scholar.google.com/citations?user=T6f-cucAAAAJ&hl=en" isExternal>
+                                    <Icon as={IoSchoolSharp} boxSize={6} color={useColorModeValue('gray.600', 'gray.400')} _hover={{ color: useColorModeValue('blue.500', 'blue.300') }} />
                                 </Link>
                             </HStack>
                         </VStack>
@@ -191,25 +192,25 @@ const Page = () => {
                     <Section>
                         <Box bg={cardBg} p={6} borderRadius="xl" shadow={shadowColor} borderWidth="1px" borderColor={useColorModeValue('gray.200', 'gray.600')}>
                             <Heading as="h2" size="lg" mb={4} color={useColorModeValue('blue.500', 'blue.300')}>
-                                Currently Working On
+                                Currently, I am...
                             </Heading>
                             <Stack direction={{ base: 'column', md: 'row' }} spacing={6}>
                                 <Box flex={1}>
-                                    <Text fontWeight="semibold" mb={2} color={useColorModeValue('gray.700', 'white')}>🔬 PhD Research</Text>
+                                    <Text fontWeight="semibold" mb={2} color={useColorModeValue('gray.700', 'white')}>🔬 Re-imagining scientific workflows</Text>
                                     <Text fontSize="sm" color={useColorModeValue('gray.600', 'gray.300')}>
-                                        Investigating accessibility in AI-powered educational tools for the blind and low-vision community
+                                        Investigating <i>accessibility</i> and <i>usability</i> of existing scientific tools alongside the blind and low-vision community
                                     </Text>
                                 </Box>
                                 <Box flex={1}>
-                                    <Text fontWeight="semibold" mb={2} color={useColorModeValue('gray.700', 'white')}>💼 Seeking Opportunities</Text>
+                                    <Text fontWeight="semibold" mb={2} color={useColorModeValue('gray.700', 'white')}>💼 Seeking internship opportunities</Text>
                                     <Text fontSize="sm" color={useColorModeValue('gray.600', 'gray.300')}>
-                                        Looking for research and engineering internships for Summer 2026
+                                        Actively looking for research (research scientist, UX research), data science, and software engineering internships for Summer 2026; I am especially interested in opportunities within industry, non-profits, NGOs, and think tanks!
                                     </Text>
                                 </Box>
                                 <Box flex={1}>
-                                    <Text fontWeight="semibold" mb={2} color={useColorModeValue('gray.700', 'white')}>📚 Learning</Text>
+                                    <Text fontWeight="semibold" mb={2} color={useColorModeValue('gray.700', 'white')}>📚 learning about learning...about technology</Text>
                                     <Text fontSize="sm" color={useColorModeValue('gray.600', 'gray.300')}>
-                                        Exploring the latest developments in human-AI interaction and assistive technologies
+                                        Understanding the latest developments in human-AI interaction and assistive technologies, especially how different populations learn about and engage with AI.
                                     </Text>
                                 </Box>
                             </Stack>

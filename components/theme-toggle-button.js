@@ -10,7 +10,6 @@ import {
     HStack,
     Text,
     Button,
-    Switch,
 } from '@chakra-ui/react'
 import { SunIcon, MoonIcon, SettingsIcon } from "@chakra-ui/icons"
 import { useState, createContext, useContext } from 'react'
@@ -32,7 +31,7 @@ export const FontSizeProvider = ({ children }) => {
 
 export const useFontSize = () => useContext(FontSizeContext);
 
-const ThemeToggleButton = ({ toggleSnow, isSnowEnabled }) => {
+const ThemeToggleButton = () => {
         const { colorMode, toggleColorMode } = useColorMode()
         const { fontSize, setFontSize } = useFontSize();
 
@@ -77,10 +76,6 @@ const ThemeToggleButton = ({ toggleSnow, isSnowEnabled }) => {
                                                                         </Button>
                                                                 ))}
                                                         </HStack>
-                                                </HStack>
-                                                <HStack justify="space-between">
-                                                        <Text>Snow:</Text>
-                                                        <Switch isChecked={isSnowEnabled} onChange={toggleSnow} />
                                                 </HStack>
                                         </VStack>
                                 </PopoverBody>

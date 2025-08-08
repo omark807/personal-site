@@ -28,7 +28,7 @@ const InterestCard = ({ icon, title, description }) => {
     const shadowColor = useColorModeValue('lg', 'dark-lg')
     const titleColor = useColorModeValue('gray.700', 'white')
     const descriptionColor = useColorModeValue('gray.600', 'gray.300')
-    const iconBg = useColorModeValue('blue.50', 'blue.900')
+    const iconBg = useColorModeValue('orange.50', 'orange.900')
     const borderColor = useColorModeValue('gray.200', 'gray.600')
     
     return (
@@ -42,7 +42,7 @@ const InterestCard = ({ icon, title, description }) => {
             _hover={{ 
                 transform: 'translateY(-4px)', 
                 shadow: 'xl',
-                borderColor: useColorModeValue('blue.300', 'blue.400')
+                borderColor: useColorModeValue('orange.300', 'orange.400')
             }}
             transition="all 0.3s ease"
             cursor="pointer"
@@ -54,7 +54,7 @@ const InterestCard = ({ icon, title, description }) => {
                     bg={iconBg}
                     mr={3}
                 >
-                    <Icon as={icon} boxSize={6} color="blue.500" />
+                    <Icon as={icon} boxSize={6} color={useColorModeValue('orange.600', 'orange.300')} />
                 </Box>
                 <Heading as="h3" size="md" color={titleColor}>{title}</Heading>
             </Flex>
@@ -69,16 +69,16 @@ const InterestCard = ({ icon, title, description }) => {
  */
 const Page = () => {
     const bgGradient = useColorModeValue(
-        'linear(to-r, blue.50, purple.50, pink.50)',
+        'linear(to-r, orange.50, pink.50, yellow.50)',
         'linear(to-r, gray.800, gray.700, gray.800)'
     )
     
     const cardBg = useColorModeValue('white', 'gray.800')
     const shadowColor = useColorModeValue('lg', 'dark-lg')
     const heroTextColor = useColorModeValue('gray.600', 'gray.300')
-    const aboutBg = useColorModeValue('blue.50', 'blue.900')
-    const aboutTextColor = useColorModeValue('blue.700', 'blue.200')
-    const aboutBorderColor = useColorModeValue('blue.500', 'blue.300')
+    const aboutBg = useColorModeValue('orange.50', 'orange.900')
+    const aboutTextColor = useColorModeValue('orange.700', 'orange.200')
+    const aboutBorderColor = useColorModeValue('orange.500', 'orange.300')
 
     return(
         <Layout>
@@ -133,7 +133,7 @@ const Page = () => {
                                 </Text>
                                 
                                 <HStack spacing={4} pt={4}>
-                                    <Badge colorScheme="blue" variant="subtle" px={3} py={1}>
+                                    <Badge colorScheme="orange" variant="subtle" px={3} py={1}>
                                         HCI Researcher
                                     </Badge>
                                     <Badge colorScheme="purple" variant="subtle" px={3} py={1}>
@@ -149,7 +149,7 @@ const Page = () => {
                                 <NextLink href="/about" passHref>
                                     <Button
                                         as="a"
-                                        colorScheme="blue"
+                                        colorScheme="orange"
                                         size="lg"
                                         rightIcon={<ChevronRightIcon />}
                                         _hover={{ transform: 'translateY(-2px)' }}
@@ -173,16 +173,16 @@ const Page = () => {
 
                             <HStack spacing={6} pt={2}>
                                 <Link href="mailto:omark807@gmail.com" isExternal>
-                                    <Icon as={FaEnvelope} boxSize={6} color={useColorModeValue('gray.600', 'gray.400')} _hover={{ color: useColorModeValue('blue.500', 'blue.300') }} />
+                                    <Icon as={FaEnvelope} boxSize={6} color={useColorModeValue('gray.600', 'gray.400')} _hover={{ color: useColorModeValue('orange.500', 'orange.300') }} />
                                 </Link>
                                 <Link href="https://linkedin.com/in/omark807" isExternal>
-                                    <Icon as={FaLinkedin} boxSize={6} color={useColorModeValue('gray.600', 'gray.400')} _hover={{ color: useColorModeValue('blue.500', 'blue.300') }} />
+                                    <Icon as={FaLinkedin} boxSize={6} color={useColorModeValue('gray.600', 'gray.400')} _hover={{ color: useColorModeValue('orange.500', 'orange.300') }} />
                                 </Link>
                                 <Link href="https://github.com/omark807" isExternal>
-                                    <Icon as={FaGithub} boxSize={6} color={useColorModeValue('gray.600', 'gray.400')} _hover={{ color: useColorModeValue('blue.500', 'blue.300') }} />
+                                    <Icon as={FaGithub} boxSize={6} color={useColorModeValue('gray.600', 'gray.400')} _hover={{ color: useColorModeValue('orange.500', 'orange.300') }} />
                                 </Link>
                                 <Link href="https://scholar.google.com/citations?user=T6f-cucAAAAJ&hl=en" isExternal>
-                                    <Icon as={IoSchoolSharp} boxSize={6} color={useColorModeValue('gray.600', 'gray.400')} _hover={{ color: useColorModeValue('blue.500', 'blue.300') }} />
+                                    <Icon as={IoSchoolSharp} boxSize={6} color={useColorModeValue('gray.600', 'gray.400')} _hover={{ color: useColorModeValue('orange.500', 'orange.300') }} />
                                 </Link>
                             </HStack>
                         </VStack>
@@ -191,7 +191,7 @@ const Page = () => {
                     {/* Current Status Section */}
                     <Section>
                         <Box bg={cardBg} p={6} borderRadius="xl" shadow={shadowColor} borderWidth="1px" borderColor={useColorModeValue('gray.200', 'gray.600')}>
-                            <Heading as="h2" size="lg" mb={4} color={useColorModeValue('blue.500', 'blue.300')}>
+                            <Heading as="h2" size="lg" mb={4} color={useColorModeValue('orange.500', 'orange.300')}>
                                 Currently, I am...
                             </Heading>
                             <Stack direction={{ base: 'column', md: 'row' }} spacing={6}>

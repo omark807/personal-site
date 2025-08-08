@@ -7,41 +7,207 @@ import {
     VStack,
     SimpleGrid,
     Icon,
-    Flex
+    Flex,
+    Image,
+    Button,
+    HStack,
+    Badge,
+    useColorModeValue,
+    Stack
 } from '@chakra-ui/react'
-import { FaAccessibleIcon, FaBrain, FaRobot, FaScroll, FaGavel, FaHeartbeat } from 'react-icons/fa'
+import { FaAccessibleIcon, FaBrain, FaRobot, FaScroll, FaGavel, FaHeartbeat, FaEnvelope, FaLinkedin, FaGithub, FaTwitter } from 'react-icons/fa'
+import { ChevronRightIcon } from '@chakra-ui/icons'
+import NextLink from 'next/link'
 import Section from '../components/section'
 import Paragraph from '../components/paragraph'
 import Layout from '../components/layouts/article'
 
-const InterestCard = ({ icon, title, description }) => (
-    <Box p={5} shadow="md" borderWidth="1px" borderRadius="lg">
-        <Flex align="center" mb={2}>
-            <Icon as={icon} boxSize={6} mr={2} color="blue.500" />
-            <Heading as="h3" size="md">{title}</Heading>
-        </Flex>
-        <Text fontSize="sm">{description}</Text>
-    </Box>
-)
+const InterestCard = ({ icon, title, description }) => {
+    const cardBg = useColorModeValue('white', 'gray.800')
+    const shadowColor = useColorModeValue('lg', 'dark-lg')
+    
+    return (
+        <Box 
+            p={6} 
+            shadow={shadowColor}
+            borderWidth="1px" 
+            borderRadius="xl"
+            bg={cardBg}
+            _hover={{ 
+                transform: 'translateY(-4px)', 
+                shadow: 'xl',
+                borderColor: 'blue.300'
+            }}
+            transition="all 0.3s ease"
+            cursor="pointer"
+        >
+            <Flex align="center" mb={3}>
+                <Box
+                    p={2}
+                    borderRadius="lg"
+                    bg="blue.50"
+                    mr={3}
+                >
+                    <Icon as={icon} boxSize={6} color="blue.500" />
+                </Box>
+                <Heading as="h3" size="md" color="gray.700">{title}</Heading>
+            </Flex>
+            <Text fontSize="sm" color="gray.600" lineHeight="tall">{description}</Text>
+        </Box>
+    )
+}
 
 /**
  * The main landing page for the website, containing a short intro and some quick bits about my interests. 
  * @returns the home page for the website
  */
 const Page = () => {
+    const bgGradient = useColorModeValue(
+        'linear(to-r, blue.50, purple.50, pink.50)',
+        'linear(to-r, blue.900, purple.900, pink.900)'
+    )
+    
+    const cardBg = useColorModeValue('white', 'gray.800')
+    const shadowColor = useColorModeValue('lg', 'dark-lg')
+
     return(
         <Layout>
-            <Container maxW="container.md">
-                <VStack spacing={10} alignItems="stretch">
-                    <Box textAlign="center" py={10}>
-                        <Heading as="h1" size="2xl" mb={2}>
-                            Omar Khan
-                        </Heading>
-                        <Text fontSize="xl" fontWeight="medium" color="cyan.200">
-                            researcher, (over)thinker, and cat parent
-                        </Text>
+            <Container maxW="container.lg">
+                <VStack spacing={16} alignItems="stretch">
+                    {/* Enhanced Hero Section */}
+                    <Box 
+                        bgGradient={bgGradient}
+                        borderRadius="2xl"
+                        p={8}
+                        textAlign="center"
+                        position="relative"
+                        overflow="hidden"
+                    >
+                        <VStack spacing={6}>
+                            <Box>
+                                <Image
+                                    src="/profpic.JPG"
+                                    alt="Omar Khan"
+                                    borderRadius="full"
+                                    boxSize="180px"
+                                    objectFit="cover"
+                                    border="4px solid"
+                                    borderColor="white"
+                                    shadow="xl"
+                                    mx="auto"
+                                    fallbackSrc="https://via.placeholder.com/180x180?text=OK"
+                                />
+                            </Box>
+                            
+                            <Badge
+                                colorScheme="green"
+                                borderRadius="full"
+                                px={4}
+                                py={2}
+                                fontSize="sm"
+                                fontWeight="semibold"
+                            >
+                                🎯 Available for Summer 2026 Internships
+                            </Badge>
+                            
+                            <VStack spacing={3}>
+                                <Heading as="h1" size="3xl" fontWeight="bold">
+                                    Omar Khan
+                                </Heading>
+                                <Text fontSize="xl" fontWeight="medium" color="gray.600">
+                                    PhD Candidate in Computer Science at UIUC
+                                </Text>
+                                <Text fontSize="lg" maxW="600px" lineHeight="tall">
+                                    researcher, (over)thinker, and cat parent passionate about making technology 
+                                    accessible and inclusive for everyone
+                                </Text>
+                                
+                                <HStack spacing={4} pt={4}>
+                                    <Badge colorScheme="blue" variant="subtle" px={3} py={1}>
+                                        HCI Researcher
+                                    </Badge>
+                                    <Badge colorScheme="purple" variant="subtle" px={3} py={1}>
+                                        Accessibility Advocate
+                                    </Badge>
+                                    <Badge colorScheme="green" variant="subtle" px={3} py={1}>
+                                        PhD Candidate
+                                    </Badge>
+                                </HStack>
+                            </VStack>
+
+                            <HStack spacing={4} pt={4}>
+                                <NextLink href="/about" passHref>
+                                    <Button
+                                        as="a"
+                                        colorScheme="blue"
+                                        size="lg"
+                                        rightIcon={<ChevronRightIcon />}
+                                        _hover={{ transform: 'translateY(-2px)' }}
+                                        transition="all 0.2s"
+                                    >
+                                        Learn More About Me
+                                    </Button>
+                                </NextLink>
+                                <NextLink href="/research" passHref>
+                                    <Button
+                                        as="a"
+                                        variant="outline"
+                                        size="lg"
+                                        _hover={{ transform: 'translateY(-2px)' }}
+                                        transition="all 0.2s"
+                                    >
+                                        View My Research
+                                    </Button>
+                                </NextLink>
+                            </HStack>
+
+                            <HStack spacing={6} pt={2}>
+                                <Link href="mailto:okhan5@illinois.edu" isExternal>
+                                    <Icon as={FaEnvelope} boxSize={6} color="gray.600" _hover={{ color: 'blue.500' }} />
+                                </Link>
+                                <Link href="https://linkedin.com/in/omar-khan-profile" isExternal>
+                                    <Icon as={FaLinkedin} boxSize={6} color="gray.600" _hover={{ color: 'blue.500' }} />
+                                </Link>
+                                <Link href="https://github.com/omark807" isExternal>
+                                    <Icon as={FaGithub} boxSize={6} color="gray.600" _hover={{ color: 'blue.500' }} />
+                                </Link>
+                                <Link href="https://twitter.com/your_handle" isExternal>
+                                    <Icon as={FaTwitter} boxSize={6} color="gray.600" _hover={{ color: 'blue.500' }} />
+                                </Link>
+                            </HStack>
+                        </VStack>
                     </Box>
 
+                    {/* Current Status Section */}
+                    <Section>
+                        <Box bg={cardBg} p={6} borderRadius="xl" shadow={shadowColor}>
+                            <Heading as="h2" size="lg" mb={4} color="blue.500">
+                                Currently Working On
+                            </Heading>
+                            <Stack direction={{ base: 'column', md: 'row' }} spacing={6}>
+                                <Box flex={1}>
+                                    <Text fontWeight="semibold" mb={2}>🔬 PhD Research</Text>
+                                    <Text fontSize="sm" color="gray.600">
+                                        Investigating accessibility in AI-powered educational tools for the blind and low-vision community
+                                    </Text>
+                                </Box>
+                                <Box flex={1}>
+                                    <Text fontWeight="semibold" mb={2}>💼 Seeking Opportunities</Text>
+                                    <Text fontSize="sm" color="gray.600">
+                                        Looking for research and engineering internships for Summer 2026
+                                    </Text>
+                                </Box>
+                                <Box flex={1}>
+                                    <Text fontWeight="semibold" mb={2}>📚 Learning</Text>
+                                    <Text fontSize="sm" color="gray.600">
+                                        Exploring the latest developments in human-AI interaction and assistive technologies
+                                    </Text>
+                                </Box>
+                            </Stack>
+                        </Box>
+                    </Section>
+
+                    {/* About Section */}
                     <Section>
                         <Heading as="h2" size="xl" mb={4}>
                             hello!
@@ -51,13 +217,22 @@ const Page = () => {
                             Urbana-Champaign (UIUC)</Link> advised by <Link href='https://jooyoungseo.github.io/' target='_blank'>Dr. JooYoung Seo</Link> in the <Link href='https://xabilitylab.ischool.illinois.edu/' target='_blank'>(x)Ability Design Lab</Link>. My interests lie broadly in human-computer interaction (HCI), 
                             and I am especially interested in the intersection of accessibility, human-AI interaction, and education, particularly how we can craft digital experiences that responsibly make use of emerging technologies, particularly with and for the blind and low-vision (BLV) community.
                         </Paragraph>
-                        <Text fontWeight="bold" mt={4} color="blue.500">
-                            I am actively seeking research-oriented and engineering-oriented internships for summer 2026!
-                        </Text>
+                        <Box 
+                            mt={6} 
+                            p={4} 
+                            bg="blue.50" 
+                            borderLeft="4px solid" 
+                            borderColor="blue.500" 
+                            borderRadius="md"
+                        >
+                            <Text fontWeight="bold" color="blue.700">
+                                🚀 I am actively seeking research-oriented and engineering-oriented internships for summer 2026!
+                            </Text>
+                        </Box>
                     </Section>
 
                     <Section>
-                        <Heading as="h2" size="xl" mb={6}>
+                        <Heading as="h2" size="xl" mb={6} textAlign="center">
                             Current Research Interests
                         </Heading>
                         <SimpleGrid columns={{ base: 1, md: 2 }} spacing={6}>
@@ -85,7 +260,7 @@ const Page = () => {
                     </Section>
 
                     <Section>
-                        <Heading as="h2" size="xl" mb={4}>
+                        <Heading as="h2" size="xl" mb={6} textAlign="center">
                             Other Academic Interests
                         </Heading>
                         <SimpleGrid columns={{ base: 1, md: 2 }} spacing={6}>

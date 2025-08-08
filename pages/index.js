@@ -128,7 +128,7 @@ const Page = () => {
                                     PhD Candidate in Computer Science at UIUC
                                 </Text>
                                 <Text fontSize="lg" maxW="600px" lineHeight="tall" color={heroTextColor}>
-                                    researcher, (over)thinker, and cat parent passionate about human-centered technology 
+                                    researcher and cat parent passionate about human-centered technology 
                                     design
                                 </Text>
                                 

@@ -7,6 +7,13 @@ const Section = motion(Box);
 
 const NewsPage = () => {
     const newsItems = [
+                {
+            title: 'ASSETS 2025 In-Person Attendance',
+            date: '08-01-2025',
+            month: 'August 2025',
+            content: 'I will be attending ASSETS 2025 in Denver, CO in October! I am very much looking forward to connecting with fellow researchers and practitioners working across any and all work within accessibility.',
+            tags: ['conference'],
+        },
         {
             title: 'CHI 2025 In-Person Presentation',
             date: '03-31-2025',

@@ -112,10 +112,15 @@ const Page = () => {
                             <Badge
                                 colorScheme="green"
                                 borderRadius="full"
-                                px={4}
+                                px={{ base: 3, md: 4 }}
                                 py={2}
-                                fontSize="sm"
+                                fontSize={{ base: "xs", md: "sm" }}
                                 fontWeight="semibold"
+                                textAlign="center"
+                                whiteSpace="normal"
+                                wordBreak="break-word"
+                                maxW={{ base: "90%", sm: "320px", md: "100%" }}
+                                lineHeight="1.4"
                             >
                                 🎯 Available for Summer 2026 Internships
                             </Badge>
@@ -124,36 +129,77 @@ const Page = () => {
                                 <Heading as="h1" size="3xl" fontWeight="bold">
                                     Omar Khan
                                 </Heading>
-                                <Text fontSize="xl" fontWeight="medium" color={heroTextColor}>
+                                <Text fontSize="xl" fontWeight="medium" color={heroTextColor} textAlign="center">
                                     Ph.D. Candidate in Computer Science at UIUC
                                 </Text>
-                                <Text fontSize="lg" maxW="600px" lineHeight="tall" color={heroTextColor}>
+                                <Text 
+                                    fontSize="lg" 
+                                    maxW={{ base: "90%", md: "600px" }} 
+                                    lineHeight="tall" 
+                                    color={heroTextColor}
+                                    textAlign="center"
+                                    px={{ base: 2, md: 0 }}
+                                >
                                     researcher and cat parent passionate about human-centered technology 
                                     design
                                 </Text>
                                 
-                                <HStack spacing={4} pt={4}>
-                                    <Badge colorScheme="orange" variant="subtle" px={3} py={1}>
+                                <HStack 
+                                    spacing={{ base: 2, md: 4 }} 
+                                    pt={4} 
+                                    flexWrap="wrap" 
+                                    justify="center"
+                                >
+                                    <Badge 
+                                        colorScheme="orange" 
+                                        variant="subtle" 
+                                        px={3} 
+                                        py={1}
+                                        fontSize={{ base: "xs", md: "sm" }}
+                                        whiteSpace="nowrap"
+                                    >
                                         HCI Researcher
                                     </Badge>
-                                    <Badge colorScheme="purple" variant="subtle" px={3} py={1}>
+                                    <Badge 
+                                        colorScheme="purple" 
+                                        variant="subtle" 
+                                        px={3} 
+                                        py={1}
+                                        fontSize={{ base: "xs", md: "sm" }}
+                                        whiteSpace="nowrap"
+                                    >
                                         Accessibility Advocate
                                     </Badge>
-                                    <Badge colorScheme="green" variant="subtle" px={3} py={1}>
+                                    <Badge 
+                                        colorScheme="green" 
+                                        variant="subtle" 
+                                        px={3} 
+                                        py={1}
+                                        fontSize={{ base: "xs", md: "sm" }}
+                                        whiteSpace="nowrap"
+                                    >
                                         PhD Candidate
                                     </Badge>
                                 </HStack>
                             </VStack>
 
-                            <HStack spacing={4} pt={4}>
+                            <Stack 
+                                direction={{ base: "column", sm: "row" }} 
+                                spacing={4} 
+                                pt={4}
+                                align="center"
+                                justify="center"
+                            >
                                 <NextLink href="/about" passHref>
                                     <Button
                                         as="a"
                                         colorScheme="orange"
-                                        size="lg"
+                                        size={{ base: "md", md: "lg" }}
                                         rightIcon={<ChevronRightIcon />}
                                         _hover={{ transform: 'translateY(-2px)' }}
                                         transition="all 0.2s"
+                                        w={{ base: "full", sm: "auto" }}
+                                        maxW={{ base: "280px", sm: "none" }}
                                     >
                                         Learn More About Me
                                     </Button>
@@ -162,14 +208,16 @@ const Page = () => {
                                     <Button
                                         as="a"
                                         variant="outline"
-                                        size="lg"
+                                        size={{ base: "md", md: "lg" }}
                                         _hover={{ transform: 'translateY(-2px)' }}
                                         transition="all 0.2s"
+                                        w={{ base: "full", sm: "auto" }}
+                                        maxW={{ base: "280px", sm: "none" }}
                                     >
                                         View My Research
                                     </Button>
                                 </NextLink>
-                            </HStack>
+                            </Stack>
 
                             <HStack spacing={6} pt={2}>
                                 <Link href="mailto:omark807@gmail.com" isExternal>

@@ -125,7 +125,7 @@ const Page = () => {
                                     Omar Khan
                                 </Heading>
                                 <Text fontSize="xl" fontWeight="medium" color={heroTextColor}>
-                                    PhD Candidate in Computer Science at UIUC
+                                    Ph.D. Candidate in Computer Science at UIUC
                                 </Text>
                                 <Text fontSize="lg" maxW="600px" lineHeight="tall" color={heroTextColor}>
                                     researcher and cat parent passionate about human-centered technology 

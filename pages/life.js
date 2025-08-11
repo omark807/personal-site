@@ -27,7 +27,7 @@ const LifePage = () => (
           <Link href="/blogs" passHref>
             <Box as="a" p={5} borderWidth={1} borderRadius="lg">
               <Heading as="h3" fontSize={20} mb={2}>Blogs</Heading>
-              <Text>blogs: scribbling thoughts!</Text>
+              <Text>blogs & substack: scribbling thoughts!</Text>
             </Box>
           </Link>
         </Section>

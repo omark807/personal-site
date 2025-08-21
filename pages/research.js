@@ -22,14 +22,23 @@ const Works = () => (
                     Conference and Journal Publications
                 </Heading> 
                 <Paragraph>
-                    <b>[C1]</b> Alex Atcheson, <b>Omar Khan</b>, Brian Siemann, Anika Jain, and Karrie Karahalios. 2025. 
+                    <b>[C1]</b> Sanchita S. Kamath, <b>Omar Khan</b>, Anurag Choudhary, Jan Meyerhoff-Liang,
+                    Soyoung Choi, and JooYoung Seo. 2025. PunchPulse: A Physically Demanding Virtual Reality Boxing Game Designed with, for and by Blind and
+                    Low-Vision Players. <i>In The 27th International ACM SIGACCESS Conference
+                    on Computers and Accessibility (ASSETS ’25)</i>, October 26–29, 2025, Denver, CO,
+                    USA. ACM, New York, NY, USA, 21 pages. <Link target="_blank" href="https://doi.org/10.1145/3663547.
+                    3746365"> [DOI]</Link> | <Link target="_blank" href="https://arxiv.org/abs/2508.02610"> [arxiv]</Link>
+                </Paragraph>
+                <Divider my={3} />
+                <Paragraph>
+                    <b>[C2]</b> Alex Atcheson, <b>Omar Khan</b>, Brian Siemann, Anika Jain, and Karrie Karahalios. 2025. 
                     ”I’d Never Actually Realized How Big An Impact It Had Until Now”: Perspectives of University Students with Disabilities on Generative Artificial Intelligence.
                     <i> In Proceedings of the 2025 CHI Conference on Human Factors in Computing Systems (CHI &apos;25).</i> Association for Computing Machinery, New York, NY, USA, Article 42, 1–22.
                     <Link target="_blank" href='https://doi.org/10.1145/3706598.3714121'> [DOI]</Link> 
                 </Paragraph>
                 <Divider my={3} />
                 <Paragraph>
-                    <b>[C2]</b> Chiang, Y.S, <b>Khan, O.</b>, Bates, A., and Cobb, C. (2024). 
+                    <b>[C3]</b> Chiang, Y.S, <b>Khan, O.</b>, Bates, A., and Cobb, C. (2024). 
                     More than just informed: The importance of consent facets in smart homes.
                     <i>In Proceedings of the CHI Conference on Human Factors in Computing Systems (CHI ’24), May 11–16, 2024, Honolulu, HI, USA.</i> ACM, New
                     York, NY, USA, 21 pages.
@@ -37,7 +46,7 @@ const Works = () => (
                 </Paragraph>
                 <Divider my={3} />
                 <Paragraph>
-                    <b>[C3]</b> Mahmood, S., Zhao, M., <b>Khan, O.</b>, Herman, G.L. (2020). 
+                    <b>[C4]</b> Mahmood, S., Zhao, M., <b>Khan, O.</b>, Herman, G.L. (2020). 
                     Caches as an Example of Machine-gradable Exam Questions for Complex Engineering Systems. 
                     <i>In Proceedings of the 49th ASEE/IEEE Frontiers in Education Conference, Uppsala, Sweden, Oct. 21-24.</i>
                     <Link target="_blank" href='https://doi.org/10.1109/FIE44824.2020.9273822'> [DOI]</Link> 

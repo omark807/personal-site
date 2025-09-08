@@ -271,9 +271,9 @@ const Page = () => {
                             hello!
                         </Heading>
                         <Paragraph>
-                            I am a fourth-year Ph.D. candidate studying Computer Science at the <Link href='https://illinois.edu/' target='_blank'>University of Illinois
-                            Urbana-Champaign (UIUC)</Link> advised by <Link href='https://jooyoungseo.github.io/' target='_blank'>Dr. JooYoung Seo</Link> in the <Link href='https://xabilitylab.ischool.illinois.edu/' target='_blank'>(x)Ability Design Lab</Link>. My interests lie broadly in human-computer interaction (HCI), 
-                            and I am especially interested in the intersection of accessibility, human-AI interaction, and education, particularly how we can craft digital experiences that responsibly make use of emerging technologies, particularly with and for the blind and low-vision (BLV) community.
+                        I am a fourth-year Ph.D. candidate studying Computer Science at the <Link href='https://illinois.edu/' target='_blank'>University of Illinois
+                            Urbana-Champaign (UIUC)</Link> advised by <Link href='https://jooyoungseo.github.io/' target='_blank'>Dr. JooYoung Seo</Link> in the <Link href='https://xabilitylab.ischool.illinois.edu/' target='_blank'>(x)Ability Design Lab</Link>. My research addresses the critical challenge of representing qualitative and conceptual data—such as mind maps or thematic analysis diagrams—for the blind and low-vision (BLV) community. Situated at the intersection of accessibility, human-AI interaction, and education, my work focuses on creating responsible, AI-driven digital experiences that empower BLV users to engage with previously inaccessible information, particularly through designing 
+                            intelligent systems for accessible data visualizations and &ldquo;open-ended&rdquo; research diagrams.
                         </Paragraph>
                         <Box 
                             mt={6} 

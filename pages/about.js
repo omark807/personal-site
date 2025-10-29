@@ -2,7 +2,7 @@ import { Container, Heading, Link, ListItem, Grid, GridItem, List, ListIcon } fr
 import Layout from '../components/layouts/article'
 import Paragraph from '../components/paragraph'
 import Section from '../components/section'
-import { CheckCircleIcon, StarIcon, EditIcon, RepeatClockIcon, CoffeeIcon, DownloadIcon, SunIcon, ChevronUpIcon, ChevronRightIcon } from '@chakra-ui/icons'
+import { CheckCircleIcon, StarIcon, EditIcon, RepeatClockIcon, DownloadIcon, SunIcon, ChevronUpIcon, ChevronRightIcon } from '@chakra-ui/icons'
 
 const AboutMe = () => (
     <Layout title="More about me! ">
@@ -71,7 +71,7 @@ const AboutMe = () => (
                                 Cat parenting
                             </ListItem>
                             <ListItem>
-                                <ListIcon as={CoffeeIcon} color="brown.500" />
+                                <ListIcon as={StarIcon} color="brown.500" />
                                 Coffee
                             </ListItem>
                             <ListItem>

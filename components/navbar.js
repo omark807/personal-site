@@ -12,6 +12,7 @@ import {
   MenuList,
   MenuButton,
   IconButton,
+  Button,
   useColorModeValue
 } from '@chakra-ui/react';
 import { HamburgerIcon } from '@chakra-ui/icons';
@@ -85,11 +86,7 @@ const Navbar = (props) => {
             projects
           </LinkItem> */}
           <Menu>
-            <MenuButton
-              p={2}
-              href={'#'}
-              rightIcon={<ChevronDownIcon />}
-            >
+            <MenuButton as={Button} rightIcon={<ChevronDownIcon />} variant="ghost" p={2}>
               resumé(s)
             </MenuButton>
             <MenuList>
@@ -164,9 +161,9 @@ const Navbar = (props) => {
                   <MenuItem as={Link}>projects</MenuItem>
                 </NextLink> */}
                 <Menu placement="right-start">
-                  <MenuItem as={MenuButton} rightIcon={<ChevronDownIcon />}>
+                  <MenuButton as={Button} rightIcon={<ChevronDownIcon />} variant="ghost" p={2}>
                     resumé(s)
-                  </MenuItem>
+                  </MenuButton>
                   <MenuList>
                     <MenuItem as={Link} href="https://drive.google.com/file/d/1cAUcYLSET9oTVi57cWeootpquQ7zJqYj/view?usp=sharing" target="_blank">
                       CV (Long-form)

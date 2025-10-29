@@ -1,9 +1,7 @@
 import { Container, Heading, Text, Box, Tag, TagLabel, TagCloseButton, Input, InputGroup, InputLeftElement, Divider } from '@chakra-ui/react';
 import { SearchIcon } from '@chakra-ui/icons';
 import { useState } from 'react';
-import { motion } from 'framer-motion';
-
-const Section = motion(Box);
+import Section from '../components/section';
 
 const NewsPage = () => {
     const newsItems = [

@@ -283,7 +283,7 @@ const Page = () => {
                             borderRadius="md"
                         >
                             <Text fontWeight="bold" color={aboutTextColor}>
-                                🚀 I am actively seeking research-oriented and engineering-oriented internships for summer 2026!
+                                🚀 I am actively seeking research scientist, UX research, and engineering-oriented internships for summer 2026!
                             </Text>
                         </Box>
                     </Section>

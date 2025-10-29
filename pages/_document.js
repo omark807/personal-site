@@ -7,6 +7,14 @@ export default class Document extends NextDocument{
         return(
             <Html lang="en">
                 <Head>
+                    {/* Optimized Google Fonts loading - preconnect and font link */}
+                    <link rel="preconnect" href="https://fonts.googleapis.com" />
+                    <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+                    <link 
+                        href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;700&display=swap" 
+                        rel="stylesheet"
+                    />
+                    
                     {/* Favicon and app icons */}
                     <link rel="icon" type="image/png" sizes="32x32" href="/ok_logo_transparent.png" />
                     <link rel="icon" type="image/png" sizes="16x16" href="/ok_logo_transparent.png" />

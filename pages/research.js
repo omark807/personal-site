@@ -46,7 +46,7 @@ const Works = () => (
                 </Paragraph>
                 <Divider my={3} />
                 <Paragraph>
-                    <b>[C4]</b> Mahmood, S., Zhao, M., <b>Khan, O.</b>, Herman, G.L. (2020). 
+                    <b>[C1]</b> Mahmood, S., Zhao, M., <b>Khan, O.</b>, Herman, G.L. (2020). 
                     Caches as an Example of Machine-gradable Exam Questions for Complex Engineering Systems. 
                     <i>In Proceedings of the 49th ASEE/IEEE Frontiers in Education Conference, Uppsala, Sweden, Oct. 21-24.</i>
                     <Link target="_blank" href='https://doi.org/10.1109/FIE44824.2020.9273822'> [DOI]</Link> 

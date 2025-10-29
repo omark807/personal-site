@@ -44,11 +44,10 @@ const ThemeToggleButton = () => {
                         <PopoverTrigger>
                                 <IconButton
                                         aria-label="Customize Theme"
-                                        isRound="true"
+                                        isRound
                                         colorScheme={useColorModeValue('blackAlpha', 'orange')}
                                         icon={<SettingsIcon />}
-                                >
-                                </IconButton>
+                                />
                         </PopoverTrigger>
                         <PopoverContent>
                                 <PopoverBody>

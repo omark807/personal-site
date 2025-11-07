@@ -24,17 +24,17 @@ const LinkItem = ({ href, path, _target, children, ...props }) => {
   const active = path === href;
   const inactiveColor = useColorModeValue('gray200', 'whiteAlpha.900');
   return (
-    <NextLink href={href} passHref>
-      <Link
-        p={2}
-        bg={active ? 'pinkyPink' : undefined}
-        color={active ? '#232323' : inactiveColor}
-        _target={_target}
-        {...props}
-      >
-        {children}
-      </Link>
-    </NextLink>
+    <Link
+      as={NextLink}
+      href={href}
+      p={2}
+      bg={active ? 'pinkyPink' : undefined}
+      color={active ? '#232323' : inactiveColor}
+      _target={_target}
+      {...props}
+    >
+      {children}
+    </Link>
   );
 };
 
@@ -148,18 +148,10 @@ const Navbar = (props) => {
                 aria-label="Options"
               />
               <MenuList>
-                <NextLink href="/about" passHref>
-                  <MenuItem as={Link}>about</MenuItem>
-                </NextLink>
-                <NextLink href="/news" passHref>
-                  <MenuItem as={Link}>news</MenuItem>
-                </NextLink>
-                <NextLink href="/research" passHref>
-                  <MenuItem as={Link}>research</MenuItem>
-                </NextLink>
-                {/* <NextLink href="/projects" passHref>
-                  <MenuItem as={Link}>projects</MenuItem>
-                </NextLink> */}
+                <MenuItem as={NextLink} href="/about">about</MenuItem>
+                <MenuItem as={NextLink} href="/news">news</MenuItem>
+                <MenuItem as={NextLink} href="/research">research</MenuItem>
+                {/* <MenuItem as={NextLink} href="/projects">projects</MenuItem> */}
                 <Menu placement="right-start">
                   <MenuButton as={Button} rightIcon={<ChevronDownIcon />} variant="ghost" p={2}>
                     resumé(s)
@@ -182,9 +174,7 @@ const Navbar = (props) => {
                 <MenuItem as={Link} href="https://scholar.google.com/citations?user=T6f-cucAAAAJ&hl=en" target="_blank">
                   google scholar
                 </MenuItem>
-                <NextLink href="/life" passHref>
-                  <MenuItem as={Link}>life</MenuItem>
-                </NextLink>
+                <MenuItem as={NextLink} href="/life">life</MenuItem>
               </MenuList>
             </Menu>
           </Box>

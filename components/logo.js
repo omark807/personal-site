@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import NextLink from 'next/link'
 import Image from 'next/image'
 import styled from '@emotion/styled'
 
@@ -18,8 +18,7 @@ const LogoBox = styled.span`
 
 const Logo = () => {
     return(
-        <Link href="/">
-            <a>
+        <NextLink href="/" aria-label="Home">
                 <LogoBox>
                     <Image 
                         src="/ok_logo_transparent.png" 
@@ -29,8 +28,7 @@ const Logo = () => {
                         priority
                     />
                 </LogoBox>
-            </a>
-        </Link>
+        </NextLink>
     )
 }
 

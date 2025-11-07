@@ -190,9 +190,9 @@ const Page = () => {
                                 align="center"
                                 justify="center"
                             >
-                                <NextLink href="/about" passHref>
                                     <Button
-                                        as="a"
+                                    as={NextLink}
+                                    href="/about"
                                         colorScheme="orange"
                                         size={{ base: "md", md: "lg" }}
                                         rightIcon={<ChevronRightIcon />}
@@ -203,10 +203,9 @@ const Page = () => {
                                     >
                                         Learn More About Me
                                     </Button>
-                                </NextLink>
-                                <NextLink href="/research" passHref>
                                     <Button
-                                        as="a"
+                                    as={NextLink}
+                                    href="/research"
                                         variant="outline"
                                         size={{ base: "md", md: "lg" }}
                                         _hover={{ transform: 'translateY(-2px)' }}
@@ -216,7 +215,6 @@ const Page = () => {
                                     >
                                         View My Research
                                     </Button>
-                                </NextLink>
                             </Stack>
 
                             <HStack spacing={6} pt={2}>

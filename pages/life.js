@@ -1,7 +1,7 @@
 import { Container, Heading, SimpleGrid, Box, Text } from '@chakra-ui/react';
 import Layout from '../components/layouts/article';
 import Section from '../components/section';
-import Link from 'next/link';
+import NextLink from 'next/link';
 
 // import blogsImg from '../public/images/blog.webp';
 // import booksImg from '../public/images/book.webp';
@@ -24,28 +24,22 @@ const LifePage = () => (
       </Heading>
       <SimpleGrid columns={[1, 2, 3]} gap={6}>
         <Section delay={0.3}>
-          <Link href="/blogs" passHref>
-            <Box as="a" p={5} borderWidth={1} borderRadius="lg">
+          <Box as={NextLink} href="/blogs" p={5} borderWidth={1} borderRadius="lg">
               <Heading as="h3" fontSize={20} mb={2}>Blogs</Heading>
               <Text>blogs & substack: scribbling thoughts!</Text>
             </Box>
-          </Link>
         </Section>
         <Section delay={0.4}>
-          <Link href="/cooking" passHref>
-            <Box as="a" p={5} borderWidth={1} borderRadius="lg">
+          <Box as={NextLink} href="/cooking" p={5} borderWidth={1} borderRadius="lg">
               <Heading as="h3" fontSize={20} mb={2}>Cooking</Heading>
               <Text>cooking: whipping up magic!</Text>
             </Box>
-          </Link>
         </Section>
         <Section delay={0.5}>
-          <Link href="/cat" passHref>
-            <Box as="a" p={5} borderWidth={1} borderRadius="lg">
+          <Box as={NextLink} href="/cat" p={5} borderWidth={1} borderRadius="lg">
               <Heading as="h3" fontSize={20} mb={2}>Cat</Heading>
               <Text>cat content</Text>
             </Box>
-          </Link>
         </Section>
       </SimpleGrid>
     </Container>

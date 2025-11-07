@@ -11,7 +11,7 @@ import Paragraph from '../components/paragraph'
 const Works = () => (
     <Layout title="Works">
         <Container>
-            <Heading as="h3" fontsize={20} mb={4}>
+            <Heading as="h3" fontSize={20} mb={4}>
                 Research
             </Heading>
             Research is nothing if not for your collaborators, and I have had the tremendous opportunity to work with many amazing ones throughout my life. Here, you can find more information on publications and presentations I&apos;ve worked on with these folks. 
@@ -22,12 +22,20 @@ const Works = () => (
                     Conference and Journal Publications
                 </Heading> 
                 <Paragraph>
-                    <b>[C4]</b> Sanchita S. Kamath, <b>Omar Khan</b>, Anurag Choudhary, Jan Meyerhoff-Liang,
+                    <b>[C6]</b> <b>Omar Khan</b> and JooYoung Seo. 2026. "I Don't Trust Any Professional Research Tool": A Re-Imagination of Knowledge Production Workflows by, with, and for Blind and Low-Vision Researchers. <i>In submission. In Proceedings of the 2026 CHI Conference on Human Factors in Computing Systems (CHI '26). ACM, New York, NY, USA, 37 pages.</i>
+                </Paragraph>
+                <Divider my={3} />
+                <Paragraph>
+                    <b>[C5]</b> Sanchita S. Kamath, <b>Omar Khan</b>, Anurag Choudhary, Jan Meyerhoff-Liang,
                     Soyoung Choi, and JooYoung Seo. 2025. PunchPulse: A Physically Demanding Virtual Reality Boxing Game Designed with, for and by Blind and
                     Low-Vision Players. <i>In The 27th International ACM SIGACCESS Conference
                     on Computers and Accessibility (ASSETS ’25)</i>, October 26–29, 2025, Denver, CO,
-                    USA. ACM, New York, NY, USA, 21 pages. <Link target="_blank" href="https://doi.org/10.1145/3663547.
-                    3746365"> [DOI]</Link> | <Link target="_blank" href="https://arxiv.org/abs/2508.02610"> [arxiv]</Link>
+                    USA. ACM, New York, NY, USA, 21 pages. <Link target="_blank" href="https://dl.acm.org/doi/10.1145/3663547.3746365"> [DOI]</Link>
+                </Paragraph>
+                <Divider my={3} />
+                <Paragraph>
+                <b>[C4]</b> Sanchita S. Kamath, <b>Omar Khan</b>, Aziz N. Zeidieh, and JooYoung Seo. 2025. Sensing the Shape of Data: Non-Visual Exploration of
+                Statistical Concepts in Histograms with Blind and Low-Vision Learners. <i>arXiv preprint arXiv:2509.14452.</i> <Link target="_blank" href="https://arxiv.org/abs/2509.14452"> [arxiv]</Link>
                 </Paragraph>
                 <Divider my={3} />
                 <Paragraph>

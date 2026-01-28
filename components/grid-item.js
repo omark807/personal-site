@@ -5,16 +5,16 @@ import { Global } from '@emotion/react'
 
 export const GridItem = ({ children, href, title, thumbnail }) => (
   <Box w="100%" textAlign="center">
-    <LinkBox cursor="pointer">
+    <LinkBox cursor="pointer" role="article" aria-labelledby={`grid-title-${title}`}>
       <Image
         src={thumbnail}
-        alt={title}
+        alt={`Thumbnail for ${title}`}
         className="grid-item-thumbnail"
         placeholder="blur"
         loading="lazy"
       />
-      <LinkOverlay href={href} target="_blank">
-        <Text mt={2}>{title}</Text>
+      <LinkOverlay href={href} target="_blank" rel="noopener noreferrer" aria-label={`View ${title} (opens in new tab)`}>
+        <Text mt={2} id={`grid-title-${title}`}>{title}</Text>
       </LinkOverlay>
       <Text fontSize={14}>{children}</Text>
     </LinkBox>
@@ -23,14 +23,14 @@ export const GridItem = ({ children, href, title, thumbnail }) => (
 
 export const WorkGridItem = ({ children, id, title, thumbnail }) => (
   <Box w="100%" textAlign="center">
-    <LinkBox as={NextLink} href={`/works/${id}`} cursor="pointer">
+    <LinkBox as={NextLink} href={`/works/${id}`} cursor="pointer" role="article" aria-labelledby={`work-grid-title-${id}`}>
       <Image
         src={thumbnail}
-        alt={title}
+        alt={`Thumbnail for ${title}`}
         className="grid-item-thumbnail"
         placeholder="blur"
       />
-      <Text mt={2} fontSize={20}>
+      <Text mt={2} fontSize={20} id={`work-grid-title-${id}`}>
         {title}
       </Text>
       <Text fontSize={14}>{children}</Text>

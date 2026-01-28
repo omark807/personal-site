@@ -11,12 +11,32 @@ const Main = ({ children, router }) => {
         <Box as="main" pb={8} fontSize={fontSize}>
             <Head>
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
-                <title>Omar Khan - Homepage</title>
             </Head>
+
+            <a 
+                href="#main-content" 
+                style={{
+                    position: 'absolute',
+                    left: '-9999px',
+                    zIndex: 999,
+                    padding: '1em',
+                    backgroundColor: '#000',
+                    color: '#fff',
+                    textDecoration: 'none'
+                }}
+                onFocus={(e) => {
+                    e.target.style.left = '0';
+                }}
+                onBlur={(e) => {
+                    e.target.style.left = '-9999px';
+                }}
+            >
+                Skip to main content
+            </a>
 
             <Navbar path={router.asPath} />
 
-            <Container maxW="container.md" pt={14}>
+            <Container maxW="container.md" pt={14} id="main-content" tabIndex={-1}>
                 {children}
                 
                 {/* Subtle Copyright Footer */}

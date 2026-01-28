@@ -86,14 +86,21 @@ const Navbar = (props) => {
             projects
           </LinkItem> */}
           <Menu>
-            <MenuButton as={Button} rightIcon={<ChevronDownIcon />} variant="ghost" p={2}>
+            <MenuButton 
+              as={Button} 
+              rightIcon={<ChevronDownIcon />} 
+              variant="ghost" 
+              p={2}
+              aria-label="Open resume menu"
+              aria-haspopup="true"
+            >
               resumé(s)
             </MenuButton>
             <MenuList>
-              <MenuItem as={Link} href="https://drive.google.com/file/d/1cAUcYLSET9oTVi57cWeootpquQ7zJqYj/view?usp=sharing" target="_blank">
+              <MenuItem as={Link} href="https://drive.google.com/file/d/1cAUcYLSET9oTVi57cWeootpquQ7zJqYj/view?usp=sharing" target="_blank" aria-label="Open CV (Long-form) (opens in new tab)">
                 CV (Long-form)
               </MenuItem>
-              <MenuItem as={Link} href="https://drive.google.com/file/d/1SLNPY8m6YRH22bDSagzfqtUcuEt29Mim/view?usp=sharing" target="_blank">
+              <MenuItem as={Link} href="https://drive.google.com/file/d/1SLNPY8m6YRH22bDSagzfqtUcuEt29Mim/view?usp=sharing" target="_blank" aria-label="Open Resume (One-page) (opens in new tab)">
                 Resume (One-page)
               </MenuItem>
             </MenuList>
@@ -109,8 +116,10 @@ const Navbar = (props) => {
             alignItems="center"
             style={{ gap: 4 }}
             pl={2}
+            aria-label="Visit Omar Khan's GitHub profile (opens in new tab)"
           >
             <IoLogoGithub />
+            <span className="sr-only">GitHub</span>
           </LinkItem>
           <LinkItem
             target="_blank"
@@ -120,8 +129,10 @@ const Navbar = (props) => {
             alignItems="center"
             style={{ gap: 4 }}
             pl={2}
+            aria-label="Visit Omar Khan's LinkedIn profile (opens in new tab)"
           >
             <IoLogoLinkedin />
+            <span className="sr-only">LinkedIn</span>
           </LinkItem>
           
           <LinkItem
@@ -132,8 +143,10 @@ const Navbar = (props) => {
             alignItems="center"
             style={{ gap: 4 }}
             pl={2}
+            aria-label="Visit Omar Khan's Google Scholar profile (opens in new tab)"
           >
             <IoSchoolSharp />
+            <span className="sr-only">Google Scholar</span>
           </LinkItem>
         </Stack>
 
@@ -145,7 +158,9 @@ const Navbar = (props) => {
                 as={IconButton}
                 icon={<HamburgerIcon />}
                 variant="outline"
-                aria-label="Options"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+                aria-haspopup="true"
               />
               <MenuList>
                 <MenuItem as={NextLink} href="/about">about</MenuItem>
@@ -153,25 +168,32 @@ const Navbar = (props) => {
                 <MenuItem as={NextLink} href="/research">research</MenuItem>
                 {/* <MenuItem as={NextLink} href="/projects">projects</MenuItem> */}
                 <Menu placement="right-start">
-                  <MenuButton as={Button} rightIcon={<ChevronDownIcon />} variant="ghost" p={2}>
+                  <MenuButton 
+                    as={Button} 
+                    rightIcon={<ChevronDownIcon />} 
+                    variant="ghost" 
+                    p={2}
+                    aria-label="Open resume menu"
+                    aria-haspopup="true"
+                  >
                     resumé(s)
                   </MenuButton>
                   <MenuList>
-                    <MenuItem as={Link} href="https://drive.google.com/file/d/1cAUcYLSET9oTVi57cWeootpquQ7zJqYj/view?usp=sharing" target="_blank">
+                    <MenuItem as={Link} href="https://drive.google.com/file/d/1cAUcYLSET9oTVi57cWeootpquQ7zJqYj/view?usp=sharing" target="_blank" aria-label="Open CV (Long-form) (opens in new tab)">
                       CV (Long-form)
                     </MenuItem>
-                    <MenuItem as={Link} href="https://drive.google.com/file/d/1SLNPY8m6YRH22bDSagzfqtUcuEt29Mim/view?usp=sharing" target="_blank">
+                    <MenuItem as={Link} href="https://drive.google.com/file/d/1SLNPY8m6YRH22bDSagzfqtUcuEt29Mim/view?usp=sharing" target="_blank" aria-label="Open Resume (One-page) (opens in new tab)">
                       Resume (One-page)
                     </MenuItem>
                   </MenuList>
                 </Menu>
-                <MenuItem as={Link} href="https://github.com/omark807" target="_blank">
+                <MenuItem as={Link} href="https://github.com/omark807" target="_blank" aria-label="Visit Omar Khan's GitHub profile (opens in new tab)">
                   github
                 </MenuItem>
-                <MenuItem as={Link} href="https://www.linkedin.com/in/omark807" target="_blank">
+                <MenuItem as={Link} href="https://www.linkedin.com/in/omark807" target="_blank" aria-label="Visit Omar Khan's LinkedIn profile (opens in new tab)">
                   linkedIn
                 </MenuItem>
-                <MenuItem as={Link} href="https://scholar.google.com/citations?user=T6f-cucAAAAJ&hl=en" target="_blank">
+                <MenuItem as={Link} href="https://scholar.google.com/citations?user=T6f-cucAAAAJ&hl=en" target="_blank" aria-label="Visit Omar Khan's Google Scholar profile (opens in new tab)">
                   google scholar
                 </MenuItem>
                 <MenuItem as={NextLink} href="/life">life</MenuItem>

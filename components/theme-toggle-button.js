@@ -43,10 +43,11 @@ const ThemeToggleButton = () => {
                 <Popover placement="bottom-end">
                         <PopoverTrigger>
                                 <IconButton
-                                        aria-label="Customize Theme"
+                                        aria-label="Open theme and accessibility settings"
+                                        aria-haspopup="dialog"
                                         isRound
                                         colorScheme={useColorModeValue('blackAlpha', 'orange')}
-                                        icon={<SettingsIcon />}
+                                        icon={<SettingsIcon aria-hidden="true" />}
                                 />
                         </PopoverTrigger>
                         <PopoverContent>
@@ -55,21 +56,23 @@ const ThemeToggleButton = () => {
                                                 <HStack justify="space-between">
                                                         <Text>Theme:</Text>
                                                         <IconButton
-                                                                aria-label="Toggle Light/Dark Theme"
-                                                                icon={colorMode === 'light' ? <MoonIcon/> : <SunIcon/>}
+                                                                aria-label={`Switch to ${colorMode === 'light' ? 'dark' : 'light'} theme`}
+                                                                icon={colorMode === 'light' ? <MoonIcon aria-hidden="true"/> : <SunIcon aria-hidden="true"/>}
                                                                 onClick={toggleColorMode}
                                                                 size="sm"
                                                         />
                                                 </HStack>
                                                 <HStack justify="space-between">
                                                         <Text>Text Size:</Text>
-                                                        <HStack>
+                                                        <HStack role="group" aria-label="Text size options">
                                                                 {['sm', 'md', 'lg'].map((size) => (
                                                                         <Button
                                                                                 key={size}
                                                                                 size="sm"
                                                                                 onClick={() => changeFontSize(size)}
                                                                                 variant={fontSize === size ? 'solid' : 'outline'}
+                                                                                aria-label={`Set text size to ${size}`}
+                                                                                aria-pressed={fontSize === size}
                                                                         >
                                                                                 {size.toUpperCase()}
                                                                         </Button>

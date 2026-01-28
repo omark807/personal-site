@@ -126,7 +126,7 @@ const Page = () => {
                             </Badge>
                             
                             <VStack spacing={3}>
-                                <Heading as="h1" size="3xl" fontWeight="bold">
+                                <Heading as="h1" size="3xl" fontWeight="bold" id="page-title">
                                     Omar Khan
                                 </Heading>
                                 <Text fontSize="xl" fontWeight="medium" color={heroTextColor} textAlign="center">
@@ -217,18 +217,42 @@ const Page = () => {
                                     </Button>
                             </Stack>
 
-                            <HStack spacing={6} pt={2}>
-                                <Link href="mailto:omark807@gmail.com" isExternal>
-                                    <Icon as={FaEnvelope} boxSize={6} color={useColorModeValue('gray.600', 'gray.400')} _hover={{ color: useColorModeValue('orange.500', 'orange.300') }} />
+                            <HStack spacing={6} pt={2} role="list" aria-label="Social media links">
+                                <Link 
+                                    href="mailto:omark807@gmail.com" 
+                                    isExternal
+                                    aria-label="Send email to Omar Khan (opens email client)"
+                                    role="listitem"
+                                >
+                                    <Icon as={FaEnvelope} boxSize={6} color={useColorModeValue('gray.600', 'gray.400')} _hover={{ color: useColorModeValue('orange.500', 'orange.300') }} aria-hidden="true" />
+                                    <span className="sr-only">Email</span>
                                 </Link>
-                                <Link href="https://linkedin.com/in/omark807" isExternal>
-                                    <Icon as={FaLinkedin} boxSize={6} color={useColorModeValue('gray.600', 'gray.400')} _hover={{ color: useColorModeValue('orange.500', 'orange.300') }} />
+                                <Link 
+                                    href="https://linkedin.com/in/omark807" 
+                                    isExternal
+                                    aria-label="Visit Omar Khan's LinkedIn profile (opens in new tab)"
+                                    role="listitem"
+                                >
+                                    <Icon as={FaLinkedin} boxSize={6} color={useColorModeValue('gray.600', 'gray.400')} _hover={{ color: useColorModeValue('orange.500', 'orange.300') }} aria-hidden="true" />
+                                    <span className="sr-only">LinkedIn</span>
                                 </Link>
-                                <Link href="https://github.com/omark807" isExternal>
-                                    <Icon as={FaGithub} boxSize={6} color={useColorModeValue('gray.600', 'gray.400')} _hover={{ color: useColorModeValue('orange.500', 'orange.300') }} />
+                                <Link 
+                                    href="https://github.com/omark807" 
+                                    isExternal
+                                    aria-label="Visit Omar Khan's GitHub profile (opens in new tab)"
+                                    role="listitem"
+                                >
+                                    <Icon as={FaGithub} boxSize={6} color={useColorModeValue('gray.600', 'gray.400')} _hover={{ color: useColorModeValue('orange.500', 'orange.300') }} aria-hidden="true" />
+                                    <span className="sr-only">GitHub</span>
                                 </Link>
-                                <Link href="https://scholar.google.com/citations?user=T6f-cucAAAAJ&hl=en" isExternal>
-                                    <Icon as={IoSchoolSharp} boxSize={6} color={useColorModeValue('gray.600', 'gray.400')} _hover={{ color: useColorModeValue('orange.500', 'orange.300') }} />
+                                <Link 
+                                    href="https://scholar.google.com/citations?user=T6f-cucAAAAJ&hl=en" 
+                                    isExternal
+                                    aria-label="Visit Omar Khan's Google Scholar profile (opens in new tab)"
+                                    role="listitem"
+                                >
+                                    <Icon as={IoSchoolSharp} boxSize={6} color={useColorModeValue('gray.600', 'gray.400')} _hover={{ color: useColorModeValue('orange.500', 'orange.300') }} aria-hidden="true" />
+                                    <span className="sr-only">Google Scholar</span>
                                 </Link>
                             </HStack>
                         </VStack>
@@ -269,8 +293,8 @@ const Page = () => {
                             hello!
                         </Heading>
                         <Paragraph>
-                        I am a fourth-year Ph.D. candidate studying Computer Science at the <Link href='https://illinois.edu/' target='_blank'>University of Illinois
-                            Urbana-Champaign (UIUC)</Link> advised by <Link href='https://jooyoungseo.github.io/' target='_blank'>Dr. JooYoung Seo</Link> in the <Link href='https://xabilitylab.ischool.illinois.edu/' target='_blank'>(x)Ability Design Lab</Link>. I co-design accessible data visualizations, especially qualitative or &apos;open-ended&apos; data such as concept maps, network graphs, and coding trees, with the blind and low-vision (BLV) community. Through understanding BLV researchers&apos; workflows and processes, I work at the intersection of accessibility, human-AI interaction, and inclusive STEM education to create responsible, AI-driven digital experiences. My goal is to design intelligent systems that empower people of diverse abilities to independently create, interpret, and share complex information with their peers and broader audiences.
+                        I am a fourth-year Ph.D. candidate studying Computer Science at the <Link href='https://illinois.edu/' target='_blank' rel="noopener noreferrer" aria-label="Visit University of Illinois Urbana-Champaign website (opens in new tab)">University of Illinois
+                            Urbana-Champaign (UIUC)</Link> advised by <Link href='https://jooyoungseo.github.io/' target='_blank' rel="noopener noreferrer" aria-label="Visit Dr. JooYoung Seo's website (opens in new tab)">Dr. JooYoung Seo</Link> in the <Link href='https://xabilitylab.ischool.illinois.edu/' target='_blank' rel="noopener noreferrer" aria-label="Visit (x)Ability Design Lab website (opens in new tab)">(x)Ability Design Lab</Link>. I co-design accessible data visualizations, especially qualitative or &apos;open-ended&apos; data such as concept maps, network graphs, and coding trees, with the blind and low-vision (BLV) community. Through understanding BLV researchers&apos; workflows and processes, I work at the intersection of accessibility, human-AI interaction, and inclusive STEM education to create responsible, AI-driven digital experiences. My goal is to design intelligent systems that empower people of diverse abilities to independently create, interpret, and share complex information with their peers and broader audiences.
                         </Paragraph>
                         <Box 
                             mt={6} 

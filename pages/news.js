@@ -1,11 +1,19 @@
 import { Container, Heading, Text, Box, Tag, TagLabel, TagCloseButton, Input, InputGroup, InputLeftElement, Divider } from '@chakra-ui/react';
 import { SearchIcon } from '@chakra-ui/icons';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Section from '../components/section';
 
 const NewsPage = () => {
+    const [announcement, setAnnouncement] = useState('');
     const newsItems = [
-                {
+        {
+            title: 'New Paper Accepted to CHI 2026!',
+            date: '01-28-2026',
+            month: 'January 2026',
+            content: <>Our paper on "I Don’t Trust Any Professional Research Tool": A Re-Imagination of Knowledge Production Workflows by, with, and for Blind and Low-Vision Researchers has been accepted to CHI 2026! You can find the preprint at <a href="https://arxiv.org/abs/2503.07415" target="_blank" rel="noopener noreferrer" aria-label="View arXiv preprint for late-breaking work (opens in new tab)"><u>this link</u></a>. I look forward to presenting this work at CHI 2026 in Barcelona, Spain in April!</>,
+            tags: ['publication', 'conference'],
+        },
+        {
             title: 'ASSETS 2025 In-Person Attendance',
             date: '08-01-2025',
             month: 'August 2025',
@@ -25,7 +33,7 @@ const NewsPage = () => {
             month: 'February 2025',
             content:
                 <>Our late-breaking work has been accepted to CHI 2025! You can find the preprint at
-                <a href="https://arxiv.org/abs/2503.07415" target='__blank'> <u>this link</u></a>.
+                <a href="https://arxiv.org/abs/2503.07415" target='_blank' rel="noopener noreferrer" aria-label="View arXiv preprint for late-breaking work (opens in new tab)"> <u>this link</u></a>.
                 </>,
             tags: ['publication', 'conference'],
         },
@@ -52,6 +60,16 @@ const NewsPage = () => {
         return matchesFilters && matchesSearchQuery;
     });
 
+    // Update announcement when filters or search change
+    useEffect(() => {
+        const count = filteredNewsItems.length;
+        if (count === 0) {
+            setAnnouncement('No news items match your current filters.');
+        } else {
+            setAnnouncement(`${count} news item${count === 1 ? '' : 's'} found.`);
+        }
+    }, [filteredNewsItems.length]);
+
     const allTags = [...new Set(newsItems.map(item => item.tags).flat())];
 
     // Group news items by month
@@ -65,21 +83,23 @@ const NewsPage = () => {
 
     return (
         <Container>
-            <Heading as="h3" fontSize={20} mb={4}>
+            <Heading as="h1" fontSize={20} mb={4}>
                 News
             </Heading>
             <InputGroup mb={4}>
                 <InputLeftElement pointerEvents='none'>
-                    <SearchIcon color='gray.300' />
+                    <SearchIcon color='gray.300' aria-hidden="true" />
                 </InputLeftElement>
                 <Input
                     placeholder='Search news...'
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
+                    aria-label="Search news articles"
+                    id="news-search-input"
                 />
             </InputGroup>
 
-            <Box mb={4}>
+            <Box mb={4} role="group" aria-label="Filter tags">
                 {allTags.map((tag) => (
                     <Tag
                         size="sm"
@@ -91,6 +111,16 @@ const NewsPage = () => {
                         mb={2}
                         cursor="pointer"
                         onClick={() => handleAddFilter(tag)}
+                        role="button"
+                        tabIndex={0}
+                        aria-label={`Filter by ${tag} tag`}
+                        aria-pressed={filters.includes(tag)}
+                        onKeyDown={(e) => {
+                            if (e.key === 'Enter' || e.key === ' ') {
+                                e.preventDefault();
+                                handleAddFilter(tag);
+                            }
+                        }}
                     >
                         <TagLabel>{tag}</TagLabel>
                     </Tag>
@@ -98,8 +128,8 @@ const NewsPage = () => {
             </Box>
 
             {filters.length > 0 && (
-                <Box mb={4}>
-                    Active Filters:
+                <Box mb={4} role="group" aria-label="Active filters">
+                    <Text as="span" fontWeight="semibold" mr={2}>Active Filters:</Text>
                     {filters.map((tag) => (
                         <Tag
                             size="sm"
@@ -109,22 +139,30 @@ const NewsPage = () => {
                             colorScheme="blue"
                             mr={2}
                             mb={2}
+                            role="listitem"
                         >
                             <TagLabel>{tag}</TagLabel>
-                            <TagCloseButton onClick={() => handleRemoveFilter(tag)} />
+                            <TagCloseButton 
+                                onClick={() => handleRemoveFilter(tag)}
+                                aria-label={`Remove ${tag} filter`}
+                            />
                         </Tag>
                     ))}
                 </Box>
             )}
 
+            <Box role="status" aria-live="polite" aria-atomic="true" className="sr-only">
+                {announcement}
+            </Box>
+
             {Object.entries(groupedNewsItems).map(([month, items]) => (
-                <Box key={month} mb={6} position="relative">
-                    <Heading as="h4" fontSize="lg" fontWeight="bold" mb={2}>{month}</Heading>
+                <Box key={month} mb={6} position="relative" role="region" aria-labelledby={`news-month-${month}`}>
+                    <Heading as="h2" fontSize="lg" fontWeight="bold" mb={2} id={`news-month-${month}`}>{month}</Heading>
                     <Divider mb={4} />
                     {items.map((item, index) => (
                         <Section key={item.title} delay={0.1 * (index + 1)}>
                             <Box position="relative" mb={4}>
-                                <Heading as="h5" variant="section-title">
+                                <Heading as="h3" variant="section-title">
                                     {item.title}
                                 </Heading>
                                 <Text>{item.content}</Text>

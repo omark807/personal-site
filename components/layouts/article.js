@@ -18,11 +18,9 @@ const Layout = ({ children, title }) => (
         style ={{ position: 'relative' }}
     >
         <>
-        {title && (
-            <Head>
-                <title>{title} - Omar</title>
-            </Head>
-        )}
+        <Head>
+            <title>{title && typeof title === 'string' ? `${title} - Omar` : 'Omar Khan - Homepage'}</title>
+        </Head>
         {children}
         <GridItemStyle/>
         </>

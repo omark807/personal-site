@@ -8,12 +8,12 @@ const AboutMe = () => (
     <Layout title="More about me! ">
         <Container>
             <Section delay={0.1}>
-                <Heading as="h3" variant="section-title">
+                <Heading as="h1" variant="section-title">
                     hi there!
                 </Heading>
-                <Paragraph>I graduated from the University of Illinois Urbana-Champaign (UIUC) with a Bachelor of Science in <Link href='https://cs.illinois.edu/academics/undergraduate/degree-program-options/cs-x-degree-programs/computer-science-crop-sciences' target='_blank'> Computer Science
-                    + Crop Sciences</Link>, an interdisciplinary program that brings the strengths of the <Link href='https://cs.illinois.edu/' target='_blank'> Siebel School of Computing and Data Science </Link> and the
-                    <Link href='https://cropsciences.illinois.edu/' target='_blank'> Department of Crop Sciences</Link> at UIUC. My drive to pursue this intersection began with my interests in computing and
+                <Paragraph>I graduated from the University of Illinois Urbana-Champaign (UIUC) with a Bachelor of Science in <Link href='https://cs.illinois.edu/academics/undergraduate/degree-program-options/cs-x-degree-programs/computer-science-crop-sciences' target='_blank' rel="noopener noreferrer" aria-label="Learn more about Computer Science + Crop Sciences program (opens in new tab)"> Computer Science
+                    + Crop Sciences</Link>, an interdisciplinary program that brings the strengths of the <Link href='https://cs.illinois.edu/' target='_blank' rel="noopener noreferrer" aria-label="Visit Siebel School of Computing and Data Science website (opens in new tab)"> Siebel School of Computing and Data Science </Link> and the
+                    <Link href='https://cropsciences.illinois.edu/' target='_blank' rel="noopener noreferrer" aria-label="Visit Department of Crop Sciences website (opens in new tab)"> Department of Crop Sciences</Link> at UIUC. My drive to pursue this intersection began with my interests in computing and
                     sustainability, wanting to create more environmentally conscious technological solutions to the world&apos;s most complex issues.
                 </Paragraph>
 
@@ -55,7 +55,7 @@ const AboutMe = () => (
             </Section>
 
             <Section>
-                <Heading as="h3" variant="section-title">
+                <Heading as="h2" variant="section-title">
                     non-academic interests
                 </Heading>
 
@@ -76,7 +76,7 @@ const AboutMe = () => (
                             </ListItem>
                             <ListItem>
                                 <ListIcon as={ChevronRightIcon} color="blue.500" />
-                                Reading (<Link href='https://www.goodreads.com/user/show/143290931-omar-khan' target='_blank'>
+                                Reading (<Link href='https://www.goodreads.com/user/show/143290931-omar-khan' target='_blank' rel="noopener noreferrer" aria-label="Visit Omar Khan's GoodReads profile (opens in new tab)">
                                     GoodReads profile</Link> for past and current reads)
                             </ListItem>
                         </List>

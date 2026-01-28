@@ -190,31 +190,33 @@ const Page = () => {
                                 align="center"
                                 justify="center"
                             >
-                                    <Button
-                                    as={NextLink}
-                                    href="/about"
-                                        colorScheme="orange"
-                                        size={{ base: "md", md: "lg" }}
-                                        rightIcon={<ChevronRightIcon />}
-                                        _hover={{ transform: 'translateY(-2px)' }}
-                                        transition="all 0.2s"
-                                        w={{ base: "full", sm: "auto" }}
-                                        maxW={{ base: "280px", sm: "none" }}
-                                    >
-                                        Learn More About Me
-                                    </Button>
-                                    <Button
-                                    as={NextLink}
-                                    href="/research"
-                                        variant="outline"
-                                        size={{ base: "md", md: "lg" }}
-                                        _hover={{ transform: 'translateY(-2px)' }}
-                                        transition="all 0.2s"
-                                        w={{ base: "full", sm: "auto" }}
-                                        maxW={{ base: "280px", sm: "none" }}
-                                    >
-                                        View My Research
-                                    </Button>
+                                    <NextLink href="/about" passHref>
+                                        <Button
+                                            as="a"
+                                            colorScheme="orange"
+                                            size={{ base: "md", md: "lg" }}
+                                            rightIcon={<ChevronRightIcon />}
+                                            _hover={{ transform: 'translateY(-2px)' }}
+                                            transition="all 0.2s"
+                                            w={{ base: "full", sm: "auto" }}
+                                            maxW={{ base: "280px", sm: "none" }}
+                                        >
+                                            Learn More About Me
+                                        </Button>
+                                    </NextLink>
+                                    <NextLink href="/research" passHref>
+                                        <Button
+                                            as="a"
+                                            variant="outline"
+                                            size={{ base: "md", md: "lg" }}
+                                            _hover={{ transform: 'translateY(-2px)' }}
+                                            transition="all 0.2s"
+                                            w={{ base: "full", sm: "auto" }}
+                                            maxW={{ base: "280px", sm: "none" }}
+                                        >
+                                            View My Research
+                                        </Button>
+                                    </NextLink>
                             </Stack>
 
                             <HStack spacing={6} pt={2} role="list" aria-label="Social media links">

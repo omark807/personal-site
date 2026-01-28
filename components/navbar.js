@@ -24,17 +24,18 @@ const LinkItem = ({ href, path, _target, children, ...props }) => {
   const active = path === href;
   const inactiveColor = useColorModeValue('gray200', 'whiteAlpha.900');
   return (
-    <Link
-      as={NextLink}
-      href={href}
-      p={2}
-      bg={active ? 'pinkyPink' : undefined}
-      color={active ? '#232323' : inactiveColor}
-      _target={_target}
-      {...props}
-    >
-      {children}
-    </Link>
+    <NextLink href={href} passHref>
+      <Link
+        as="a"
+        p={2}
+        bg={active ? 'pinkyPink' : undefined}
+        color={active ? '#232323' : inactiveColor}
+        _target={_target}
+        {...props}
+      >
+        {children}
+      </Link>
+    </NextLink>
   );
 };
 
@@ -163,10 +164,18 @@ const Navbar = (props) => {
                 aria-haspopup="true"
               />
               <MenuList>
-                <MenuItem as={NextLink} href="/about">about</MenuItem>
-                <MenuItem as={NextLink} href="/news">news</MenuItem>
-                <MenuItem as={NextLink} href="/research">research</MenuItem>
-                {/* <MenuItem as={NextLink} href="/projects">projects</MenuItem> */}
+                <NextLink href="/about" passHref>
+                  <MenuItem as="a">about</MenuItem>
+                </NextLink>
+                <NextLink href="/news" passHref>
+                  <MenuItem as="a">news</MenuItem>
+                </NextLink>
+                <NextLink href="/research" passHref>
+                  <MenuItem as="a">research</MenuItem>
+                </NextLink>
+                {/* <NextLink href="/projects" passHref>
+                  <MenuItem as="a">projects</MenuItem>
+                </NextLink> */}
                 <Menu placement="right-start">
                   <MenuButton 
                     as={Button} 
@@ -196,7 +205,9 @@ const Navbar = (props) => {
                 <MenuItem as={Link} href="https://scholar.google.com/citations?user=T6f-cucAAAAJ&hl=en" target="_blank" aria-label="Visit Omar Khan's Google Scholar profile (opens in new tab)">
                   google scholar
                 </MenuItem>
-                <MenuItem as={NextLink} href="/life">life</MenuItem>
+                <NextLink href="/life" passHref>
+                  <MenuItem as="a">life</MenuItem>
+                </NextLink>
               </MenuList>
             </Menu>
           </Box>

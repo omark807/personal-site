@@ -1,0 +1,8 @@
+# Netlify build configuration for Next.js
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+# Use Node 18 (LTS) for consistent builds
+[build.environment]
+  NODE_VERSION = "18"

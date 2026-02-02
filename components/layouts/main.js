@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Navbar from '../navbar.js'
-import { Box, Container, Text, useColorModeValue } from '@chakra-ui/react'
+import { Box, Container, Text, Link, useColorModeValue } from '@chakra-ui/react'
 import { useFontSize } from '../theme-toggle-button'
 
 const Main = ({ children, router }) => {
@@ -13,26 +13,30 @@ const Main = ({ children, router }) => {
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
             </Head>
 
-            <a 
-                href="#main-content" 
-                style={{
-                    position: 'absolute',
-                    left: '-9999px',
-                    zIndex: 999,
-                    padding: '1em',
-                    backgroundColor: '#000',
-                    color: '#fff',
-                    textDecoration: 'none'
+            <Link
+                href="#main-content"
+                position="absolute"
+                left="-9999px"
+                zIndex={999}
+                p={4}
+                bg="black"
+                color="white"
+                _focus={{
+                    left: 0,
+                    position: 'fixed',
+                    top: 0,
+                    outline: '2px solid',
+                    outlineColor: 'orange.400',
+                    outlineOffset: '2px'
                 }}
-                onFocus={(e) => {
-                    e.target.style.left = '0';
-                }}
-                onBlur={(e) => {
-                    e.target.style.left = '-9999px';
+                _focusVisible={{
+                    left: 0,
+                    position: 'fixed',
+                    top: 0
                 }}
             >
                 Skip to main content
-            </a>
+            </Link>
 
             <Navbar path={router.asPath} />
 

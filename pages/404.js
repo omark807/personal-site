@@ -10,11 +10,9 @@ const NotFound = () => {
                 </Text>
                 <Divider my={6}/>
                 <Box my={6} align="center">
-                    <NextLink href="/" passHref>
-                        <Button as="a" aria-label="Return to homepage">
-                            Return to Home
-                        </Button>
-                    </NextLink>
+                    <Button as={NextLink} href="/" aria-label="Return to homepage">
+                        Return to Home
+                    </Button>
                 </Box>
         </Container>
     )

@@ -22,25 +22,27 @@ import { ChevronDownIcon } from '@chakra-ui/icons';
 
 const LinkItem = ({ href, path, _target, children, ...props }) => {
   const active = path === href;
-  const inactiveColor = useColorModeValue('gray200', 'whiteAlpha.900');
+  const inactiveColor = useColorModeValue('gray.800', 'whiteAlpha.900');
+  const isExternal = href?.startsWith('http');
   return (
-    <NextLink href={href} passHref>
-      <Link
-        as="a"
-        p={2}
-        bg={active ? 'pinkyPink' : undefined}
-        color={active ? '#232323' : inactiveColor}
-        _target={_target}
-        {...props}
-      >
-        {children}
-      </Link>
-    </NextLink>
+    <Link
+      as={isExternal ? 'a' : NextLink}
+      href={href}
+      p={2}
+      bg={active ? 'pinkyPink' : undefined}
+      color={active ? '#232323' : inactiveColor}
+      target={_target}
+      {...(isExternal && { rel: 'noopener noreferrer' })}
+      {...props}
+    >
+      {children}
+    </Link>
   );
 };
 
 const Navbar = (props) => {
   const { path } = props;
+  const navTextColor = useColorModeValue('gray.800', 'whiteAlpha.900');
 
   return (
     <Box
@@ -56,9 +58,9 @@ const Navbar = (props) => {
         display="flex"
         p={2}
         maxW="container.md"
-        wrap="wrap"
-        align="center"
-        justify="space-between"
+        flexWrap="wrap"
+        alignItems="center"
+        justifyContent="space-between"
       >
         <Flex align="center" mr={5}>
           <Heading as="h1" size="lg" letterSpacing={'tighter'}>
@@ -83,17 +85,18 @@ const Navbar = (props) => {
           <LinkItem href="/research" path={path}>
             research
           </LinkItem>
-          {/* <LinkItem href="/projects" path={path}>
+          <LinkItem href="/projects" path={path}>
             projects
-          </LinkItem> */}
+          </LinkItem>
           <Menu>
-            <MenuButton 
-              as={Button} 
-              rightIcon={<ChevronDownIcon />} 
-              variant="ghost" 
+            <MenuButton
+              as={Button}
+              rightIcon={<ChevronDownIcon />}
+              variant="ghost"
               p={2}
+              color={navTextColor}
               aria-label="Open resume menu"
-              aria-haspopup="true"
+              aria-haspopup="menu"
             >
               resumé(s)
             </MenuButton>
@@ -159,31 +162,24 @@ const Navbar = (props) => {
                 as={IconButton}
                 icon={<HamburgerIcon />}
                 variant="outline"
+                color={navTextColor}
                 aria-label="Open navigation menu"
-                aria-expanded="false"
-                aria-haspopup="true"
+                aria-haspopup="menu"
               />
               <MenuList>
-                <NextLink href="/about" passHref>
-                  <MenuItem as="a">about</MenuItem>
-                </NextLink>
-                <NextLink href="/news" passHref>
-                  <MenuItem as="a">news</MenuItem>
-                </NextLink>
-                <NextLink href="/research" passHref>
-                  <MenuItem as="a">research</MenuItem>
-                </NextLink>
-                {/* <NextLink href="/projects" passHref>
-                  <MenuItem as="a">projects</MenuItem>
-                </NextLink> */}
+                <MenuItem as={NextLink} href="/about">about</MenuItem>
+                <MenuItem as={NextLink} href="/news">news</MenuItem>
+                <MenuItem as={NextLink} href="/research">research</MenuItem>
+                <MenuItem as={NextLink} href="/projects">projects</MenuItem>
                 <Menu placement="right-start">
-                  <MenuButton 
-                    as={Button} 
-                    rightIcon={<ChevronDownIcon />} 
-                    variant="ghost" 
+                  <MenuButton
+                    as={Button}
+                    rightIcon={<ChevronDownIcon />}
+                    variant="ghost"
                     p={2}
+                    color={navTextColor}
                     aria-label="Open resume menu"
-                    aria-haspopup="true"
+                    aria-haspopup="menu"
                   >
                     resumé(s)
                   </MenuButton>
@@ -205,9 +201,7 @@ const Navbar = (props) => {
                 <MenuItem as={Link} href="https://scholar.google.com/citations?user=T6f-cucAAAAJ&hl=en" target="_blank" aria-label="Visit Omar Khan's Google Scholar profile (opens in new tab)">
                   google scholar
                 </MenuItem>
-                <NextLink href="/life" passHref>
-                  <MenuItem as="a">life</MenuItem>
-                </NextLink>
+                <MenuItem as={NextLink} href="/life">life</MenuItem>
               </MenuList>
             </Menu>
           </Box>

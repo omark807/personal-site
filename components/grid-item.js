@@ -1,6 +1,6 @@
 import NextLink from 'next/link'
 import Image from 'next/image'
-import { Box, Text, LinkBox, LinkOverlay } from '@chakra-ui/react'
+import { Box, Text, Link, LinkBox, LinkOverlay, useColorModeValue } from '@chakra-ui/react'
 import { Global } from '@emotion/react'
 
 export const GridItem = ({ children, href, title, thumbnail }) => (
@@ -21,30 +21,44 @@ export const GridItem = ({ children, href, title, thumbnail }) => (
   </Box>
 )
 
-export const WorkGridItem = ({ children, id, title, thumbnail }) => (
-  <Box w="100%" textAlign="center">
-    <NextLink href={`/works/${id}`} passHref>
-      <LinkBox as="a" cursor="pointer" role="article" aria-labelledby={`work-grid-title-${id}`}>
+export const WorkGridItem = ({ children, id, title, thumbnail }) => {
+  const tileBg = useColorModeValue('gray.100', 'whiteAlpha.100')
+  return (
+    <Box w="100%" textAlign="center" role="article" aria-labelledby={`work-grid-title-${id}`}>
+      <Box
+        position="relative"
+        aspectRatio={1}
+        overflow="hidden"
+        borderRadius="12px"
+        bg={tileBg}
+        mb={2}
+      >
         <Image
           src={thumbnail}
           alt={`Thumbnail for ${title}`}
-          className="grid-item-thumbnail"
-          placeholder="blur"
+          fill
+          sizes="(max-width: 768px) 100vw, 33vw"
+          className="work-grid-item-thumbnail"
+          placeholder={typeof thumbnail === 'string' ? 'empty' : 'blur'}
+          style={{ objectFit: 'contain' }}
         />
-        <Text mt={2} fontSize={20} id={`work-grid-title-${id}`}>
-          {title}
-        </Text>
-        <Text fontSize={14}>{children}</Text>
-      </LinkBox>
-    </NextLink>
-  </Box>
-)
+      </Box>
+      <Link as={NextLink} href={`/works/${id}`} display="inline-block" mt={2} fontSize={20} id={`work-grid-title-${id}`}>
+        {title}
+      </Link>
+      <Text fontSize={14} mt={1}>{children}</Text>
+    </Box>
+  )
+}
 
 export const GridItemStyle = () => (
   <Global
     styles={`
       .grid-item-thumbnail {
         border-radius: 12px;
+      }
+      .work-grid-item-thumbnail {
+        object-fit: contain;
       }
     `}
   />

@@ -7,7 +7,7 @@ import {
   Box,
   Link,
 } from '@chakra-ui/react'
-import { Title, WorkImage, Meta } from '../../components/work'
+import { Title, WorkImage } from '../../components/work'
 import P from '../../components/paragraph'
 import Layout from '../../components/layouts/article'
 
@@ -19,47 +19,89 @@ const Project = () => (
       </Title>
       <WorkImage src="/images/maidr_logo.svg" alt="MAIDR logo" />
 
-      <P>
-        <strong>MAIDR</strong> (Multimodal Access and Interactive Data
-        Representation) is an open-source system that makes statistical data
-        visualizations accessible to blind and low-vision users. MAIDR is
-        available as an <strong>R package</strong> (r_maidr) and a{' '}
-        <strong>Python package</strong>, and is designed to integrate into data
-        curators’ reproducible workflows so that charts can be equally used by
-        people with and without visual impairments.
-      </P>
+      <Box as="section" aria-labelledby="maidr-project" mt={4}>
+        <Heading as="h2" id="maidr-project" size="md" mb={3}>
+          Project
+        </Heading>
+        <P>
+          <strong>My role:</strong> Collaborator. <strong>Lead:</strong> JooYoung Seo, University of Illinois Urbana-Champaign. <strong>Scope:</strong> MAIDR (Multimodal Access and Interactive Data Representation) is an open-source system that makes statistical data visualizations accessible to blind and low-vision users via R and Python packages. I contributed to needs assessment, co-design with BLV participants, usability testing, and translation of research findings into design and product decisions for the packages and documentation.
+        </P>
+      </Box>
 
-      <Box as="section" aria-labelledby="maidr-modalities" mt={6}>
-        <Heading as="h2" id="maidr-modalities" size="md" mb={3}>
-          Multimodal representation
+      <Box as="section" aria-labelledby="maidr-objective" mt={6}>
+        <Heading as="h2" id="maidr-objective" size="md" mb={3}>
+          Objective
+        </Heading>
+        <P>
+          Statistical charts (bar plots, heat maps, box plots, scatter plots) are central to data communication but are often inaccessible to blind and low-vision users. The goal was to understand user needs, co-design multimodal representations (sonification, text, braille), and validate that BLV participants could accurately interpret and interact with charts through these modalities so the team could ship accessible R and Python tooling.
+        </P>
+      </Box>
+
+      <Box as="section" aria-labelledby="maidr-work" mt={6}>
+        <Heading as="h2" id="maidr-work" size="md" mb={3}>
+          Work
         </Heading>
         <P>
           MAIDR augments visual charts into touchable, readable, and audible
-          representations:
-        </P>
-        <List as="ul" listStyleType="disc" pl={6} mt={2} spacing={1}>
-          <ListItem>
-            <strong>Sonification</strong>, audio representation of data
-          </ListItem>
-          <ListItem>
-            <strong>Textual descriptions</strong>, readable summaries for screen
-            readers
-          </ListItem>
-          <ListItem>
-            <strong>Braille</strong>, tactile representation
-          </ListItem>
-          <ListItem>
-            <strong>Review mode</strong>, interactive exploration with
-            complementary modalities
-          </ListItem>
-        </List>
-        <P mt={3}>
+          representations: <strong>sonification</strong> (audio), <strong>textual
+          descriptions</strong> (screen readers), <strong>braille</strong>
+          (tactile), and <strong>review mode</strong> (interactive exploration).
           Supported chart types include bar plots, heat maps, box plots, and
-          scatter plots. A user study with 11 blind participants showed that
-          MAIDR supported accurate interpretation of statistical visualizations;
-          participants combined modalities in varied ways based on their
-          experience, underscoring the importance of user autonomy in accessible
-          design.
+          scatter plots.
+        </P>
+        <P mt={3}>
+          I contributed to needs assessment and co-design with BLV stakeholders,
+          and to a user study with 11 blind participants that evaluated
+          interpretation and interaction with MAIDR. Findings showed that
+          MAIDR supported accurate interpretation and that participants
+          combined modalities in varied ways, underscoring the importance of
+          user autonomy in accessible design.
+        </P>
+        <P mt={2}>
+          <strong>Methods:</strong> User research and needs assessment; co-design;
+          usability testing with BLV participants; translating insights into
+          design and product (R/Python packages, documentation). Cross-functional
+          collaboration with lead investigator and partners.
+        </P>
+      </Box>
+
+      <Box as="section" aria-labelledby="maidr-result" mt={6}>
+        <Heading as="h2" id="maidr-result" size="md" mb={3}>
+          End result
+        </Heading>
+        <Heading as="h3" size="sm" mb={2}>
+          Insights &amp; recommendations
+        </Heading>
+        <P mb={2}>
+          Research findings informed the design of multimodal representations
+          and the prioritization of chart types and documentation. Key insight:
+          users combined modalities in varied ways based on experience, so
+          supporting flexibility and user choice (rather than a single prescribed
+          modality) was recommended and reflected in the shipped packages.
+        </P>
+        <Heading as="h3" size="sm" mb={2}>
+          Impact
+        </Heading>
+        <P>
+          MAIDR is available as open-source R and Python packages and is
+          designed to integrate into data curators&apos; workflows so that
+          charts can be used by people with and without visual impairments.
+          The work contributes to accessible data visualization infrastructure
+          used by the broader research and data community.
+        </P>
+      </Box>
+
+      <Box as="section" aria-labelledby="maidr-reflection" mt={6}>
+        <Heading as="h2" id="maidr-reflection" size="md" mb={3}>
+          Reflection
+        </Heading>
+        <P>
+          Collaborating on MAIDR reinforced how usability testing with the
+          right participants (BLV users) is non-negotiable for accessibility
+          work. If I were to revisit this project, I would push for earlier
+          inclusion of real workflows (e.g., analysts using the packages in
+          their own projects) to validate adoption and uncover edge cases in
+          documentation and API design.
         </P>
       </Box>
 
@@ -67,18 +109,13 @@ const Project = () => (
         <Heading as="h2" id="maidr-ux-skills" size="md" mb={3}>
           Research skills demonstrated
         </Heading>
-        <P>
-          This project reflects core UX research competencies: <strong>needs
-          assessment and user research</strong> with blind and low-vision
-          participants; <strong>co-design</strong> of multimodal representations
-          with stakeholders; <strong>usability testing</strong> to validate
-          interpretation and interaction (e.g., bar plots, heat maps, box
-          plots); and <strong>translating findings into actionable product
-          decisions</strong>, shaping the R and Python packages and documentation.
-          Work was done in <strong>collaboration</strong> with a lead
-          investigator and partners, with research directly informing
-          design and implementation priorities.
-        </P>
+        <List as="ul" listStyleType="disc" pl={6} spacing={1}>
+          <ListItem>Needs assessment and user research with BLV participants</ListItem>
+          <ListItem>Co-design of multimodal representations</ListItem>
+          <ListItem>Usability testing to validate interpretation and interaction</ListItem>
+          <ListItem>Translating findings into actionable product decisions</ListItem>
+          <ListItem>Cross-functional collaboration with lead investigator and partners</ListItem>
+        </List>
       </Box>
 
       <Box as="section" aria-labelledby="maidr-publications" mt={6}>
@@ -121,20 +158,11 @@ const Project = () => (
 
       <Box as="section" aria-labelledby="maidr-meta" mt={6}>
         <Heading as="h2" id="maidr-meta" size="md" mb={3}>
-          Project details
+          Methods
         </Heading>
-        <List spacing={2}>
-          <ListItem>
-            <Meta>Lead</Meta>
-            JooYoung Seo, University of Illinois Urbana-Champaign
-          </ListItem>
-          <ListItem>
-            <Meta>Methods</Meta>
-            User research &amp; needs assessment, co-design, usability testing
-            with BLV participants, translating insights to design &amp;
-            product, cross-functional collaboration
-          </ListItem>
-        </List>
+        <P>
+          User research and needs assessment, co-design, usability testing with BLV participants, translating insights to design and product, cross-functional collaboration.
+        </P>
       </Box>
     </Container>
   </Layout>

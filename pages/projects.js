@@ -16,13 +16,18 @@ const Works = () => (
 
             <SimpleGrid columns={[1, 1, 3]} gap={6}>
                 <Section delay={0.3}>
-                    <WorkGridItem id="quartz" title="QUARTZ" thumbnail="/images/quartz_logo.png">
-                        A qualitative research tool for analyzing and visualizing thematic structures in interview and survey data.
+                    <WorkGridItem id="quartz" title="QUARTZ" thumbnail="/images/quartz_logo.png" role="lead">
+                        User research, co-design, and usability testing with BLV practitioners; qualitative analysis and actionable design guidelines for accessible qualitative visualization.
                     </WorkGridItem>
                 </Section>
                 <Section delay={0.3}>
-                    <WorkGridItem id="maidr" title="MAIDR" thumbnail="/images/maidr_logo.svg">
-                        An R package and framework for making data visualizations more accessible through multiple representation modalities.
+                    <WorkGridItem id="dmh" title="Digital Mental Health & BLV" thumbnail="/images/dmh.png" role="lead">
+                        User interviews and need-finding with the blind community; translating research into actionable insights for inclusive digital mental health products.
+                    </WorkGridItem>
+                </Section>
+                <Section delay={0.3}>
+                    <WorkGridItem id="maidr" title="MAIDR" thumbnail="/images/maidr_logo.svg" role="collaborator">
+                        Needs assessment, co-design, and usability testing with BLV participants; insights driving an accessible R/Python visualization framework.
                     </WorkGridItem>
                 </Section>
             </SimpleGrid>

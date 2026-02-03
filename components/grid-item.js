@@ -1,6 +1,6 @@
 import NextLink from 'next/link'
 import Image from 'next/image'
-import { Box, Text, Link, LinkBox, LinkOverlay, useColorModeValue } from '@chakra-ui/react'
+import { Box, Text, Link, LinkBox, LinkOverlay, useColorModeValue, Badge } from '@chakra-ui/react'
 import { Global } from '@emotion/react'
 
 export const GridItem = ({ children, href, title, thumbnail }) => (
@@ -21,8 +21,9 @@ export const GridItem = ({ children, href, title, thumbnail }) => (
   </Box>
 )
 
-export const WorkGridItem = ({ children, id, title, thumbnail }) => {
+export const WorkGridItem = ({ children, id, title, thumbnail, role }) => {
   const tileBg = useColorModeValue('gray.100', 'whiteAlpha.100')
+  const roleLabel = role === 'lead' ? 'Lead' : role === 'collaborator' ? 'Collaborator' : null
   return (
     <Box w="100%" textAlign="center" role="article" aria-labelledby={`work-grid-title-${id}`}>
       <Box
@@ -42,6 +43,18 @@ export const WorkGridItem = ({ children, id, title, thumbnail }) => {
           placeholder={typeof thumbnail === 'string' ? 'empty' : 'blur'}
           style={{ objectFit: 'contain' }}
         />
+        {roleLabel && (
+          <Badge
+            position="absolute"
+            top={2}
+            right={2}
+            colorScheme={role === 'lead' ? 'blue' : 'purple'}
+            fontSize="xs"
+            textTransform="none"
+          >
+            {roleLabel}
+          </Badge>
+        )}
       </Box>
       <Link as={NextLink} href={`/works/${id}`} display="inline-block" mt={2} fontSize={20} id={`work-grid-title-${id}`}>
         {title}

@@ -26,8 +26,8 @@ const Project = () => (
         <strong>QUARTZ</strong> (Qualitative Understanding via Accessible
         Representation and VisualiZation) is an accessible, multimodal system
         that enables blind and low-vision (BLV) practitioners to create,
-        explore, and analyze qualitative visualizations—such as knowledge
-        graphs, concept maps, and coding hierarchies—through complementary
+        explore, and analyze qualitative visualizations, such as knowledge
+        graphs, concept maps, and coding hierarchies, through complementary
         modalities.
       </P>
 
@@ -60,16 +60,16 @@ const Project = () => (
         </P>
         <List as="ul" listStyleType="disc" pl={6} mt={2} spacing={1}>
           <ListItem>
-            <strong>Structured textual descriptions</strong>—hierarchical,
+            <strong>Structured textual descriptions</strong>, hierarchical,
             navigable text adapted from semantic levels in prior research.
           </ListItem>
           <ListItem>
-            <strong>Sonification</strong>—mappings that encode network topology
+            <strong>Sonification</strong>, mappings that encode network topology
             and inter-code relationships through pitch, rhythm, and spatial
             audio.
           </ListItem>
           <ListItem>
-            <strong>Interactive navigation</strong>—keyboard-driven exploration
+            <strong>Interactive navigation</strong>, keyboard-driven exploration
             of graph structures, with screen reader–compatible feedback.
           </ListItem>
         </List>
@@ -111,8 +111,8 @@ const Project = () => (
         </Heading>
         <List as="ol" listStyleType="decimal" pl={6} spacing={2}>
           <ListItem>
-            How can multimodal representations—structured text, sonification,
-            interactive navigation, and AI-generated descriptions—effectively
+            How can multimodal representations (structured text, sonification,
+            interactive navigation, and AI-generated descriptions) effectively
             convey qualitative visualization semantics?
           </ListItem>
           <ListItem>
@@ -162,8 +162,26 @@ const Project = () => (
           analysis, and AI training data curation, ensuring these analytical
           tools are accessible determines who can participate in data-driven
           decision-making. QUARTZ aims to enable BLV practitioners to conduct
-          independent qualitative analysis—a significant barrier documented by
+          independent qualitative analysis, a significant barrier documented by
           prior work.
+        </P>
+      </Box>
+
+      <Box as="section" aria-labelledby="quartz-ux-skills" mt={6}>
+        <Heading as="h2" id="quartz-ux-skills" size="md" mb={3}>
+          Research skills demonstrated
+        </Heading>
+        <P>
+          This project reflects competencies that UX research hiring managers
+          look for: <strong>participatory co-design and user interviews</strong> with
+          BLV practitioners to define problems and needs; <strong>qualitative
+          analysis and thematic coding</strong> to surface patterns; <strong>usability-oriented
+          evaluation</strong> of multimodal representations and analytical reasoning
+          tasks; and <strong>translating research into actionable design
+          guidelines</strong> and system requirements. Work was conducted in close
+          <strong> collaboration</strong> with an academic partner and community
+          stakeholders, with findings directly informing product direction and
+          open-source deliverables.
         </P>
       </Box>
 
@@ -179,9 +197,9 @@ const Project = () => (
           </ListItem>
           <ListItem>
             <Meta>Methods</Meta>
-            Participatory co-design with BLV practitioners, qualitative
-            analysis, thematic coding, accessible visualization, sonification,
-            keyboard-driven interaction
+            User research &amp; interviews, participatory co-design, usability
+            testing &amp; task analysis, qualitative analysis &amp; thematic
+            coding, translating insights to design guidelines
           </ListItem>
         </List>
       </Box>

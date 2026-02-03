@@ -130,7 +130,7 @@ const Page = () => {
                                     Omar Khan
                                 </Heading>
                                 <Text fontSize="xl" fontWeight="medium" color={heroTextColor} textAlign="center">
-                                    Ph.D. Candidate in Computer Science at UIUC
+                                    UX Researcher & Ph.D. Candidate in Computer Science at UIUC
                                 </Text>
                                 <Text 
                                     fontSize="lg" 

@@ -39,17 +39,17 @@ const Project = () => (
         </P>
         <List as="ul" listStyleType="disc" pl={6} mt={2} spacing={1}>
           <ListItem>
-            <strong>Sonification</strong>—audio representation of data
+            <strong>Sonification</strong>, audio representation of data
           </ListItem>
           <ListItem>
-            <strong>Textual descriptions</strong>—readable summaries for screen
+            <strong>Textual descriptions</strong>, readable summaries for screen
             readers
           </ListItem>
           <ListItem>
-            <strong>Braille</strong>—tactile representation
+            <strong>Braille</strong>, tactile representation
           </ListItem>
           <ListItem>
-            <strong>Review mode</strong>—interactive exploration with
+            <strong>Review mode</strong>, interactive exploration with
             complementary modalities
           </ListItem>
         </List>
@@ -63,17 +63,21 @@ const Project = () => (
         </P>
       </Box>
 
-      <Box as="section" aria-labelledby="maidr-funding" mt={6}>
-        <Heading as="h2" id="maidr-funding" size="md" mb={3}>
-          Project and funding
+      <Box as="section" aria-labelledby="maidr-ux-skills" mt={6}>
+        <Heading as="h2" id="maidr-ux-skills" size="md" mb={3}>
+          Research skills demonstrated
         </Heading>
         <P>
-          MAIDR is led by JooYoung Seo at the University of Illinois. The work
-          is funded by the Institute of Museum and Library Services (IMLS) with
-          $649,921 in support (2023–present). Project partners include the
-          National Center for Supercomputing Applications, Posit (formerly RStudio),
-          the Chart2Music open-source project, the Data Curation Network, and
-          the National Federation of the Blind.
+          This project reflects core UX research competencies: <strong>needs
+          assessment and user research</strong> with blind and low-vision
+          participants; <strong>co-design</strong> of multimodal representations
+          with stakeholders; <strong>usability testing</strong> to validate
+          interpretation and interaction (e.g., bar plots, heat maps, box
+          plots); and <strong>translating findings into actionable product
+          decisions</strong>, shaping the R and Python packages and documentation.
+          Work was done in <strong>collaboration</strong> with a lead
+          investigator and partners, with research directly informing
+          design and implementation priorities.
         </P>
       </Box>
 
@@ -126,13 +130,9 @@ const Project = () => (
           </ListItem>
           <ListItem>
             <Meta>Methods</Meta>
-            Accessible visualization, multimodal representation (sonification,
-            text, braille), R and Python package development, needs assessment,
-            co-design, user studies with blind and low-vision participants
-          </ListItem>
-          <ListItem>
-            <Meta>Funding</Meta>
-            Institute of Museum and Library Services, 2023–present
+            User research &amp; needs assessment, co-design, usability testing
+            with BLV participants, translating insights to design &amp;
+            product, cross-functional collaboration
           </ListItem>
         </List>
       </Box>

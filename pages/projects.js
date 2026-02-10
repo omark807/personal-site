@@ -36,4 +36,3 @@ const Works = () => (
 )
 
 export default Works
-export default Works

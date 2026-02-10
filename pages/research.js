@@ -22,7 +22,7 @@ const Works = () => (
                     Conference and Journal Publications
                 </Heading> 
                 <Paragraph>
-                <b>[C6]</b> Omar Khan and JooYoung Seo. 2026. &quot;I Don’t Trust Any Professional Research Tool&quot;: A Re-Imagination of Knowledge Production Workflows by, with, and for Blind and Low-Vision Researchers. In Proceedings of the 2026 CHI Conference on Human Factors in Computing Systems (CHI ’26), April 13–17, 2026, Barcelona, Spain. ACM, New York, NY, USA, 24 pages. <Link target="_blank" href="https://doi.org/10.1145/3772318.3791242" rel="noopener noreferrer" aria-label="View DOI for CHI 2026 paper on knowledge production workflows (opens in new tab)"> [DOI]</Link>
+                <b>[C6]</b> Omar Khan and JooYoung Seo. 2026. &quot;I Don’t Trust Any Professional Research Tool&quot;: A Re-Imagination of Knowledge Production Workflows by, with, and for Blind and Low-Vision Researchers. In Proceedings of the 2026 CHI Conference on Human Factors in Computing Systems (CHI ’26), April 13–17, 2026, Barcelona, Spain. ACM, New York, NY, USA, 24 pages. <Link target="_blank" href="https://doi.org/10.1145/3772318.3791242" rel="noopener noreferrer" aria-label="View DOI for CHI 2026 paper on knowledge production workflows (opens in new tab)"> [DOI]</Link> | <Link target="_blank" href="https://arxiv.org/abs/2602.08925" rel="noopener noreferrer" aria-label="View arXiv preprint for CHI 2026 paper on knowledge production workflows (opens in new tab)"> [arXiv]</Link>
                 </Paragraph>
                 <Divider my={3} />
                 <Paragraph>

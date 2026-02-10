@@ -10,7 +10,7 @@ const NewsPage = () => {
             title: 'New Paper Accepted to CHI 2026!',
             date: '01-28-2026',
             month: 'January 2026',
-            content: <>Our paper on &quot;I Don’t Trust Any Professional Research Tool&quot;: A Re-Imagination of Knowledge Production Workflows by, with, and for Blind and Low-Vision Researchers has been accepted to CHI 2026! You can find the preprint at <a href="https://arxiv.org/abs/2503.07415" target="_blank" rel="noopener noreferrer" aria-label="View arXiv preprint for late-breaking work (opens in new tab)"><u>this link</u></a>. I look forward to presenting this work at CHI 2026 in Barcelona, Spain in April!</>,
+            content: <>Our paper on &quot;I Don’t Trust Any Professional Research Tool&quot;: A Re-Imagination of Knowledge Production Workflows by, with, and for Blind and Low-Vision Researchers has been accepted to CHI 2026! You can find the preprint at <a href="https://arxiv.org/abs/2602.08925" target="_blank" rel="noopener noreferrer" aria-label="View arXiv preprint for full paper (opens in new tab)"><u>this link</u></a>. I look forward to presenting this work at CHI 2026 in Barcelona, Spain in April!</>,
             tags: ['publication', 'conference'],
         },
         {

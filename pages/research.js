@@ -30,7 +30,7 @@ const Works = () => (
                     Soyoung Choi, and JooYoung Seo. 2025. PunchPulse: A Physically Demanding Virtual Reality Boxing Game Designed with, for and by Blind and
                     Low-Vision Players. <i>In The 27th International ACM SIGACCESS Conference
                     on Computers and Accessibility (ASSETS ’25)</i>, October 26–29, 2025, Denver, CO,
-                    USA. ACM, New York, NY, USA, 21 pages. <Link target="_blank" href="https://dl.acm.org/doi/10.1145/3663547.3746365" rel="noopener noreferrer" aria-label="View DOI for PunchPulse paper (opens in new tab)"> [DOI]</Link>
+                    USA. ACM, New York, NY, USA, 21 pages. <Link target="_blank" href="https://dl.acm.org/doi/10.1145/3663547.3746365" rel="noopener noreferrer" aria-label="View DOI for PunchPulse paper (opens in new tab)"> [DOI]</Link> | <Link target="_blank" href="https://arxiv.org/abs/2602.08925" rel="noopener noreferrer" aria-label="View arXiv preprint for PunchPulse paper (opens in new tab)"> [arxiv]</Link>
                 </Paragraph>
                 <Divider my={3} />
                 <Paragraph>

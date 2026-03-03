@@ -20,6 +20,13 @@ import Layout from '../components/layouts/article';
 const BlogsPage = () => {
   const cardBg = useColorModeValue('white', 'gray.800');
   const borderColor = useColorModeValue('gray.200', 'gray.600');
+  const primaryBg = 'orange.700';
+  const primaryColor = 'white';
+  const primaryHoverBg = 'orange.800';
+  const primaryActiveBg = 'orange.900';
+  const secondaryColor = useColorModeValue('orange.700', 'orange.200');
+  const secondaryBorderColor = useColorModeValue('orange.700', 'orange.200');
+  const secondaryHoverBg = useColorModeValue('orange.50', 'whiteAlpha.200');
   
   return (
     <Layout title="Blogs">
@@ -43,10 +50,12 @@ const BlogsPage = () => {
                 as={Link}
                 href="https://substack.com/@winterydaphne?utm_source=user-menu"
                 isExternal
-                colorScheme="orange"
                 size="lg"
                 rightIcon={<Icon as={FaExternalLinkAlt} />}
-                _hover={{ textDecoration: 'none', transform: 'translateY(-2px)' }}
+                bg={primaryBg}
+                color={primaryColor}
+                _hover={{ textDecoration: 'none', transform: 'translateY(-2px)', bg: primaryHoverBg }}
+                _active={{ bg: primaryActiveBg }}
                 transition="all 0.2s"
               >
                 Visit My Substack
@@ -56,10 +65,11 @@ const BlogsPage = () => {
                 href="https://winterydaphne.substack.com/subscribe?next=https%3A%2F%2Fsubstack.com%2F%40winterydaphne%3Futm_source%3Duser-menu&utm_source=profile-page&utm_medium=web&utm_campaign=substack_profile&just_signed_up=true"
                 isExternal
                 variant="outline"
-                colorScheme="orange"
                 size="lg"
                 rightIcon={<Icon as={FaNewspaper} />}
-                _hover={{ textDecoration: 'none', transform: 'translateY(-2px)' }}
+                color={secondaryColor}
+                borderColor={secondaryBorderColor}
+                _hover={{ textDecoration: 'none', transform: 'translateY(-2px)', bg: secondaryHoverBg }}
                 transition="all 0.2s"
               >
                 Subscribe

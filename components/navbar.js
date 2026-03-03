@@ -46,19 +46,20 @@ const Navbar = (props) => {
 
   return (
     <Box
-      position="fixed"
+      position="sticky"
+      top={0}
       as="nav"
       w="100%"
-      bg={useColorModeValue('#fffff40', '#20202380')}
+      bg={useColorModeValue('whiteAlpha.800', '#20202380')}
       style={{ backdropFilter: 'blur(10px)' }}
-      zIndex={1}
+      zIndex={10}
       {...props}
     >
       <Container
         display="flex"
         p={2}
-        maxW="container.md"
-        flexWrap="wrap"
+        maxW="container.lg"
+        flexWrap={{ base: 'wrap', xl: 'nowrap' }}
         alignItems="center"
         justifyContent="space-between"
       >
@@ -69,24 +70,32 @@ const Navbar = (props) => {
         </Flex>
 
         <Stack
-          direction={{ base: 'column', md: 'row' }}
-          display={{ base: 'none', md: 'flex' }}
+          direction={{ base: 'column', xl: 'row' }}
+          display={{ base: 'none', xl: 'flex' }}
           width={{ base: 'full', md: 'auto' }}
           alignItems="center"
           flexGrow={1}
-          mt={{ base: 4, md: 0 }}
+          minW={0}
+          mt={{ base: 4, xl: 0 }}
+          spacing={1}
         >
+          <LinkItem href="/" path={path}>
+            home
+          </LinkItem>
           <LinkItem href="/about" path={path}>
             about
           </LinkItem>
           <LinkItem href="/news" path={path}>
-            news
+            updates
           </LinkItem>
           <LinkItem href="/research" path={path}>
             research
           </LinkItem>
           <LinkItem href="/projects" path={path}>
             projects
+          </LinkItem>
+          <LinkItem href="mailto:omark807@gmail.com" path={path}>
+            get in touch
           </LinkItem>
           <Menu>
             <MenuButton
@@ -154,9 +163,9 @@ const Navbar = (props) => {
           </LinkItem>
         </Stack>
 
-        <Box flex={1} align="right">
+        <Box flexShrink={0} ml={2} display="flex" alignItems="center" justifyContent="flex-end">
           <ThemeToggleButton />
-          <Box ml={2} display={{ base: 'inline-block', md: 'none' }}>
+          <Box ml={2} display={{ base: 'inline-block', xl: 'none' }}>
             <Menu isLazy id="navbar-menu">
               <MenuButton
                 as={IconButton}
@@ -167,10 +176,12 @@ const Navbar = (props) => {
                 aria-haspopup="menu"
               />
               <MenuList>
+                <MenuItem as={NextLink} href="/">home</MenuItem>
                 <MenuItem as={NextLink} href="/about">about</MenuItem>
-                <MenuItem as={NextLink} href="/news">news</MenuItem>
+                <MenuItem as={NextLink} href="/news">updates</MenuItem>
                 <MenuItem as={NextLink} href="/research">research</MenuItem>
                 <MenuItem as={NextLink} href="/projects">projects</MenuItem>
+                <MenuItem as={Link} href="mailto:omark807@gmail.com">get in touch</MenuItem>
                 <Menu placement="right-start">
                   <MenuButton
                     as={Button}

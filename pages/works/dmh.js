@@ -19,6 +19,27 @@ const Project = () => (
       </Title>
       <WorkImage src="/images/dmh.png" alt="Digital mental health and accessibility" />
 
+      <Box as="section" aria-labelledby="dmh-summary" mt={4}>
+        <Heading as="h2" id="dmh-summary" size="md" mb={3}>
+          Executive summary
+        </Heading>
+        <P>
+          This project investigates how digital mental health tools exclude blind and low-vision users and what inclusive alternatives should look like. As lead researcher, I conducted need-finding research that produced evidence-based recommendations teams can use to design accessible DMH products.
+        </P>
+      </Box>
+
+      <Box as="section" aria-labelledby="dmh-glance" mt={6}>
+        <Heading as="h2" id="dmh-glance" size="md" mb={3}>
+          At a glance
+        </Heading>
+        <List spacing={2}>
+          <ListItem><strong>Role:</strong> Lead researcher</ListItem>
+          <ListItem><strong>Collaborator:</strong> JooYoung Seo (UIUC)</ListItem>
+          <ListItem><strong>Methods:</strong> Interviews, surveys, need-finding, synthesis into product recommendations</ListItem>
+          <ListItem><strong>Tools and outputs:</strong> CHI EA publication, arXiv preprint, actionable design recommendations</ListItem>
+        </List>
+      </Box>
+
       <Box as="section" aria-labelledby="dmh-project" mt={4}>
         <Heading as="h2" id="dmh-project" size="md" mb={3}>
           Project
@@ -107,9 +128,9 @@ const Project = () => (
         </List>
       </Box>
 
-      <Box as="section" aria-labelledby="dmh-publications" mt={6}>
-        <Heading as="h2" id="dmh-publications" size="md" mb={3}>
-          Publication
+      <Box as="section" aria-labelledby="dmh-resources" mt={6}>
+        <Heading as="h2" id="dmh-resources" size="md" mb={3}>
+          Resources
         </Heading>
         <List as="ul" listStyleType="disc" pl={6} spacing={2}>
           <ListItem>

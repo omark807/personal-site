@@ -21,7 +21,7 @@ export const GridItem = ({ children, href, title, thumbnail }) => (
   </Box>
 )
 
-export const WorkGridItem = ({ children, id, title, thumbnail, role }) => {
+export const WorkGridItem = ({ children, id, title, thumbnail, role, tags = [] }) => {
   const tileBg = useColorModeValue('gray.100', 'whiteAlpha.100')
   const roleLabel = role === 'lead' ? 'Lead' : role === 'collaborator' ? 'Collaborator' : null
   return (
@@ -59,6 +59,15 @@ export const WorkGridItem = ({ children, id, title, thumbnail, role }) => {
       <Link as={NextLink} href={`/works/${id}`} display="inline-block" mt={2} fontSize={20} id={`work-grid-title-${id}`}>
         {title}
       </Link>
+      {tags.length > 0 && (
+        <Box mt={2}>
+          {tags.map(tag => (
+            <Badge key={`${id}-${tag}`} mr={1} mb={1} colorScheme="orange" variant="subtle" textTransform="none">
+              {tag}
+            </Badge>
+          ))}
+        </Box>
+      )}
       <Text fontSize={14} mt={1}>{children}</Text>
     </Box>
   )

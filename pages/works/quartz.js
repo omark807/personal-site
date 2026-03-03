@@ -6,6 +6,7 @@ import {
   Heading,
   Box,
   Image,
+  Link,
 } from '@chakra-ui/react'
 import { Title, WorkImage } from '../../components/work'
 import P from '../../components/paragraph'
@@ -21,6 +22,27 @@ const Project = () => (
         QUARTZ <Badge>Project</Badge>
       </Title>
       <WorkImage src="/images/quartz_logo.png" alt="QUARTZ logo" />
+
+      <Box as="section" aria-labelledby="quartz-summary" mt={4}>
+        <Heading as="h2" id="quartz-summary" size="md" mb={3}>
+          Executive summary
+        </Heading>
+        <P>
+          QUARTZ addresses a persistent accessibility gap in qualitative visualization workflows for blind and low-vision researchers. As lead researcher, I drove co-design and evaluation work that produced actionable design guidance and informed an open-source multimodal system.
+        </P>
+      </Box>
+
+      <Box as="section" aria-labelledby="quartz-glance" mt={6}>
+        <Heading as="h2" id="quartz-glance" size="md" mb={3}>
+          At a glance
+        </Heading>
+        <List spacing={2}>
+          <ListItem><strong>Role:</strong> Lead researcher</ListItem>
+          <ListItem><strong>Collaborator:</strong> Dr. JooYoung Seo (UIUC)</ListItem>
+          <ListItem><strong>Methods:</strong> Interviews, participatory co-design, qualitative analysis, usability-oriented evaluation</ListItem>
+          <ListItem><strong>Tools and outputs:</strong> QUARTZ interface, multimodal representations, design guidelines</ListItem>
+        </List>
+      </Box>
 
       <Box as="section" aria-labelledby="quartz-project" mt={4}>
         <Heading as="h2" id="quartz-project" size="md" mb={3}>
@@ -177,6 +199,24 @@ const Project = () => (
           <ListItem>Usability evaluation and task analysis</ListItem>
           <ListItem>Translating research into actionable design guidelines</ListItem>
           <ListItem>Cross-functional collaboration with academic and community stakeholders</ListItem>
+        </List>
+      </Box>
+
+      <Box as="section" aria-labelledby="quartz-resources" mt={6}>
+        <Heading as="h2" id="quartz-resources" size="md" mb={3}>
+          Resources
+        </Heading>
+        <List as="ul" listStyleType="disc" pl={6} spacing={2}>
+          <ListItem>
+            <Link href="https://doi.org/10.1145/3772318.3791242" target="_blank" rel="noopener noreferrer" aria-label="View DOI for QUARTZ-related CHI 2026 paper (opens in new tab)">
+              CHI &apos;26 publication [DOI]
+            </Link>
+          </ListItem>
+          <ListItem>
+            <Link href="https://arxiv.org/abs/2602.08925" target="_blank" rel="noopener noreferrer" aria-label="View arXiv preprint for QUARTZ-related CHI 2026 paper (opens in new tab)">
+              arXiv preprint
+            </Link>
+          </ListItem>
         </List>
       </Box>
 

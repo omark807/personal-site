@@ -19,6 +19,27 @@ const Project = () => (
       </Title>
       <WorkImage src="/images/maidr_logo.svg" alt="MAIDR logo" />
 
+      <Box as="section" aria-labelledby="maidr-summary" mt={4}>
+        <Heading as="h2" id="maidr-summary" size="md" mb={3}>
+          Executive summary
+        </Heading>
+        <P>
+          MAIDR enables accessible interpretation of statistical visualizations through multimodal interaction in R and Python workflows. As a collaborator, I contributed to needs assessment, co-design, and usability testing that directly shaped package and documentation decisions.
+        </P>
+      </Box>
+
+      <Box as="section" aria-labelledby="maidr-glance" mt={6}>
+        <Heading as="h2" id="maidr-glance" size="md" mb={3}>
+          At a glance
+        </Heading>
+        <List spacing={2}>
+          <ListItem><strong>Role:</strong> Collaborator</ListItem>
+          <ListItem><strong>Lead:</strong> JooYoung Seo (UIUC)</ListItem>
+          <ListItem><strong>Methods:</strong> Needs assessment, co-design, usability testing with BLV participants</ListItem>
+          <ListItem><strong>Tools and outputs:</strong> MAIDR R/Python packages, multimodal design recommendations</ListItem>
+        </List>
+      </Box>
+
       <Box as="section" aria-labelledby="maidr-project" mt={4}>
         <Heading as="h2" id="maidr-project" size="md" mb={3}>
           Project

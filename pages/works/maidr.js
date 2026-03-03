@@ -21,10 +21,10 @@ const Project = () => (
 
       <Box as="section" aria-labelledby="maidr-summary" mt={4}>
         <Heading as="h2" id="maidr-summary" size="md" mb={3}>
-          Executive summary
+          Contribution overview
         </Heading>
         <P>
-          MAIDR enables accessible interpretation of statistical visualizations through multimodal interaction in R and Python workflows. As a collaborator, I contributed to needs assessment, co-design, and usability testing that directly shaped package and documentation decisions.
+          I co-authored <strong>Sensing the Shape of Data</strong>, a study on how blind and low-vision (BLV) learners interpret histogram concepts through non-visual modalities. I contributed to study design, in-person data collection, and mixed-method analysis.
         </P>
       </Box>
 
@@ -35,80 +35,68 @@ const Project = () => (
         <List spacing={2}>
           <ListItem><strong>Role:</strong> Collaborator</ListItem>
           <ListItem><strong>Lead:</strong> JooYoung Seo (UIUC)</ListItem>
-          <ListItem><strong>Methods:</strong> Needs assessment, co-design, usability testing with BLV participants</ListItem>
-          <ListItem><strong>Tools and outputs:</strong> MAIDR R/Python packages, multimodal design recommendations</ListItem>
+          <ListItem><strong>Study:</strong> Within-subjects multimodal histogram study with 7 BLV participants</ListItem>
+          <ListItem><strong>Methods:</strong> Task-based evaluation, confidence and timing measures, and qualitative gesture analysis</ListItem>
+          <ListItem><strong>Representations:</strong> STGs (swell-touch tactile graphics), BDPs (braille data patterns), and sonification</ListItem>
         </List>
       </Box>
 
       <Box as="section" aria-labelledby="maidr-project" mt={4}>
         <Heading as="h2" id="maidr-project" size="md" mb={3}>
-          Project
+          Paper context
         </Heading>
         <P>
-          <strong>My role:</strong> Collaborator. <strong>Lead:</strong> JooYoung Seo, University of Illinois Urbana-Champaign. <strong>Scope:</strong> MAIDR (Multimodal Access and Interactive Data Representation) is an open-source system that makes statistical data visualizations accessible to blind and low-vision users via R and Python packages. I contributed to needs assessment, co-design with BLV participants, usability testing, and translation of research findings into design and product decisions for the packages and documentation.
+          <strong>My role:</strong> Co-author and collaborator. <strong>Lead:</strong> JooYoung Seo, University of Illinois Urbana-Champaign. <strong>Scope:</strong> We evaluated learnability (not just accessibility) for three histogram concepts: skewness, modality, and kurtosis.
         </P>
       </Box>
 
       <Box as="section" aria-labelledby="maidr-objective" mt={6}>
         <Heading as="h2" id="maidr-objective" size="md" mb={3}>
-          Objective
+          Research objective
         </Heading>
         <P>
-          Statistical charts (bar plots, heat maps, box plots, scatter plots) are central to data communication but are often inaccessible to blind and low-vision users. The goal was to understand user needs, co-design multimodal representations (sonification, text, braille), and validate that BLV participants could accurately interpret and interact with charts through these modalities so the team could ship accessible R and Python tooling.
+          Measure how representation choice affects BLV learners&apos; <strong>accuracy</strong>, <strong>efficiency</strong>, and <strong>confidence</strong> while interpreting histogram concepts using STG, BDP, and sonification.
         </P>
       </Box>
 
       <Box as="section" aria-labelledby="maidr-work" mt={6}>
         <Heading as="h2" id="maidr-work" size="md" mb={3}>
-          Work
+          What I did
         </Heading>
         <P>
-          MAIDR augments visual charts into touchable, readable, and audible
-          representations: <strong>sonification</strong> (audio), <strong>textual
-          descriptions</strong> (screen readers), <strong>braille</strong>
-          (tactile), and <strong>review mode</strong> (interactive exploration).
-          Supported chart types include bar plots, heat maps, box plots, and
-          scatter plots.
+          Designed and ran an in-person, within-subjects user study comparing
+          <strong> STGs</strong>, <strong>BDPs</strong>, and <strong>sonification</strong>
+          for non-visual interpretation of histogram patterns.
         </P>
         <P mt={3}>
-          I contributed to needs assessment and co-design with BLV stakeholders,
-          and to a user study with 11 blind participants that evaluated
-          interpretation and interaction with MAIDR. Findings showed that
-          MAIDR supported accurate interpretation and that participants
-          combined modalities in varied ways, underscoring the importance of
-          user autonomy in accessible design.
+          Led mixed-method analysis combining quantitative metrics (accuracy,
+          confidence, response time) with qualitative gesture coding (for example,
+          whole-to-part vs part-to-whole exploration).
         </P>
         <P mt={2}>
-          <strong>Methods:</strong> User research and needs assessment; co-design;
-          usability testing with BLV participants; translating insights into
-          design and product (R/Python packages, documentation). Cross-functional
-          collaboration with lead investigator and partners.
+          <strong>Methods:</strong> Within-subjects protocol, multimodal task
+          evaluation, non-parametric analysis, and qualitative interaction coding.
         </P>
       </Box>
 
       <Box as="section" aria-labelledby="maidr-result" mt={6}>
         <Heading as="h2" id="maidr-result" size="md" mb={3}>
-          End result
+          Findings and impact
         </Heading>
         <Heading as="h3" size="sm" mb={2}>
-          Insights &amp; recommendations
+          Key findings
         </Heading>
         <P mb={2}>
-          Research findings informed the design of multimodal representations
-          and the prioritization of chart types and documentation. Key insight:
-          users combined modalities in varied ways based on experience, so
-          supporting flexibility and user choice (rather than a single prescribed
-          modality) was recommended and reflected in the shipped packages.
+          BDPs showed the highest accuracy trend, sonification enabled faster
+          completion, and STGs supported stronger confidence. Participants
+          switched strategies across modalities rather than relying on one method.
         </P>
         <Heading as="h3" size="sm" mb={2}>
-          Impact
+          Why it matters
         </Heading>
         <P>
-          MAIDR is available as open-source R and Python packages and is
-          designed to integrate into data curators&apos; workflows so that
-          charts can be used by people with and without visual impairments.
-          The work contributes to accessible data visualization infrastructure
-          used by the broader research and data community.
+          The work extends MAIDR from accessibility to <strong>learnability</strong>,
+          informing inclusive statistics teaching and future multimodal tools.
         </P>
       </Box>
 
@@ -117,25 +105,22 @@ const Project = () => (
           Reflection
         </Heading>
         <P>
-          Collaborating on MAIDR reinforced how usability testing with the
-          right participants (BLV users) is non-negotiable for accessibility
-          work. If I were to revisit this project, I would push for earlier
-          inclusion of real workflows (e.g., analysts using the packages in
-          their own projects) to validate adoption and uncover edge cases in
-          documentation and API design.
+          This work reinforced that accessibility studies must include BLV
+          participants from the start. Next, I would add more real-world analysis
+          workflows to test transfer and adoption.
         </P>
       </Box>
 
       <Box as="section" aria-labelledby="maidr-ux-skills" mt={6}>
         <Heading as="h2" id="maidr-ux-skills" size="md" mb={3}>
-          Research skills demonstrated
+          Skills demonstrated
         </Heading>
         <List as="ul" listStyleType="disc" pl={6} spacing={1}>
-          <ListItem>Needs assessment and user research with BLV participants</ListItem>
-          <ListItem>Co-design of multimodal representations</ListItem>
-          <ListItem>Usability testing to validate interpretation and interaction</ListItem>
-          <ListItem>Translating findings into actionable product decisions</ListItem>
-          <ListItem>Cross-functional collaboration with lead investigator and partners</ListItem>
+          <ListItem>Within-subjects study design with BLV participants</ListItem>
+          <ListItem>Multimodal evaluation (STG, BDP, sonification)</ListItem>
+          <ListItem>Mixed-method analysis (quant + qualitative coding)</ListItem>
+          <ListItem>Research translation to accessible learning/tool design</ListItem>
+          <ListItem>Cross-functional collaboration in accessibility research</ListItem>
         </List>
       </Box>
 
@@ -166,6 +151,16 @@ const Project = () => (
           </ListItem>
           <ListItem>
             <Link
+              href="https://arxiv.org/abs/2509.14452"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Paper on non-visual exploration of statistical concepts in histograms with BLV learners on arXiv (opens in new tab)"
+            >
+              Sensing the Shape of Data (arXiv)
+            </Link>
+          </ListItem>
+          <ListItem>
+            <Link
               href="https://arxiv.org/abs/2403.00717"
               target="_blank"
               rel="noopener noreferrer"
@@ -182,7 +177,7 @@ const Project = () => (
           Methods
         </Heading>
         <P>
-          User research and needs assessment, co-design, usability testing with BLV participants, translating insights to design and product, cross-functional collaboration.
+          Within-subjects study design, multimodal task evaluation, non-parametric analysis, qualitative gesture coding, and cross-functional collaboration.
         </P>
       </Box>
     </Container>

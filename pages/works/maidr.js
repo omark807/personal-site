@@ -187,7 +187,6 @@ const Project = () => (
         <List as="ul" listStyleType="disc" pl={6} spacing={1}>
           <ListItem>Within-subjects study design</ListItem>
           <ListItem>Multimodal task evaluation</ListItem>
-          <ListItem>Non-parametric statistical analysis</ListItem>
           <ListItem>Qualitative gesture coding</ListItem>
           <ListItem>Cross-functional collaboration</ListItem>
         </List>

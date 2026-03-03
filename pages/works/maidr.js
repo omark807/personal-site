@@ -19,7 +19,7 @@ const Project = () => (
       </Title>
       <WorkImage src="/images/maidr_logo.svg" alt="MAIDR logo" />
 
-      <Box as="section" aria-labelledby="maidr-summary" mt={4}>
+      <Box as="section" aria-labelledby="maidr-summary" mt={6}>
         <Heading as="h2" id="maidr-summary" size="md" mb={3}>
           Contribution overview
         </Heading>
@@ -33,7 +33,7 @@ const Project = () => (
           At a glance
         </Heading>
         <List spacing={2}>
-          <ListItem><strong>Role:</strong> Collaborator</ListItem>
+          <ListItem><strong>Role:</strong> Co-author and research collaborator</ListItem>
           <ListItem><strong>Lead:</strong> JooYoung Seo (UIUC)</ListItem>
           <ListItem><strong>Study:</strong> Within-subjects multimodal histogram study with 7 BLV participants</ListItem>
           <ListItem><strong>Methods:</strong> Task-based evaluation, confidence and timing measures, and qualitative gesture analysis</ListItem>
@@ -41,7 +41,7 @@ const Project = () => (
         </List>
       </Box>
 
-      <Box as="section" aria-labelledby="maidr-project" mt={4}>
+      <Box as="section" aria-labelledby="maidr-project" mt={6}>
         <Heading as="h2" id="maidr-project" size="md" mb={3}>
           Paper context
         </Heading>
@@ -63,15 +63,19 @@ const Project = () => (
         <Heading as="h2" id="maidr-work" size="md" mb={3}>
           What I did
         </Heading>
-        <P>
-          Designed and ran an in-person, within-subjects user study comparing
-          <strong> swell-touch tactile graphs (STGs)</strong>, <strong>Braille display patterns (BDPs)</strong>, and <strong>sonification</strong> for non-visual interpretation of histogram patterns.
-        </P>
-        <P mt={3}>
-          Led mixed-method analysis combining quantitative metrics (accuracy,
-          confidence, response time) with qualitative gesture coding (for example,
-          whole-to-part vs part-to-whole exploration).
-        </P>
+        <List as="ul" listStyleType="disc" pl={6} spacing={2}>
+          <ListItem>
+            Designed and ran an in-person, within-subjects user study comparing
+            <strong>swell-touch tactile graphs (STGs)</strong>,{' '}
+            <strong>Braille display patterns (BDPs)</strong>, and{' '}
+            <strong>sonification</strong> for non-visual interpretation of histogram patterns.
+          </ListItem>
+          <ListItem>
+            Led mixed-method analysis combining quantitative metrics (accuracy,
+            confidence, response time) with qualitative gesture coding (for
+            example, whole-to-part vs part-to-whole exploration).
+          </ListItem>
+        </List>
         <P mt={2}>
           <strong>Methods:</strong> Within-subjects protocol, multimodal task
           evaluation, non-parametric analysis, and qualitative interaction coding.
@@ -85,13 +89,17 @@ const Project = () => (
         <Heading as="h3" size="sm" mb={2}>
           Key findings
         </Heading>
-        <P mb={2}>
-          BDPs showed the highest accuracy trend, sonification enabled faster
-          completion, and STGs supported stronger confidence. Participants
-          switched strategies across modalities rather than relying on one method.
-        </P>
-        
-        <Heading as="h3" size="sm" mb={2}>
+        <List as="ul" listStyleType="disc" pl={6} spacing={2} mb={4}>
+          <ListItem>BDPs showed the highest accuracy trend.</ListItem>
+          <ListItem>Sonification enabled faster task completion.</ListItem>
+          <ListItem>STGs supported stronger participant confidence.</ListItem>
+          <ListItem>
+            Participants switched strategies across modalities rather than relying
+            on one method.
+          </ListItem>
+        </List>
+
+        <Heading as="h3" size="sm" mb={2} mt={2}>
           Why it matters
         </Heading>
         <P>
@@ -176,9 +184,13 @@ const Project = () => (
         <Heading as="h2" id="maidr-meta" size="md" mb={3}>
           Methods
         </Heading>
-        <P>
-          Within-subjects study design, multimodal task evaluation, non-parametric analysis, qualitative gesture coding, and cross-functional collaboration.
-        </P>
+        <List as="ul" listStyleType="disc" pl={6} spacing={1}>
+          <ListItem>Within-subjects study design</ListItem>
+          <ListItem>Multimodal task evaluation</ListItem>
+          <ListItem>Non-parametric statistical analysis</ListItem>
+          <ListItem>Qualitative gesture coding</ListItem>
+          <ListItem>Cross-functional collaboration</ListItem>
+        </List>
       </Box>
     </Container>
   </Layout>

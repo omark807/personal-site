@@ -24,7 +24,7 @@ const projects = [
         tags: ['UX Research', 'Accessibility', 'Product', 'Academic'],
         focuses: ['ux', 'product', 'academic'],
         description:
-            'Enabled BLV researchers to independently analyze qualitative visualizations through co-designed multimodal interactions and evidence-backed design guidance.'
+            'Enabling BLV researchers to independently analyze qualitative visualizations through co-designed multimodal interactions and evidence-backed design guidance.'
     },
     {
         id: 'dmh',
@@ -44,7 +44,7 @@ const projects = [
         tags: ['Design Research', 'Accessibility', 'Product', 'Academic'],
         focuses: ['ux', 'product', 'academic'],
         description:
-            'Improved access to statistical visualizations via multimodal representation and usability findings that informed MAIDR&apos;s R/Python framework.'
+            'Explored non-visual interpretation of statistical charts with BLV participants.'
     }
 ]
 

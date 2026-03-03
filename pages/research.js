@@ -18,9 +18,6 @@ const Works = () => (
                 I study accessible research and product ecosystems with and for blind and low-vision communities. My work connects
                 participatory UX research, multimodal interaction design, and product-relevant recommendations for inclusive systems.
             </Text>
-            <Text mb={4}>
-                This page groups publications by theme so collaborators, recruiters, and research teams can quickly scan relevant contributions.
-            </Text>
 
             <Section delay={0.2}>
                 <Divider my={6} />
@@ -28,7 +25,7 @@ const Works = () => (
                     Accessible Tooling and Infrastructure
                 </Heading>
                 <Paragraph>
-                <b>[C6]</b> Omar Khan and JooYoung Seo. 2026. &quot;I Don&apos;t Trust Any Professional Research Tool&quot;: A Re-Imagination of Knowledge Production Workflows by, with, and for Blind and Low-Vision Researchers.
+                <b>[C6]</b> <b>Omar Khan</b> and JooYoung Seo. 2026. &quot;I Don&apos;t Trust Any Professional Research Tool&quot;: A Re-Imagination of Knowledge Production Workflows by, with, and for Blind and Low-Vision Researchers.
                 <Badge ml={2} colorScheme="purple">CHI &apos;26</Badge>
                 <Badge ml={2} colorScheme="orange">First Author</Badge>
                 {' '}In Proceedings of the 2026 CHI Conference on Human Factors in Computing Systems, Barcelona, Spain. ACM, 24 pages.

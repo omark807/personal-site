@@ -282,7 +282,7 @@ const Page = () => {
               </UnorderedList>
               <List spacing={1} mt={4} fontSize="sm">
                 <ListItem>
-                  Looking for Summer 2026 opportunities in UX research, design research, and accessibility-focused product teams.
+                  <b>Looking for Summer 2026 opportunities in UX research, design research, and product research!</b>
                 </ListItem>
               </List>
             </Box>

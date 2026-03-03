@@ -262,7 +262,7 @@ const Page = () => {
                 title="MAIDR"
                 role="Collaborator"
                 summary="How can statistical charts be accessible across modalities and workflows?"
-                outcome="Contributed to R/Python packages shaped by co-design and usability testing."
+                outcome="Contributeed to usability studies with BLV participates to understand multimodal interaction with statistical charts."
                 href="/works/maidr"
               />
             </SimpleGrid>

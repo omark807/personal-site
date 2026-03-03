@@ -65,8 +65,7 @@ const Project = () => (
         </Heading>
         <P>
           Designed and ran an in-person, within-subjects user study comparing
-          <strong> STGs</strong>, <strong>BDPs</strong>, and <strong>sonification</strong>
-          for non-visual interpretation of histogram patterns.
+          <strong> swell-touch tactile graphs (STGs)</strong>, <strong>Braille display patterns (BDPs)</strong>, and <strong>sonification</strong> for non-visual interpretation of histogram patterns.
         </P>
         <P mt={3}>
           Led mixed-method analysis combining quantitative metrics (accuracy,
@@ -91,6 +90,7 @@ const Project = () => (
           completion, and STGs supported stronger confidence. Participants
           switched strategies across modalities rather than relying on one method.
         </P>
+        
         <Heading as="h3" size="sm" mb={2}>
           Why it matters
         </Heading>

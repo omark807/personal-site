@@ -15,6 +15,7 @@ import {
   Link
 } from '@chakra-ui/react';
 import { FaExternalLinkAlt, FaNewspaper } from 'react-icons/fa';
+import NextLink from 'next/link';
 import Layout from '../components/layouts/article';
 
 const BlogsPage = () => {
@@ -80,26 +81,42 @@ const BlogsPage = () => {
           {/* Website Blog Posts */}
           <Heading as="h2" size="xl" mb={6} textAlign="center">Website Posts</Heading>
           <SimpleGrid columns={{ base: 1, md: 2 }} spacing={6}>
-            {[1, 2].map((index) => (
-              <Box 
-                key={index} 
-                borderWidth={1} 
-                borderRadius="lg" 
-                p={6} 
-                bg={cardBg}
-                borderColor={borderColor}
-                _hover={{ transform: 'translateY(-2px)' }}
-                transition="all 0.2s"
-              >
-                <VStack align="start" spacing={3}>
-                  <Heading as="h3" size="lg">Coming Soon</Heading>
-                  <Badge colorScheme="orange">TBD</Badge>
-                  <Text color="gray.500" fontStyle="italic">
-                    Stay tuned!
-                  </Text>
-                </VStack>
-              </Box>
-            ))}
+            <Box
+              as={NextLink}
+              href="/blog/my-pathway-to-ux-research"
+              borderWidth={1}
+              borderRadius="lg"
+              p={6}
+              bg={cardBg}
+              borderColor={borderColor}
+              _hover={{ transform: 'translateY(-2px)', textDecoration: 'none' }}
+              transition="all 0.2s"
+              display="block"
+            >
+              <VStack align="start" spacing={3}>
+                <Heading as="h3" size="lg">My Steps (and Stumbles) Into Research</Heading>
+                <Badge colorScheme="orange">Personal</Badge>
+                <Text color="gray.500">
+                  How a whirlwind of experiences, opportunities, and random happenings led me to HCI and accessibility research.
+                </Text>
+              </VStack>
+            </Box>
+            <Box
+              borderWidth={1}
+              borderRadius="lg"
+              p={6}
+              bg={cardBg}
+              borderColor={borderColor}
+              transition="all 0.2s"
+            >
+              <VStack align="start" spacing={3}>
+                <Heading as="h3" size="lg">Coming Soon</Heading>
+                <Badge colorScheme="orange">TBD</Badge>
+                <Text color="gray.500" fontStyle="italic">
+                  Stay tuned!
+                </Text>
+              </VStack>
+            </Box>
           </SimpleGrid>
         </Box>
       </Container>

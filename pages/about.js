@@ -2,7 +2,30 @@ import { Container, Heading, Link, ListItem, Grid, GridItem, List, ListIcon } fr
 import Layout from '../components/layouts/article'
 import Paragraph from '../components/paragraph'
 import Section from '../components/section'
-import { CheckCircleIcon, StarIcon, EditIcon, RepeatClockIcon, DownloadIcon, SunIcon, ChevronUpIcon, ChevronRightIcon } from '@chakra-ui/icons'
+import { StarIcon, EditIcon, RepeatClockIcon, DownloadIcon, SunIcon, ChevronUpIcon, ChevronRightIcon } from '@chakra-ui/icons'
+import ReactMarkdown from 'react-markdown'
+import remarkGfm from 'remark-gfm'
+
+const aboutMarkdown = `
+I am a PhD candidate in Computer Science at the University of Illinois Urbana-Champaign (UIUC), focusing on research at the intersection of human-computer interaction (HCI), AI, and accessibility. I am fortunate to be advised by [Dr. JooYoung Seo](http://jooyoungseo.me/) and work in the [(x)Ability Design Lab](https://xabilitylab.ischool.illinois.edu/). My research investigates co-designing qualitative data visualizations with blind and low-vision (BLV) communities, enabling them to independently analyze qualitative visualizations through multimodal interactions and evidence-backed design guidance. I also have interests in human-centered design in a broad range of contexts, which you should check out in the [Research](/research) section of my site.
+
+Prior to my PhD, I graduated from UIUC with a Bachelor of Science in [Computer Science + Crop Sciences](https://cs.illinois.edu/academics/undergraduate/degree-program-options/cs-x-degree-programs/computer-science-crop-sciences), an interdisciplinary program that brings the strengths of the [Siebel School of Computing and Data Science](https://cs.illinois.edu/) and the [Department of Crop Sciences](https://cropsciences.illinois.edu/). My drive to pursue this intersection began with my interests in computing and sustainability, wanting to create more environmentally conscious technological solutions to the world's most complex issues, and through a whirlwind of experiences, opportunities, and random happenings, I found myself doing what I do now (read more about that in this [blog post](/blog/my-pathway-to-ux-research)).  
+
+While my interests in sustainability and computing remain, research opportunities throughout my undergraduate studies accompanied with my positionality gradually shifted my interests towards HCI. I became increasingly excited in the ways in which humans and technology co-exist and interact with each other, and how these interactions can and **should** be made more equitable and accessibl Fast-forward to today, I find myself often lost in thought about humanity's boundless potential to craft positively impactful digital experiences. This is especially important given the amount of division that exists in our society today.
+
+There are so many ways this division has already been tackled, and continues to be addressed as you read this/as we speak/as we exist! As for what I find especially interesting, I find myself thinking a *lot* about gaps in accessible and equitable design throughout the world, specifically for underrepresented communities. I ask myself:
+
+- Who gets to participate in designing the tools that shape how we work and learn?
+- When technology is built "for everyone," who is actually imagined as the user? 
+- How do we build systems that augment what people *can* do, rather than assuming what they *can't* do?
+
+
+To answer these questions, my research aims to:
+
+- **Collaborate** with community stakeholders to gather firsthand, lived experiences
+- **Co-design** novel interaction possibilities and design recommendations
+- **Craft** systems that positively enhance their users' lives, iteratively making adjustments and improvements
+`
 
 const AboutMe = () => (
     <Layout title="More about me! ">
@@ -11,46 +34,21 @@ const AboutMe = () => (
                 <Heading as="h1" variant="section-title">
                     hi there!
                 </Heading>
-                <Paragraph>I graduated from the University of Illinois Urbana-Champaign (UIUC) with a Bachelor of Science in <Link href='https://cs.illinois.edu/academics/undergraduate/degree-program-options/cs-x-degree-programs/computer-science-crop-sciences' target='_blank' rel="noopener noreferrer" aria-label="Learn more about Computer Science + Crop Sciences program (opens in new tab)"> Computer Science
-                    + Crop Sciences</Link>, an interdisciplinary program that brings the strengths of the <Link href='https://cs.illinois.edu/' target='_blank' rel="noopener noreferrer" aria-label="Visit Siebel School of Computing and Data Science website (opens in new tab)"> Siebel School of Computing and Data Science </Link> and the
-                    <Link href='https://cropsciences.illinois.edu/' target='_blank' rel="noopener noreferrer" aria-label="Visit Department of Crop Sciences website (opens in new tab)"> Department of Crop Sciences</Link> at UIUC. My drive to pursue this intersection began with my interests in computing and
-                    sustainability, wanting to create more environmentally conscious technological solutions to the world&apos;s most complex issues.
-                </Paragraph>
 
-                <br></br>
-
-                <Paragraph>
-                    While these interests still exist, research experiences throughout my undergraduate studies accompanied with my positionality gradually shifted my interests towards human-computer interaction (HCI).
-                    I became increasingly excited in the ways in which humans and technology co-exist and interact with each other, and fast-forward to today, I find myself often lost in thought about humanity&apos;s boundless potential
-                    to craft positively impactful digital experiences.
-                </Paragraph>
-
-                <br></br>
-
-                <Paragraph>And there&apos;s so many ways this has already been done, and continues to be done as you read this/as we speak/as we exist!
-                    As for what I find especially interesting, I find myself thinking a <i>lot</i> about gaps in mental health access and support throughout the world,
-                    specifically for underrepresented communities. While technology rapidly evolves to offer new strategies to manage our health&apos;s multi-faceted nature,
-                    recurring setbacks remain in <b>accessibility</b> and <b>inclusivity</b>. My research investigates and aims to address these gaps by:
-                </Paragraph>
-
-                <br></br>
-
-                <Paragraph>
-                    <List spacing={3}>
-                        <ListItem>
-                            <ListIcon as={CheckCircleIcon} color="green.500" />
-                            <b>Collaborating</b> with community stakeholders to gather firsthand, lived experiences
-                        </ListItem>
-                        <ListItem>
-                            <ListIcon as={CheckCircleIcon} color="green.500" />
-                            <b>Co-designing</b> novel interaction possibilities
-                        </ListItem>
-                        <ListItem>
-                            <ListIcon as={CheckCircleIcon} color="green.500" />
-                            <b>Crafting</b> systems that positively enhance their users&apos; lives, iteratively making adjustments and improvements
-                        </ListItem>
-                    </List>
-                </Paragraph>
+                <ReactMarkdown
+                    remarkPlugins={[remarkGfm]}
+                    components={{
+                        p: ({ _node, ...props }) => <Paragraph {...props} />,
+                        a: ({ _node, ...props }) => (
+                            <Link isExternal {...props} />
+                        ),
+                        ul: ({ _node, ...props }) => (
+                            <ul style={{ paddingLeft: '1.2em', marginBottom: '1em' }} {...props} />
+                        )
+                    }}
+                >
+                    {aboutMarkdown}
+                </ReactMarkdown>
 
             </Section>
 
@@ -89,7 +87,7 @@ const AboutMe = () => (
                             </ListItem>
                             <ListItem>
                                 <ListIcon as={EditIcon} color="gray.500" />
-                                Writing (conveying my love of parenthical afterthoughts)
+                                Writing (conveying my love of parenthetical afterthoughts)
                             </ListItem>
                             <ListItem>
                                 <ListIcon as={DownloadIcon} color="red.500" />

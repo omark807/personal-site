@@ -1,8 +1,15 @@
-import { Container, Heading, Link, Divider, Badge, Text } from '@chakra-ui/react'
+import { Container, Heading, Link, Divider, Badge, Text, Box, Flex } from '@chakra-ui/react'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
+import PageNav from '../components/page-nav'
 
 import Paragraph from '../components/paragraph'
+
+const sections = [
+  { id: 'accessible-tooling', label: 'Accessible Tooling' },
+  { id: 'human-ai', label: 'Human-AI, Inclusion' },
+  { id: 'dmh-wip', label: 'DMH and WIP' },
+]
 
 /**
  * Main page where a user cna find information about research I have done. 
@@ -11,6 +18,9 @@ import Paragraph from '../components/paragraph'
 const Works = () => (
     <Layout title="Works">
         <Container>
+            <Flex direction="row" gap={4}>
+            <PageNav sections={sections} />
+            <Box flex={1} minW={0}>
             <Heading as="h1" fontSize={20} mb={4}>
                 Research
             </Heading>
@@ -21,7 +31,7 @@ const Works = () => (
 
             <Section delay={0.2}>
                 <Divider my={6} />
-                <Heading as="h2" fontSize={20} mb={4}>
+                <Heading as="h2" id="accessible-tooling" fontSize={20} mb={4}>
                     Accessible Tooling and Infrastructure
                 </Heading>
                 <Paragraph>
@@ -51,7 +61,7 @@ const Works = () => (
 
             <Section delay={0.2}>
                 <Divider my={6} />
-                <Heading as="h2" fontSize={20} mb={4}>
+                <Heading as="h2" id="human-ai" fontSize={20} mb={4}>
                     Human-AI, Inclusion, and Consent
                 </Heading>
                 <Divider my={3} />
@@ -84,7 +94,7 @@ const Works = () => (
 
             <Section delay={0.2}>
                 <Divider my={6} />
-                <Heading as="h2" fontSize={20} mb={4}>
+                <Heading as="h2" id="dmh-wip" fontSize={20} mb={4}>
                     Digital Mental Health and Works in Progress
                 </Heading>
                 <Paragraph>
@@ -112,8 +122,8 @@ const Works = () => (
                     <i>Virtual poster presentation: Illinois Undergraduate Research Symposium 2021.</i>
                 </Paragraph> 
             </Section>
-
-          
+            </Box>
+            </Flex>
         </Container>
     </Layout>
 )

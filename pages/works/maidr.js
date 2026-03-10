@@ -5,15 +5,33 @@ import {
   ListItem,
   Heading,
   Box,
+  Flex,
   Link,
 } from '@chakra-ui/react'
 import { Title, WorkImage } from '../../components/work'
 import P from '../../components/paragraph'
 import Layout from '../../components/layouts/article'
+import PageNav from '../../components/page-nav'
+
+const sections = [
+  { id: 'maidr-summary', label: 'Overview' },
+  { id: 'maidr-glance', label: 'At a glance' },
+  { id: 'maidr-project', label: 'Context' },
+  { id: 'maidr-objective', label: 'Objective' },
+  { id: 'maidr-work', label: 'What I did' },
+  { id: 'maidr-result', label: 'Findings' },
+  { id: 'maidr-reflection', label: 'Reflection' },
+  { id: 'maidr-ux-skills', label: 'Skills' },
+  { id: 'maidr-publications', label: 'Publications' },
+  { id: 'maidr-meta', label: 'Methods' },
+]
 
 const Project = () => (
   <Layout title="MAIDR">
     <Container as="main" maxW="container.md">
+      <Flex direction="row" gap={4}>
+      <PageNav sections={sections} />
+      <Box flex={1} minW={0}>
       <Title>
         MAIDR <Badge>Project</Badge>
       </Title>
@@ -191,6 +209,8 @@ const Project = () => (
           <ListItem>Cross-functional collaboration</ListItem>
         </List>
       </Box>
+      </Box>
+      </Flex>
     </Container>
   </Layout>
 )

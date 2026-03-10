@@ -5,15 +5,33 @@ import {
   ListItem,
   Heading,
   Box,
+  Flex,
   Link,
 } from '@chakra-ui/react'
 import { Title, WorkImage } from '../../components/work'
 import P from '../../components/paragraph'
 import Layout from '../../components/layouts/article'
+import PageNav from '../../components/page-nav'
+
+const sections = [
+  { id: 'dmh-summary', label: 'Summary' },
+  { id: 'dmh-glance', label: 'At a glance' },
+  { id: 'dmh-project', label: 'Project' },
+  { id: 'dmh-objective', label: 'Objective' },
+  { id: 'dmh-work', label: 'Work' },
+  { id: 'dmh-result', label: 'End result' },
+  { id: 'dmh-reflection', label: 'Reflection' },
+  { id: 'dmh-ux-skills', label: 'Skills' },
+  { id: 'dmh-resources', label: 'Resources' },
+  { id: 'dmh-meta', label: 'Methods' },
+]
 
 const Project = () => (
   <Layout title="Digital Mental Health & BLV">
     <Container as="main" maxW="container.md">
+      <Flex direction="row" gap={4}>
+      <PageNav sections={sections} />
+      <Box flex={1} minW={0}>
       <Title>
         Digital Mental Health (DMH) <Badge>Project</Badge>
       </Title>
@@ -165,6 +183,8 @@ const Project = () => (
           User interviews and surveys, need-finding, persona and segment understanding, actionable insights for product and design, stakeholder collaboration.
         </P>
       </Box>
+      </Box>
+      </Flex>
     </Container>
   </Layout>
 )

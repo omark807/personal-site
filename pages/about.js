@@ -1,7 +1,8 @@
-import { Container, Heading, Link, ListItem, Grid, GridItem, List, ListIcon } from '@chakra-ui/react'
+import { Container, Heading, Link, ListItem, Grid, GridItem, List, ListIcon, Box, Flex } from '@chakra-ui/react'
 import Layout from '../components/layouts/article'
 import Paragraph from '../components/paragraph'
 import Section from '../components/section'
+import PageNav from '../components/page-nav'
 import { StarIcon, EditIcon, RepeatClockIcon, DownloadIcon, SunIcon, ChevronUpIcon, ChevronRightIcon } from '@chakra-ui/icons'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
@@ -27,11 +28,19 @@ To answer these questions, my research aims to:
 - **Craft** systems that positively enhance their users' lives, iteratively making adjustments and improvements
 `
 
+const sections = [
+    { id: 'hi-there', label: 'Hi there!' },
+    { id: 'non-academic-interests', label: 'Non-academic interests' },
+]
+
 const AboutMe = () => (
     <Layout title="More about me! ">
         <Container>
+            <Flex direction="row" gap={4}>
+            <PageNav sections={sections} />
+            <Box flex={1} minW={0}>
             <Section delay={0.1}>
-                <Heading as="h1" variant="section-title">
+                <Heading as="h1" id="hi-there" variant="section-title">
                     hi there!
                 </Heading>
 
@@ -53,7 +62,7 @@ const AboutMe = () => (
             </Section>
 
             <Section>
-                <Heading as="h2" variant="section-title">
+                <Heading as="h2" id="non-academic-interests" variant="section-title">
                     non-academic interests
                 </Heading>
 
@@ -101,6 +110,8 @@ const AboutMe = () => (
                     </GridItem>
                 </Grid>
             </Section>
+            </Box>
+            </Flex>
         </Container>
     </Layout>
 

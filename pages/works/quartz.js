@@ -5,12 +5,27 @@ import {
   ListItem,
   Heading,
   Box,
+  Flex,
   Image,
   Link,
 } from '@chakra-ui/react'
 import { Title, WorkImage } from '../../components/work'
 import P from '../../components/paragraph'
 import Layout from '../../components/layouts/article'
+import PageNav from '../../components/page-nav'
+
+const sections = [
+  { id: 'quartz-summary', label: 'Summary' },
+  { id: 'quartz-glance', label: 'At a glance' },
+  { id: 'quartz-project', label: 'Project' },
+  { id: 'quartz-objective', label: 'Objective' },
+  { id: 'quartz-work', label: 'Work' },
+  { id: 'quartz-result', label: 'End result' },
+  { id: 'quartz-reflection', label: 'Reflection' },
+  { id: 'quartz-ux-skills', label: 'Skills' },
+  { id: 'quartz-resources', label: 'Resources' },
+  { id: 'quartz-meta', label: 'Methods' },
+]
 
 const QUARTZ_NETWORK_GRAPH_ALT =
   'QUARTZ system interface showing a thematic network visualization. Three nodes form a triangle: Qualitative Research Methods and Data Visualization (orange, concepts) and Accessibility Research (blue, research paper). Controls panel on the right includes filter by importance, size by importance, color by community, and network metrics: 3 nodes, 3 edges, 100% density, 0% occlusion, 0% crossings, 0% tunneling, readability EXCELLENT. Legend: blue for Research Papers, orange for Concepts. Status: Sonification OFF, Keyboard Nav ACTIVE.'
@@ -18,6 +33,9 @@ const QUARTZ_NETWORK_GRAPH_ALT =
 const Project = () => (
   <Layout title="QUARTZ">
     <Container as="main" maxW="container.md">
+      <Flex direction="row" gap={4}>
+      <PageNav sections={sections} />
+      <Box flex={1} minW={0}>
       <Title>
         QUARTZ <Badge>Project</Badge>
       </Title>
@@ -228,6 +246,8 @@ const Project = () => (
           User research and interviews, participatory co-design, usability testing and task analysis, qualitative analysis and thematic coding, translating insights to design guidelines.
         </P>
       </Box>
+      </Box>
+      </Flex>
     </Container>
   </Layout>
 )

@@ -138,9 +138,9 @@ const Page = () => {
                 fallbackSrc="https://via.placeholder.com/180x180?text=OK"
               />
 
-              <Badge colorScheme="green" borderRadius="full" px={4} py={2} fontSize="sm">
+              {/* <Badge colorScheme="green" borderRadius="full" px={4} py={2} fontSize="sm">
                 Available for Summer 2026 internships
-              </Badge>
+              </Badge> */}
 
               <Heading as="h1" size="3xl" fontWeight="bold" id="page-title">
                 Omar Khan
@@ -280,11 +280,11 @@ const Page = () => {
                 <ListItem> I colleaborate with cross-functional teams to deliver accessible products.</ListItem>
                 <ListItem>I document trade-offs and reflect on what I would change in future iterations.</ListItem>
               </UnorderedList>
-              <List spacing={1} mt={4} fontSize="sm">
+              {/* <List spacing={1} mt={4} fontSize="sm">
                 <ListItem>
                   <b>Looking for Summer 2026 opportunities in UX research, design research, and product research!</b>
                 </ListItem>
-              </List>
+              </List> */}
             </Box>
           </Section>
         </VStack>

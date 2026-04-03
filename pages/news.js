@@ -7,6 +7,20 @@ const NewsPage = () => {
     const [announcement, setAnnouncement] = useState('');
     const newsItems = [
         {
+            title: 'Joining Infosys as a Design Research Intern for Summer 2026!',
+            date: '04-02-2026',
+            month: 'April 2026',
+            content: <>I&apos;m excited to share that this upcoming summer I&apos;ll be joining Infosys&apos; Center for Autonomous Learning as a Design Research Intern, working on accessibility-focused design for robotics (more details to come). Looking forward to bringing my background in accessible design and HCI to industry-scale challenges!</>,
+            tags: ['internship', 'industry'],
+        },
+        {
+            title: 'AFB National Report on AI & Disability',
+            date: '03-25-2026',
+            month: 'March 2026',
+            content: <>I contributed as a co-author to the American Foundation for the Blind&apos;s national report, &quot;The AI Quagmire: Benefits, Risks, and User Aspirations Through a Disability Lens.&quot; Drawing on a survey of over 1,700 Americans with and without disabilities, the report examines how people are using AI, the barriers and risks disabled users face, and actionable recommendations for developers, employers, educators, and policymakers. You can read the full report on <a href="https://afb.org/research-and-initiatives/ai-series/ai-quagmire" target="_blank" rel="noopener noreferrer" aria-label="View The AI Quagmire report on the AFB website (opens in new tab)"><u>AFB&apos;s website</u></a>.</>,
+            tags: ['publication', 'report'],
+        },
+        {
             title: 'New Paper Accepted to CHI 2026!',
             date: '01-28-2026',
             month: 'January 2026',

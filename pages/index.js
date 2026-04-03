@@ -13,7 +13,7 @@ import {
   Badge,
   useColorModeValue,
   Stack,
-  List,
+  // List,
   ListItem,
   UnorderedList,
 } from '@chakra-ui/react'

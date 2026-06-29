@@ -25,6 +25,7 @@ const PageNav = ({ sections }) => {
     return (
         <Box
             as="nav"
+            display={{ base: 'none', md: 'block' }}
             position="sticky"
             top="5rem"
             alignSelf="flex-start"

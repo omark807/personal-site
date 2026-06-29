@@ -1,3 +1,4 @@
+import NextLink from 'next/link'
 import {
   Container,
   Badge,
@@ -33,7 +34,7 @@ const QUARTZ_NETWORK_GRAPH_ALT =
 const Project = () => (
   <Layout title="QUARTZ">
     <Container as="main" maxW="container.md">
-      <Flex direction="row" gap={4}>
+      <Flex direction={{ base: 'column', md: 'row' }} gap={4}>
       <PageNav sections={sections} />
       <Box flex={1} minW={0}>
       <Title>
@@ -225,6 +226,11 @@ const Project = () => (
           Resources
         </Heading>
         <List as="ul" listStyleType="disc" pl={6} spacing={2}>
+          <ListItem>
+            <Link as={NextLink} href="/research">
+              Full bibliography: [C5] CHI 2026 · [C7] ASSETS 2026 (to appear)
+            </Link>
+          </ListItem>
           <ListItem>
             <Link href="https://doi.org/10.1145/3772318.3791242" target="_blank" rel="noopener noreferrer" aria-label="View DOI for QUARTZ-related CHI 2026 paper (opens in new tab)">
               CHI &apos;26 publication [DOI]

@@ -6,3 +6,4 @@
 # Use Node 18 (LTS) for consistent builds
 [build.environment]
   NODE_VERSION = "18"
+  NEXT_PUBLIC_SITE_URL = "https://omark807.netlify.app"

@@ -40,7 +40,12 @@ const Main = ({ children, router }) => {
 
             <Navbar path={router.asPath} />
 
-            <Container maxW="container.md" pt={8} id="main-content" tabIndex={-1}>
+            <Container
+              maxW={router.pathname === '/' ? 'container.lg' : 'container.md'}
+              pt={8}
+              id="main-content"
+              tabIndex={-1}
+            >
                 {children}
                 
                 {/* Subtle Copyright Footer */}

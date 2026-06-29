@@ -1,11 +1,10 @@
-import Logo from './logo';
-import NextLink from 'next/link';
+import Logo from './logo'
+import NextLink from 'next/link'
 import {
   Container,
   Box,
   Link,
   Stack,
-  Heading,
   Flex,
   Menu,
   MenuItem,
@@ -13,17 +12,17 @@ import {
   MenuButton,
   IconButton,
   Button,
-  useColorModeValue
-} from '@chakra-ui/react';
-import { HamburgerIcon } from '@chakra-ui/icons';
-import { IoLogoGithub, IoLogoLinkedin, IoSchoolSharp } from "react-icons/io5";
-import ThemeToggleButton from './theme-toggle-button';
-import { ChevronDownIcon } from '@chakra-ui/icons';
+  useColorModeValue,
+} from '@chakra-ui/react'
+import { HamburgerIcon, ChevronDownIcon } from '@chakra-ui/icons'
+import { IoLogoGithub, IoLogoLinkedin, IoSchoolSharp } from 'react-icons/io5'
+import ThemeToggleButton from './theme-toggle-button'
+import { CV_LONG_URL, CV_SHORT_URL } from '../lib/site'
 
 const LinkItem = ({ href, path, _target, children, ...props }) => {
-  const active = path === href;
-  const inactiveColor = useColorModeValue('gray.800', 'whiteAlpha.900');
-  const isExternal = href?.startsWith('http');
+  const active = path === href
+  const inactiveColor = useColorModeValue('gray.800', 'whiteAlpha.900')
+  const isExternal = href?.startsWith('http') || href?.startsWith('mailto:')
   return (
     <Link
       as={isExternal ? 'a' : NextLink}
@@ -32,17 +31,32 @@ const LinkItem = ({ href, path, _target, children, ...props }) => {
       bg={active ? 'pinkyPink' : undefined}
       color={active ? '#232323' : inactiveColor}
       target={_target}
-      {...(isExternal && { rel: 'noopener noreferrer' })}
+      {...(isExternal && href?.startsWith('http') && { rel: 'noopener noreferrer' })}
       {...props}
     >
       {children}
     </Link>
-  );
-};
+  )
+}
+
+const primaryNavLinks = [
+  { href: '/', label: 'Home' },
+  { href: '/projects', label: 'Projects' },
+  { href: '/experience', label: 'Experience' },
+  { href: '/research', label: 'Research' },
+  { href: '/about', label: 'About' },
+  { href: '/news', label: 'News' },
+  { href: '/life', label: 'Life' },
+]
+
+const contactNavLink = {
+  href: 'mailto:omark807@gmail.com',
+  label: 'Get in touch',
+}
 
 const Navbar = (props) => {
-  const { path } = props;
-  const navTextColor = useColorModeValue('gray.800', 'whiteAlpha.900');
+  const { path } = props
+  const navTextColor = useColorModeValue('gray.800', 'whiteAlpha.900')
 
   return (
     <Box
@@ -64,9 +78,9 @@ const Navbar = (props) => {
         justifyContent="space-between"
       >
         <Flex align="center" mr={5}>
-          <Heading as="h1" size="lg" letterSpacing={'tighter'}>
+          <Box as="div" letterSpacing="tighter">
             <Logo />
-          </Heading>
+          </Box>
         </Flex>
 
         <Stack
@@ -79,24 +93,11 @@ const Navbar = (props) => {
           mt={{ base: 4, xl: 0 }}
           spacing={1}
         >
-          <LinkItem href="/" path={path}>
-            home
-          </LinkItem>
-          <LinkItem href="/about" path={path}>
-            about
-          </LinkItem>
-          <LinkItem href="/news" path={path}>
-            updates
-          </LinkItem>
-          <LinkItem href="/research" path={path}>
-            research
-          </LinkItem>
-          <LinkItem href="/projects" path={path}>
-            projects
-          </LinkItem>
-          <LinkItem href="mailto:omark807@gmail.com" path={path}>
-            get in touch
-          </LinkItem>
+          {primaryNavLinks.map(({ href, label }) => (
+            <LinkItem key={href} href={href} path={path}>
+              {label}
+            </LinkItem>
+          ))}
           <Menu>
             <MenuButton
               as={Button}
@@ -107,19 +108,19 @@ const Navbar = (props) => {
               aria-label="Open resume menu"
               aria-haspopup="menu"
             >
-              resumé(s)
+              Résumé(s)
             </MenuButton>
             <MenuList>
-              <MenuItem as={Link} href="https://drive.google.com/file/d/1cAUcYLSET9oTVi57cWeootpquQ7zJqYj/view?usp=sharing" target="_blank" aria-label="Open CV (Long-form) (opens in new tab)">
+              <MenuItem as={Link} href={CV_LONG_URL} target="_blank" aria-label="Open CV (Long-form) (opens in new tab)">
                 CV (Long-form)
               </MenuItem>
-              <MenuItem as={Link} href="https://drive.google.com/file/d/1SLNPY8m6YRH22bDSagzfqtUcuEt29Mim/view?usp=sharing" target="_blank" aria-label="Open Resume (One-page) (opens in new tab)">
+              <MenuItem as={Link} href={CV_SHORT_URL} target="_blank" aria-label="Open Resume (One-page) (opens in new tab)">
                 Resume (One-page)
               </MenuItem>
             </MenuList>
           </Menu>
-          <LinkItem href="/life" path={path}>
-            life
+          <LinkItem href={contactNavLink.href} path={path}>
+            {contactNavLink.label}
           </LinkItem>
           <LinkItem
             target="_blank"
@@ -147,7 +148,6 @@ const Navbar = (props) => {
             <IoLogoLinkedin />
             <span className="sr-only">LinkedIn</span>
           </LinkItem>
-          
           <LinkItem
             target="_blank"
             href="https://scholar.google.com/citations?user=T6f-cucAAAAJ&hl=en"
@@ -176,12 +176,11 @@ const Navbar = (props) => {
                 aria-haspopup="menu"
               />
               <MenuList>
-                <MenuItem as={NextLink} href="/">home</MenuItem>
-                <MenuItem as={NextLink} href="/about">about</MenuItem>
-                <MenuItem as={NextLink} href="/news">updates</MenuItem>
-                <MenuItem as={NextLink} href="/research">research</MenuItem>
-                <MenuItem as={NextLink} href="/projects">projects</MenuItem>
-                <MenuItem as={Link} href="mailto:omark807@gmail.com">get in touch</MenuItem>
+                {primaryNavLinks.map(({ href, label }) => (
+                  <MenuItem key={href} as={NextLink} href={href}>
+                    {label}
+                  </MenuItem>
+                ))}
                 <Menu placement="right-start">
                   <MenuButton
                     as={Button}
@@ -192,34 +191,36 @@ const Navbar = (props) => {
                     aria-label="Open resume menu"
                     aria-haspopup="menu"
                   >
-                    resumé(s)
+                    Résumé(s)
                   </MenuButton>
                   <MenuList>
-                    <MenuItem as={Link} href="https://drive.google.com/file/d/1cAUcYLSET9oTVi57cWeootpquQ7zJqYj/view?usp=sharing" target="_blank" aria-label="Open CV (Long-form) (opens in new tab)">
+                    <MenuItem as={Link} href={CV_LONG_URL} target="_blank" aria-label="Open CV (Long-form) (opens in new tab)">
                       CV (Long-form)
                     </MenuItem>
-                    <MenuItem as={Link} href="https://drive.google.com/file/d/1SLNPY8m6YRH22bDSagzfqtUcuEt29Mim/view?usp=sharing" target="_blank" aria-label="Open Resume (One-page) (opens in new tab)">
+                    <MenuItem as={Link} href={CV_SHORT_URL} target="_blank" aria-label="Open Resume (One-page) (opens in new tab)">
                       Resume (One-page)
                     </MenuItem>
                   </MenuList>
                 </Menu>
+                <MenuItem as={Link} href={contactNavLink.href}>
+                  {contactNavLink.label}
+                </MenuItem>
                 <MenuItem as={Link} href="https://github.com/omark807" target="_blank" aria-label="Visit Omar Khan's GitHub profile (opens in new tab)">
-                  github
+                  GitHub
                 </MenuItem>
                 <MenuItem as={Link} href="https://www.linkedin.com/in/omark807" target="_blank" aria-label="Visit Omar Khan's LinkedIn profile (opens in new tab)">
-                  linkedIn
+                  LinkedIn
                 </MenuItem>
                 <MenuItem as={Link} href="https://scholar.google.com/citations?user=T6f-cucAAAAJ&hl=en" target="_blank" aria-label="Visit Omar Khan's Google Scholar profile (opens in new tab)">
-                  google scholar
+                  Google Scholar
                 </MenuItem>
-                <MenuItem as={NextLink} href="/life">life</MenuItem>
               </MenuList>
             </Menu>
           </Box>
         </Box>
       </Container>
     </Box>
-  );
-};
+  )
+}
 
-export default Navbar;
+export default Navbar

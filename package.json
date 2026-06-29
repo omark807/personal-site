@@ -1,6 +1,5 @@
 {
-  "homepage": "http://omark807.github.io/my-app",
-  "name": "portfolio",
+  "name": "personal-site",
   "version": "1.0.0",
   "description": "Omar Khan Personal Site",
   "scripts": {
@@ -13,9 +12,6 @@
     "prettier": "prettier -write .",
     "lint": "next lint"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "@chakra-ui/icons": "^2.0.17",
     "@chakra-ui/react": "^2.8.2",

@@ -1,43 +1,37 @@
-import React from 'react';
-import Head from 'next/head';
-import { Container, Heading, Text, SimpleGrid, Box, VStack, Badge } from '@chakra-ui/react';
-import Layout from '../components/layouts/article';
+import { Container, Heading, Text, Box, VStack, Link, useColorModeValue } from '@chakra-ui/react'
+import NextLink from 'next/link'
+import Layout from '../components/layouts/article'
 
 const CatPage = () => {
-  return (
-    <Layout title="Cat">
-      <Container maxW="container.xl">
-        <Head>
-          <title>Meow World | Cat Content</title>
-          <meta name="description" content="Explore the wonderful world of cats and learn fascinating feline facts" />
-        </Head>
+  const mutedColor = useColorModeValue('gray.600', 'gray.400')
+  const cardBg = useColorModeValue('gray.50', 'gray.800')
 
+  return (
+    <Layout title="Cat" canonicalPath="/cat">
+      <Container maxW="container.md">
         <Box as="main" py={8}>
-          <Heading as="h1" size="2xl" mb={4} textAlign="center" textTransform="lowercase">
-            daphne&apos;s world
+          <Heading as="h1" size="2xl" mb={4} textAlign="center">
+            Daphne&apos;s world
           </Heading>
           <Text fontSize="lg" mb={8} textAlign="center">
-            Daphne is her name, ruling over me is her game. 
+            Daphne is her name, ruling over me is her game.
           </Text>
 
-          <SimpleGrid columns={{ base: 1, md: 2 }} spacing={6}>
-            {[1, 2].map((index) => (
-              <Box key={index} borderWidth={1} borderRadius="lg" p={6} bg="gray.50">
-                <VStack align="start" spacing={3}>
-                  <Heading as="h2" size="lg">cat content soon</Heading>
-                  <Badge colorScheme="purple">TBD</Badge>
-                  <Text color="gray.600" fontStyle="italic">
-                    hang tight!
-                  </Text>
-                </VStack>
-              </Box>
-            ))}
-          </SimpleGrid>
+          <Box borderWidth={1} borderRadius="lg" p={6} bg={cardBg} textAlign="center">
+            <VStack spacing={3}>
+              <Text fontSize="4xl" aria-hidden="true">🐱</Text>
+              <Heading as="h2" size="md">More cat content coming soon</Heading>
+              <Text color={mutedColor}>
+                I&apos;m building this section out with photos and stories about Daphne.
+                Check back for updates, or follow along on my{' '}
+                <Link as={NextLink} href="/life">Life</Link> page.
+              </Text>
+            </VStack>
+          </Box>
         </Box>
       </Container>
     </Layout>
-  );
-};
+  )
+}
 
-export default CatPage;
-
+export default CatPage

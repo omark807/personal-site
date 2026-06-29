@@ -1,3 +1,4 @@
+import NextLink from 'next/link'
 import {
   Container,
   Badge,
@@ -29,7 +30,7 @@ const sections = [
 const Project = () => (
   <Layout title="Digital Mental Health & BLV">
     <Container as="main" maxW="container.md">
-      <Flex direction="row" gap={4}>
+      <Flex direction={{ base: 'column', md: 'row' }} gap={4}>
       <PageNav sections={sections} />
       <Box flex={1} minW={0}>
       <Title>
@@ -151,6 +152,11 @@ const Project = () => (
           Resources
         </Heading>
         <List as="ul" listStyleType="disc" pl={6} spacing={2}>
+          <ListItem>
+            <Link as={NextLink} href="/research">
+              Full bibliography: [P3] CHI EA 2025 · [C6] ASSETS 2026 (to appear)
+            </Link>
+          </ListItem>
           <ListItem>
             <Link
               href="https://dl.acm.org/doi/10.1145/3706599.3719817"

@@ -21,8 +21,9 @@ export const GridItem = ({ children, href, title, thumbnail }) => (
   </Box>
 )
 
-export const WorkGridItem = ({ children, id, title, thumbnail, role, tags = [] }) => {
+export const WorkGridItem = ({ children, id, title, thumbnail, role, tags = [], metadata = [] }) => {
   const tileBg = useColorModeValue('gray.100', 'whiteAlpha.100')
+  const mutedColor = useColorModeValue('gray.600', 'gray.400')
   const roleLabel = role === 'lead' ? 'Lead' : role === 'collaborator' ? 'Collaborator' : null
   return (
     <Box w="100%" textAlign="center" role="article" aria-labelledby={`work-grid-title-${id}`}>
@@ -59,9 +60,14 @@ export const WorkGridItem = ({ children, id, title, thumbnail, role, tags = [] }
       <Link as={NextLink} href={`/works/${id}`} display="inline-block" mt={2} fontSize={20} id={`work-grid-title-${id}`}>
         {title}
       </Link>
+      {metadata.length > 0 && (
+        <Text fontSize="xs" color={mutedColor} mt={2}>
+          {metadata.join(' · ')}
+        </Text>
+      )}
       {tags.length > 0 && (
         <Box mt={2}>
-          {tags.map(tag => (
+          {tags.map((tag) => (
             <Badge key={`${id}-${tag}`} mr={1} mb={1} colorScheme="orange" variant="subtle" textTransform="none">
               {tag}
             </Badge>

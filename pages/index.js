@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import {
   Container,
   Heading,
@@ -13,7 +14,6 @@ import {
   Badge,
   useColorModeValue,
   Stack,
-  // List,
   ListItem,
   UnorderedList,
 } from '@chakra-ui/react'
@@ -23,6 +23,26 @@ import { ChevronRightIcon } from '@chakra-ui/icons'
 import NextLink from 'next/link'
 import Section from '../components/section'
 import Layout from '../components/layouts/article'
+import { SOCIAL_LINKS, absoluteUrl } from '../lib/site'
+
+const personSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'Omar Khan',
+  jobTitle: 'Mixed-methods UX Researcher and PhD Candidate',
+  affiliation: {
+    '@type': 'Organization',
+    name: 'University of Illinois Urbana-Champaign',
+  },
+  url: absoluteUrl('/'),
+  sameAs: [
+    SOCIAL_LINKS.linkedin,
+    SOCIAL_LINKS.github,
+    SOCIAL_LINKS.scholar,
+  ],
+  description:
+    'HCI and accessibility researcher studying equitable digital tools with blind and low-vision communities.',
+}
 
 const PathwayCard = ({ title, description, cta, href }) => {
   const cardBg = useColorModeValue('white', 'gray.800')
@@ -111,6 +131,7 @@ const Page = () => {
   const heroTextColor = useColorModeValue('gray.600', 'gray.300')
   const cardBg = useColorModeValue('white', 'gray.800')
   const borderColor = useColorModeValue('gray.200', 'gray.600')
+  const mutedColor = useColorModeValue('gray.600', 'gray.300')
   const primaryBg = 'orange.700'
   const primaryColor = 'white'
   const primaryHoverBg = 'orange.800'
@@ -118,9 +139,16 @@ const Page = () => {
   const secondaryColor = useColorModeValue('orange.700', 'orange.200')
   const secondaryBorderColor = useColorModeValue('orange.700', 'orange.200')
   const secondaryHoverBg = useColorModeValue('orange.50', 'whiteAlpha.200')
+  const iconHoverColor = useColorModeValue('orange.500', 'orange.300')
 
   return (
-    <Layout>
+    <Layout canonicalPath="/">
+      <Head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+        />
+      </Head>
       <Container maxW="container.lg">
         <VStack spacing={14} alignItems="stretch">
           <Box bgGradient={bgGradient} borderRadius="2xl" p={8} textAlign="center">
@@ -138,15 +166,25 @@ const Page = () => {
                 fallbackSrc="https://via.placeholder.com/180x180?text=OK"
               />
 
-              {/* <Badge colorScheme="green" borderRadius="full" px={4} py={2} fontSize="sm">
-                Available for Summer 2026 internships
-              </Badge> */}
+              <Badge
+                as={NextLink}
+                href="/news"
+                colorScheme="green"
+                borderRadius="full"
+                px={4}
+                py={2}
+                fontSize="sm"
+                cursor="pointer"
+                _hover={{ textDecoration: 'none', opacity: 0.9 }}
+              >
+                Infosys Design Research Intern · Summer 2026
+              </Badge>
 
               <Heading as="h1" size="3xl" fontWeight="bold" id="page-title">
                 Omar Khan
               </Heading>
               <Text fontSize="xl" fontWeight="medium" color={heroTextColor}>
-                Mixed-methods UX researcher and PhD candidate
+                Mixed-methods UX researcher · PhD candidate · accessibility and human-AI
               </Text>
               <Text fontSize="lg" maxW="700px" lineHeight="tall" color={heroTextColor}>
                 I design equitable digital tools with blind and low-vision communities across
@@ -165,7 +203,7 @@ const Page = () => {
                 </Badge>
               </HStack>
 
-              <Stack direction={{ base: 'column', sm: 'row' }} spacing={4} pt={3}>
+              <Stack direction={{ base: 'column', sm: 'row' }} spacing={4} pt={3} flexWrap="wrap" justify="center">
                 <Button
                   as={NextLink}
                   href="/projects"
@@ -187,26 +225,29 @@ const Page = () => {
                 >
                   View Publications
                 </Button>
-                <Button as={NextLink} href="/about" variant="ghost">
-                  About Me
+                <Button as={NextLink} href="/experience" variant="outline">
+                  Experience
+                </Button>
+                <Button as={NextLink} href="/news" variant="ghost">
+                  Updates
                 </Button>
               </Stack>
 
               <HStack spacing={6} pt={2} role="list" aria-label="Social media links">
-                <Link href="mailto:omark807@gmail.com" aria-label="Send email to Omar Khan (opens email client)" role="listitem">
-                  <Icon as={FaEnvelope} boxSize={6} color={heroTextColor} _hover={{ color: useColorModeValue('orange.500', 'orange.300') }} aria-hidden="true" />
-                  <span className="sr-only">Email</span>
-                </Link>
-                <Link href="https://linkedin.com/in/omark807" isExternal aria-label="Visit Omar Khan's LinkedIn profile (opens in new tab)" role="listitem">
-                  <Icon as={FaLinkedin} boxSize={6} color={heroTextColor} _hover={{ color: useColorModeValue('orange.500', 'orange.300') }} aria-hidden="true" />
+                <Link href={SOCIAL_LINKS.linkedin} isExternal aria-label="Visit Omar Khan's LinkedIn profile (opens in new tab)" role="listitem">
+                  <Icon as={FaLinkedin} boxSize={6} color={heroTextColor} _hover={{ color: iconHoverColor }} aria-hidden="true" />
                   <span className="sr-only">LinkedIn</span>
                 </Link>
-                <Link href="https://github.com/omark807" isExternal aria-label="Visit Omar Khan's GitHub profile (opens in new tab)" role="listitem">
-                  <Icon as={FaGithub} boxSize={6} color={heroTextColor} _hover={{ color: useColorModeValue('orange.500', 'orange.300') }} aria-hidden="true" />
+                <Link href={SOCIAL_LINKS.email} aria-label="Send email to Omar Khan (opens email client)" role="listitem">
+                  <Icon as={FaEnvelope} boxSize={6} color={heroTextColor} _hover={{ color: iconHoverColor }} aria-hidden="true" />
+                  <span className="sr-only">Email</span>
+                </Link>
+                <Link href={SOCIAL_LINKS.github} isExternal aria-label="Visit Omar Khan's GitHub profile (opens in new tab)" role="listitem">
+                  <Icon as={FaGithub} boxSize={6} color={heroTextColor} _hover={{ color: iconHoverColor }} aria-hidden="true" />
                   <span className="sr-only">GitHub</span>
                 </Link>
-                <Link href="https://scholar.google.com/citations?user=T6f-cucAAAAJ&hl=en" isExternal aria-label="Visit Omar Khan's Google Scholar profile (opens in new tab)" role="listitem">
-                  <Icon as={IoSchoolSharp} boxSize={6} color={heroTextColor} _hover={{ color: useColorModeValue('orange.500', 'orange.300') }} aria-hidden="true" />
+                <Link href={SOCIAL_LINKS.scholar} isExternal aria-label="Visit Omar Khan's Google Scholar profile (opens in new tab)" role="listitem">
+                  <Icon as={IoSchoolSharp} boxSize={6} color={heroTextColor} _hover={{ color: iconHoverColor }} aria-hidden="true" />
                   <span className="sr-only">Google Scholar</span>
                 </Link>
               </HStack>
@@ -214,10 +255,35 @@ const Page = () => {
           </Box>
 
           <Section>
+            <Box
+              p={5}
+              borderRadius="xl"
+              borderWidth="1px"
+              borderColor={borderColor}
+              bg={cardBg}
+            >
+              <HStack justify="space-between" align="start" flexWrap="wrap" gap={3}>
+                <Box flex={1} minW="200px" textAlign="left">
+                  <Badge colorScheme="blue" mb={2}>Recent</Badge>
+                  <Text fontWeight="semibold">
+                    Joining Infosys as a Design Research Intern for Summer 2026!
+                  </Text>
+                  <Text fontSize="sm" color={mutedColor} mt={1}>
+                    I am conducting mixed-methods design research on last-mile delivery robots (LMDRs) using my background in accessible design at industry scale. Stay tuned for more details!
+                  </Text>
+                </Box>
+                <Button as={NextLink} href="/news" size="sm" variant="outline" flexShrink={0}>
+                  All updates
+                </Button>
+              </HStack>
+            </Box>
+          </Section>
+
+          <Section>
             <Heading as="h2" size="xl" mb={5}>
               Audience pathways
             </Heading>
-            <SimpleGrid columns={{ base: 1, md: 3 }} spacing={5}>
+            <SimpleGrid columns={{ base: 1, md: 2, lg: 4 }} spacing={5}>
               <PathwayCard
                 title="For UX and design teams"
                 description="See how I run accessible, mixed-method research and turn insights into clear design direction."
@@ -229,6 +295,12 @@ const Page = () => {
                 description="Review projects that connect user needs, prioritization, and practical product outcomes."
                 cta="View product-facing work"
                 href="/projects"
+              />
+              <PathwayCard
+                title="For research and design hiring"
+                description="Scan credentials, methods, and selected publications in one place."
+                cta="View experience"
+                href="/experience"
               />
               <PathwayCard
                 title="For academic collaborators"
@@ -262,7 +334,7 @@ const Page = () => {
                 title="MAIDR"
                 role="Collaborator"
                 summary="How can statistical charts be accessible across modalities and workflows?"
-                outcome="Contributeed to usability studies with BLV participates to understand multimodal interaction with statistical charts."
+                outcome="Contributed to usability studies with BLV participants to understand multimodal interaction with statistical charts."
                 href="/works/maidr"
               />
             </SimpleGrid>
@@ -277,14 +349,9 @@ const Page = () => {
                 <ListItem>I co-design <i>with</i> diverse stakeholders rather than designing <i>for</i> them.</ListItem>
                 <ListItem>I prioritize accessibility from scoping through delivery, including non-visual interaction support.</ListItem>
                 <ListItem>I combine rigorous methods with practical product recommendations teams can act on quickly.</ListItem>
-                <ListItem> I colleaborate with cross-functional teams to deliver accessible products.</ListItem>
+                <ListItem>I collaborate with cross-functional teams to deliver accessible products.</ListItem>
                 <ListItem>I document trade-offs and reflect on what I would change in future iterations.</ListItem>
               </UnorderedList>
-              {/* <List spacing={1} mt={4} fontSize="sm">
-                <ListItem>
-                  <b>Looking for Summer 2026 opportunities in UX research, design research, and product research!</b>
-                </ListItem>
-              </List> */}
             </Box>
           </Section>
         </VStack>

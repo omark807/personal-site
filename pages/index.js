@@ -297,7 +297,7 @@ const Page = () => {
                 href="/projects"
               />
               <PathwayCard
-                title="For research and design hiring"
+                title="For a quick overview of my work"
                 description="Scan credentials, methods, and selected publications in one place."
                 cta="View experience"
                 href="/experience"

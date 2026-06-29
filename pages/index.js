@@ -269,7 +269,7 @@ const Page = () => {
                     Joining Infosys as a Design Research Intern for Summer 2026!
                   </Text>
                   <Text fontSize="sm" color={mutedColor} mt={1}>
-                    I am conducting mixed-methods design research on last-mile delivery robots (LMDRs) using my background in accessible design at industry scale. Stay tuned for more details!
+                  I&apos;m conducting mixed-methods design research on last-mile delivery robots (LMDRs), bringing an industry-scale accessibility background to questions prior deployments have limited work on: how perceptible are these systems&apos; signals and cues, who do they actually work for, and who do they leave behind?
                   </Text>
                 </Box>
                 <Button as={NextLink} href="/news" size="sm" variant="outline" flexShrink={0}>

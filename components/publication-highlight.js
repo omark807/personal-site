@@ -7,8 +7,8 @@ export const formatPubLabel = (id) => {
 }
 
 export const PublicationImpact = ({ children }) => {
-  const color = useColorModeValue('teal.800', 'teal.200')
-  const borderColor = useColorModeValue('teal.400', 'teal.300')
+  const color = useColorModeValue('brand.hover', 'brand.muted')
+  const borderColor = useColorModeValue('brand.DEFAULT', 'brand.muted')
 
   return (
     <Text

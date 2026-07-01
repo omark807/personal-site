@@ -5,7 +5,7 @@ import { useFontSize } from '../theme-toggle-button'
 
 const Main = ({ children, router }) => {
     const { fontSize } = useFontSize()
-    const footerColor = useColorModeValue('gray.500', 'gray.400')
+    const footerColor = useColorModeValue('text.subtle', 'text.subtle')
     
     return (
         <Box as="main" pb={8} fontSize={fontSize}>

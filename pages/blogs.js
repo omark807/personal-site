@@ -16,9 +16,9 @@ import NextLink from 'next/link'
 import Layout from '../components/layouts/article'
 
 const BlogsPage = () => {
-  const cardBg = useColorModeValue('white', 'gray.800')
-  const borderColor = useColorModeValue('gray.200', 'gray.600')
-  const mutedColor = useColorModeValue('gray.600', 'gray.400')
+  const cardBg = useColorModeValue('bg.surface', 'bg.surface')
+  const borderColor = useColorModeValue('border.emphasis', 'border.emphasis')
+  const mutedColor = useColorModeValue('text.muted', 'text.muted')
 
   return (
     <Layout title="Blogs" canonicalPath="/blogs">
@@ -68,7 +68,7 @@ const BlogsPage = () => {
             >
               <VStack align="start" spacing={3}>
                 <Heading as="h3" size="lg">My Steps (and Stumbles) Into Research</Heading>
-                <Badge colorScheme="gray" variant="outline">In progress</Badge>
+                <Badge colorScheme="accent" variant="outline">In progress</Badge>
                 <Text color={mutedColor}>
                   I will (eventially) post this. In the meantime, read about mme on my <Link as={NextLink} href="/about">About</Link> page.
                 </Text>

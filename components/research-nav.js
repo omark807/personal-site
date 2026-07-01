@@ -16,10 +16,10 @@ const ResearchNav = ({
   publicationTypes,
 }) => {
   const [activeSectionId, setActiveSectionId] = useState(publicationTypes[0]?.id)
-  const activeColor = useColorModeValue('#0F766E', '#5EEAD4')
-  const inactiveColor = useColorModeValue('gray.600', 'gray.400')
-  const borderColor = useColorModeValue('gray.200', 'whiteAlpha.200')
-  const labelColor = useColorModeValue('gray.500', 'gray.500')
+  const activeColor = useColorModeValue('brand.DEFAULT', 'brand.muted')
+  const inactiveColor = useColorModeValue('text.muted', 'text.muted')
+  const borderColor = useColorModeValue('border.default', 'border.default')
+  const labelColor = useColorModeValue('text.subtle', 'text.subtle')
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -44,8 +44,7 @@ const ResearchNav = ({
     <Flex direction={direction} gap={1} flexWrap="wrap" role="group" aria-label="Filter by research theme">
       <Button
         size="xs"
-        variant={activeThemes.length === 0 ? 'solid' : 'ghost'}
-        colorScheme="teal"
+        variant={activeThemes.length === 0 ? 'brand' : 'ghost'}
         onClick={onClearThemes}
         aria-pressed={activeThemes.length === 0}
         whiteSpace="normal"
@@ -62,8 +61,7 @@ const ResearchNav = ({
           <Button
             key={id}
             size="xs"
-            variant={isActive ? 'solid' : 'ghost'}
-            colorScheme="teal"
+            variant={isActive ? 'brand' : 'ghost'}
             onClick={() => onThemeToggle(id)}
             aria-pressed={isActive}
             whiteSpace="normal"

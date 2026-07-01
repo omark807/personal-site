@@ -85,7 +85,7 @@ const NewsPage = () => {
               key={tag}
               borderRadius="full"
               variant="solid"
-              colorScheme={filters.includes(tag) ? 'teal' : 'gray'}
+              colorScheme={filters.includes(tag) ? 'accent' : 'gray'}
               mr={2}
               mb={2}
               cursor="pointer"
@@ -115,7 +115,7 @@ const NewsPage = () => {
                 key={tag}
                 borderRadius="full"
                 variant="solid"
-                colorScheme="teal"
+                colorScheme="accent"
                 mr={2}
                 mb={2}
                 role="listitem"
@@ -152,7 +152,7 @@ const NewsPage = () => {
                         key={tag}
                         borderRadius="full"
                         variant="subtle"
-                        colorScheme="gray"
+                        colorScheme="accent"
                         mr={2}
                       >
                         <TagLabel>{tag}</TagLabel>

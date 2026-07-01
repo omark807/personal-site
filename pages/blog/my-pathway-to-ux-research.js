@@ -11,7 +11,7 @@ import Layout from '../../components/layouts/article'
 import Paragraph from '../../components/paragraph'
 
 const BlogPost = () => {
-  const dateFg = useColorModeValue('gray.500', 'gray.400')
+  const dateFg = useColorModeValue('text.subtle', 'text.subtle')
 
   return (
     <Layout title="My Steps (and Stumbles) Into Research" canonicalPath="/blog/my-pathway-to-ux-research">

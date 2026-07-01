@@ -104,10 +104,10 @@ const personSchema = {
 }
 
 const Page = () => {
-  const heroTextColor = useColorModeValue('gray.600', 'gray.300')
-  const iconColor = useColorModeValue('gray.600', 'gray.400')
+  const heroTextColor = useColorModeValue('text.muted', 'text.muted')
+  const iconColor = useColorModeValue('text.muted', 'text.muted')
   const iconHoverColor = useColorModeValue('brand.DEFAULT', 'brand.muted')
-  const photoBorderColor = useColorModeValue('white', 'gray.700')
+  const photoBorderColor = useColorModeValue('border.photo', 'border.photo')
 
   return (
     <Layout canonicalPath="/">

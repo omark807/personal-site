@@ -10,8 +10,8 @@ const CatFigure = ({
   aspectRatio = 4 / 3,
   objectPosition = 'center center',
 }) => {
-  const borderColor = useColorModeValue('gray.200', 'gray.600')
-  const captionColor = useColorModeValue('gray.600', 'gray.400')
+  const borderColor = useColorModeValue('border.emphasis', 'border.emphasis')
+  const captionColor = useColorModeValue('text.muted', 'text.muted')
 
   return (
     <Box as="figure" m={0} h="full" display="flex" flexDirection="column" alignItems="center">

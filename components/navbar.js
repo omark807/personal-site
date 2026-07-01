@@ -45,8 +45,8 @@ const socialNavLinks = [
 
 const LinkItem = ({ href, path, _target, children, ...props }) => {
   const active = path === href
-  const inactiveColor = useColorModeValue('gray.800', 'whiteAlpha.900')
-  const activeBg = useColorModeValue('teal.50', 'whiteAlpha.200')
+  const inactiveColor = useColorModeValue('text.nav', 'text.nav')
+  const activeBg = useColorModeValue('interactive.activeBg', 'interactive.activeBg')
   const activeColor = useColorModeValue('brand.DEFAULT', 'brand.muted')
   const isExternal = href?.startsWith('http') || href?.startsWith('mailto:')
   return (
@@ -116,10 +116,10 @@ const MoreMenu = ({ path, navTextColor, placement = 'bottom-end' }) => {
 
 const Navbar = (props) => {
   const { path } = props
-  const navTextColor = useColorModeValue('gray.800', 'whiteAlpha.900')
-  const borderColor = useColorModeValue('gray.200', 'whiteAlpha.200')
-  const navBg = useColorModeValue('rgba(255, 253, 248, 0.92)', 'rgba(32, 32, 35, 0.92)')
-  const nameColor = useColorModeValue('gray.800', 'whiteAlpha.900')
+  const navTextColor = useColorModeValue('text.nav', 'text.nav')
+  const borderColor = useColorModeValue('border.default', 'border.default')
+  const navBg = useColorModeValue('bg.nav', 'bg.nav')
+  const nameColor = useColorModeValue('text.nav', 'text.nav')
   const homeActiveColor = useColorModeValue('brand.DEFAULT', 'brand.muted')
 
   const mobileNavItems = [

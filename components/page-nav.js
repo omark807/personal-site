@@ -3,9 +3,9 @@ import { Box, Flex, Link, useColorModeValue } from '@chakra-ui/react'
 
 const PageNav = ({ sections }) => {
     const [activeId, setActiveId] = useState(sections[0]?.id)
-    const activeColor = useColorModeValue('#0F766E', '#5EEAD4')
-    const inactiveColor = useColorModeValue('gray.600', 'gray.400')
-    const borderColor = useColorModeValue('gray.200', 'whiteAlpha.200')
+    const activeColor = useColorModeValue('brand.DEFAULT', 'brand.muted')
+    const inactiveColor = useColorModeValue('text.muted', 'text.muted')
+    const borderColor = useColorModeValue('border.default', 'border.default')
 
     useEffect(() => {
         const observer = new IntersectionObserver(

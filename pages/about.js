@@ -113,19 +113,19 @@ const AboutMe = () => (
               <GridItem>
                 <List spacing={3}>
                   <ListItem>
-                    <ListIcon as={RepeatClockIcon} color="orange.500" />
+                    <ListIcon as={RepeatClockIcon} color="brand.600" />
                     Fitness
                   </ListItem>
                   <ListItem>
-                    <ListIcon as={ChevronUpIcon} color="purple.500" />
+                    <ListIcon as={ChevronUpIcon} color="accent.500" />
                     Cat parenting
                   </ListItem>
                   <ListItem>
-                    <ListIcon as={StarIcon} color="brown.500" />
+                    <ListIcon as={StarIcon} color="brand.500" />
                     Coffee
                   </ListItem>
                   <ListItem>
-                    <ListIcon as={ChevronRightIcon} color="blue.500" />
+                    <ListIcon as={ChevronRightIcon} color="accent.600" />
                     Reading (
                     <Link
                       href="https://www.goodreads.com/user/show/143290931-omar-khan"
@@ -141,19 +141,19 @@ const AboutMe = () => (
               <GridItem>
                 <List spacing={3}>
                   <ListItem>
-                    <ListIcon as={SunIcon} color="yellow.500" />
+                    <ListIcon as={SunIcon} color="accent.400" />
                     Anything outdoors!
                   </ListItem>
                   <ListItem>
-                    <ListIcon as={EditIcon} color="gray.500" />
+                    <ListIcon as={EditIcon} color="brand.700" />
                     Writing (conveying my love of parenthetical afterthoughts)
                   </ListItem>
                   <ListItem>
-                    <ListIcon as={DownloadIcon} color="red.500" />
+                    <ListIcon as={DownloadIcon} color="accent.500" />
                     Gaming (especially Nintendo games)
                   </ListItem>
                   <ListItem>
-                    <ListIcon as={StarIcon} color="green.500" />
+                    <ListIcon as={StarIcon} color="brand.600" />
                     Cooking
                   </ListItem>
                 </List>

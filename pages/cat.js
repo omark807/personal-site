@@ -7,19 +7,16 @@ import { catPageIntro } from '../lib/cat-photos'
 import { getAvailableCatPhotos } from '../lib/get-cat-photos'
 
 const CatPage = ({ hero, gallery, hasPhotos }) => {
-  const mutedColor = useColorModeValue('gray.600', 'gray.400')
-  const cardBg = useColorModeValue('gray.50', 'gray.800')
-  const borderColor = useColorModeValue('gray.200', 'gray.600')
+  const mutedColor = useColorModeValue('text.muted', 'text.muted')
+  const cardBg = useColorModeValue('bg.surfaceMuted', 'bg.surfaceMuted')
+  const borderColor = useColorModeValue('border.emphasis', 'border.emphasis')
 
   return (
     <Layout title="Cat" canonicalPath="/cat">
       <Box as="main" py={4}>
-        <Heading as="h1" fontSize={24} mb={4} textAlign="center" textTransform="lowercase">
+        <Heading as="h1" fontSize={24} mb={6} textAlign="center" textTransform="lowercase">
           daphne&apos;s world
         </Heading>
-        <Text fontSize={16} mb={6} textAlign="center" textTransform="lowercase">
-          
-        </Text>
 
         <Paragraph>{catPageIntro}</Paragraph>
 

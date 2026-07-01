@@ -98,7 +98,7 @@ const Projects = () => {
         </SimpleGrid>
 
         {filteredProjects.length === 0 && (
-          <Text mt={6} fontSize="sm">
+          <Text mt={6} fontSize="sm" color="text.muted">
             No projects match this focus yet.
           </Text>
         )}

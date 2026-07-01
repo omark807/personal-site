@@ -292,7 +292,7 @@ const Research = () => {
             </Box>
 
             {groupedPublications.length === 0 ? (
-              <Text color="gray.500">No publications match the selected themes.</Text>
+              <Text color="text.subtle">No publications match the selected themes.</Text>
             ) : (
               groupedPublications.map((group, groupIndex) => (
                 <Section key={group.id} delay={0.1 * (groupIndex + 1)}>

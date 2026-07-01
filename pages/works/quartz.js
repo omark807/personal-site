@@ -148,7 +148,7 @@ const Project = () => (
             decoding="async"
           />
         </Box>
-        <P fontSize="sm" color="gray.500">
+        <P fontSize="sm" color="text.subtle">
           The QUARTZ interface: a visual network graph with controls for filtering, display options, and readability metrics.
         </P>
       </Box>

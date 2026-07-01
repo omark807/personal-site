@@ -22,8 +22,8 @@ export const GridItem = ({ children, href, title, thumbnail }) => (
 )
 
 export const WorkGridItem = ({ children, id, title, thumbnail, role, metadata = [] }) => {
-  const tileBg = useColorModeValue('gray.100', 'whiteAlpha.100')
-  const mutedColor = useColorModeValue('gray.600', 'gray.400')
+  const tileBg = useColorModeValue('bg.surfaceMuted', 'bg.surfaceMuted')
+  const mutedColor = useColorModeValue('text.muted', 'text.muted')
   const roleLabel = role === 'lead' ? 'Lead' : role === 'collaborator' ? 'Collaborator' : null
   return (
     <Box w="100%" textAlign="center" role="article" aria-labelledby={`work-grid-title-${id}`}>
@@ -50,7 +50,7 @@ export const WorkGridItem = ({ children, id, title, thumbnail, role, metadata = 
             top={2}
             right={2}
             variant="outline"
-            colorScheme="gray"
+            colorScheme="accent"
             fontSize="xs"
             textTransform="none"
           >

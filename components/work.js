@@ -20,7 +20,7 @@ export const WorkImage = ({ src, alt }) => (
 )
 
 export const Meta = ({ children }) => (
-    <Badge colorScheme="gray" variant="outline" mr={2} textTransform="none">
+    <Badge colorScheme="accent" variant="outline" mr={2} textTransform="none">
         { children}
     </Badge>
 )

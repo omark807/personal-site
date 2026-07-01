@@ -12,14 +12,14 @@ import NextLink from 'next/link'
 import { getAvailableCatPhotos } from '../lib/get-cat-photos'
 
 const LifeCard = ({ href, children, hasTopMedia = false }) => {
-  const borderColor = useColorModeValue('gray.200', 'gray.600')
-  const hoverBorderColor = useColorModeValue('#0F766E', '#5EEAD4')
-  const hoverBg = useColorModeValue('teal.50', 'whiteAlpha.100')
+  const borderColor = useColorModeValue('border.emphasis', 'border.emphasis')
+  const hoverBorderColor = useColorModeValue('brand.DEFAULT', 'brand.muted')
+  const hoverBg = useColorModeValue('interactive.hover', 'interactive.hover')
   const focusRing = useColorModeValue(
-    '0 0 0 3px rgba(15, 118, 110, 0.28)',
+    '0 0 0 3px rgba(13, 148, 136, 0.28)',
     '0 0 0 3px rgba(94, 234, 212, 0.35)'
   )
-  const bodyColor = useColorModeValue('gray.600', 'gray.400')
+  const bodyColor = useColorModeValue('text.muted', 'text.muted')
 
   return (
     <Box
@@ -59,12 +59,15 @@ const LifeCard = ({ href, children, hasTopMedia = false }) => {
   )
 }
 
-const LifePage = ({ catPreviewSrc }) => (
+const LifePage = ({ catPreviewSrc }) => {
+  const subtitleColor = useColorModeValue('accent.700', 'accent.300')
+
+  return (
   <Layout title="Life">
     <Heading as="h1" fontSize={24} mb={4} textAlign="center" textTransform="lowercase">
       my life
     </Heading>
-    <Heading as="h2" fontSize={16} mb={8} textAlign="center" textTransform="lowercase">
+    <Heading as="h2" fontSize={16} mb={8} textAlign="center" textTransform="lowercase" color={subtitleColor}>
       some of my interests and passions, from my love for cats to my adventures in cooking.
     </Heading>
     <SimpleGrid columns={[1, 2, 3]} gap={6} alignItems="stretch">
@@ -118,7 +121,8 @@ const LifePage = ({ catPreviewSrc }) => (
       </Section>
     </SimpleGrid>
   </Layout>
-)
+  )
+}
 
 export async function getStaticProps() {
   const { hero } = getAvailableCatPhotos()

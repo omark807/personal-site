@@ -313,8 +313,8 @@ const talks = [
 ]
 
 const ExperiencePage = () => {
-  const mutedColor = useColorModeValue('gray.600', 'gray.400')
-  const borderColor = useColorModeValue('gray.200', 'whiteAlpha.200')
+  const mutedColor = useColorModeValue('text.muted', 'text.muted')
+  const borderColor = useColorModeValue('border.default', 'border.default')
 
   const DatedRow = ({ period, children, borderLeft = false }) => (
     <Flex

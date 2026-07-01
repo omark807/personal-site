@@ -1,7 +1,6 @@
 import {
     IconButton,
     useColorMode,
-    useColorModeValue,
     Popover,
     PopoverTrigger,
     PopoverContent,
@@ -46,7 +45,7 @@ const ThemeToggleButton = () => {
                                         aria-label="Open theme and accessibility settings"
                                         aria-haspopup="dialog"
                                         isRound
-                                        colorScheme={useColorModeValue('blackAlpha', 'teal')}
+                                        colorScheme="brand"
                                         icon={<SettingsIcon aria-hidden="true" />}
                                 />
                         </PopoverTrigger>
@@ -70,7 +69,7 @@ const ThemeToggleButton = () => {
                                                                                 key={size}
                                                                                 size="sm"
                                                                                 onClick={() => changeFontSize(size)}
-                                                                                variant={fontSize === size ? 'solid' : 'outline'}
+                                                                                variant={fontSize === size ? 'brand' : 'brandOutline'}
                                                                                 aria-label={`Set text size to ${size}`}
                                                                                 aria-pressed={fontSize === size}
                                                                         >

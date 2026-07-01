@@ -15,9 +15,9 @@ import {
 import NextLink from 'next/link'
 
 const ExperienceAccordion = ({ items, borderLeft = false }) => {
-  const mutedColor = useColorModeValue('gray.600', 'gray.400')
-  const borderColor = useColorModeValue('gray.200', 'whiteAlpha.200')
-  const hoverBg = useColorModeValue('blackAlpha.50', 'whiteAlpha.100')
+  const mutedColor = useColorModeValue('text.muted', 'text.muted')
+  const borderColor = useColorModeValue('border.default', 'border.default')
+  const hoverBg = useColorModeValue('interactive.hover', 'interactive.hover')
 
   return (
     <Accordion allowMultiple reduceMotion>

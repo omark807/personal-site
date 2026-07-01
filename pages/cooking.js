@@ -3,8 +3,8 @@ import NextLink from 'next/link'
 import Layout from '../components/layouts/article'
 
 const CookingPage = () => {
-  const mutedColor = useColorModeValue('gray.600', 'gray.400')
-  const cardBg = useColorModeValue('gray.50', 'gray.800')
+  const mutedColor = useColorModeValue('text.muted', 'text.muted')
+  const cardBg = useColorModeValue('bg.surfaceMuted', 'bg.surfaceMuted')
 
   return (
     <Layout title="Cooking" canonicalPath="/cooking">
@@ -16,7 +16,7 @@ const CookingPage = () => {
             I like food, so I make it sometimes.
           </Text>
 
-          <Box borderWidth={1} borderRadius="lg" p={6} bg={cardBg} textAlign="center">
+          <Box borderWidth={1} borderRadius="lg" p={6} bg={cardBg} borderColor="border.emphasis" textAlign="center">
             <VStack spacing={3}>
               <Text fontSize="4xl" aria-hidden="true">🍳</Text>
               <Heading as="h2" size="md">Recipes in progress</Heading>

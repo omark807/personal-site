@@ -21,7 +21,7 @@ export const GridItem = ({ children, href, title, thumbnail }) => (
   </Box>
 )
 
-export const WorkGridItem = ({ children, id, title, thumbnail, role, tags = [], metadata = [] }) => {
+export const WorkGridItem = ({ children, id, title, thumbnail, role, metadata = [] }) => {
   const tileBg = useColorModeValue('gray.100', 'whiteAlpha.100')
   const mutedColor = useColorModeValue('gray.600', 'gray.400')
   const roleLabel = role === 'lead' ? 'Lead' : role === 'collaborator' ? 'Collaborator' : null
@@ -49,7 +49,8 @@ export const WorkGridItem = ({ children, id, title, thumbnail, role, tags = [], 
             position="absolute"
             top={2}
             right={2}
-            colorScheme={role === 'lead' ? 'blue' : 'purple'}
+            variant="outline"
+            colorScheme="gray"
             fontSize="xs"
             textTransform="none"
           >
@@ -64,15 +65,6 @@ export const WorkGridItem = ({ children, id, title, thumbnail, role, tags = [], 
         <Text fontSize="xs" color={mutedColor} mt={2}>
           {metadata.join(' · ')}
         </Text>
-      )}
-      {tags.length > 0 && (
-        <Box mt={2}>
-          {tags.map((tag) => (
-            <Badge key={`${id}-${tag}`} mr={1} mb={1} colorScheme="orange" variant="subtle" textTransform="none">
-              {tag}
-            </Badge>
-          ))}
-        </Box>
       )}
       <Text fontSize={14} mt={1}>{children}</Text>
     </Box>

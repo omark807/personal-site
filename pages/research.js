@@ -1,6 +1,5 @@
 import { useMemo, useState, useEffect } from 'react'
 import {
-  Container,
   Heading,
   Link,
   Divider,
@@ -271,7 +270,6 @@ const Research = () => {
 
   return (
     <Layout title="Research" canonicalPath="/research">
-      <Container>
         <Flex direction={{ base: 'column', md: 'row' }} gap={4}>
           <ResearchNav
             themeFilters={themeFilters}
@@ -281,7 +279,7 @@ const Research = () => {
             publicationTypes={visiblePublicationTypes}
           />
           <Box flex={1} minW={0}>
-            <Heading as="h1" fontSize={24} mb={4}>
+            <Heading as="h1" variant="section-title" mb={4}>
               Research
             </Heading>
             <Text mb={4}>
@@ -338,7 +336,6 @@ const Research = () => {
             )}
           </Box>
         </Flex>
-      </Container>
     </Layout>
   )
 }

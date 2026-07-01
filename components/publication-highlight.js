@@ -13,7 +13,7 @@ export const PublicationImpact = ({ children }) => {
   return (
     <Text
       fontSize="xs"
-      fontWeight="semibold"
+      fontWeight="medium"
       color={color}
       borderLeftWidth="2px"
       borderLeftColor={borderColor}

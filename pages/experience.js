@@ -1,5 +1,4 @@
 import {
-  Container,
   Heading,
   Link,
   Divider,
@@ -8,7 +7,6 @@ import {
   Flex,
   List,
   ListItem,
-  Badge,
   Button,
   HStack,
   useColorModeValue,
@@ -26,7 +24,6 @@ const sections = [
   { id: 'overview', label: 'Overview' },
   { id: 'education', label: 'Education' },
   { id: 'experience', label: 'Experience' },
-  { id: 'themes', label: 'Themes' },
   { id: 'methods', label: 'Methods' },
   { id: 'selected-work', label: 'Selected work' },
   { id: 'talks', label: 'Talks' },
@@ -38,7 +35,7 @@ const professionalExperience = [
     title: 'Design Research Intern',
     org: 'Infosys · Center for Autonomous Learning · Remote',
     summary:
-      'Investigating accessibility needs and design opportunities for autonomous delivery robots through mixed-methods user research.',
+      'Investigating accessibility needs and design opportunities for autonomous delivery robots through interviews, observation, and synthesis with design teams.',
     link: '/news',
   },
   {
@@ -49,7 +46,7 @@ const professionalExperience = [
       {
         items: [
           'Conducting accessibility testing (user interviews, prototype reviews, and compatibility assessments) for clients across the U.S., Canada, and the U.K.',
-          'Partnering with cross-functional teams to translate findings into actionable, prioritized recommendations for inclusive design.',
+          'Partnering with cross-functional teams to translate findings into prioritized recommendations for inclusive design.',
         ],
       },
     ],
@@ -349,20 +346,20 @@ const ExperiencePage = () => {
   return (
     <Layout
       title="Experience"
-      description="Education, industry and research experience, methods, and selected publications for Omar Khan, mixed-methods UX researcher and PhD candidate at UIUC."
+      description="Education, industry and research experience, methods, and selected publications for Omar Khan, PhD candidate in HCI and accessibility at UIUC."
       canonicalPath="/experience"
     >
-      <Container>
         <Flex direction={{ base: 'column', md: 'row' }} gap={4}>
           <PageNav sections={sections} />
           <Box flex={1} minW={0}>
-            <Heading as="h1" fontSize={24} mb={4} id="overview">
+            <Heading as="h1" variant="section-title" mb={4} id="overview">
               Experience
             </Heading>
-            <Text mb={4} color={mutedColor}>
-              PhD candidate · mixed-methods UX and accessibility researcher · industry and academic
-              collaboration
-            </Text>
+            <Paragraph>
+              I am a PhD candidate at UIUC studying HCI, human-AI interaction, and accessibility — mostly through
+              co-design with blind and low-vision communities, with stints in industry research
+              along the way.
+            </Paragraph>
 
             <HStack spacing={3} mb={6} flexWrap="wrap">
               <Button
@@ -370,7 +367,7 @@ const ExperiencePage = () => {
                 href={CV_LONG_URL}
                 isExternal
                 size="sm"
-                colorScheme="teal"
+                variant="brand"
                 aria-label="Open CV (Long-form) (opens in new tab)"
               >
                 CV (Long-form)
@@ -380,8 +377,7 @@ const ExperiencePage = () => {
                 href={CV_SHORT_URL}
                 isExternal
                 size="sm"
-                variant="outline"
-                colorScheme="teal"
+                variant="brandOutline"
                 aria-label="Open Resume (One-page) (opens in new tab)"
               >
                 Resume (One-page)
@@ -389,7 +385,7 @@ const ExperiencePage = () => {
             </HStack>
 
             <Section delay={0.1}>
-              <Heading as="h2" id="education" fontSize={20} mb={4}>
+              <Heading as="h2" id="education" variant="section-title">
                 Education
               </Heading>
               <List spacing={4}>
@@ -413,7 +409,7 @@ const ExperiencePage = () => {
 
             <Section delay={0.15}>
               <Divider my={6} />
-              <Heading as="h2" id="experience" fontSize={20} mb={4}>
+              <Heading as="h2" id="experience" variant="section-title">
                 Experience
               </Heading>
 
@@ -430,25 +426,7 @@ const ExperiencePage = () => {
 
             <Section delay={0.2}>
               <Divider my={6} />
-              <Heading as="h2" id="themes" fontSize={20} mb={4}>
-                Research themes
-              </Heading>
-              <HStack spacing={2} flexWrap="wrap">
-                <Badge colorScheme="orange" variant="subtle" px={3} py={1}>
-                  Accessible tooling for BLV researchers
-                </Badge>
-                <Badge colorScheme="purple" variant="subtle" px={3} py={1}>
-                  Digital mental health access
-                </Badge>
-                <Badge colorScheme="green" variant="subtle" px={3} py={1}>
-                  Human-AI and inclusion
-                </Badge>
-              </HStack>
-            </Section>
-
-            <Section delay={0.25}>
-              <Divider my={6} />
-              <Heading as="h2" id="methods" fontSize={20} mb={4}>
+              <Heading as="h2" id="methods" variant="section-title">
                 Methods and tools
               </Heading>
               <Paragraph>
@@ -470,7 +448,7 @@ const ExperiencePage = () => {
 
             <Section delay={0.3}>
               <Divider my={6} />
-              <Heading as="h2" id="selected-work" fontSize={20} mb={2}>
+              <Heading as="h2" id="selected-work" variant="section-title">
                 Selected publications
               </Heading>
               <Text fontSize="sm" mb={3}>
@@ -494,7 +472,7 @@ const ExperiencePage = () => {
 
             <Section delay={0.35}>
               <Divider my={6} />
-              <Heading as="h2" id="talks" fontSize={20} mb={4}>
+              <Heading as="h2" id="talks" variant="section-title">
                 Talks and presentations
               </Heading>
               <List spacing={3}>
@@ -512,7 +490,6 @@ const ExperiencePage = () => {
             </Section>
           </Box>
         </Flex>
-      </Container>
     </Layout>
   )
 }

@@ -1,14 +1,13 @@
-import { Container, Heading, Text, Box, VStack, Link, useColorModeValue } from '@chakra-ui/react'
+import { Heading, Text, Box, VStack, Link, useColorModeValue } from '@chakra-ui/react'
 import NextLink from 'next/link'
 import Layout from '../components/layouts/article'
 
 const CookingPage = () => {
   const mutedColor = useColorModeValue('gray.600', 'gray.400')
-  const cardBg = useColorModeValue('orange.50', 'gray.800')
+  const cardBg = useColorModeValue('gray.50', 'gray.800')
 
   return (
     <Layout title="Cooking" canonicalPath="/cooking">
-      <Container maxW="container.md">
         <Box as="main" py={8}>
           <Heading as="h1" size="2xl" mb={4} textAlign="center">
             My food
@@ -28,7 +27,6 @@ const CookingPage = () => {
             </VStack>
           </Box>
         </Box>
-      </Container>
     </Layout>
   )
 }

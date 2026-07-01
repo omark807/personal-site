@@ -1,5 +1,4 @@
 import {
-  Container,
   Heading,
   Text,
   Box,
@@ -11,69 +10,16 @@ import {
   InputLeftElement,
   Divider,
   Link,
-  Badge,
 } from '@chakra-ui/react'
 import { SearchIcon } from '@chakra-ui/icons'
 import { useState, useEffect } from 'react'
 import NextLink from 'next/link'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
+import { newsItems } from '../lib/news'
 
 const NewsPage = () => {
   const [announcement, setAnnouncement] = useState('')
-  const newsItems = [
-    {
-      title: 'Joining Infosys as a Design Research Intern for Summer 2026!',
-      date: '04-02-2026',
-      month: 'April 2026',
-      content: <>I&apos;m excited to share that this upcoming summer I&apos;ll be joining Infosys&apos; Center for Autonomous Learning as a Design Research Intern, working on accessibility-focused design for robotics (more details to come). Looking forward to bringing my background in accessible design and HCI to industry-scale challenges!</>,
-      tags: ['internship', 'industry'],
-      relatedLink: { href: '/experience', label: 'View experience' },
-    },
-    {
-      title: 'AFB National Report on AI & Disability',
-      date: '03-25-2026',
-      month: 'March 2026',
-      content: <>I contributed as a co-author to the American Foundation for the Blind&apos;s national report, &quot;The AI Quagmire: Benefits, Risks, and User Aspirations Through a Disability Lens.&quot; Drawing on a survey of over 1,700 Americans with and without disabilities, the report examines how people are using AI, the barriers and risks disabled users face, and actionable recommendations for developers, employers, educators, and policymakers. You can read the full report on <a href="https://afb.org/research-and-initiatives/ai-series/ai-quagmire" target="_blank" rel="noopener noreferrer" aria-label="View The AI Quagmire report on the AFB website (opens in new tab)"><u>AFB&apos;s website</u></a>.</>,
-      tags: ['publication', 'report'],
-      relatedLink: { href: '/research', label: 'View publication [W1]' },
-    },
-    {
-      title: 'New Paper Accepted to CHI 2026!',
-      date: '01-28-2026',
-      month: 'January 2026',
-      content: <>Our paper on &quot;I Don’t Trust Any Professional Research Tool&quot;: A Re-Imagination of Knowledge Production Workflows by, with, and for Blind and Low-Vision Researchers has been accepted to CHI 2026! You can find the preprint at <a href="https://arxiv.org/abs/2602.08925" target="_blank" rel="noopener noreferrer" aria-label="View arXiv preprint for full paper (opens in new tab)"><u>this link</u></a>. I look forward to presenting this work at CHI 2026 in Barcelona, Spain in April!</>,
-      tags: ['publication', 'conference'],
-      relatedLink: { href: '/works/quartz', label: 'View QUARTZ case study' },
-    },
-    {
-      title: 'ASSETS 2025 In-Person Attendance',
-      date: '08-01-2025',
-      month: 'August 2025',
-      content: 'I will be attending ASSETS 2025 in Denver, CO in October! I am very much looking forward to connecting with fellow researchers and practitioners working across any and all work within accessibility.',
-      tags: ['conference'],
-    },
-    {
-      title: 'CHI 2025 In-Person Presentation',
-      date: '03-31-2025',
-      month: 'March 2025',
-      content: 'I will be presenting our Late-Breaking Work at CHI 2025 in Yokohama, Japan! I am excited to share our findings and engage with the broader CHI community.',
-      tags: ['conference', 'presentation'],
-      relatedLink: { href: '/works/dmh', label: 'View DMH case study' },
-    },
-    {
-      title: 'Late-Breaking Work Accepted to CHI 2025!',
-      date: '02-22-2025',
-      month: 'February 2025',
-      content:
-        <>Our late-breaking work has been accepted to CHI 2025! You can find the preprint at
-        <a href="https://arxiv.org/abs/2503.07415" target='_blank' rel="noopener noreferrer" aria-label="View arXiv preprint for late-breaking work (opens in new tab)"> <u>this link</u></a>.
-        </>,
-      tags: ['publication', 'conference'],
-      relatedLink: { href: '/works/dmh', label: 'View DMH case study' },
-    },
-  ]
-
   const [filters, setFilters] = useState([])
   const [searchQuery, setSearchQuery] = useState('')
 
@@ -116,8 +62,7 @@ const NewsPage = () => {
 
   return (
     <Layout title="News" canonicalPath="/news">
-      <Container>
-        <Heading as="h1" fontSize={24} mb={4}>
+        <Heading as="h1" variant="section-title" mb={4}>
           News
         </Heading>
         <InputGroup mb={4}>
@@ -140,7 +85,7 @@ const NewsPage = () => {
               key={tag}
               borderRadius="full"
               variant="solid"
-              colorScheme={filters.includes(tag) ? 'blue' : tag === 'industry' ? 'green' : 'gray'}
+              colorScheme={filters.includes(tag) ? 'teal' : 'gray'}
               mr={2}
               mb={2}
               cursor="pointer"
@@ -170,7 +115,7 @@ const NewsPage = () => {
                 key={tag}
                 borderRadius="full"
                 variant="solid"
-                colorScheme="blue"
+                colorScheme="teal"
                 mr={2}
                 mb={2}
                 role="listitem"
@@ -207,17 +152,12 @@ const NewsPage = () => {
                         key={tag}
                         borderRadius="full"
                         variant="subtle"
-                        colorScheme={tag === 'industry' ? 'green' : 'gray'}
+                        colorScheme="gray"
                         mr={2}
                       >
                         <TagLabel>{tag}</TagLabel>
                       </Tag>
                     ))}
-                    {item.tags.includes('industry') && (
-                      <Badge ml={1} colorScheme="green" variant="outline">
-                        Industry
-                      </Badge>
-                    )}
                   </Box>
                   {item.relatedLink && (
                     <Link as={NextLink} href={item.relatedLink.href} fontSize="sm" mt={2} display="inline-block">
@@ -229,7 +169,6 @@ const NewsPage = () => {
             ))}
           </Box>
         ))}
-      </Container>
     </Layout>
   )
 }

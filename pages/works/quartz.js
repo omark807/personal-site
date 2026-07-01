@@ -1,7 +1,5 @@
 import NextLink from 'next/link'
 import {
-  Container,
-  Badge,
   List,
   ListItem,
   Heading,
@@ -16,8 +14,8 @@ import Layout from '../../components/layouts/article'
 import PageNav from '../../components/page-nav'
 
 const sections = [
-  { id: 'quartz-summary', label: 'Summary' },
   { id: 'quartz-glance', label: 'At a glance' },
+  { id: 'quartz-summary', label: 'Summary' },
   { id: 'quartz-project', label: 'Project' },
   { id: 'quartz-objective', label: 'Objective' },
   { id: 'quartz-work', label: 'Work' },
@@ -33,26 +31,15 @@ const QUARTZ_NETWORK_GRAPH_ALT =
 
 const Project = () => (
   <Layout title="QUARTZ">
-    <Container as="main" maxW="container.md">
+    <Box as="main">
       <Flex direction={{ base: 'column', md: 'row' }} gap={4}>
       <PageNav sections={sections} />
       <Box flex={1} minW={0}>
-      <Title>
-        QUARTZ <Badge>Project</Badge>
-      </Title>
+      <Title>QUARTZ</Title>
       <WorkImage src="/images/quartz_logo.png" alt="QUARTZ logo" />
 
-      <Box as="section" aria-labelledby="quartz-summary" mt={4}>
-        <Heading as="h2" id="quartz-summary" size="md" mb={3}>
-          Executive summary
-        </Heading>
-        <P>
-          QUARTZ addresses a persistent accessibility gap in qualitative visualization workflows for blind and low-vision researchers. As lead researcher, I drove co-design and evaluation work that produced actionable design guidance and informed an open-source multimodal system.
-        </P>
-      </Box>
-
-      <Box as="section" aria-labelledby="quartz-glance" mt={6}>
-        <Heading as="h2" id="quartz-glance" size="md" mb={3}>
+      <Box as="section" aria-labelledby="quartz-glance" mt={4}>
+        <Heading as="h2" id="quartz-glance" variant="section-title">
           At a glance
         </Heading>
         <List spacing={2}>
@@ -63,8 +50,17 @@ const Project = () => (
         </List>
       </Box>
 
+      <Box as="section" aria-labelledby="quartz-summary" mt={6}>
+        <Heading as="h2" id="quartz-summary" variant="section-title">
+          Summary
+        </Heading>
+        <P>
+          QUARTZ closes an accessibility gap in qualitative visualization workflows for blind and low-vision researchers. As lead researcher, I ran co-design and evaluation that produced design guidelines and an open-source multimodal system built with BLV researchers.
+        </P>
+      </Box>
+
       <Box as="section" aria-labelledby="quartz-project" mt={4}>
-        <Heading as="h2" id="quartz-project" size="md" mb={3}>
+        <Heading as="h2" id="quartz-project" variant="section-title">
           Project
         </Heading>
         <P>
@@ -73,7 +69,7 @@ const Project = () => (
       </Box>
 
       <Box as="section" aria-labelledby="quartz-objective" mt={6}>
-        <Heading as="h2" id="quartz-objective" size="md" mb={3}>
+        <Heading as="h2" id="quartz-objective" variant="section-title">
           Objective
         </Heading>
         <P>
@@ -110,7 +106,7 @@ const Project = () => (
       </Box>
 
       <Box as="section" aria-labelledby="quartz-work" mt={6}>
-        <Heading as="h2" id="quartz-work" size="md" mb={3}>
+        <Heading as="h2" id="quartz-work" variant="section-title">
           Work
         </Heading>
         <P>
@@ -158,7 +154,7 @@ const Project = () => (
       </Box>
 
       <Box as="section" aria-labelledby="quartz-result" mt={6}>
-        <Heading as="h2" id="quartz-result" size="md" mb={3}>
+        <Heading as="h2" id="quartz-result" variant="section-title">
           End result
         </Heading>
         <Heading as="h3" size="sm" mb={2}>
@@ -196,7 +192,7 @@ const Project = () => (
       </Box>
 
       <Box as="section" aria-labelledby="quartz-reflection" mt={6}>
-        <Heading as="h2" id="quartz-reflection" size="md" mb={3}>
+        <Heading as="h2" id="quartz-reflection" variant="section-title">
           Reflection
         </Heading>
         <P>
@@ -209,20 +205,20 @@ const Project = () => (
       </Box>
 
       <Box as="section" aria-labelledby="quartz-ux-skills" mt={6}>
-        <Heading as="h2" id="quartz-ux-skills" size="md" mb={3}>
+        <Heading as="h2" id="quartz-ux-skills" variant="section-title">
           Research skills demonstrated
         </Heading>
         <List as="ul" listStyleType="disc" pl={6} spacing={1}>
           <ListItem>User interviews and participatory co-design</ListItem>
           <ListItem>Qualitative analysis and thematic coding</ListItem>
           <ListItem>Usability evaluation and task analysis</ListItem>
-          <ListItem>Translating research into actionable design guidelines</ListItem>
+          <ListItem>Synthesizing co-design findings into design guidelines</ListItem>
           <ListItem>Cross-functional collaboration with academic and community stakeholders</ListItem>
         </List>
       </Box>
 
       <Box as="section" aria-labelledby="quartz-resources" mt={6}>
-        <Heading as="h2" id="quartz-resources" size="md" mb={3}>
+        <Heading as="h2" id="quartz-resources" variant="section-title">
           Resources
         </Heading>
         <List as="ul" listStyleType="disc" pl={6} spacing={2}>
@@ -245,7 +241,7 @@ const Project = () => (
       </Box>
 
       <Box as="section" aria-labelledby="quartz-meta" mt={6}>
-        <Heading as="h2" id="quartz-meta" size="md" mb={3}>
+        <Heading as="h2" id="quartz-meta" variant="section-title">
           Methods
         </Heading>
         <P>
@@ -254,7 +250,7 @@ const Project = () => (
       </Box>
       </Box>
       </Flex>
-    </Container>
+    </Box>
   </Layout>
 )
 

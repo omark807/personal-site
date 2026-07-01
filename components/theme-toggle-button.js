@@ -46,7 +46,7 @@ const ThemeToggleButton = () => {
                                         aria-label="Open theme and accessibility settings"
                                         aria-haspopup="dialog"
                                         isRound
-                                        colorScheme={useColorModeValue('blackAlpha', 'orange')}
+                                        colorScheme={useColorModeValue('blackAlpha', 'teal')}
                                         icon={<SettingsIcon aria-hidden="true" />}
                                 />
                         </PopoverTrigger>

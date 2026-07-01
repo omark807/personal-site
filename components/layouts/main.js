@@ -26,7 +26,7 @@ const Main = ({ children, router }) => {
                     position: 'fixed',
                     top: 0,
                     outline: '2px solid',
-                    outlineColor: 'orange.400',
+                    outlineColor: 'brand.DEFAULT',
                     outlineOffset: '2px'
                 }}
                 _focusVisible={{
@@ -41,7 +41,7 @@ const Main = ({ children, router }) => {
             <Navbar path={router.asPath} />
 
             <Container
-              maxW={router.pathname === '/' ? 'container.lg' : 'container.md'}
+              maxW="container.md"
               pt={8}
               id="main-content"
               tabIndex={-1}

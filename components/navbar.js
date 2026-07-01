@@ -10,26 +10,56 @@ import {
   MenuItem,
   MenuList,
   MenuButton,
+  MenuDivider,
   IconButton,
   Button,
+  Text,
   useColorModeValue,
 } from '@chakra-ui/react'
 import { HamburgerIcon, ChevronDownIcon } from '@chakra-ui/icons'
-import { IoLogoGithub, IoLogoLinkedin, IoSchoolSharp } from 'react-icons/io5'
 import ThemeToggleButton from './theme-toggle-button'
-import { CV_LONG_URL, CV_SHORT_URL } from '../lib/site'
+import { CV_LONG_URL, CV_SHORT_URL, SOCIAL_LINKS } from '../lib/site'
+
+const primaryNavLinks = [
+  { href: '/about', label: 'About' },
+  { href: '/projects', label: 'Projects' },
+  { href: '/experience', label: 'Experience' },
+  { href: '/research', label: 'Research' },
+]
+
+const moreNavLinks = [
+  { href: '/news', label: 'News' },
+  { href: '/life', label: 'Life' },
+]
+
+const contactNavLink = {
+  href: SOCIAL_LINKS.email,
+  label: 'Get in touch',
+}
+
+const socialNavLinks = [
+  { href: SOCIAL_LINKS.github, label: 'GitHub' },
+  { href: SOCIAL_LINKS.linkedin, label: 'LinkedIn' },
+  { href: SOCIAL_LINKS.scholar, label: 'Google Scholar' },
+]
 
 const LinkItem = ({ href, path, _target, children, ...props }) => {
   const active = path === href
   const inactiveColor = useColorModeValue('gray.800', 'whiteAlpha.900')
+  const activeBg = useColorModeValue('teal.50', 'whiteAlpha.200')
+  const activeColor = useColorModeValue('brand.DEFAULT', 'brand.muted')
   const isExternal = href?.startsWith('http') || href?.startsWith('mailto:')
   return (
     <Link
       as={isExternal ? 'a' : NextLink}
       href={href}
       p={2}
-      bg={active ? 'pinkyPink' : undefined}
-      color={active ? '#232323' : inactiveColor}
+      borderRadius="md"
+      bg={active ? activeBg : undefined}
+      color={active ? activeColor : inactiveColor}
+      fontWeight={active ? 'semibold' : 'normal'}
+      textDecoration={active ? 'underline' : 'none'}
+      textUnderlineOffset={3}
       target={_target}
       {...(isExternal && href?.startsWith('http') && { rel: 'noopener noreferrer' })}
       {...props}
@@ -39,24 +69,68 @@ const LinkItem = ({ href, path, _target, children, ...props }) => {
   )
 }
 
-const primaryNavLinks = [
-  { href: '/', label: 'Home' },
-  { href: '/projects', label: 'Projects' },
-  { href: '/experience', label: 'Experience' },
-  { href: '/research', label: 'Research' },
-  { href: '/about', label: 'About' },
-  { href: '/news', label: 'News' },
-  { href: '/life', label: 'Life' },
-]
+const MoreMenu = ({ path, navTextColor, placement = 'bottom-end' }) => {
+  const moreIsActive = moreNavLinks.some(({ href }) => path === href)
+  const activeColor = useColorModeValue('brand.DEFAULT', 'brand.muted')
 
-const contactNavLink = {
-  href: 'mailto:omark807@gmail.com',
-  label: 'Get in touch',
+  return (
+    <Menu placement={placement}>
+      <MenuButton
+        as={Button}
+        rightIcon={<ChevronDownIcon />}
+        variant="ghost"
+        p={2}
+        color={moreIsActive ? activeColor : navTextColor}
+        fontWeight={moreIsActive ? 'semibold' : 'normal'}
+        aria-label="Open more navigation links"
+        aria-haspopup="menu"
+      >
+        More
+      </MenuButton>
+      <MenuList>
+        {moreNavLinks.map(({ href, label }) => (
+          <MenuItem key={href} as={NextLink} href={href} fontWeight={path === href ? 'semibold' : 'normal'}>
+            {label}
+          </MenuItem>
+        ))}
+        <MenuDivider />
+        <MenuItem as={Link} href={CV_LONG_URL} target="_blank" rel="noopener noreferrer">
+          CV (Long-form)
+        </MenuItem>
+        <MenuItem as={Link} href={CV_SHORT_URL} target="_blank" rel="noopener noreferrer">
+          Resume (One-page)
+        </MenuItem>
+        <MenuDivider />
+        <MenuItem as={Link} href={contactNavLink.href}>
+          {contactNavLink.label}
+        </MenuItem>
+        {socialNavLinks.map(({ href, label }) => (
+          <MenuItem key={href} as={Link} href={href} target="_blank" rel="noopener noreferrer">
+            {label}
+          </MenuItem>
+        ))}
+      </MenuList>
+    </Menu>
+  )
 }
 
 const Navbar = (props) => {
   const { path } = props
   const navTextColor = useColorModeValue('gray.800', 'whiteAlpha.900')
+  const borderColor = useColorModeValue('gray.200', 'whiteAlpha.200')
+  const navBg = useColorModeValue('rgba(255, 253, 248, 0.92)', 'rgba(32, 32, 35, 0.92)')
+  const nameColor = useColorModeValue('gray.800', 'whiteAlpha.900')
+  const homeActiveColor = useColorModeValue('brand.DEFAULT', 'brand.muted')
+
+  const mobileNavItems = [
+    { href: '/', label: 'Home' },
+    ...primaryNavLinks,
+    ...moreNavLinks,
+    { href: CV_LONG_URL, label: 'CV (Long-form)', external: true },
+    { href: CV_SHORT_URL, label: 'Resume (One-page)', external: true },
+    { href: contactNavLink.href, label: contactNavLink.label, external: contactNavLink.href.startsWith('mailto:') },
+    ...socialNavLinks.map(({ href, label }) => ({ href, label, external: true })),
+  ]
 
   return (
     <Box
@@ -64,7 +138,9 @@ const Navbar = (props) => {
       top={0}
       as="nav"
       w="100%"
-      bg={useColorModeValue('whiteAlpha.800', '#20202380')}
+      bg={navBg}
+      borderBottomWidth="1px"
+      borderBottomColor={borderColor}
       style={{ backdropFilter: 'blur(10px)' }}
       zIndex={10}
       {...props}
@@ -73,99 +149,45 @@ const Navbar = (props) => {
         display="flex"
         p={2}
         maxW="container.lg"
-        flexWrap={{ base: 'wrap', xl: 'nowrap' }}
+        flexWrap="nowrap"
         alignItems="center"
         justifyContent="space-between"
       >
-        <Flex align="center" mr={5}>
-          <Box as="div" letterSpacing="tighter">
-            <Logo />
-          </Box>
+        <Flex align="center" gap={2} mr={4} flexShrink={0}>
+          <Logo />
+          <Link as={NextLink} href="/" _hover={{ textDecoration: 'none' }} aria-label="Home">
+            <Text
+              fontWeight="bold"
+              fontSize="sm"
+              letterSpacing="tight"
+              color={path === '/' ? homeActiveColor : nameColor}
+              display={{ base: 'none', sm: 'block' }}
+            >
+              Omar Khan
+            </Text>
+          </Link>
         </Flex>
 
         <Stack
-          direction={{ base: 'column', xl: 'row' }}
-          display={{ base: 'none', xl: 'flex' }}
-          width={{ base: 'full', md: 'auto' }}
+          direction="row"
+          display={{ base: 'none', lg: 'flex' }}
           alignItems="center"
           flexGrow={1}
           minW={0}
-          mt={{ base: 4, xl: 0 }}
           spacing={1}
+          justifyContent="flex-end"
         >
           {primaryNavLinks.map(({ href, label }) => (
             <LinkItem key={href} href={href} path={path}>
               {label}
             </LinkItem>
           ))}
-          <Menu>
-            <MenuButton
-              as={Button}
-              rightIcon={<ChevronDownIcon />}
-              variant="ghost"
-              p={2}
-              color={navTextColor}
-              aria-label="Open resume menu"
-              aria-haspopup="menu"
-            >
-              Résumé(s)
-            </MenuButton>
-            <MenuList>
-              <MenuItem as={Link} href={CV_LONG_URL} target="_blank" aria-label="Open CV (Long-form) (opens in new tab)">
-                CV (Long-form)
-              </MenuItem>
-              <MenuItem as={Link} href={CV_SHORT_URL} target="_blank" aria-label="Open Resume (One-page) (opens in new tab)">
-                Resume (One-page)
-              </MenuItem>
-            </MenuList>
-          </Menu>
-          <LinkItem href={contactNavLink.href} path={path}>
-            {contactNavLink.label}
-          </LinkItem>
-          <LinkItem
-            target="_blank"
-            href="https://github.com/omark807"
-            path={path}
-            display="inline-flex"
-            alignItems="center"
-            style={{ gap: 4 }}
-            pl={2}
-            aria-label="Visit Omar Khan's GitHub profile (opens in new tab)"
-          >
-            <IoLogoGithub />
-            <span className="sr-only">GitHub</span>
-          </LinkItem>
-          <LinkItem
-            target="_blank"
-            href="https://www.linkedin.com/in/omark807/"
-            path={path}
-            display="inline-flex"
-            alignItems="center"
-            style={{ gap: 4 }}
-            pl={2}
-            aria-label="Visit Omar Khan's LinkedIn profile (opens in new tab)"
-          >
-            <IoLogoLinkedin />
-            <span className="sr-only">LinkedIn</span>
-          </LinkItem>
-          <LinkItem
-            target="_blank"
-            href="https://scholar.google.com/citations?user=T6f-cucAAAAJ&hl=en"
-            path={path}
-            display="inline-flex"
-            alignItems="center"
-            style={{ gap: 4 }}
-            pl={2}
-            aria-label="Visit Omar Khan's Google Scholar profile (opens in new tab)"
-          >
-            <IoSchoolSharp />
-            <span className="sr-only">Google Scholar</span>
-          </LinkItem>
+          <MoreMenu path={path} navTextColor={navTextColor} />
         </Stack>
 
         <Box flexShrink={0} ml={2} display="flex" alignItems="center" justifyContent="flex-end">
           <ThemeToggleButton />
-          <Box ml={2} display={{ base: 'inline-block', xl: 'none' }}>
+          <Box ml={2} display={{ base: 'inline-block', lg: 'none' }}>
             <Menu isLazy id="navbar-menu">
               <MenuButton
                 as={IconButton}
@@ -175,45 +197,18 @@ const Navbar = (props) => {
                 aria-label="Open navigation menu"
                 aria-haspopup="menu"
               />
-              <MenuList>
-                {primaryNavLinks.map(({ href, label }) => (
-                  <MenuItem key={href} as={NextLink} href={href}>
+              <MenuList maxH="70vh" overflowY="auto">
+                {mobileNavItems.map(({ href, label, external }) => (
+                  <MenuItem
+                    key={`${href}-${label}`}
+                    as={external ? Link : NextLink}
+                    href={href}
+                    {...(external && href.startsWith('http') && { target: '_blank', rel: 'noopener noreferrer' })}
+                    fontWeight={path === href ? 'semibold' : 'normal'}
+                  >
                     {label}
                   </MenuItem>
                 ))}
-                <Menu placement="right-start">
-                  <MenuButton
-                    as={Button}
-                    rightIcon={<ChevronDownIcon />}
-                    variant="ghost"
-                    p={2}
-                    color={navTextColor}
-                    aria-label="Open resume menu"
-                    aria-haspopup="menu"
-                  >
-                    Résumé(s)
-                  </MenuButton>
-                  <MenuList>
-                    <MenuItem as={Link} href={CV_LONG_URL} target="_blank" aria-label="Open CV (Long-form) (opens in new tab)">
-                      CV (Long-form)
-                    </MenuItem>
-                    <MenuItem as={Link} href={CV_SHORT_URL} target="_blank" aria-label="Open Resume (One-page) (opens in new tab)">
-                      Resume (One-page)
-                    </MenuItem>
-                  </MenuList>
-                </Menu>
-                <MenuItem as={Link} href={contactNavLink.href}>
-                  {contactNavLink.label}
-                </MenuItem>
-                <MenuItem as={Link} href="https://github.com/omark807" target="_blank" aria-label="Visit Omar Khan's GitHub profile (opens in new tab)">
-                  GitHub
-                </MenuItem>
-                <MenuItem as={Link} href="https://www.linkedin.com/in/omark807" target="_blank" aria-label="Visit Omar Khan's LinkedIn profile (opens in new tab)">
-                  LinkedIn
-                </MenuItem>
-                <MenuItem as={Link} href="https://scholar.google.com/citations?user=T6f-cucAAAAJ&hl=en" target="_blank" aria-label="Visit Omar Khan's Google Scholar profile (opens in new tab)">
-                  Google Scholar
-                </MenuItem>
               </MenuList>
             </Menu>
           </Box>

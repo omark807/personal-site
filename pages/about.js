@@ -1,4 +1,4 @@
-import { Container, Heading, Link, ListItem, Grid, GridItem, List, ListIcon, Box, Flex } from '@chakra-ui/react'
+import { Heading, Link, ListItem, Grid, GridItem, List, ListIcon, Box, Flex } from '@chakra-ui/react'
 import Layout from '../components/layouts/article'
 import Paragraph from '../components/paragraph'
 import Section from '../components/section'
@@ -47,7 +47,6 @@ const MarkdownLink = ({ href, children, ...props }) => {
 
 const AboutMe = () => (
   <Layout title="About" canonicalPath="/about">
-    <Container>
       <Flex direction={{ base: 'column', md: 'row' }} gap={4}>
         <PageNav sections={sections} />
         <Box flex={1} minW={0}>
@@ -70,9 +69,7 @@ const AboutMe = () => (
             </ReactMarkdown>
 
             <Paragraph>
-              For a scannable overview of education, experience, and selected work, see my{' '}
-              <Link href="/experience">Experience</Link> page. For more personal writing, I share
-              thoughts on my{' '}
+              For more personal writing, I share thoughts on my{' '}
               <Link href="https://substack.com/@winterydaphne" isExternal>
                 Substack
               </Link>
@@ -165,7 +162,6 @@ const AboutMe = () => (
           </Section>
         </Box>
       </Flex>
-    </Container>
   </Layout>
 )
 

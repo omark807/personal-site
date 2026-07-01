@@ -1,14 +1,15 @@
 import { useMemo, useState } from 'react'
-import { Container, Heading, SimpleGrid, HStack, Text, Button } from '@chakra-ui/react'
+import { Heading, SimpleGrid, HStack, Text, Button } from '@chakra-ui/react'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
+import Paragraph from '../components/paragraph'
 import { WorkGridItem } from '../components/grid-item'
 
 const focusOptions = [
-  { id: 'all', label: 'All', colorScheme: 'orange' },
-  { id: 'ux', label: 'UX research-focused', colorScheme: 'purple' },
-  { id: 'product', label: 'Product-focused', colorScheme: 'green' },
-  { id: 'academic', label: 'Academic-facing', colorScheme: 'blue' },
+  { id: 'all', label: 'All' },
+  { id: 'ux', label: 'UX research-focused' },
+  { id: 'product', label: 'Product-focused' },
+  { id: 'academic', label: 'Academic-facing' },
 ]
 
 const projects = [
@@ -21,7 +22,7 @@ const projects = [
     focuses: ['ux', 'product', 'academic'],
     metadata: ['Interviews · co-design · usability evaluation'],
     description:
-      'Enabling BLV researchers to independently analyze qualitative visualizations through co-designed multimodal interactions and evidence-backed design guidance.',
+      'Co-designing qualitative visualization tools with BLV researchers through multimodal interactions and design guidelines informed by user studies.',
   },
   {
     id: 'dmh',
@@ -32,7 +33,7 @@ const projects = [
     focuses: ['ux', 'product'],
     metadata: ['Interviews · surveys · need-finding'],
     description:
-      'Clarified unmet needs in digital mental health tracking and translated BLV community insights into actionable product and design recommendations.',
+      'Interviewed BLV users about digital mental health tracking and surfaced design recommendations grounded in what participants actually needed from these tools.',
   },
   {
     id: 'maidr',
@@ -57,10 +58,12 @@ const Projects = () => {
 
   return (
     <Layout title="Projects" canonicalPath="/projects">
-      <Container>
-        <Heading as="h1" fontSize={24} mb={6}>
+        <Heading as="h1" variant="section-title" mb={4}>
           UX Research Projects
         </Heading>
+        <Paragraph>
+          Three case studies with blind and low-vision participants — methods, outcomes, and reflections.
+        </Paragraph>
         <Text mb={3} fontSize="sm">
           Show by focus:
         </Text>
@@ -70,8 +73,7 @@ const Projects = () => {
               key={option.id}
               size="sm"
               onClick={() => setActiveFocus(option.id)}
-              colorScheme={option.colorScheme}
-              variant={activeFocus === option.id ? 'solid' : 'ghost'}
+              variant={activeFocus === option.id ? 'brand' : 'ghost'}
               aria-pressed={activeFocus === option.id}
             >
               {option.label}
@@ -87,7 +89,6 @@ const Projects = () => {
                 title={project.title}
                 thumbnail={project.thumbnail}
                 role={project.role}
-                tags={project.tags}
                 metadata={project.metadata}
               >
                 {project.description}
@@ -101,7 +102,6 @@ const Projects = () => {
             No projects match this focus yet.
           </Text>
         )}
-      </Container>
     </Layout>
   )
 }

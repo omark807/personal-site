@@ -1,5 +1,4 @@
 import {
-  Container,
   Heading,
   Text,
   Box,
@@ -16,8 +15,7 @@ const BlogPost = () => {
 
   return (
     <Layout title="My Steps (and Stumbles) Into Research" canonicalPath="/blog/my-pathway-to-ux-research">
-      <Container as="article" maxW="container.md">
-        <Box py={4}>
+        <Box as="article" py={4}>
           <Heading as="h1" size="xl" mb={2}>
             My Steps (and Stumbles) Into Research
           </Heading>
@@ -33,7 +31,6 @@ const BlogPost = () => {
             <Link href="https://substack.com/@winterydaphne" isExternal>Substack</Link>.
           </Paragraph>
         </Box>
-      </Container>
     </Layout>
   )
 }

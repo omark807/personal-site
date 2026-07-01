@@ -1,7 +1,5 @@
 import NextLink from 'next/link'
 import {
-  Container,
-  Badge,
   List,
   ListItem,
   Heading,
@@ -15,8 +13,8 @@ import Layout from '../../components/layouts/article'
 import PageNav from '../../components/page-nav'
 
 const sections = [
-  { id: 'maidr-summary', label: 'Overview' },
   { id: 'maidr-glance', label: 'At a glance' },
+  { id: 'maidr-summary', label: 'Summary' },
   { id: 'maidr-project', label: 'Context' },
   { id: 'maidr-objective', label: 'Objective' },
   { id: 'maidr-work', label: 'What I did' },
@@ -29,26 +27,15 @@ const sections = [
 
 const Project = () => (
   <Layout title="MAIDR">
-    <Container as="main" maxW="container.md">
+    <Box as="main">
       <Flex direction={{ base: 'column', md: 'row' }} gap={4}>
       <PageNav sections={sections} />
       <Box flex={1} minW={0}>
-      <Title>
-        MAIDR <Badge>Project</Badge>
-      </Title>
+      <Title>MAIDR</Title>
       <WorkImage src="/images/maidr_logo.svg" alt="MAIDR logo" />
 
-      <Box as="section" aria-labelledby="maidr-summary" mt={6}>
-        <Heading as="h2" id="maidr-summary" size="md" mb={3}>
-          Contribution overview
-        </Heading>
-        <P>
-          I co-authored <strong>Sensing the Shape of Data</strong>, a study on how blind and low-vision (BLV) learners interpret histogram concepts through non-visual modalities. I contributed to study design, in-person data collection, and mixed-method analysis.
-        </P>
-      </Box>
-
-      <Box as="section" aria-labelledby="maidr-glance" mt={6}>
-        <Heading as="h2" id="maidr-glance" size="md" mb={3}>
+      <Box as="section" aria-labelledby="maidr-glance" mt={4}>
+        <Heading as="h2" id="maidr-glance" variant="section-title">
           At a glance
         </Heading>
         <List spacing={2}>
@@ -60,8 +47,17 @@ const Project = () => (
         </List>
       </Box>
 
+      <Box as="section" aria-labelledby="maidr-summary" mt={6}>
+        <Heading as="h2" id="maidr-summary" variant="section-title">
+          Summary
+        </Heading>
+        <P>
+          I co-authored <strong>Sensing the Shape of Data</strong>, a study on how blind and low-vision (BLV) learners interpret histogram concepts through non-visual modalities. I contributed to study design, in-person data collection, and mixed-method analysis.
+        </P>
+      </Box>
+
       <Box as="section" aria-labelledby="maidr-project" mt={6}>
-        <Heading as="h2" id="maidr-project" size="md" mb={3}>
+        <Heading as="h2" id="maidr-project" variant="section-title">
           Paper context
         </Heading>
         <P>
@@ -70,7 +66,7 @@ const Project = () => (
       </Box>
 
       <Box as="section" aria-labelledby="maidr-objective" mt={6}>
-        <Heading as="h2" id="maidr-objective" size="md" mb={3}>
+        <Heading as="h2" id="maidr-objective" variant="section-title">
           Research objective
         </Heading>
         <P>
@@ -79,7 +75,7 @@ const Project = () => (
       </Box>
 
       <Box as="section" aria-labelledby="maidr-work" mt={6}>
-        <Heading as="h2" id="maidr-work" size="md" mb={3}>
+        <Heading as="h2" id="maidr-work" variant="section-title">
           What I did
         </Heading>
         <List as="ul" listStyleType="disc" pl={6} spacing={2}>
@@ -102,7 +98,7 @@ const Project = () => (
       </Box>
 
       <Box as="section" aria-labelledby="maidr-result" mt={6}>
-        <Heading as="h2" id="maidr-result" size="md" mb={3}>
+        <Heading as="h2" id="maidr-result" variant="section-title">
           Findings and impact
         </Heading>
         <Heading as="h3" size="sm" mb={2}>
@@ -128,7 +124,7 @@ const Project = () => (
       </Box>
 
       <Box as="section" aria-labelledby="maidr-reflection" mt={6}>
-        <Heading as="h2" id="maidr-reflection" size="md" mb={3}>
+        <Heading as="h2" id="maidr-reflection" variant="section-title">
           Reflection
         </Heading>
         <P>
@@ -139,7 +135,7 @@ const Project = () => (
       </Box>
 
       <Box as="section" aria-labelledby="maidr-ux-skills" mt={6}>
-        <Heading as="h2" id="maidr-ux-skills" size="md" mb={3}>
+        <Heading as="h2" id="maidr-ux-skills" variant="section-title">
           Skills demonstrated
         </Heading>
         <List as="ul" listStyleType="disc" pl={6} spacing={1}>
@@ -152,7 +148,7 @@ const Project = () => (
       </Box>
 
       <Box as="section" aria-labelledby="maidr-publications" mt={6}>
-        <Heading as="h2" id="maidr-publications" size="md" mb={3}>
+        <Heading as="h2" id="maidr-publications" variant="section-title">
           Publications and resources
         </Heading>
         <List as="ul" listStyleType="disc" pl={6} spacing={2}>
@@ -205,7 +201,7 @@ const Project = () => (
       </Box>
 
       <Box as="section" aria-labelledby="maidr-meta" mt={6}>
-        <Heading as="h2" id="maidr-meta" size="md" mb={3}>
+        <Heading as="h2" id="maidr-meta" variant="section-title">
           Methods
         </Heading>
         <List as="ul" listStyleType="disc" pl={6} spacing={1}>
@@ -217,7 +213,7 @@ const Project = () => (
       </Box>
       </Box>
       </Flex>
-    </Container>
+    </Box>
   </Layout>
 )
 

@@ -1,7 +1,5 @@
 import NextLink from 'next/link'
 import {
-  Container,
-  Badge,
   List,
   ListItem,
   Heading,
@@ -15,8 +13,8 @@ import Layout from '../../components/layouts/article'
 import PageNav from '../../components/page-nav'
 
 const sections = [
-  { id: 'dmh-summary', label: 'Summary' },
   { id: 'dmh-glance', label: 'At a glance' },
+  { id: 'dmh-summary', label: 'Summary' },
   { id: 'dmh-project', label: 'Project' },
   { id: 'dmh-objective', label: 'Objective' },
   { id: 'dmh-work', label: 'Work' },
@@ -29,38 +27,36 @@ const sections = [
 
 const Project = () => (
   <Layout title="Digital Mental Health & BLV">
-    <Container as="main" maxW="container.md">
+    <Box as="main">
       <Flex direction={{ base: 'column', md: 'row' }} gap={4}>
       <PageNav sections={sections} />
       <Box flex={1} minW={0}>
-      <Title>
-        Digital Mental Health (DMH) <Badge>Project</Badge>
-      </Title>
+      <Title>Digital Mental Health (DMH)</Title>
       <WorkImage src="/images/dmh.png" alt="Digital mental health and accessibility" />
 
-      <Box as="section" aria-labelledby="dmh-summary" mt={4}>
-        <Heading as="h2" id="dmh-summary" size="md" mb={3}>
-          Executive summary
-        </Heading>
-        <P>
-          This project investigates how digital mental health tools exclude blind and low-vision users and what inclusive alternatives should look like. As lead researcher, I conducted need-finding research that produced evidence-based recommendations teams can use to design accessible DMH products.
-        </P>
-      </Box>
-
-      <Box as="section" aria-labelledby="dmh-glance" mt={6}>
-        <Heading as="h2" id="dmh-glance" size="md" mb={3}>
+      <Box as="section" aria-labelledby="dmh-glance" mt={4}>
+        <Heading as="h2" id="dmh-glance" variant="section-title">
           At a glance
         </Heading>
         <List spacing={2}>
           <ListItem><strong>Role:</strong> Lead researcher</ListItem>
           <ListItem><strong>Collaborator:</strong> JooYoung Seo (UIUC)</ListItem>
           <ListItem><strong>Methods:</strong> Interviews, surveys, need-finding, synthesis into product recommendations</ListItem>
-          <ListItem><strong>Tools and outputs:</strong> CHI EA publication, arXiv preprint, actionable design recommendations</ListItem>
+          <ListItem><strong>Tools and outputs:</strong> CHI EA publication, arXiv preprint, design recommendations for inclusive DMH products</ListItem>
         </List>
       </Box>
 
+      <Box as="section" aria-labelledby="dmh-summary" mt={6}>
+        <Heading as="h2" id="dmh-summary" variant="section-title">
+          Summary
+        </Heading>
+        <P>
+          This project investigates how digital mental health tools exclude blind and low-vision users and what inclusive alternatives should look like. As lead researcher, I conducted need-finding research that produced evidence-based recommendations teams can use to design accessible DMH products.
+        </P>
+      </Box>
+
       <Box as="section" aria-labelledby="dmh-project" mt={4}>
-        <Heading as="h2" id="dmh-project" size="md" mb={3}>
+        <Heading as="h2" id="dmh-project" variant="section-title">
           Project
         </Heading>
         <P>
@@ -69,7 +65,7 @@ const Project = () => (
       </Box>
 
       <Box as="section" aria-labelledby="dmh-objective" mt={6}>
-        <Heading as="h2" id="dmh-objective" size="md" mb={3}>
+        <Heading as="h2" id="dmh-objective" variant="section-title">
           Objective
         </Heading>
         <P>
@@ -91,7 +87,7 @@ const Project = () => (
       </Box>
 
       <Box as="section" aria-labelledby="dmh-work" mt={6}>
-        <Heading as="h2" id="dmh-work" size="md" mb={3}>
+        <Heading as="h2" id="dmh-work" variant="section-title">
           Work
         </Heading>
         <P>
@@ -99,7 +95,7 @@ const Project = () => (
           community using interviews and need-finding to capture lived
           experiences, barriers, and desired features in digital mental health
           tools. Analysis centered on community perspectives to produce
-          actionable recommendations for more inclusive design and future
+          recommendations for more inclusive design and future
           development of accessible DMH tracking services.
         </P>
         <P mt={2}>
@@ -108,7 +104,7 @@ const Project = () => (
       </Box>
 
       <Box as="section" aria-labelledby="dmh-result" mt={6}>
-        <Heading as="h2" id="dmh-result" size="md" mb={3}>
+        <Heading as="h2" id="dmh-result" variant="section-title">
           End result
         </Heading>
         <Heading as="h3" size="sm" mb={2}>
@@ -126,7 +122,7 @@ const Project = () => (
       </Box>
 
       <Box as="section" aria-labelledby="dmh-reflection" mt={6}>
-        <Heading as="h2" id="dmh-reflection" size="md" mb={3}>
+        <Heading as="h2" id="dmh-reflection" variant="section-title">
           Reflection
         </Heading>
         <P>
@@ -135,20 +131,19 @@ const Project = () => (
       </Box>
 
       <Box as="section" aria-labelledby="dmh-ux-skills" mt={6}>
-        <Heading as="h2" id="dmh-ux-skills" size="md" mb={3}>
+        <Heading as="h2" id="dmh-ux-skills" variant="section-title">
           Research skills demonstrated
         </Heading>
         <List as="ul" listStyleType="disc" pl={6} spacing={1}>
           <ListItem>User interviews and surveys with underserved populations</ListItem>
           <ListItem>Need-finding and problem definition</ListItem>
           <ListItem>Synthesis into personas and evidence-based recommendations</ListItem>
-          <ListItem>Translating research into actionable product and design insights</ListItem>
           <ListItem>Stakeholder collaboration throughout</ListItem>
         </List>
       </Box>
 
       <Box as="section" aria-labelledby="dmh-resources" mt={6}>
-        <Heading as="h2" id="dmh-resources" size="md" mb={3}>
+        <Heading as="h2" id="dmh-resources" variant="section-title">
           Resources
         </Heading>
         <List as="ul" listStyleType="disc" pl={6} spacing={2}>
@@ -182,16 +177,16 @@ const Project = () => (
       </Box>
 
       <Box as="section" aria-labelledby="dmh-meta" mt={6}>
-        <Heading as="h2" id="dmh-meta" size="md" mb={3}>
+        <Heading as="h2" id="dmh-meta" variant="section-title">
           Methods
         </Heading>
         <P>
-          User interviews and surveys, need-finding, persona and segment understanding, actionable insights for product and design, stakeholder collaboration.
+          User interviews and surveys, need-finding, persona and segment understanding, product and design insights, stakeholder collaboration.
         </P>
       </Box>
       </Box>
       </Flex>
-    </Container>
+    </Box>
   </Layout>
 )
 

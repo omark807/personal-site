@@ -41,8 +41,8 @@ const Project = () => (
         <List spacing={2}>
           <ListItem><strong>Role:</strong> Lead researcher</ListItem>
           <ListItem><strong>Collaborator:</strong> JooYoung Seo (UIUC)</ListItem>
-          <ListItem><strong>Methods:</strong> Interviews, surveys, need-finding, synthesis into product recommendations</ListItem>
-          <ListItem><strong>Tools and outputs:</strong> CHI EA publication, arXiv preprint, design recommendations for inclusive DMH products</ListItem>
+          <ListItem><strong>Methods:</strong> Explanatory sequential mixed methods — survey (n=93, Kruskal-Wallis) followed by semi-structured interviews (n=10)</ListItem>
+          <ListItem><strong>Tools and outputs:</strong> CHI EA and ASSETS publications, arXiv preprint, design recommendations for inclusive DMH products</ListItem>
         </List>
       </Box>
 
@@ -51,7 +51,7 @@ const Project = () => (
           Summary
         </Heading>
         <P>
-          This project investigates how digital mental health tools exclude blind and low-vision users and what inclusive alternatives should look like. As lead researcher, I conducted need-finding research that produced evidence-based recommendations teams can use to design accessible DMH products.
+          This project investigates how digital mental health tools exclude blind and low-vision users and what inclusive alternatives should look like. As lead researcher, I ran an explanatory sequential mixed-methods study — a survey of 93 BLV respondents (analyzed with Kruskal-Wallis tests) to establish where experiences diverged, followed by 10 semi-structured interviews to explain why — and turned the combined evidence into recommendations teams can use to design accessible DMH products.
         </P>
       </Box>
 
@@ -60,7 +60,7 @@ const Project = () => (
           Project
         </Heading>
         <P>
-          <strong>My role:</strong> Lead researcher. <strong>Collaborator:</strong> JooYoung Seo, University of Illinois Urbana-Champaign. <strong>Scope:</strong> Need-finding research to understand how blind and low-vision (BLV) individuals experience digital mental health (DMH) tracking tools (e.g., mood, habits, wellness) and what they need from accessible DMH products. I led study design, recruitment, interviews, analysis, and translation of findings into recommendations for product and design.
+          <strong>My role:</strong> Lead researcher. <strong>Collaborator:</strong> JooYoung Seo, University of Illinois Urbana-Champaign. <strong>Scope:</strong> A mixed-methods study of how blind and low-vision (BLV) individuals experience digital mental health (DMH) tracking tools (e.g., mood, habits, wellness) and what they need from accessible DMH products. I led study design, recruitment, the survey and its statistical analysis, the interviews, integration of the two strands, and translation of findings into recommendations for product and design.
         </P>
       </Box>
 
@@ -91,15 +91,31 @@ const Project = () => (
           Work
         </Heading>
         <P>
-          I conducted research <strong>with and for</strong> the blind
-          community using interviews and need-finding to capture lived
-          experiences, barriers, and desired features in digital mental health
-          tools. Analysis centered on community perspectives to produce
-          recommendations for more inclusive design and future
-          development of accessible DMH tracking services.
+          I ran the study <strong>with and for</strong> the blind community in
+          two connected phases:
         </P>
+        <List as="ol" listStyleType="decimal" pl={6} mt={2} spacing={1}>
+          <ListItem>
+            <strong>Quantitative phase.</strong> A survey of 93 BLV respondents
+            about their use of and barriers with DMH tracking tools. I used
+            Kruskal-Wallis tests to identify where responses differed
+            significantly across groups, which pinpointed the barriers worth
+            explaining in depth.
+          </ListItem>
+          <ListItem>
+            <strong>Qualitative phase.</strong> 10 semi-structured interviews,
+            sampled to follow up on the survey signals, to capture lived
+            experiences and the &quot;why&quot; behind the numbers, analyzed
+            with reflexive thematic analysis.
+          </ListItem>
+        </List>
         <P mt={2}>
-          <strong>Methods:</strong> User interviews and surveys with BLV participants; need-finding and problem definition; synthesis into personas/segments and evidence-based recommendations for product and design. Collaboration with academic advisor and community stakeholders throughout.
+          <strong>Methods:</strong> Explanatory sequential mixed methods; survey
+          design and non-parametric analysis (Kruskal-Wallis); semi-structured
+          interviews and reflexive thematic analysis; integration of quant and
+          qual strands into evidence-based recommendations for product and
+          design. Collaboration with academic advisor and community stakeholders
+          throughout.
         </P>
       </Box>
 
@@ -111,13 +127,23 @@ const Project = () => (
           Insights &amp; recommendations
         </Heading>
         <P mb={2}>
-          Key findings and recommendations were synthesized and communicated in a CHI EA &apos;25 paper and supporting materials, informing how product and design teams can prioritize accessibility and inclusivity in DMH tracking features (e.g., screen reader support, non-visual feedback, reduced reliance on charts).
+          The survey established statistically distinct patterns in how BLV users
+          experience DMH tools, and the interviews explained them — pointing to
+          concrete design priorities like screen reader support, non-visual
+          feedback for tracking and progress, and reduced reliance on charts.
+          Findings were published as a CHI EA &apos;25 late-breaking work and a
+          fuller ASSETS 2026 paper.
         </P>
         <Heading as="h3" size="sm" mb={2}>
           Impact
         </Heading>
         <P>
-          The work surfaces unmet needs in an underserved domain and provides evidence-based direction for building DMH tools that support mental health access for BLV users. It demonstrates how need-finding with affected communities can directly shape product and design priorities.
+          Pairing quantitative signal with qualitative explanation gives product
+          and design teams both the &quot;how many / how much&quot; and the
+          &quot;why&quot; they need to prioritize accessibility work in an
+          underserved domain. The study also demonstrates independent
+          mixed-methods capability — survey design, non-parametric statistics,
+          and qualitative integration — not qualitative research alone.
         </P>
       </Box>
 
@@ -135,9 +161,10 @@ const Project = () => (
           Research skills demonstrated
         </Heading>
         <List as="ul" listStyleType="disc" pl={6} spacing={1}>
-          <ListItem>User interviews and surveys with underserved populations</ListItem>
-          <ListItem>Need-finding and problem definition</ListItem>
-          <ListItem>Synthesis into personas and evidence-based recommendations</ListItem>
+          <ListItem>Explanatory sequential mixed-methods study design</ListItem>
+          <ListItem>Survey design and quantitative analysis (non-parametric / Kruskal-Wallis)</ListItem>
+          <ListItem>Semi-structured interviews and reflexive thematic analysis</ListItem>
+          <ListItem>Integration of quantitative and qualitative strands into evidence-based recommendations</ListItem>
           <ListItem>Stakeholder collaboration throughout</ListItem>
         </List>
       </Box>
@@ -181,7 +208,7 @@ const Project = () => (
           Methods
         </Heading>
         <P>
-          User interviews and surveys, need-finding, persona and segment understanding, product and design insights, stakeholder collaboration.
+          Explanatory sequential mixed methods: survey design and non-parametric analysis (Kruskal-Wallis), semi-structured interviews and reflexive thematic analysis, integration of quantitative and qualitative findings into product and design recommendations, stakeholder collaboration.
         </P>
       </Box>
       </Box>

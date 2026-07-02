@@ -8,8 +8,12 @@ import {
   HStack,
   Icon,
   Image,
+  List,
+  ListItem,
+  ListIcon,
   useColorModeValue,
 } from '@chakra-ui/react'
+import { CheckCircleIcon } from '@chakra-ui/icons'
 import { FaGithub, FaLinkedin, FaFileAlt, FaFilePdf } from 'react-icons/fa'
 import { IoSchoolSharp } from 'react-icons/io5'
 import NextLink from 'next/link'
@@ -17,7 +21,14 @@ import Section from '../components/section'
 import Paragraph from '../components/paragraph'
 import { PublicationImpact } from '../components/publication-highlight'
 import Layout from '../components/layouts/article'
-import { CV_LONG_URL, CV_SHORT_URL, SOCIAL_LINKS, absoluteUrl } from '../lib/site'
+import {
+  CV_LONG_URL,
+  CV_SHORT_URL,
+  SOCIAL_LINKS,
+  absoluteUrl,
+  AVAILABILITY,
+  PROOF_POINTS,
+} from '../lib/site'
 import { getLatestNews, formatNewsLabel } from '../lib/news'
 
 const latestNews = getLatestNews(3)
@@ -135,8 +146,14 @@ const Page = () => {
             <Heading as="h1" variant="section-title" id="page-title">
               Omar Khan
             </Heading>
-            <Text fontSize="lg" color={heroTextColor}>
-              Mixed-methods researcher and PhD candidate in HCI, human-AI interaction, and accessibility @ UIUC
+            <Text fontSize="lg" fontWeight="medium">
+              Mixed-methods HCI researcher who builds and evaluates accessible AI systems
+            </Text>
+            <Text fontSize="sm" color={heroTextColor}>
+              PhD candidate at UIUC · accessibility + human-AI interaction
+            </Text>
+            <Text fontSize="sm" color={heroTextColor} maxW="34rem">
+              {AVAILABILITY}
             </Text>
             <HStack spacing={5} pt={1} role="list" aria-label="Profile and resume links">
               {profileLinks.map(({ href, label, icon, external }) => (
@@ -164,10 +181,26 @@ const Page = () => {
 
         <Section delay={0.1}>
           <Paragraph>
-          I leverage <b>mixed-methods and UX research principles</b> to co-design with blind and low-vision (BLV) communities (and sometimes beyond), building and studying the tools researchers and everyday people rely on to make sense of data, and increasingly, AI. My work turns messy, real-world context into things people can <i>actually</i> use: <b>accessible data-visualization systems, design approaches, and empirical evidence</b> that shape how products get built and theory is refined. It lives at the intersection of accessibility and HCI, and shows up at venues like CHI and ASSETS, which you can find more about on my <Link as={NextLink} href="/research">Research</Link> page.
-
-
+            I co-design with blind and low-vision (BLV) communities to build and evaluate the
+            tools people rely on to make sense of data — and, increasingly, AI. I turn messy,
+            real-world context into things people can <i>actually</i> use: accessible
+            data-visualization systems, design guidelines, and empirical evidence that shape how
+            products get built. My work shows up at venues like CHI and ASSETS — more on my{' '}
+            <Link as={NextLink} href="/research">Research</Link> page.
           </Paragraph>
+          <List spacing={2} mt={2} aria-label="Highlights">
+            {PROOF_POINTS.map((point) => (
+              <ListItem key={point} display="flex" alignItems="flex-start">
+                <ListIcon
+                  as={CheckCircleIcon}
+                  color={iconHoverColor}
+                  mt={1}
+                  aria-hidden="true"
+                />
+                <Text as="span">{point}</Text>
+              </ListItem>
+            ))}
+          </List>
           <Paragraph>
             Outside research: cats, cooking, and too many parentheticals — more on{' '}
             <Link as={NextLink} href="/life">Life</Link>.

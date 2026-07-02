@@ -1,11 +1,12 @@
-import { Heading, Link, ListItem, Grid, GridItem, List, ListIcon, Box, Flex } from '@chakra-ui/react'
+import { Heading, Link, ListItem, Grid, GridItem, List, ListIcon, Box, Flex, Text } from '@chakra-ui/react'
 import Layout from '../components/layouts/article'
 import Paragraph from '../components/paragraph'
 import Section from '../components/section'
 import PageNav from '../components/page-nav'
-import { StarIcon, EditIcon, RepeatClockIcon, DownloadIcon, SunIcon, ChevronUpIcon, ChevronRightIcon } from '@chakra-ui/icons'
+import { StarIcon, EditIcon, RepeatClockIcon, DownloadIcon, SunIcon, ChevronUpIcon, ChevronRightIcon, CheckCircleIcon } from '@chakra-ui/icons'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
+import { AVAILABILITY, PROOF_POINTS } from '../lib/site'
 
 const aboutMarkdown = `
 I am a PhD candidate in Computer Science at the University of Illinois Urbana-Champaign (UIUC), focusing on research at the intersection of human-computer interaction (HCI), AI, and accessibility. I am fortunate to be advised by [Dr. JooYoung Seo](http://jooyoungseo.me/) and work in the [(x)Ability Design Lab](https://xabilitylab.ischool.illinois.edu/). My research investigates co-designing qualitative data visualizations with blind and low-vision (BLV) communities, enabling them to independently analyze qualitative visualizations through multimodal interactions and evidence-backed design guidance. I also have interests in human-centered design in a broad range of contexts, which you should check out in the [Research](/research) section of my site.
@@ -54,6 +55,31 @@ const AboutMe = () => (
             <Heading as="h1" id="hi-there" variant="section-title">
               Hi there!
             </Heading>
+
+            <Box
+              mb={6}
+              p={4}
+              borderWidth="1px"
+              borderColor="border.default"
+              borderRadius="lg"
+            >
+              <Text fontWeight="medium" mb={2}>
+                I&apos;m a mixed-methods HCI researcher who builds and evaluates
+                accessible AI systems with and for blind and low-vision
+                communities.
+              </Text>
+              <List spacing={2} mb={2} aria-label="Highlights">
+                {PROOF_POINTS.map((point) => (
+                  <ListItem key={point} display="flex" alignItems="flex-start">
+                    <ListIcon as={CheckCircleIcon} color="brand.600" mt={1} aria-hidden="true" />
+                    <Text as="span">{point}</Text>
+                  </ListItem>
+                ))}
+              </List>
+              <Text fontSize="sm" color="text.muted">
+                {AVAILABILITY}
+              </Text>
+            </Box>
 
             <ReactMarkdown
               remarkPlugins={[remarkGfm]}

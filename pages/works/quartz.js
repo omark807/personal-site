@@ -45,7 +45,7 @@ const Project = () => (
         <List spacing={2}>
           <ListItem><strong>Role:</strong> Lead researcher</ListItem>
           <ListItem><strong>Collaborator:</strong> Dr. JooYoung Seo (UIUC)</ListItem>
-          <ListItem><strong>Methods:</strong> Interviews, participatory co-design, qualitative analysis, usability-oriented evaluation</ListItem>
+          <ListItem><strong>Methods:</strong> Interviews, participatory co-design, qualitative analysis, RITE evaluation (8 BLV participants, 12 tasks, 4 visualization types)</ListItem>
           <ListItem><strong>Tools and outputs:</strong> QUARTZ interface, multimodal representations, design guidelines</ListItem>
         </List>
       </Box>
@@ -55,7 +55,7 @@ const Project = () => (
           Summary
         </Heading>
         <P>
-          QUARTZ closes an accessibility gap in qualitative visualization workflows for blind and low-vision researchers. As lead researcher, I ran co-design and evaluation that produced design guidelines and an open-source multimodal system built with BLV researchers.
+          QUARTZ closes an accessibility gap in qualitative visualization workflows for blind and low-vision researchers. As lead researcher, I ran co-design and a RITE (Rapid Iterative Testing and Evaluation) study with 8 BLV researchers across 12 tasks and 4 visualization types, iterating the system between rounds so each research finding drove a concrete design change. The result: an open-source multimodal system and design guidelines built with, not just for, BLV researchers.
         </P>
       </Box>
 
@@ -136,7 +136,7 @@ const Project = () => (
           with coding stripes.
         </P>
         <P mt={3}>
-          <strong>Methods:</strong> Participatory co-design and user interviews with BLV practitioners; qualitative analysis and thematic coding; usability-oriented evaluation of multimodal representations. Findings directly informed design guidelines and system requirements.
+          <strong>Methods:</strong> Participatory co-design and user interviews with BLV practitioners; qualitative analysis and thematic coding; and a RITE evaluation with 8 BLV researchers spanning 12 tasks across all 4 supported visualization types (network graphs, concept maps, coding hierarchies, and annotated text views). RITE is iterative by design: after each round I coded what broke down, changed the system, and re-tested with the next participants, so the evaluation itself is the record of research driving design decisions rather than a one-shot usability check.
         </P>
         <Box mt={4} mb={2}>
           <Image
@@ -158,36 +158,66 @@ const Project = () => (
           End result
         </Heading>
         <Heading as="h3" size="sm" mb={2}>
-          Insights &amp; recommendations
+          How the research changed the design
+        </Heading>
+        <P mb={2}>
+          Across the RITE rounds with 8 BLV researchers, findings from each round
+          were translated into design changes before the next, so the study is a
+          record of research driving iteration rather than a single usability
+          score:
+        </P>
+        <List as="ul" listStyleType="disc" pl={6} spacing={1} mb={3}>
+          <ListItem>
+            Participants lost their place in large network graphs, so keyboard
+            navigation was redesigned to announce position, neighbors, and depth
+            on every move rather than reading nodes in a flat order.
+          </ListItem>
+          <ListItem>
+            Early sonification mappings were ambiguous when several relationships
+            overlapped, so pitch, rhythm, and spatial cues were re-scoped to
+            encode topology one dimension at a time and made toggleable.
+          </ListItem>
+          <ListItem>
+            Structured text descriptions were too verbose at the overview level,
+            so they were reorganized into navigable semantic tiers (summary to
+            detail) that researchers could drill into on demand.
+          </ListItem>
+          <ListItem>
+            AI-generated summaries needed trust and correction, so a
+            human-in-the-loop refinement step was added so researchers could
+            verify and edit descriptions.
+          </ListItem>
+        </List>
+        <Heading as="h3" size="sm" mb={2}>
+          Outcomes
         </Heading>
         <List as="ul" listStyleType="disc" pl={6} spacing={1} mb={3}>
           <ListItem>
+            An open-source multimodal system covering all 4 visualization types,
+            shipped with the design changes above.
+          </ListItem>
+          <ListItem>
             Design guidelines for accessible multimodal representations of
-            qualitative data structures.
+            qualitative data structures, grounded in the RITE findings.
           </ListItem>
           <ListItem>
             Technical approaches for AI-assisted natural language description
             generation of relational data structures.
-          </ListItem>
-          <ListItem>
-            Empirical findings from user studies on how multimodal
-            representations support analytical reasoning; recommendations
-            informed the QUARTZ open-source system (visual, textual, and
-            auditory modalities).
           </ListItem>
         </List>
         <Heading as="h3" size="sm" mb={2}>
           Impact
         </Heading>
         <P>
-          This work advances multimodal information access beyond traditional
-          chart types and contributes open-source tooling that extends
-          accessibility infrastructure. As qualitative methods increasingly
-          inform business intelligence, policy analysis, and AI training data
-          curation, accessible tooling determines who can participate in
-          data-driven decision-making. QUARTZ enables BLV practitioners to
-          conduct independent qualitative analysis, addressing a barrier
-          documented by prior work.
+          The RITE study showed BLV researchers completing qualitative analysis
+          tasks — pattern identification and theme development across network
+          graphs, concept maps, coding hierarchies, and annotated text — that
+          mouse- and vision-dependent tools like NVivo had made impossible for
+          them. Because qualitative methods increasingly feed business
+          intelligence, policy analysis, and AI training-data curation,
+          accessible tooling determines who gets to do this work; QUARTZ and its
+          guidelines give teams a concrete, evidence-backed way to include BLV
+          analysts.
         </P>
       </Box>
 
@@ -234,7 +264,7 @@ const Project = () => (
           </ListItem>
           <ListItem>
             <Link href="https://arxiv.org/abs/2602.08925" target="_blank" rel="noopener noreferrer" aria-label="View arXiv preprint for QUARTZ-related CHI 2026 paper (opens in new tab)">
-              arXiv preprint
+              CHI &apos;26 preprint
             </Link>
           </ListItem>
         </List>

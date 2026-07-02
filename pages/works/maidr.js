@@ -26,7 +26,7 @@ const sections = [
 ]
 
 const Project = () => (
-  <Layout title="MAIDR">
+  <Layout title="MAIDR" canonicalPath="/works/maidr">
     <Box as="main">
       <Flex direction={{ base: 'column', md: 'row' }} gap={4}>
       <PageNav sections={sections} />

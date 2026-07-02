@@ -30,7 +30,7 @@ const QUARTZ_NETWORK_GRAPH_ALT =
   'QUARTZ system interface showing a thematic network visualization. Three nodes form a triangle: Qualitative Research Methods and Data Visualization (orange, concepts) and Accessibility Research (blue, research paper). Controls panel on the right includes filter by importance, size by importance, color by community, and network metrics: 3 nodes, 3 edges, 100% density, 0% occlusion, 0% crossings, 0% tunneling, readability EXCELLENT. Legend: blue for Research Papers, orange for Concepts. Status: Sonification OFF, Keyboard Nav ACTIVE.'
 
 const Project = () => (
-  <Layout title="QUARTZ">
+  <Layout title="QUARTZ" canonicalPath="/works/quartz">
     <Box as="main">
       <Flex direction={{ base: 'column', md: 'row' }} gap={4}>
       <PageNav sections={sections} />

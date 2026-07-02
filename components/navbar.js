@@ -203,7 +203,11 @@ const Navbar = (props) => {
                     key={`${href}-${label}`}
                     as={external ? Link : NextLink}
                     href={href}
-                    {...(external && href.startsWith('http') && { target: '_blank', rel: 'noopener noreferrer' })}
+                    {...(external &&
+                      (href.startsWith('http') || href.endsWith('.pdf')) && {
+                        target: '_blank',
+                        rel: 'noopener noreferrer',
+                      })}
                     fontWeight={path === href ? 'semibold' : 'normal'}
                   >
                     {label}

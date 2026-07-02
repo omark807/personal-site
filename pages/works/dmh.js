@@ -26,7 +26,7 @@ const sections = [
 ]
 
 const Project = () => (
-  <Layout title="Digital Mental Health & BLV">
+  <Layout title="Digital Mental Health & BLV" canonicalPath="/works/dmh">
     <Box as="main">
       <Flex direction={{ base: 'column', md: 'row' }} gap={4}>
       <PageNav sections={sections} />

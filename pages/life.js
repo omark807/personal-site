@@ -63,7 +63,7 @@ const LifePage = ({ catPreviewSrc }) => {
   const subtitleColor = useColorModeValue('accent.700', 'accent.300')
 
   return (
-  <Layout title="Life">
+  <Layout title="Life" canonicalPath="/life">
     <Heading as="h1" fontSize={24} mb={4} textAlign="center" textTransform="lowercase">
       my life
     </Heading>

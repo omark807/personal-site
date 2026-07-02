@@ -286,6 +286,15 @@ const Research = () => {
               I study accessible research and product ecosystems with and for blind and low-vision communities. My work connects
               participatory UX research, multimodal interaction design, and product-relevant recommendations for inclusive systems.
             </Text>
+            <Text mb={4}>
+              <Text as="span" fontWeight="semibold">Research statement.</Text>{' '}
+              My dissertation advances <i>epistemic equity in qualitative research infrastructure</i> — the principle that who
+              gets to produce and interpret qualitative knowledge should not be limited by whether the tools were designed for
+              sighted users. Across QUARTZ, my study re-imagining knowledge-production workflows, and my digital mental health
+              work, I pair participatory co-design with multimodal system building and mixed-methods evaluation to make the tools
+              of qualitative inquiry accessible to blind and low-vision researchers, and to develop design theory for accessible,
+              AI-assisted analysis more broadly.
+            </Text>
 
             <Box role="status" aria-live="polite" aria-atomic="true" className="sr-only">
               {announcement}

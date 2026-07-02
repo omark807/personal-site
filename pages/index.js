@@ -26,8 +26,8 @@ import {
   CV_SHORT_URL,
   SOCIAL_LINKS,
   absoluteUrl,
-  AVAILABILITY,
-  PROOF_POINTS,
+  // AVAILABILITY,
+  // PROOF_POINTS,
 } from '../lib/site'
 import { getLatestNews, formatNewsLabel } from '../lib/news'
 
@@ -152,9 +152,9 @@ const Page = () => {
             <Text fontSize="sm" color={heroTextColor}>
               PhD candidate at UIUC · accessibility + human-AI interaction
             </Text>
-            <Text fontSize="sm" color={heroTextColor} maxW="34rem">
+            {/* <Text fontSize="sm" color={heroTextColor} maxW="34rem">
               {AVAILABILITY}
-            </Text>
+            </Text> */}
             <HStack spacing={5} pt={1} role="list" aria-label="Profile and resume links">
               {profileLinks.map(({ href, label, icon, external }) => (
                 <Link
@@ -188,7 +188,7 @@ const Page = () => {
             products get built. My work shows up at venues like CHI and ASSETS — more on my{' '}
             <Link as={NextLink} href="/research">Research</Link> page.
           </Paragraph>
-          <List spacing={2} mt={2} aria-label="Highlights">
+          {/* <List spacing={2} mt={2} aria-label="Highlights">
             {PROOF_POINTS.map((point) => (
               <ListItem key={point} display="flex" alignItems="flex-start">
                 <ListIcon
@@ -200,7 +200,7 @@ const Page = () => {
                 <Text as="span">{point}</Text>
               </ListItem>
             ))}
-          </List>
+          </List> */}
           <Paragraph>
             Outside research: cats, cooking, and too many parentheticals — more on{' '}
             <Link as={NextLink} href="/life">Life</Link>.

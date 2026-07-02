@@ -7,6 +7,8 @@ import {
   Flex,
   Image,
   Link,
+  SimpleGrid,
+  Text,
 } from '@chakra-ui/react'
 import { Title, WorkImage } from '../../components/work'
 import P from '../../components/paragraph'
@@ -19,6 +21,7 @@ const sections = [
   { id: 'quartz-project', label: 'Project' },
   { id: 'quartz-objective', label: 'Objective' },
   { id: 'quartz-work', label: 'Work' },
+  // { id: 'quartz-demo', label: 'Demo' },
   { id: 'quartz-result', label: 'End result' },
   { id: 'quartz-reflection', label: 'Reflection' },
   { id: 'quartz-ux-skills', label: 'Skills' },
@@ -26,8 +29,73 @@ const sections = [
   { id: 'quartz-meta', label: 'Methods' },
 ]
 
-const QUARTZ_NETWORK_GRAPH_ALT =
-  'QUARTZ system interface showing a thematic network visualization. Three nodes form a triangle: Qualitative Research Methods and Data Visualization (orange, concepts) and Accessibility Research (blue, research paper). Controls panel on the right includes filter by importance, size by importance, color by community, and network metrics: 3 nodes, 3 edges, 100% density, 0% occlusion, 0% crossings, 0% tunneling, readability EXCELLENT. Legend: blue for Research Papers, orange for Concepts. Status: Sonification OFF, Keyboard Nav ACTIVE.'
+const LANDING_ALT =
+  'QUARTZ landing page: the QUARTZ logo and title with the tagline "Qualitative Understanding via Accessible Representation and VisualiZation," and three cards — Sample Data (explore with example data), Import Data (upload your own data), and Learn More (view tutorial).'
+
+const VIZ_TYPES = [
+  {
+    src: '/images/network_graph.png',
+    caption:
+      'Network graph: code co-occurrence from interview data, with sonification and keyboard navigation.',
+    alt: 'QUARTZ network graph view titled "Code Co-occurrence Network," showing co-occurrence relationships between qualitative codes from interview data about coping and adaptation. Seven red nodes — Frustration, Peer Support, Adaptation, Coping Strategies, Support-Seeking, Isolation, and Resilience — are linked by twelve grey edges, with the Frustration node keyboard-focused. Status: 7 nodes, 12 edges, Sonification ON.',
+  },
+  {
+    src: '/images/concept_map.png',
+    caption: 'Concept map: a hierarchical view of themes and sub-themes.',
+    alt: 'QUARTZ concept map view titled "Remote Work Analysis," a hierarchical tree of 19 concepts across 3 levels. A root concept branches into color-coded main concepts, sub-concepts, and examples, each labeled with an importance percentage and child count; Sonification ON.',
+  },
+  {
+    src: '/images/sankey_diagram.png',
+    caption: 'Sankey diagram: participant flow through a process, with audio.',
+    alt: 'QUARTZ Sankey diagram titled "Job Search Participant Journey," showing participant flow from job-search initiation through methods (online applications, networking, skills training), interviews, and outcomes such as hired, rejection, and career pivot, with Sound On enabled.',
+  },
+  {
+    src: '/images/coding_stripes.png',
+    caption:
+      'Coding stripes: overlapping thematic codes over an interview transcript.',
+    alt: 'QUARTZ coding-stripes view titled "Job Search Interview — Coded Transcript," an interview transcript with colored stripes marking eight thematic codes (such as Job Search Strategy, Emotional Response, Social Support, and Barrier) across overlapping text segments.',
+  },
+]
+
+const GUIDANCE_ALT =
+  'QUARTZ "Why Concept Map?" guidance panel. It reports the detected data structure (19 concepts across 3 levels), explains why a concept map fits hierarchical data, shows a table mapping the user\u2019s data to visual elements (root theme, main themes, sub-themes, hierarchical relationships, and node depth mapped to a sonification tone), and notes complexity constraints such as node count within the recommended range.'
+
+const ARCHITECTURE_ALT =
+  'QUARTZ software architecture diagram with four layers following clean architecture: Presentation (visualizations, import/export, and accessibility features like sonification hooks, focus trap, and keyboard navigation), Application (manage visualization, transform data, navigate graph), Domain (entities, service and repository ports, domain errors), and Infrastructure (parsers and analysis, transformers, sonification engine). Arrows show dependencies pointing inward toward the domain.'
+
+const EVAL_ALT =
+  'QUARTZ evaluation panel for a concept map showing publication readiness of 4 out of 5 ("Good, 5 of 6 checks passed"), export readiness, a structure summary, statistics (19 nodes, 0 edges, max depth 3), and quality checks such as reasonable complexity, labels present on all nodes, appropriate hierarchy depth, and root concept exists.'
+
+const Figure = ({ src, alt, caption, ...props }) => (
+  <Box
+    borderWidth="1px"
+    borderColor="border.default"
+    borderRadius="lg"
+    overflow="hidden"
+    {...props}
+  >
+    <Image
+      src={src}
+      alt={alt}
+      w="full"
+      display="block"
+      loading="lazy"
+      decoding="async"
+    />
+    <Text
+      fontSize="sm"
+      color="text.subtle"
+      textAlign="center"
+      px={3}
+      py={2}
+      mb={0}
+      borderTopWidth="1px"
+      borderTopColor="border.default"
+    >
+      {caption}
+    </Text>
+  </Box>
+)
 
 const Project = () => (
   <Layout title="QUARTZ" canonicalPath="/works/quartz">
@@ -36,7 +104,10 @@ const Project = () => (
       <PageNav sections={sections} />
       <Box flex={1} minW={0}>
       <Title>QUARTZ</Title>
-      <WorkImage src="/images/quartz_logo.png" alt="QUARTZ logo" />
+      <WorkImage
+        src="/images/quartz_logo.png"
+        alt="QUARTZ logo: a stylized letter Q formed from purple crystal facets with a crystal shard, above the word QUARTZ."
+      />
 
       <Box as="section" aria-labelledby="quartz-glance" mt={4}>
         <Heading as="h2" id="quartz-glance" variant="section-title">
@@ -131,27 +202,110 @@ const Project = () => (
         <P mt={3}>
           AI-generated natural language summaries provide overviews and
           contextual descriptions with human-in-the-loop refinement. The system
-          supports three core visualization types: network graphs (thematic
-          networks and knowledge graphs), concept maps, and annotated text views
-          with coding stripes.
+          supports four core visualization types: network graphs, concept maps,
+          Sankey diagrams, and coding-stripe annotated text.
         </P>
         <P mt={3}>
-          <strong>Methods:</strong> Participatory co-design and user interviews with BLV practitioners; qualitative analysis and thematic coding; and a RITE evaluation with 8 BLV researchers spanning 12 tasks across all 4 supported visualization types (network graphs, concept maps, coding hierarchies, and annotated text views). RITE is iterative by design: after each round I coded what broke down, changed the system, and re-tested with the next participants, so the evaluation itself is the record of research driving design decisions rather than a one-shot usability check.
+          <strong>Methods:</strong> Participatory co-design and user interviews with BLV practitioners; qualitative analysis and thematic coding; and a RITE evaluation with 8 BLV researchers spanning 12 tasks across all 4 supported visualization types (network graphs, concept maps, Sankey diagrams, and coding stripes). RITE is iterative by design: after each round I coded what broke down, changed the system, and re-tested with the next participants, so the evaluation itself is the record of research driving design decisions rather than a one-shot usability check.
         </P>
-        <Box mt={4} mb={2}>
-          <Image
-            src="/images/quartz_network_graph.png"
-            alt={QUARTZ_NETWORK_GRAPH_ALT}
-            borderRadius="lg"
-            w="full"
-            loading="lazy"
-            decoding="async"
-          />
+        <Figure
+          src="/images/landing_page.png"
+          alt={LANDING_ALT}
+          caption="The QUARTZ landing page: users start from sample data, import their own, or learn more."
+          my={4}
+        />
+
+        <Heading as="h3" size="sm" mt={5} mb={2}>
+          The four visualization types
+        </Heading>
+        <SimpleGrid columns={{ base: 1, sm: 2 }} spacing={5}>
+          {VIZ_TYPES.map((viz) => (
+            <Figure
+              key={viz.src}
+              src={viz.src}
+              alt={viz.alt}
+              caption={viz.caption}
+            />
+          ))}
+        </SimpleGrid>
+
+        <Heading as="h3" size="sm" mt={6} mb={2}>
+          AI-assisted guidance
+        </Heading>
+        <P>
+          QUARTZ inspects the shape of a user&apos;s data, recommends a fitting
+          visualization type, and explains why — mapping each part of the data to
+          a visual and auditory element and flagging complexity constraints.
+        </P>
+        <Figure
+          src="/images/why_this_type.png"
+          alt={GUIDANCE_ALT}
+          caption="The guidance panel detects the data structure and explains the recommended visualization."
+          my={4}
+        />
+
+        <Heading as="h3" size="sm" mt={6} mb={2}>
+          System design
+        </Heading>
+        <P>
+          I built QUARTZ as a Next.js application on a clean, layered
+          architecture, treating accessibility concerns — sonification, focus
+          management, and keyboard navigation — as first-class parts of the
+          system rather than add-ons.
+        </P>
+        <Figure
+          src="/images/architecture-diagram.png"
+          alt={ARCHITECTURE_ALT}
+          caption="QUARTZ's four-layer architecture: presentation, application, domain, and infrastructure."
+          my={4}
+        />
+      </Box>
+
+      {/* Temporarily hidden until the sonification audio asset is ready.
+      <Box as="section" aria-labelledby="quartz-demo" mt={6}>
+        <Heading as="h2" id="quartz-demo" variant="section-title">
+          Hear it: sonification
+        </Heading>
+        <P>
+          A short audio clip of QUARTZ sonifying a thematic network, so you can
+          hear how topology and relationships are conveyed without sight.
+        </P>
+        <Box
+          as="audio"
+          controls
+          preload="none"
+          w="full"
+          mt={2}
+          aria-label="QUARTZ sonification audio demo"
+        >
+          <source src="/audio/quartz-sonification.mp3" type="audio/mpeg" />
+          Your browser does not support the audio element.{' '}
+          <Link
+            href="/audio/quartz-sonification.mp3"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Download the audio clip
+          </Link>
+          .
         </Box>
-        <P fontSize="sm" color="text.subtle">
-          The QUARTZ interface: a visual network graph with controls for filtering, display options, and readability metrics.
+        <P fontSize="sm" color="text.subtle" mt={2}>
+          Audio: QUARTZ sonifying a three-node thematic network (concepts and a
+          research paper) as the user navigates it.
+        </P>
+        <Heading as="h3" size="sm" mt={4} mb={2}>
+          What you are hearing
+        </Heading>
+        <P>
+          [Placeholder description - refine with the actual mappings.] Pitch
+          encodes a node's position or importance in the network; rhythm
+          conveys how densely connected a node is; and spatial (left/right) audio
+          indicates direction to neighboring nodes. As the user moves through the
+          graph, each step is announced and paired with these cues so structure
+          and relationships are perceivable by ear.
         </P>
       </Box>
+      */}
 
       <Box as="section" aria-labelledby="quartz-result" mt={6}>
         <Heading as="h2" id="quartz-result" variant="section-title">
@@ -204,16 +358,26 @@ const Project = () => (
             Technical approaches for AI-assisted natural language description
             generation of relational data structures.
           </ListItem>
+          <ListItem>
+            A built-in evaluation view that scores publication readiness and runs
+            structural quality checks on a visualization.
+          </ListItem>
         </List>
+        <Figure
+          src="/images/eval.png"
+          alt={EVAL_ALT}
+          caption="The evaluation panel reports publication readiness and structural quality checks."
+          my={4}
+        />
         <Heading as="h3" size="sm" mb={2}>
           Impact
         </Heading>
         <P>
           The RITE study showed BLV researchers completing qualitative analysis
           tasks — pattern identification and theme development across network
-          graphs, concept maps, coding hierarchies, and annotated text — that
-          mouse- and vision-dependent tools like NVivo had made impossible for
-          them. Because qualitative methods increasingly feed business
+          graphs, concept maps, Sankey diagrams, and coding-stripe transcripts —
+          that mouse- and vision-dependent tools like NVivo had made impossible
+          for them. Because qualitative methods increasingly feed business
           intelligence, policy analysis, and AI training-data curation,
           accessible tooling determines who gets to do this work; QUARTZ and its
           guidelines give teams a concrete, evidence-backed way to include BLV

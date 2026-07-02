@@ -27,6 +27,7 @@ const sections = [
   { id: 'methods', label: 'Methods' },
   { id: 'selected-work', label: 'Selected work' },
   { id: 'talks', label: 'Talks' },
+  { id: 'teaching', label: 'Teaching' },
 ]
 
 const professionalExperience = [
@@ -487,6 +488,24 @@ const ExperiencePage = () => {
                   </ListItem>
                 ))}
               </List>
+            </Section>
+
+            <Section delay={0.4}>
+              <Divider my={6} />
+              <Heading as="h2" id="teaching" variant="section-title">
+                Teaching and mentorship
+              </Heading>
+              <Paragraph>
+                I design and teach an accessible high-performance computing (HPC)
+                workshop series that introduces blind and low-vision researchers
+                to the NCSA Delta cluster — a scaffolded, three-part curriculum
+                grounded in Universal Design for Learning, constructivism, and
+                adult learning theory. I designed and ran the first edition as a
+                three-day series (March 30 – April 1, 2026) for 15 participants.
+              </Paragraph>
+              <Link as={NextLink} href="/teaching" fontSize="sm">
+                See the full curriculum →
+              </Link>
             </Section>
           </Box>
         </Flex>

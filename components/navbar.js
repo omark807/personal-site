@@ -29,6 +29,7 @@ const primaryNavLinks = [
 
 const moreNavLinks = [
   { href: '/news', label: 'News' },
+  { href: '/teaching', label: 'Teaching' },
   { href: '/life', label: 'Life' },
 ]
 

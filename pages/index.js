@@ -8,12 +8,8 @@ import {
   HStack,
   Icon,
   Image,
-  List,
-  ListItem,
-  ListIcon,
   useColorModeValue,
 } from '@chakra-ui/react'
-import { CheckCircleIcon } from '@chakra-ui/icons'
 import { FaGithub, FaLinkedin, FaFileAlt, FaFilePdf } from 'react-icons/fa'
 import { IoSchoolSharp } from 'react-icons/io5'
 import NextLink from 'next/link'

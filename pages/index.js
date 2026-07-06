@@ -142,12 +142,12 @@ const Page = () => {
             <Heading as="h1" variant="section-title" id="page-title">
               Omar Khan
             </Heading>
-            <Text fontSize="lg" fontWeight="medium">
-              Mixed-methods HCI researcher who builds and evaluates accessible AI systems
+            <Text fontSize="lg" fontWeight="medium" maxW="32rem">
+            I design things that help people make sense of data and AI, and I care a lot that they work for everyone.
             </Text>
-            <Text fontSize="sm" color={heroTextColor}>
-              PhD candidate at UIUC · accessibility + human-AI interaction
-            </Text>
+            {/* <Text fontSize="sm" color={heroTextColor}>
+              PhD candidate at UIUC · mixed-methods HCI researcher
+            </Text> */}
             {/* <Text fontSize="sm" color={heroTextColor} maxW="34rem">
               {AVAILABILITY}
             </Text> */}
@@ -175,14 +175,14 @@ const Page = () => {
           </VStack>
         </Section>
 
-        <Section delay={0.1}>
+        <Section delay={0.1} inView>
           <Paragraph>
             I co-design with blind and low-vision (BLV) communities to build and evaluate the
-            tools people rely on to make sense of data — and, increasingly, AI. I turn messy,
+            tools people rely on to make sense of data, and increasingly, AI. I turn messy,
             real-world context into things people can <i>actually</i> use: accessible
-            data-visualization systems, design guidelines, and empirical evidence that shape how
-            products get built. My work shows up at venues like CHI and ASSETS — more on my{' '}
-            <Link as={NextLink} href="/research">Research</Link> page.
+            data visualization systems, design guidelines, and empirical evidence that shape how
+            products get built. My work shows up at venues like CHI and ASSETS (more on my{' '}
+            <Link as={NextLink} href="/research">Research</Link> page). 
           </Paragraph>
           {/* <List spacing={2} mt={2} aria-label="Highlights">
             {PROOF_POINTS.map((point) => (

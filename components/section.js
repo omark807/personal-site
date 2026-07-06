@@ -6,10 +6,15 @@ const StyledDiv = chakra(motion.div, {
     shouldForwardProp(prop) || prop === 'transition'
 });
 
-const Section = ({ children, delay = 0 }) => (
+const Section = ({ children, delay = 0, inView = false }) => (
   <StyledDiv
     initial={{ opacity: 0, y: 10 }}
-    animate={{ opacity: 1, y: 0 }}
+    {...(inView
+      ? {
+          whileInView: { opacity: 1, y: 0 },
+          viewport: { once: true, amount: 0.2 },
+        }
+      : { animate: { opacity: 1, y: 0 } })}
     transition={{ duration: 0.8, delay }}
     mb={6}
   >

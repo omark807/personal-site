@@ -33,10 +33,10 @@ const sections = [
 const professionalExperience = [
   {
     period: '06/2025 – Present',
-    title: 'Design Research Intern',
+    title: 'Research Scientist Intern',
     org: 'Infosys · Center for Autonomous Learning · Remote',
     summary:
-      'Investigating accessibility needs and design opportunities for autonomous delivery robots through interviews, observation, and synthesis with design teams.',
+      'Conducting mixed-methods research on last-mile delivery robots — who their signals and cues actually work for, and who they leave behind.',
     link: '/news',
   },
   {

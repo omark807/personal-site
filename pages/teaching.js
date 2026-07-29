@@ -8,6 +8,11 @@ import {
   ListItem,
   Divider,
   Link,
+  Accordion,
+  AccordionItem,
+  AccordionButton,
+  AccordionPanel,
+  AccordionIcon,
   useColorModeValue,
 } from '@chakra-ui/react'
 import Layout from '../components/layouts/article'
@@ -17,10 +22,48 @@ import Paragraph from '../components/paragraph'
 
 const sections = [
   { id: 'teaching-overview', label: 'Overview' },
-  { id: 'teaching-philosophy', label: 'Philosophy' },
-  { id: 'teaching-series', label: 'Workshop series' },
-  { id: 'teaching-frameworks', label: 'Frameworks' },
-  { id: 'teaching-practices', label: 'Instructor practices' },
+  { id: 'teaching-workshop', label: 'Workshop' },
+  { id: 'teaching-appointments', label: 'Appointments' },
+]
+
+const teachingAppointments = [
+  {
+    period: 'Spring 2024',
+    role: 'Graduate Teaching Assistant',
+    course: 'CS 467: Social Visualization',
+    org: 'UIUC',
+  },
+  {
+    period: 'Fall 2023, Fall 2024',
+    role: 'Graduate Teaching Assistant',
+    course: 'CS 210/211: Ethical & Professional Issues/Conduct in CS',
+    org: 'UIUC',
+  },
+  {
+    period: 'Fall 2019 – Spring 2021',
+    role: 'Undergraduate Course Assistant',
+    course: 'CS 233: Computer Architecture',
+    org: 'UIUC',
+  },
+  {
+    period: 'Fall 2018 – Fall 2019',
+    role: 'Undergraduate Course Assistant',
+    course: 'CS 196-25: Freshman Honors',
+    org: 'UIUC',
+  },
+  {
+    period: 'Fall 2018, Spring 2019',
+    role: 'Undergraduate Course Assistant',
+    course: 'CS 125: Introduction to Computer Science',
+    org: 'UIUC',
+  },
+]
+
+const mentoring = [
+  {
+    period: '2025 – Present',
+    detail: 'Soundarya Kumar Pradhan · UIUC MCS',
+  },
 ]
 
 const principles = [
@@ -102,13 +145,45 @@ const instructorPractices = [
   'Provide an accessible plain-text cheat sheet of key commands with a short description for each session.',
 ]
 
+const DatedRow = ({ period, children, mutedColor }) => (
+  <Flex justify="space-between" align="flex-start" gap={4}>
+    <Box flex={1} minW={0}>
+      {children}
+    </Box>
+    <Text
+      fontSize="sm"
+      color={mutedColor}
+      textAlign="right"
+      flexShrink={0}
+      maxW={{ base: '40%', md: '11rem' }}
+      lineHeight="short"
+    >
+      {period}
+    </Text>
+  </Flex>
+)
+
+const CurriculumPanel = ({ title, children }) => (
+  <AccordionItem border="none" borderTopWidth="1px" borderColor="border.default">
+    <AccordionButton px={0} py={3} _hover={{ bg: 'transparent' }}>
+      <Box flex="1" textAlign="left" fontWeight="semibold">
+        {title}
+      </Box>
+      <AccordionIcon />
+    </AccordionButton>
+    <AccordionPanel px={0} pb={4} pt={0}>
+      {children}
+    </AccordionPanel>
+  </AccordionItem>
+)
+
 const Teaching = () => {
   const mutedColor = useColorModeValue('text.muted', 'text.muted')
 
   return (
     <Layout
       title="Teaching"
-      description="Teaching and mentorship by Omar Khan, including an accessible high-performance computing (HPC) workshop series for blind and low-vision researchers on the NCSA Delta cluster."
+      description="Teaching and mentorship by Omar Khan, including an accessible HPC workshop series for blind and low-vision researchers (primary instructor; advised by Dr. JooYoung Seo) and course appointments at UIUC."
       canonicalPath="/teaching"
     >
       <Flex direction={{ base: 'column', md: 'row' }} gap={4}>
@@ -118,113 +193,145 @@ const Teaching = () => {
             Teaching and mentorship
           </Heading>
           <Paragraph>
-            I design and teach an accessible high-performance computing (HPC)
-            workshop series that introduces blind and low-vision (BLV)
-            researchers to the NCSA Delta cluster. It grew out of a simple gap:
-            HPC is increasingly essential to modern research, but its tooling and
-            documentation assume a sighted user by default. The series is both a
-            teaching artifact and a service contribution \u2014 a reusable,
-            evidence-informed curriculum for bringing BLV researchers into
-            compute-intensive work.
-          </Paragraph>
-          <Paragraph>
-            The first edition ran as a three-day series (March 30 \u2013 April 1,
-            2026) with 15 participants \u2014 the first time we designed and
-            delivered a workshop series of this kind.
+            I teach and mentor across accessibility-focused workshops and CS
+            courses at UIUC. My most recent teaching design work is an accessible
+            high-performance computing (HPC) workshop series for blind and
+            low-vision researchers; I have also served as a graduate teaching
+            assistant and undergraduate course assistant across several CS
+            courses, and I mentor an MCS student.
           </Paragraph>
 
           <Section delay={0.1}>
             <Divider my={6} />
-            <Heading as="h2" id="teaching-philosophy" variant="section-title">
-              Workshop philosophy
+            <Heading as="h2" id="teaching-workshop" variant="section-title">
+              Accessible HPC workshop series
             </Heading>
             <Paragraph>
-              The curriculum rests on four principles that keep the learning
-              environment effective and empowering:
+              As primary instructor, advised by{' '}
+              <Link href="http://jooyoungseo.me/" isExternal>
+                Dr. JooYoung Seo
+              </Link>
+              , I designed and taught a three-part workshop series that introduces
+              blind and low-vision (BLV) researchers to the NCSA Delta cluster. It
+              grew out of a simple gap: HPC is increasingly essential to modern
+              research, but its tooling and documentation assume a sighted user by
+              default. The first edition ran March 30 \u2013 April 1, 2026, with 15
+              participants.
             </Paragraph>
-            <List spacing={4} mt={2}>
-              {principles.map((item) => (
-                <ListItem key={item.heading}>
-                  <Text fontWeight="semibold">{item.heading}</Text>
-                  <Text color={mutedColor}>{item.body}</Text>
-                </ListItem>
-              ))}
-            </List>
             <Paragraph>
-              Participants also receive a pre-workshop checklist a week ahead \u2014
-              screen reader and terminal setup, SSH client, and ACCESS/NCSA
-              account activation \u2014 so everyone can start hands-on from the
-              first session.
+              The curriculum is grounded in Universal Design for Learning,
+              constructivism, and adult learning theory. Expand a section below for
+              the full design detail.
             </Paragraph>
-          </Section>
 
-          <Section delay={0.15}>
-            <Divider my={6} />
-            <Heading as="h2" id="teaching-series" variant="section-title">
-              A three-part workshop series
-            </Heading>
-            <Paragraph>
-              The series is scaffolded from foundational skills to goal-oriented
-              research tasks, so each session builds on the last.
-            </Paragraph>
-            {workshops.map((workshop, index) => (
-              <Box key={workshop.title} mt={index === 0 ? 4 : 6}>
-                <Heading as="h3" fontSize={18} mb={1}>
-                  {workshop.title}
-                </Heading>
-                <Text fontSize="sm" color={mutedColor} mb={2}>
-                  {workshop.time}
-                </Text>
-                <Text mb={2}>
-                  <Text as="span" fontWeight="semibold">
-                    Goal:
-                  </Text>{' '}
-                  {workshop.goal}
-                </Text>
-                <List as="ul" listStyleType="disc" pl={6} spacing={1}>
-                  {workshop.topics.map((topic) => (
-                    <ListItem key={topic}>{topic}</ListItem>
+            <Accordion allowMultiple reduceMotion mt={2}>
+              <CurriculumPanel title="Workshop philosophy">
+                <Paragraph>
+                  The curriculum rests on four principles that keep the learning
+                  environment effective and empowering:
+                </Paragraph>
+                <List spacing={4} mt={2}>
+                  {principles.map((item) => (
+                    <ListItem key={item.heading}>
+                      <Text fontWeight="semibold">{item.heading}</Text>
+                      <Text color={mutedColor}>{item.body}</Text>
+                    </ListItem>
                   ))}
                 </List>
-              </Box>
-            ))}
+                <Paragraph>
+                  Participants also receive a pre-workshop checklist a week ahead
+                  \u2014 screen reader and terminal setup, SSH client, and
+                  ACCESS/NCSA account activation \u2014 so everyone can start
+                  hands-on from the first session.
+                </Paragraph>
+              </CurriculumPanel>
+
+              <CurriculumPanel title="Three-part series">
+                <Paragraph>
+                  The series is scaffolded from foundational skills to
+                  goal-oriented research tasks, so each session builds on the last.
+                </Paragraph>
+                {workshops.map((workshop, index) => (
+                  <Box key={workshop.title} mt={index === 0 ? 4 : 6}>
+                    <Heading as="h3" fontSize={18} mb={1}>
+                      {workshop.title}
+                    </Heading>
+                    <Text fontSize="sm" color={mutedColor} mb={2}>
+                      {workshop.time}
+                    </Text>
+                    <Text mb={2}>
+                      <Text as="span" fontWeight="semibold">
+                        Goal:
+                      </Text>{' '}
+                      {workshop.goal}
+                    </Text>
+                    <List as="ul" listStyleType="disc" pl={6} spacing={1}>
+                      {workshop.topics.map((topic) => (
+                        <ListItem key={topic}>{topic}</ListItem>
+                      ))}
+                    </List>
+                  </Box>
+                ))}
+              </CurriculumPanel>
+
+              <CurriculumPanel title="Theoretical frameworks">
+                <Paragraph>
+                  The design is grounded in three complementary learning theories,
+                  which keep it rigorous rather than ad hoc:
+                </Paragraph>
+                <List spacing={4} mt={2}>
+                  {frameworks.map((item) => (
+                    <ListItem key={item.heading}>
+                      <Text fontWeight="semibold">{item.heading}</Text>
+                      <Text color={mutedColor}>{item.body}</Text>
+                    </ListItem>
+                  ))}
+                </List>
+              </CurriculumPanel>
+
+              <CurriculumPanel title="Instructor practices">
+                <Paragraph>
+                  A few teaching habits do most of the accessibility work in a
+                  live, non-visual session:
+                </Paragraph>
+                <List as="ul" listStyleType="disc" pl={6} spacing={2} mt={2}>
+                  {instructorPractices.map((practice) => (
+                    <ListItem key={practice}>{practice}</ListItem>
+                  ))}
+                </List>
+              </CurriculumPanel>
+            </Accordion>
           </Section>
 
           <Section delay={0.2}>
             <Divider my={6} />
-            <Heading as="h2" id="teaching-frameworks" variant="section-title">
-              Theoretical frameworks
+            <Heading as="h2" id="teaching-appointments" variant="section-title">
+              Course appointments
             </Heading>
-            <Paragraph>
-              The design is grounded in three complementary learning theories,
-              which keep it rigorous rather than ad hoc:
-            </Paragraph>
-            <List spacing={4} mt={2}>
-              {frameworks.map((item) => (
-                <ListItem key={item.heading}>
-                  <Text fontWeight="semibold">{item.heading}</Text>
-                  <Text color={mutedColor}>{item.body}</Text>
+            <List spacing={3}>
+              {teachingAppointments.map((item) => (
+                <ListItem key={`${item.course}-${item.period}`}>
+                  <DatedRow period={item.period} mutedColor={mutedColor}>
+                    <Text fontWeight="semibold">{item.role}</Text>
+                    <Text fontSize="sm" color={mutedColor} mt={1}>
+                      {item.course} · {item.org}
+                    </Text>
+                  </DatedRow>
                 </ListItem>
               ))}
             </List>
-          </Section>
-
-          <Section delay={0.25}>
-            <Divider my={6} />
-            <Heading as="h2" id="teaching-practices" variant="section-title">
-              Instructor practices
+            <Heading as="h3" fontSize={18} mt={6} mb={3}>
+              Mentoring
             </Heading>
-            <Paragraph>
-              A few teaching habits do most of the accessibility work in a live,
-              non-visual session:
-            </Paragraph>
-            <List as="ul" listStyleType="disc" pl={6} spacing={2} mt={2}>
-              {instructorPractices.map((practice) => (
-                <ListItem key={practice}>{practice}</ListItem>
+            <List spacing={3}>
+              {mentoring.map((item) => (
+                <ListItem key={item.detail}>
+                  <DatedRow period={item.period} mutedColor={mutedColor}>
+                    <Text>{item.detail}</Text>
+                  </DatedRow>
+                </ListItem>
               ))}
             </List>
-            <br>
-            </br>
             <Paragraph>
               For related research, see my{' '}
               <Link as={NextLink} href="/research">

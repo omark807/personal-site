@@ -313,6 +313,34 @@ const talks = [
   },
 ]
 
+const teachingAppointments = [
+  {
+    period: 'Spring 2024',
+    role: 'Graduate Teaching Assistant',
+    course: 'CS 467: Social Visualization · UIUC',
+  },
+  {
+    period: 'Fall 2023, Fall 2024',
+    role: 'Graduate Teaching Assistant',
+    course: 'CS 210/211: Ethical & Professional Issues/Conduct in CS · UIUC',
+  },
+  {
+    period: 'Fall 2019 – Spring 2021',
+    role: 'Undergraduate Course Assistant',
+    course: 'CS 233: Computer Architecture · UIUC',
+  },
+  {
+    period: 'Fall 2018 – Fall 2019',
+    role: 'Undergraduate Course Assistant',
+    course: 'CS 196-25: Freshman Honors · UIUC',
+  },
+  {
+    period: 'Fall 2018, Spring 2019',
+    role: 'Undergraduate Course Assistant',
+    course: 'CS 125: Introduction to Computer Science · UIUC',
+  },
+]
+
 const ExperiencePage = () => {
   const mutedColor = useColorModeValue('text.muted', 'text.muted')
   const borderColor = useColorModeValue('border.default', 'border.default')
@@ -496,16 +524,36 @@ const ExperiencePage = () => {
                 Teaching and mentorship
               </Heading>
               <Paragraph>
-                I design and teach an accessible high-performance computing (HPC)
-                workshop series that introduces blind and low-vision researchers
-                to the NCSA Delta cluster — a scaffolded, three-part curriculum
-                grounded in Universal Design for Learning, constructivism, and
-                adult learning theory. I designed and ran the first edition as a
-                three-day series (March 30 – April 1, 2026) for 15 participants.
+                I designed and taught — as primary instructor — an accessible
+                high-performance computing (HPC) workshop series that introduces
+                blind and low-vision researchers to the NCSA Delta cluster,
+                advised by{' '}
+                <Link href="http://jooyoungseo.me/" isExternal>
+                  Dr. JooYoung Seo
+                </Link>
+                . The scaffolded, three-part curriculum is grounded in Universal
+                Design for Learning, constructivism, and adult learning theory. I
+                ran the first edition as a three-day series (March 30 – April 1,
+                2026) for 15 participants.
               </Paragraph>
-              <Link as={NextLink} href="/teaching" fontSize="sm">
-                See the full curriculum →
+              <Link as={NextLink} href="/teaching" fontSize="sm" display="inline-block" mb={4}>
+                Teaching page →
               </Link>
+              <List spacing={3}>
+                {teachingAppointments.map((item) => (
+                  <ListItem key={`${item.course}-${item.period}`}>
+                    <DatedRow period={item.period}>
+                      <Text fontWeight="semibold">{item.role}</Text>
+                      <Text fontSize="sm" color={mutedColor} mt={1}>
+                        {item.course}
+                      </Text>
+                    </DatedRow>
+                  </ListItem>
+                ))}
+              </List>
+              <Text fontSize="sm" color={mutedColor} mt={4}>
+                Mentoring: Soundarya Kumar Pradhan · UIUC MCS (2025 – Present)
+              </Text>
             </Section>
           </Box>
         </Flex>

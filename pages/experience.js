@@ -32,9 +32,9 @@ const sections = [
 
 const professionalExperience = [
   {
-    period: '06/2025 – Present',
+    period: '06/2026 – Present',
     title: 'Research Scientist Intern',
-    org: 'Infosys · Center for Autonomous Learning · Remote',
+    org: 'Infosys · Center for Autonomous Machines · Remote',
     summary:
       'Conducting mixed-methods research on last-mile delivery robots — who their signals and cues actually work for, and who they leave behind.',
     link: '/news',

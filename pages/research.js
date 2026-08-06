@@ -134,6 +134,34 @@ const publications = [
     ),
   },
   {
+    id: 'w3',
+    type: 'white-paper',
+    themes: ['human-ai'],
+    impact:
+      'AFB report on how AI in hiring, workplace tools, and surveillance affects disabled workers.',
+    content: (
+      <>
+        <b>[W3]</b> A. Shock, S. J. Baguhn, W. E. Hanuschock, M. Hashimoto, C. H. Heydarian, <b>Omar Khan</b>, M-L. Vader, and A. L. Whistler. 2026. Working with the Machine: AI&apos;s Expanding Role in Employment for People With Disabilities.
+        {' '}American Foundation for the Blind.
+        <Link target="_blank" href="https://afb.org/research-and-initiatives/ai-series/working-machine" rel="noopener noreferrer" aria-label="View the Working with the Machine report on the AFB website (opens in new tab)"> [Report]</Link>
+      </>
+    ),
+  },
+  {
+    id: 'w2',
+    type: 'white-paper',
+    themes: ['human-ai'],
+    impact:
+      'AFB report on autonomous vehicles, transit, and the accessibility gaps in AI-enabled travel.',
+    content: (
+      <>
+        <b>[W2]</b> C. H. Heydarian, A. L. Whistler, A. M. Silverman, S. J. Baguhn, W. E. Hanuschock, M. Hashimoto, <b>Omar Khan</b>, A. Shock, and M-L. Vader. 2026. Navigating Toward AI: Transportation Access in a Changing Technology Landscape.
+        {' '}American Foundation for the Blind.
+        <Link target="_blank" href="https://afb.org/research-and-initiatives/ai-series/navigating-toward-ai" rel="noopener noreferrer" aria-label="View the Navigating Toward AI report on the AFB website (opens in new tab)"> [Report]</Link>
+      </>
+    ),
+  },
+  {
     id: 'w1',
     type: 'white-paper',
     themes: ['human-ai'],
